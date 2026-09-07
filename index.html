@@ -253,10 +253,16 @@
     border:1px solid rgba(110,151,160,.2);border-radius:18px;padding:14px 16px 12px;
     cursor:pointer;font-family:inherit;color:var(--ink);width:100%;
     display:flex;flex-direction:column;align-items:flex-start;justify-content:flex-start;
-    box-shadow:0 8px 28px rgba(61,107,117,.06);
+    box-shadow:0 8px 28px rgba(61,107,117,.06);isolation:isolate;
     transition:transform .5s cubic-bezier(.22,1,.36,1),box-shadow .5s,border-color .5s}
-  .bd-card:hover{transform:translateY(-3px);box-shadow:0 16px 40px rgba(61,107,117,.12);
+  .bd-card::before{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;z-index:-1;
+    background:radial-gradient(circle at 50% 45%, rgba(255,255,255,.95) 0%, rgba(255,255,255,.5) 42%, rgba(255,255,255,0) 74%);
+    opacity:0;transform:scale(.7);
+    transition:opacity .6s ease,transform .8s cubic-bezier(.22,1,.36,1)}
+  .bd-card:hover{transform:translateY(-3px);
+    box-shadow:0 16px 40px rgba(61,107,117,.12),0 0 26px rgba(255,255,255,.85);
     border-color:rgba(110,151,160,.45)}
+  .bd-card:hover::before{opacity:1;transform:scale(1)}
   .bd-card .no{font-size:10px;letter-spacing:.3em;color:var(--ink-soft);margin-bottom:6px}
   .bd-card .pair{display:flex;align-items:baseline;flex-wrap:wrap;gap:4px 10px;
     font-size:clamp(15px,1.4vw,16.5px);font-weight:600;letter-spacing:.06em;line-height:1.6;word-break:keep-all}
@@ -342,14 +348,23 @@
     background:radial-gradient(circle, rgba(255,255,255,.78) 0%, rgba(255,255,255,.48) 55%, rgba(255,255,255,0) 100%);
     animation:bubblebob var(--dur,8s) ease-in-out var(--delay,0s) infinite;
     font-size:12px;letter-spacing:.03em;line-height:1.65;font-weight:600;padding:0 6px;
-    text-shadow:0 1px 8px rgba(255,255,255,.95)}
+    text-shadow:0 1px 8px rgba(255,255,255,.95);
+    transition:background .6s ease,box-shadow .6s ease}
   .bubble::before{content:"";position:absolute;inset:0;border-radius:50%;
     border:2px solid rgba(255,255,255,.7);filter:blur(2.5px)}
-  .bubble:hover{background:radial-gradient(circle, rgba(255,255,255,.92) 0%, rgba(255,255,255,.62) 55%, rgba(255,255,255,.05) 100%)}
+  /* 内側からぼわんと広がる光。transform は bubblebob と競合しないよう ::after 側だけで動かす */
+  .bubble::after{content:"";position:absolute;inset:-20%;border-radius:50%;pointer-events:none;z-index:-1;
+    background:radial-gradient(circle, rgba(255,255,255,.95) 0%, rgba(255,255,255,.55) 38%, rgba(255,255,255,0) 70%);
+    opacity:0;transform:scale(.5);
+    transition:opacity .6s ease,transform .8s cubic-bezier(.22,1,.36,1)}
+  .bubble:hover{background:radial-gradient(circle, rgba(255,255,255,.92) 0%, rgba(255,255,255,.62) 55%, rgba(255,255,255,.05) 100%);
+    box-shadow:0 0 28px 8px rgba(255,255,255,.6)}
+  .bubble:hover::after{opacity:1;transform:scale(1)}
   @keyframes bubblebob{0%,100%{margin-top:0}50%{margin-top:-12px}}
   .bubble.hello{animation:bubblehello 2.6s ease-in-out 1}
   @keyframes bubblehello{0%,100%{transform:translate(-50%,-50%) scale(1)}35%{transform:translate(-50%,-50%) scale(1.22)}}
-  @media (prefers-reduced-motion:reduce){.bubble{animation:none}}
+  @media (prefers-reduced-motion:reduce){.bubble{animation:none}
+    .bubble::after,.bubble:hover::after,.bd-card::before,.bd-card:hover::before{transform:none}}
   @media (max-width:640px){
     .bubble{font-size:11px}
   }
