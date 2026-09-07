@@ -5,15 +5,35 @@ SubstackのRSS(feed)から最新記事を読み、index.html の const WEEKLY = 
 標準ライブラリのみ。失敗したら index.html は触らず、終了コード1で止まる(前回の内容が残る)。
 使い方: python3 scripts/update_weekly.py [index.html]
 """
-import html, json, re, sys, urllib.request, xml.etree.ElementTree as ET
+import html, json, re, sys, time, urllib.error, urllib.request, xml.etree.ElementTree as ET
 
 FEED = "https://michiyospiritualcounsellor.substack.com/feed"
 INDEX = sys.argv[1] if len(sys.argv) > 1 else "index.html"
 
+HEADERS = {
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
+                  "(KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36",
+    "Accept": "application/rss+xml, application/xml;q=0.9, text/xml;q=0.8, */*;q=0.7",
+    "Accept-Language": "ja,en-US;q=0.9,en;q=0.8",
+}
+
 def fetch(url):
-    req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0 (resonancelink weekly updater)"})
-    with urllib.request.urlopen(req, timeout=30) as r:
-        return r.read()
+    # Substack(Cloudflare)がデータセンターIPを弾くことがあるので、間隔をあけて再試行する
+    last = ""
+    for i in range(4):
+        if i:
+            time.sleep(15 * i)
+        try:
+            req = urllib.request.Request(url, headers=HEADERS)
+            with urllib.request.urlopen(req, timeout=30) as r:
+                return r.read()
+        except urllib.error.HTTPError as e:
+            last = f"HTTP {e.code}"
+            if e.code not in (403, 429, 500, 502, 503, 504):
+                raise
+        except urllib.error.URLError as e:
+            last = str(e.reason)
+    raise SystemExit(f"feedの取得に失敗しました({last})")
 
 def strip_tags(s):
     s = re.sub(r"<br\s*/?>", "\n", s)
