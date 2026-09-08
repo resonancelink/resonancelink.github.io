@@ -8,6 +8,7 @@ resonancelink.com として GitHub Pages で公開するためのファイル一
 - `guidance/index.html` … みちよのガイダンス
 - `zukan/index.html` … 意識の図鑑(魂のブレイクダウン)のページ。resonancelink.com/zukan/
 - `zukan/data.js` … 意識の図鑑の正本(1配列)。項目を足すのはこのファイルだけ
+- `portal-nav.js` … 各アプリ(今日の１枚・魂診断の家・好き診断)と図鑑ページが読み込む共通導線(上の帯・「研究所のほかの部屋」・共通フッター)。部屋が増えたら中の ROOMS に1行足す
 - `water.js` / `water.jpg` … 図鑑ページが使う水面のスクリプトと写真(トップページは同じものを index.html の中に内蔵)
 - `CNAME` … 独自ドメイン(resonancelink.com)の設定ファイル。消さない
 - `.nojekyll` … GitHub Pagesにそのまま配信させる印
