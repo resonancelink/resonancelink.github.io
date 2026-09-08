@@ -396,23 +396,28 @@
     /* HERO: 文字の間に息をさせる(タイトル→一言→図鑑への一行→ことば→円、を段ごとに離す) */
     .hero h1{font-size:21px;line-height:1.9;letter-spacing:.18em;text-indent:.18em}
     .hero .sg-title{margin-bottom:18px}
-    .hero p.tagline{margin-top:26px;font-size:14.5px;letter-spacing:.2em;line-height:2}
-    .hero p.tagline2{margin-top:22px;font-size:13.5px;letter-spacing:.14em;line-height:2;text-align:center;padding:0 16px}
+    .hero p.tagline{margin-top:18px;font-size:14.5px;letter-spacing:.2em;line-height:1.9}
+    .hero p.tagline2{margin-top:4px;font-size:13.5px;letter-spacing:.14em;line-height:1.9;text-align:center;padding:0 16px}
     .hero p.tagline2 a{border-bottom:none}
-    .hero p.tagline2 .to{display:block;margin:8px 0 0;font-size:.92em;color:var(--ink-soft);
+    .hero p.tagline2 .to{display:block;margin:4px 0 0;font-size:.9em;color:var(--ink-soft);
       border-bottom:1px solid rgba(58,102,114,.35);padding-bottom:3px;width:max-content;margin-left:auto;margin-right:auto}
     /* スマホではHEROを「上から順に積む」配置にして、ことばと円が重ならないようにする */
     .hero{height:auto;min-height:100vh;display:flex;flex-direction:column}
-    .hero-inner{height:auto;padding-top:8vh}
-    .kotoba-area{flex:0 0 auto;padding:46px 28px 30px}
-    .kotoba-label{margin-bottom:22px}
-    .kotoba-text{font-size:17px;line-height:2.2}
+    /* 上=タイトル一式 / 中=みちよのことば(余った高さの真ん中に浮かぶ) / 下=円3つ横並び */
+    .hero-inner{height:auto;flex:1;padding-top:6vh}
+    .kotoba-area{flex:1;padding:40px 26px 30px;min-height:240px}
+    .kotoba-label{margin-bottom:24px;font-size:13px}
+    .kotoba-text{font-size:18.5px;line-height:2.15;letter-spacing:.1em}
     .kotoba-src{margin-top:20px;line-height:2}
     .kotoba-src .who-link{display:block;margin:8px auto 0;width:max-content}
-    .concepts{position:relative;left:auto;bottom:auto;transform:none;margin:10px auto 34px;padding:0 12px;gap:18px 22px}
-    .hint{position:relative;bottom:auto;padding-bottom:16px;font-size:12px;color:rgba(58,102,114,.85)}
+    .concepts{position:relative;left:auto;bottom:auto;transform:none;margin:0 auto 18px;padding:0 6px;
+      flex-wrap:nowrap;gap:10px;width:100%;max-width:100%;justify-content:center}
+    .concepts .circle{--d:min(112px, calc((100vw - 44px) / 3))}
+    .concepts .circle h2{font-size:12px;letter-spacing:.06em;padding:0 6px}
+    .concepts .circle .mark{margin-bottom:4px}
+    .hint{position:relative;bottom:auto;padding-bottom:12px;font-size:12px;color:rgba(58,102,114,.85)}
     .kotoba-label,.kicker{font-size:12.5px}
-    .kotoba-text{font-size:17px}
+    .kotoba-text{font-size:18.5px}
     .kotoba-src{font-size:13px;letter-spacing:.12em}
     .concepts .circle h2{font-size:13px}
     .circle .soon-label{font-size:10.5px;white-space:nowrap;letter-spacing:.12em;padding:2px 7px}
