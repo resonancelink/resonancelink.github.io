@@ -87,6 +87,19 @@
   .pn-foot .pn-name{letter-spacing:.28em;margin-bottom:4px}
   .pn-foot .pn-name a{border:none;margin:0}
   .pn-foot .pn-unei{font-size:10.5px;opacity:.85;margin-top:4px}
+  /* スマホでは少し大きく・濃く */
+  @media (max-width:640px){
+    .pn-home{font-size:12.5px;opacity:1}
+    .pn-menu > button{font-size:13px;opacity:1}
+    .pn-menu li a{font-size:14px}
+    .pn-menu li a small{font-size:12px;opacity:.75}
+    .pn-rooms .pn-k{font-size:12px;opacity:.9}
+    .pn-rooms a b{font-size:14.5px}
+    .pn-rooms a span{font-size:12.5px;opacity:.85}
+    .pn-rooms .pn-more{font-size:13px;opacity:.9}
+    .pn-foot{font-size:13px;opacity:.95}
+    .pn-foot .pn-unei{font-size:12px}
+  }
   `;
 
   function el(tag, cls, html){ const e = document.createElement(tag); if (cls) e.className = cls; if (html != null) e.innerHTML = html; return e; }

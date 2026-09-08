@@ -385,6 +385,47 @@
     .bubble{font-size:11px}
   }
 
+
+  /* ---------- スマホの読みやすさ(文字を少し大きく・濃く)。PCの見え方は変えない ---------- */
+  @media (max-width:640px){
+    :root{--ink:#2f5762;--ink-soft:#3a6672}
+    .hero p.tagline{font-size:14.5px;letter-spacing:.18em}
+    .hero p.tagline2{font-size:14px;letter-spacing:.12em;text-align:center;padding:0 16px}
+    .hero p.tagline2 .to{display:block;margin:6px 0 0;font-size:.9em}
+    /* スマホではHEROを「上から順に積む」配置にして、ことばと円が重ならないようにする */
+    .hero{height:auto;min-height:100vh;display:flex;flex-direction:column}
+    .hero-inner{height:auto;padding-top:9vh}
+    .kotoba-area{flex:0 0 auto;padding:34px 24px 26px}
+    .concepts{position:relative;left:auto;bottom:auto;transform:none;margin:6px auto 30px;padding:0 12px}
+    .hint{position:relative;bottom:auto;padding-bottom:16px}
+    .kotoba-label,.kicker{font-size:12.5px}
+    .kotoba-text{font-size:16.5px}
+    .kotoba-src{font-size:13px;letter-spacing:.12em}
+    .hint{font-size:12px;color:rgba(58,102,114,.85)}
+    .concepts .circle h2{font-size:13px}
+    .circle .soon-label{font-size:11px}
+    .lede{font-size:15.5px}
+    .weekly .wl,.weekly .wm{font-size:13.5px}
+    .weekly .wx{font-size:15.5px}
+    .notice .detail{font-size:15.5px}
+    .notice .mail-line{font-size:13.5px}
+    .intro .ibody{font-size:15.5px}
+    .intro .profile,.intro .first{font-size:14px}
+    .intro figcaption .ttl,.intro figcaption .sm{font-size:13px}
+    .intro .stance{font-size:12.5px;color:var(--ink-soft)}
+    .app .sub,.app .meta,.app .go{font-size:13.5px}
+    .app p.desc{font-size:15px}
+    .bd-cta .bd-guide,.bd-cta .bd-note{font-size:14px}
+    .bubble{font-size:12px}
+    .deepen .sub-link{font-size:14px}
+    .install ol{font-size:15.5px}
+    .install .inapp{font-size:14px}
+    .install .note,.install .fine{font-size:13.5px}
+    .install .dname{font-size:15.5px}
+    footer{font-size:13.5px}
+    footer .links{font-size:13px}
+    footer .unei{font-size:12.5px}
+  }
 </style>
 </head>
 <body>

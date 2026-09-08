@@ -176,6 +176,26 @@
     .bubble{animation:none}
     .bubble::after,.bubble:hover::after,.bd-card::before,.bd-card:hover::before{transform:none}
   }
+
+  /* ---------- スマホの読みやすさ(文字を少し大きく・濃く) ---------- */
+  @media (max-width:640px){
+    :root{--ink:#2f5762;--ink-soft:#3a6672}
+    .kicker{font-size:12.5px}
+    .lede{font-size:15.5px}
+    .bd-guide{font-size:14px}
+    .bubble{font-size:12px}
+    .bd-card .no{font-size:11px}
+    .bd-card .theme{font-size:12.5px}
+    .bd-card .open{font-size:12px}
+    .bd-note{font-size:14px}
+    .deepen .sub-link{font-size:14px}
+    .backhome{font-size:14px}
+    #bdModal .card p{font-size:15.5px}
+    #bdModal .src,#bdModal .nav{font-size:13.5px}
+    footer{font-size:13.5px}
+    footer .links{font-size:13px}
+    footer .unei{font-size:12.5px}
+  }
 </style>
 </head>
 <body>
