@@ -1,0 +1,15 @@
+{
+  "name": "スピリチュアル・メタサイエンス研究所",
+  "short_name": "研究所",
+  "description": "見えない世界を、やさしく紐解く場所。スピリチュアルを、自分のために使う。",
+  "lang": "ja",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#f4f9fa",
+  "theme_color": "#f4f9fa",
+  "icons": [
+    { "src": "/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
+  ]
+}
