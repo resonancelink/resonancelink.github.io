@@ -7,6 +7,10 @@
 <meta name="theme-color" content="#f4f9fa">
 <!-- 読み込み中の「最初の一瞬」も明るい地にする(スマホのダークモードだと、CSSが届く前は黒い画面が出るため。本体のCSSより先に置く) -->
 <style>html{background:#f4f9fa;color-scheme:light}</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<!-- 本文の書体。オラクルアプリと同じ Noto Serif JP を先に使う(iPhone付属の明朝は細くて薄く見えるため) -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;500;600&display=swap">
 <title>スピリチュアル・メタサイエンス研究所 — 見えない世界を、やさしく紐解く場所</title>
 <meta name="description" content="見えない世界を、やさしく紐解く場所。スピリチュアルを、自分のために使う。スピリチュアルカウンセラー・みちよの無料アプリ(今日の１枚・魂診断の家・好き診断)と「意識の図鑑」。">
 <!-- OGP: og:image は公開先の絶対URLに置き換える(同梱の og.jpg を同じ場所に置く) -->
@@ -33,7 +37,7 @@
   }
   *{margin:0;padding:0;box-sizing:border-box}
   html{scroll-behavior:smooth;scroll-padding-top:56px}
-  body{font-family:"Hiragino Mincho ProN","Yu Mincho","Noto Serif JP",serif;color:var(--ink);background:var(--bg)}
+  body{font-family:"Noto Serif JP","Hiragino Mincho ProN","Yu Mincho",serif;color:var(--ink);background:var(--bg)}
 
   /* ---------- 神聖幾何学のマーク ---------- */
   .sg{display:inline-block;width:1em;height:1em;vertical-align:-.12em;color:currentColor}
@@ -397,11 +401,10 @@
     .hero-inner{height:auto;padding-top:9vh}
     .kotoba-area{flex:0 0 auto;padding:34px 24px 26px}
     .concepts{position:relative;left:auto;bottom:auto;transform:none;margin:6px auto 30px;padding:0 12px}
-    .hint{position:relative;bottom:auto;padding-bottom:16px}
+    .hint{position:relative;bottom:auto;padding-bottom:16px;font-size:12px;color:rgba(58,102,114,.85)}
     .kotoba-label,.kicker{font-size:12.5px}
     .kotoba-text{font-size:16.5px}
     .kotoba-src{font-size:13px;letter-spacing:.12em}
-    .hint{font-size:12px;color:rgba(58,102,114,.85)}
     .concepts .circle h2{font-size:13px}
     .circle .soon-label{font-size:11px}
     .lede{font-size:15.5px}
