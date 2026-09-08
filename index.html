@@ -82,6 +82,19 @@
   .hero p.tagline2 .to{display:inline-block;margin-left:.6em;font-size:.82em;letter-spacing:.14em;color:var(--ink-soft)}
   .hero p.tagline2 .to::after{content:"↓";display:inline-block;margin-left:.3em;animation:nudge 2.6s ease-in-out infinite}
   @keyframes nudge{0%,100%{transform:translateY(0)}50%{transform:translateY(3px)}}
+  /* ---------- HERO上部3行のフェードイン(水面から静かに浮かび上がる) ---------- */
+  @keyframes heroRise{
+    from{opacity:0;transform:translateY(18px);filter:blur(8px)}
+    to  {opacity:1;transform:translateY(0);filter:blur(0)}
+  }
+  .hero h1,.hero p.tagline,.hero p.tagline2{
+    opacity:0;animation:heroRise 2.6s cubic-bezier(.22,1,.36,1) both}
+  .hero h1{animation-delay:.35s}
+  .hero p.tagline{animation-delay:1.15s}
+  .hero p.tagline2{animation-delay:1.95s}
+  @media (prefers-reduced-motion:reduce){
+    .hero h1,.hero p.tagline,.hero p.tagline2{animation:none;opacity:1}
+  }
   .hint{position:absolute;bottom:14px;left:0;right:0;text-align:center;font-size:11px;
     letter-spacing:.2em;color:rgba(90,130,140,.55);z-index:2;pointer-events:none}
 
