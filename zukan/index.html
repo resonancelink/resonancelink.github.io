@@ -7,10 +7,6 @@
 <meta name="theme-color" content="#f4f9fa">
 <!-- 読み込み中の「最初の一瞬」も明るい地にする(スマホのダークモードだと、CSSが届く前は黒い画面が出るため。本体のCSSより先に置く) -->
 <style>html{background:#f4f9fa;color-scheme:light}</style>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<!-- 本文の書体。オラクルアプリと同じ Noto Serif JP を先に使う(iPhone付属の明朝は細くて薄く見えるため) -->
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;500;600&display=swap">
 <title>意識の図鑑（魂のブレイクダウン） — スピリチュアル・メタサイエンス研究所</title>
 <meta name="description" content="似ているようで、まったく違う言葉を、魂の目線で見分ける「ことばの辞典」。「ワガママ」と「ありのまま」、「愛」と「執着」——スピリチュアルカウンセラー・みちよの意識の図鑑。">
 <meta property="og:type" content="website">
@@ -36,7 +32,7 @@
   }
   *{margin:0;padding:0;box-sizing:border-box}
   html{scroll-behavior:smooth;scroll-padding-top:70px}
-  body{font-family:"Noto Serif JP","Hiragino Mincho ProN","Yu Mincho",serif;color:var(--ink);background:var(--bg)}
+  body{font-family:"Hiragino Mincho ProN","Yu Mincho","Noto Serif JP",serif;color:var(--ink);background:var(--bg)}
 
   /* ---------- 神聖幾何学のマーク ---------- */
   .sg{display:inline-block;width:1em;height:1em;vertical-align:-.12em;color:currentColor}
@@ -183,7 +179,8 @@
 
   /* ---------- スマホの読みやすさ(文字を少し大きく・濃く) ---------- */
   @media (max-width:640px){
-    :root{--ink:#2f5762;--ink-soft:#3a6672}
+    :root{--ink:#22454f;--ink-soft:#2f5c67}
+    h1,h2,h3,strong,b,.kicker,.bubble,.bd-card .pair,#bdModal h3,.deepen h2{font-weight:700}
     .kicker{font-size:12.5px}
     .lede{font-size:15.5px}
     .bd-guide{font-size:14px}
