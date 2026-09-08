@@ -531,7 +531,10 @@ function createWater(canvas, opts){
   const SIM_W = 420; let SIM_H = 236;
   let cur, prev, simCanvas, simCtx, srcData, outData, img = new Image();
 
+  let ready = false;   /* 写真が読み込めてから true。それまでは何も描かない(黒い水面が出ないように) */
   function fit(){
+    /* iPhoneは読み込み直後に resize が飛んでくる。写真が届く前に呼ばれると真っ黒な水面を作ってしまうので、その時は何もしない */
+    if (!img.complete || !img.naturalWidth) return;
     canvas.width  = canvas.clientWidth  = canvas.parentElement.clientWidth;
     canvas.height = canvas.clientHeight = canvas.parentElement.clientHeight;
     SIM_H = Math.max(90, Math.round(SIM_W * canvas.height / canvas.width));
@@ -642,7 +645,7 @@ function createWater(canvas, opts){
   if ('IntersectionObserver' in window){
     new IntersectionObserver(es => {
       visible = es[0].isIntersecting;
-      if (visible && !running && srcData) requestAnimationFrame(loop);
+      if (visible && !running && ready) requestAnimationFrame(loop);
     }, {threshold:0}).observe(canvas.parentElement);
   }
   let ambientTimer = 120;
@@ -669,7 +672,7 @@ function createWater(canvas, opts){
     flakeTimer = 60 + Math.random() * 80;
     setTimeout(() => drop(0.5 + (Math.random() - .5) * 0.3, 0.68, 260, 2), 350);
   }
-  img.onload = () => { fit(); warmStart(); loop(); };
+  img.onload = () => { fit(); ready = true; warmStart(); loop(); };
   img.src = HERO_IMG;
   addEventListener('resize', fit);
 }
