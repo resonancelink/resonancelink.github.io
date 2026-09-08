@@ -224,6 +224,12 @@
     background:linear-gradient(rgba(244,249,250,.9), rgba(244,249,250,.28) 16%, rgba(244,249,250,.28) 84%, rgba(244,249,250,.9))}
   .intro .inner2,.intro .below{position:relative;z-index:1;pointer-events:none}
   .intro .inner2 a,.intro .below a{pointer-events:auto}
+  /* 文章の後ろに、HEROの「みちよのことば」と同じ、雲のような白い霧を敷く(水面と文字が同化しないように) */
+  .intro .txt,.intro .below{position:relative;isolation:isolate}
+  .intro .txt::before,.intro .below::before{content:"";position:absolute;inset:-48px -70px;z-index:-1;border-radius:50%;pointer-events:none;
+    background:radial-gradient(ellipse closest-side, rgba(255,255,255,.92) 0%, rgba(255,255,255,.72) 50%, rgba(255,255,255,.3) 80%, rgba(255,255,255,0) 100%);
+    filter:blur(16px)}
+  @media (max-width:760px){.intro .txt::before,.intro .below::before{inset:-34px -40px}}
   .intro .inner2{max-width:960px;margin:0 auto;display:flex;gap:clamp(30px,5vw,64px);
     align-items:center;justify-content:center}
   .intro .photo{width:50%;max-width:500px;flex-shrink:0;margin:0;text-align:center}
