@@ -30,6 +30,7 @@ function createWater(canvas, opts){
   }
 
   function drop(nx, ny, strength = 260, radius = 2){
+    if (!ready) return;   /* 写真が届く前に触られても何もしない */
     const cx = Math.round(nx * SIM_W), cy = Math.round(ny * SIM_H);
     for (let y = cy - radius; y <= cy + radius; y++)
       for (let x = cx - radius; x <= cx + radius; x++)
