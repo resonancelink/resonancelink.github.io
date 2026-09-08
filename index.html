@@ -303,8 +303,12 @@
   .app .sub{font-size:12px;letter-spacing:.14em;color:var(--ink-soft);margin-bottom:12px}
   .app p.desc{font-size:14.5px;line-height:2;letter-spacing:.04em;color:var(--ink);text-align:left}
   .app .meta{margin-top:12px;font-size:12px;letter-spacing:.16em;color:var(--ink-soft)}
-  .app .go{display:inline-block;margin-top:14px;font-size:12.5px;letter-spacing:.2em;color:var(--ink-soft);
-    border:1px solid rgba(110,151,160,.35);border-radius:999px;padding:6px 18px}
+  .app .go{display:inline-block;margin-top:16px;font-size:13.5px;font-weight:600;letter-spacing:.2em;color:#4a3d1c;
+    background:linear-gradient(135deg,#f6ead0 0%,#e9d49e 50%,#f3e3bb 100%);
+    border:1px solid rgba(196,168,96,.55);border-radius:999px;padding:9px 24px;
+    box-shadow:0 4px 14px rgba(196,168,96,.28), inset 0 1px 0 rgba(255,255,255,.7);
+    transition:transform .3s ease, box-shadow .3s ease}
+  .app:hover .go{transform:translateY(-2px);box-shadow:0 8px 22px rgba(196,168,96,.4), inset 0 1px 0 rgba(255,255,255,.7)}
 
   /* ---------- スマホのホーム画面に置く ---------- */
   .install{max-width:760px;margin:70px auto 0;padding:0 24px;text-align:center}
@@ -434,7 +438,8 @@
     .intro .profile,.intro .first{font-size:14px}
     .intro figcaption .ttl,.intro figcaption .sm{font-size:13px}
     .intro .stance{font-size:12.5px;color:var(--ink-soft)}
-    .app .sub,.app .meta,.app .go{font-size:13.5px}
+    .app .sub,.app .meta{font-size:13.5px}
+    .app .go{font-size:15px;padding:11px 30px;margin-top:18px}
     .app p.desc{font-size:15px}
     .bd-cta .bd-guide,.bd-cta .bd-note{font-size:14px}
     .bubble{font-size:12px}
