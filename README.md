@@ -6,6 +6,9 @@ resonancelink.com として GitHub Pages で公開するためのファイル一
 - `index.html` … ポータル本体(1ファイル完結・画像内蔵)
 - `og.jpg` … シェア時の画像(OGP)
 - `guidance/index.html` … みちよのガイダンス
+- `zukan/index.html` … 意識の図鑑(魂のブレイクダウン)のページ。resonancelink.com/zukan/
+- `zukan/data.js` … 意識の図鑑の正本(1配列)。項目を足すのはこのファイルだけ
+- `water.js` / `water.jpg` … 図鑑ページが使う水面のスクリプトと写真(トップページは同じものを index.html の中に内蔵)
 - `CNAME` … 独自ドメイン(resonancelink.com)の設定ファイル。消さない
 - `.nojekyll` … GitHub Pagesにそのまま配信させる印
 - `scripts/update_weekly.py` … 「今週のメルマガ」欄を最新記事に書き換える手動スクリプト
@@ -31,4 +34,7 @@ resonancelink.com として GitHub Pages で公開するためのファイル一
 
 ## 手で直すとき
 `index.html` の `const WEEKLY = {...};` の4行(ep/title/url/excerpt)を書き換えるだけ。
-「意識の図鑑」の追加は `const BREAKDOWN = [...]` に1項目足す。
+「意識の図鑑」に項目を足すときは `zukan/data.js` の `const BREAKDOWN = [...]` の末尾に1項目足す(index.html は触らない)。
+図鑑ページには全項目が泡と一覧カードで出て、トップページには新しい順に5個だけ泡が出る。
+泡の位置(bubble の x,y)を書かなければ、図鑑ページでは空いている場所に自動で置かれる。
+`zukan/index.html#no-05` のように番号付きで開くと、その項目の解説がひらいた状態になる(シェア用)。

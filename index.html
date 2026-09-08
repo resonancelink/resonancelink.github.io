@@ -259,47 +259,16 @@
   .bd-head h3 .sub{font-size:.62em;letter-spacing:.14em;color:var(--ink-soft);white-space:nowrap}
   .bd-head .lede{margin-bottom:0}
   .bd-head .lede strong{font-weight:600;color:var(--ink)}
-  .bd-grid{max-width:900px;margin:0 auto;padding:6px 24px 0;
-    display:flex;flex-wrap:wrap;justify-content:center;gap:12px}
-  .bd-grid .bd-card{width:calc((100% - 24px)/3)}
-  .bd-card{position:relative;text-align:left;background:rgba(255,255,255,.8);
-    border:1px solid rgba(110,151,160,.2);border-radius:18px;padding:14px 16px 12px;
-    cursor:pointer;font-family:inherit;color:var(--ink);width:100%;
-    display:flex;flex-direction:column;align-items:flex-start;justify-content:flex-start;
-    box-shadow:0 8px 28px rgba(61,107,117,.06);isolation:isolate;
-    transition:transform .5s cubic-bezier(.22,1,.36,1),box-shadow .5s,border-color .5s}
-  /* カードは白いので、背後からローズがほんのり滲む程度に。中心は透明にして文字を邪魔しない */
-  .bd-card::before{content:"";position:absolute;inset:-9%;border-radius:inherit;pointer-events:none;z-index:-1;
-    background:radial-gradient(rgba(201,154,166,0) 54%, rgba(201,154,166,.22) 76%,
-                               rgba(201,154,166,.07) 90%, rgba(201,154,166,0) 100%);
-    opacity:0;transform:scale(.92);
-    transition:opacity .8s ease,transform 1s cubic-bezier(.22,1,.36,1)}
-  .bd-card:hover{transform:translateY(-3px);
-    box-shadow:0 16px 40px rgba(61,107,117,.12),0 0 20px 1px rgba(201,154,166,.2);
-    border-color:rgba(201,154,166,.5)}
-  .bd-card:hover::before{opacity:1;transform:scale(1)}
-  .bd-card .no{font-size:10px;letter-spacing:.3em;color:var(--ink-soft);margin-bottom:6px}
-  .bd-card .pair{display:flex;align-items:baseline;flex-wrap:wrap;gap:4px 10px;
-    font-size:clamp(15px,1.4vw,16.5px);font-weight:600;letter-spacing:.06em;line-height:1.6;word-break:keep-all}
-  .bd-card .pair .vs{font-size:.7em;font-weight:400;color:#C99AA6;letter-spacing:.1em}
-  .bd-card .theme{font-size:11.5px;letter-spacing:.16em;color:var(--ink-soft);margin-top:3px}
-  .bd-card .gist{display:none}
-  .bd-card .open{margin-top:8px;font-size:11px;letter-spacing:.2em;color:var(--ink-soft)}
-  .bd-card .open::after{content:"→";margin-left:.4em;display:inline-block;transition:transform .4s}
-  .bd-card:hover .open::after{transform:translateX(4px)}
-  .bd-guide{max-width:900px;margin:0 auto;padding:36px 24px 18px;text-align:center;
-    font-size:13.5px;letter-spacing:.14em;color:var(--ink-soft)}
-  @media (max-width:640px){.bd-grid{gap:10px}.bd-grid .bd-card{width:calc((100% - 10px)/2)}
-    .bd-card{padding:12px 12px 10px}.bd-card .pair{font-size:14px}
-    .bd-head .lede br{display:none}}
+  .bd-cta{max-width:760px;margin:0 auto;padding:36px 24px 0;text-align:center}
+  .bd-cta .bd-guide{padding:0 0 22px;font-size:13.5px;letter-spacing:.14em;color:var(--ink-soft)}
+  .bd-cta .bd-note{margin-top:22px;font-size:13px;letter-spacing:.1em;color:var(--ink-soft)}
+  @media (max-width:640px){.bd-head .lede br{display:none}}
   .bd-sea{position:relative;height:min(64vh,540px);overflow:hidden;
     background-size:cover;background-position:center}
   .bd-sea::after{content:"";position:absolute;inset:0;pointer-events:none;
     background:linear-gradient(rgba(244,249,250,.95), rgba(244,249,250,0) 14%,
                                rgba(244,249,250,0) 86%, rgba(244,249,250,.95))}
   .bd-sea .bubbles{position:absolute;inset:0;z-index:2}
-  .bd-wrap{max-width:760px;margin:0 auto;padding:44px 24px 0;text-align:center}
-  .bd-wrap .bd-list{text-align:left}
 
 
   /* ---------- 体験室(アプリのカード) ---------- */
@@ -359,7 +328,7 @@
   .bubbles{position:absolute;inset:0;z-index:2;pointer-events:none}
   .bubble{position:absolute;transform:translate(-50%,-50%);border-radius:50%;
     display:flex;align-items:center;justify-content:center;text-align:center;
-    cursor:pointer;pointer-events:auto;color:var(--ink);
+    cursor:pointer;pointer-events:auto;color:var(--ink);text-decoration:none;
     background:radial-gradient(circle, rgba(255,255,255,.78) 0%, rgba(255,255,255,.48) 55%, rgba(255,255,255,0) 100%);
     animation:bubblebob var(--dur,8s) ease-in-out var(--delay,0s) infinite;
     font-size:12px;letter-spacing:.03em;line-height:1.65;font-weight:600;padding:0 6px;
@@ -379,38 +348,10 @@
   .bubble.hello{animation:bubblehello 2.6s ease-in-out 1}
   @keyframes bubblehello{0%,100%{transform:translate(-50%,-50%) scale(1)}35%{transform:translate(-50%,-50%) scale(1.22)}}
   @media (prefers-reduced-motion:reduce){.bubble{animation:none}
-    .bubble::after,.bubble:hover::after,.bd-card::before,.bd-card:hover::before{transform:none}}
+    .bubble::after,.bubble:hover::after{transform:none}}
   @media (max-width:640px){
     .bubble{font-size:11px}
   }
-
-  /* ---------- ブレイクダウン(一覧) ---------- */
-  .bd-list{text-align:left;border-top:1px solid rgba(110,151,160,.22)}
-  .bd-list details{border-bottom:1px solid rgba(110,151,160,.22)}
-  .bd-list summary{list-style:none;cursor:pointer;padding:20px 34px 20px 6px;position:relative;
-    font-size:clamp(14px,1.6vw,16px);letter-spacing:.1em;line-height:1.8;font-weight:600}
-  .bd-list summary::-webkit-details-marker{display:none}
-  .bd-list summary::after{content:"＋";position:absolute;right:10px;top:50%;transform:translateY(-50%);
-    font-size:14px;color:var(--ink-soft)}
-  .bd-list details[open] summary::after{content:"−"}
-  .bd-list .bd-body{padding:2px 6px 26px}
-  .bd-list .bd-body p{font-size:13.5px;line-height:2.3;letter-spacing:.05em;color:var(--ink);margin-bottom:12px}
-  .bd-list .bd-src{font-size:10.5px;letter-spacing:.14em;color:var(--ink-soft)}
-  .bd-note{margin-top:26px;font-size:13px;letter-spacing:.1em;color:var(--ink-soft)}
-
-  /* ---------- ことばのカード(モーダル) ---------- */
-  #bdModal{position:fixed;inset:0;z-index:50;display:none;align-items:center;justify-content:center;padding:20px}
-  #bdModal.open{display:flex}
-  #bdModal .backdrop{position:absolute;inset:0;background:rgba(232,243,245,.78);backdrop-filter:blur(6px)}
-  #bdModal .card{position:relative;background:rgba(255,255,255,.97);border-radius:28px;
-    max-width:580px;width:100%;max-height:78vh;overflow:auto;padding:46px 34px 36px;
-    box-shadow:0 20px 60px rgba(61,107,117,.18);text-align:left}
-  #bdModal h4{font-size:18px;letter-spacing:.1em;margin-bottom:20px;color:var(--ink);font-weight:600;text-align:center;line-height:1.9}
-  #bdModal .card p{font-size:15px;line-height:2.2;letter-spacing:.05em;color:var(--ink);margin-bottom:12px}
-  #bdModal .src{font-size:12px;color:var(--ink-soft);letter-spacing:.14em}
-  #bdModal .more{display:block;text-align:center;margin-top:22px;font-size:13px;letter-spacing:.1em;color:var(--ink-soft)}
-  #bdModal .close{position:absolute;top:12px;right:18px;font-size:24px;color:var(--ink-soft);
-    cursor:pointer;background:none;border:none;font-family:inherit;line-height:1}
 
 </style>
 </head>
@@ -483,7 +424,7 @@
   </div>
 
   <nav class="concepts" id="concepts">
-    <a class="circle" href="#breakdown">
+    <a class="circle" href="zukan/index.html">
       <div class="mark"><svg class="sg" aria-hidden="true"><use href="#sg-cube"/></svg></div>
       <h2>意識の図鑑</h2>
       <p>似ているようで、<br>まったく違う言葉を、<br>魂の目線で見分ける。</p>
@@ -789,10 +730,10 @@ const WEEKLY = {
   <div class="bd-sea" id="bdSea">
     <div class="bubbles" id="bubbles"></div>
   </div>
-  <p class="bd-guide">泡かカードに触れると、解説がひらきます</p>
-  <div class="bd-grid" id="bdGrid"></div>
-  <div class="bd-wrap">
-    <p class="bd-note">少しずつ、増えていきます。</p>
+  <div class="bd-cta">
+    <p class="bd-guide">泡に触れると、そのことばの解説がひらきます</p>
+    <a class="pillbtn" href="zukan/index.html">図鑑をひらく</a>
+    <p class="bd-note">すべてのことばは、図鑑のページに。少しずつ、増えていきます。</p>
   </div>
 </section>
 
@@ -823,129 +764,32 @@ const WEEKLY = {
   © みちよ
 </footer>
 
-<div id="bdModal" aria-hidden="true">
-  <div class="backdrop" id="bdBackdrop"></div>
-  <div class="card" role="dialog" aria-modal="true">
-    <button class="close" id="bdClose" aria-label="とじる">×</button>
-    <h4 id="bdTitle"></h4>
-    <div id="bdBody"></div>
-    <a class="more" href="#breakdown" id="bdMore">ほかのことばも見る</a>
-  </div>
-</div>
 
+<!-- 意識の図鑑の正本は zukan/data.js(1配列)。ここでは新しい順に数個だけ泡にして、図鑑ページ(zukan/)へ案内する -->
+<script src="zukan/data.js"></script>
 <script>
-
-/* 意識の図鑑の正本(1配列)。1項目= q:見出し / card:一覧カードの表示(pair=2語の対比 or word+theme) /
-   bubble:水面の泡(label=2行・x,y=%・d=直径px) / a:本文。追加はここに1項目足すだけ */
-const BREAKDOWN = [
- {q:"「ワガママ」と「ありのまま」の違い",
-  card:{pair:["ワガママ","ありのまま"], theme:"違い"},
-  bubble:{label:["ワガママと","ありのまま"], x:10, y:26, d:106},
-  a:["我がまま＝「我」の「まま」でいること。つまり、ありのままの「あなた」でいることなのです。「こうしたい」「これが好き」「これは嫌だ」——そういう感覚を持つことは、あなたが「あなた」である証。自分の気持ちを大切にすることは、わがままではなく〈あなたとして生きること〉なのですね。",
-     "ちなみに「開き直り」との違いは、幸せそうかどうか。本当の意味でありのままで生きている人は、朗らかで、周りにネガティブな印象を与えないものですよ。"]},
- {q:"本当の「ポジティブ」と「ネガティブ」",
-  card:{pair:["ポジティブ","ネガティブ"], theme:"本当の意味"},
-  bubble:{label:["ポジティブと","ネガティブ"], x:47, y:22, d:102},
-  a:["感情が「クレヨン」だとしたら、明るい色だけでは絵が成り立たないのと同じで、暗い色も必要です。ネガティブは二極の、単なる「片方」。むしろ創造性の高い人ほど、ネガティブな思考を持っていたりします。",
-     "逆説的ですが、ネガティブを受け入れたときに、本当の「ポジティブ」になります。本当のネガティブは「ネガティブを嫌う意識」のほうだと知ってくださいね。"]},
- {q:"「心の声」と「アタマの声」の聞き分け方",
-  card:{pair:["心の声","アタマの声"], theme:"聞き分け方"},
-  bubble:{label:["心の声と","アタマの声"], x:84, y:26, d:100},
-  a:["アタマで言っているときは、たいがい「〜べき」「〜したほうがいい」。ハート(心)で言っているときは「〜したい」「〜したくない」となります。",
-     "ときにアタマも「〜したい」と言うことがありますが、そのときは後ろに〈恐れ〉がくっついているのが特徴。心の声は、子どものように、ただ素直な感情で話しているのです。"]},
- {q:"「頑張らない」の本当の意味",
-  card:{word:"頑張らない", theme:"本当の意味"},
-  bubble:{label:["頑張らない","の本当の意味"], x:28, y:48, d:98},
-  a:["「だらけていい・怠けていい・何もしない」ということではありません。「我慢していることをやめる」こと。我慢にもエネルギーが使われているのなら、そのエネルギーを、好きなこと・本当にやりたいことのほうへシフトして使っていく——それが「頑張らない」です。",
-     "まずは、自分のツラさという「感情」に敏感になることから始めてくださいね。"]},
- {q:"本当のスピリチュアルには「依存」がない",
-  card:{pair:["スピリチュアル","依存"], theme:"本当のスピリチュアルには依存がない"},
-  bubble:{label:["スピリチュアル","と依存"], x:66, y:50, d:102},
-  a:["スピリチュアルは、「何か見えないもの」に頼ったり、すがることではありません。自分が持っている「力」に気づいて、自分で道を切り開いていけることに気づくためのもの。すべての答えは「自分の中」にあります。",
-     "依存は、自分の生きる力を信じられなくなったときに起こるもの。あなたには「自分で自分を生きる力」があることを、覚えておいてくださいね。"]},
- {q:"「自分を愛する」の本当の意味",
-  card:{word:"自分を愛する", theme:"本当の意味"},
-  bubble:{label:["自分を愛する","とは"], x:91, y:60, d:98},
-  a:["自分を甘やかすことでも、自分勝手を許すことでもありません。「〇〇できたら愛せる」という条件ではなく、〈無条件〉に自分を受け入れられている状態のこと。すごく簡単に表すなら、「自分を追い込んでいない状態」です。",
-     "この世界で、あなたを無条件で受け入れられるのは、あなたしかいないのですよ。"]},
- {q:"「宿命」と「運命」の違い",
-  card:{pair:["宿命","運命"], theme:"違い"},
-  bubble:{label:["宿命と","運命"], x:9, y:62, d:92},
-  a:["宿命は変えられませんが、運命は変えられます。宿命は、生まれた時代・国・場所といった、木でいえば「根っこ」=土台の部分。その土台で、どんな木に育つかを決めるのが意思であり、運命です。",
-     "自分の「運」を決めているのは、自分の〈意識〉。意識が自分にとって健やかであれば、人生はいい方向に動いていきますよ。"]},
- {q:"「いい気分でいる」の本当の意味",
-  card:{word:"いい気分でいる", theme:"本当の意味"},
-  bubble:{label:["「いい気分」","とは"], x:45, y:74, d:92},
-  a:["「ゴキゲン」や「ハイテンション」になることではありません。「今ここの気分より、少しでもよい方向に感じられる状態」のこと。いきなり元気いっぱいにならなくていいのです。",
-     "カラ元気は、エネルギーで嘘をつくことになるので、本当の「いい気分」ではありません。今の自分を、少しでも楽にさせてあげようとする〈自分への優しさ〉だと思ってくださいね。"]},
- {q:"本当の自己肯定は「完全無条件」",
-  card:{word:"自己肯定", theme:"本当の自己肯定は完全無条件"},
-  bubble:{label:["本当の","自己肯定"], x:76, y:78, d:94},
-  a:["「良いことをした」「結果を残せた」から肯定できる——それは自己肯定ではありません。それができなかったとき、完全自己否定にまっしぐらですから。",
-     "本当の自己肯定感とは、なにがあっても「自分でいい」と受容できること。頑張って生きている自分を、そのまま「それでいいよ」と見てあげることなのです。"]},
- {q:"「愛」と「執着」の違い",
-  card:{pair:["愛","執着"], theme:"違い"},
-  bubble:{label:["愛と","執着"], x:20, y:80, d:90},
-  a:["本当の愛情とは、「見守る」こと。心配してハラハラ・オロオロするのは、波動の世界では「この子は自分で生きる力がない」と言っているのと変わらないのですね。自分も信じて、大切な人も信じる——それが「見守る」ということ。",
-     "何かやってあげられないと「不安」になるのは、自分を信じていないことにもつながります。「力がない」と見ているから心配する——それは「愛情」ではないのですね。"]},
- {q:"「憧れ」と「崇拝」は似て非なるもの",
-  card:{pair:["憧れ","崇拝"], theme:"似て非なるもの"},
-  bubble:{label:["憧れと","崇拝"], x:65, y:24, d:96},
-  a:["「この人スゴイ！」と憧れる人は、きっと〈あなたが自分の中に欲しいエッセンス〉を持っている人。でも「自分の中にそんなものはない、あの人が特別なんだ」と、その人を崇拝してしまった瞬間、自分から力を奪ってしまいます。「自分には力がありません」（＝だからあなたからもらいたいです）という状態になっているのですね。",
-     "憧れも崇拝も、元は同じエネルギーに反応しているサイン。自分も同じものを持っていなければ反応しませんから、あなたの中にも憧れの人と同じエッセンスがあると気づいて使っていくほうが、自分の人生をより楽しめますよ。"]},
- {q:"本当の「愛」と「自己犠牲」の違い",
-  card:{pair:["愛","自己犠牲"], theme:"違い"},
-  bubble:{label:["愛と","自己犠牲"], x:58, y:64, d:94},
-  a:["愛するとは「相手のために尽くすこと」——そう思って、好きな人のためなら無理もできる、家族のためなら自分のことは我慢できる。でもその我慢が続くと、心の奥に「わたしばかり」がたまっていきます。与えて辛いのなら、それは愛ではなく〈消耗〉に近い状態なのですね。",
-     "本当の愛は、自分を削ることで生まれるものではなく、自分が満たされているから自然とあふれ出てくるもの。空になったコップからは、何も注いであげられません。自分を満たしてあげることが、まわりへの本当の愛につながっていきますよ。"]},
- {q:"「手放す」と「諦める」の違い",
-  card:{pair:["手放す","諦める"], theme:"違い"},
-  bubble:{label:["手放すと","諦める"], x:62, y:87, d:90},
-  a:["「手放す」というと、何かを諦める・捨てる、というイメージがあるかもしれませんが、本当はちょっと違います。ぎゅっと握りしめた手に、なにかを乗せてもらおうとしても無理ですよね。手放すとは「諦める＝give up」ではなく、手を開いて〈新しいものを受け取れる状態〉にすること。",
-     "「ここで手放したら、いいものが二度と入ってこないかもしれない」——古いものへのこだわりの正体は、この恐れです。でも実際に手放したとき、「あれ、これでよかったんだ」と気づくことが多いもの。手放すのは諦めではなく、新しい善き事・チャンス・導きを受け入れる第一歩なのですよ。"]}
-];
-
-/* ことば玉の短いラベルと配置(x%, y%, 直径px) */
-
 (() => {
-  const modal = document.getElementById('bdModal');
-  const elTitle = document.getElementById('bdTitle');
-  const elBody = document.getElementById('bdBody');
-  function openBd(i){
-    const item = BREAKDOWN[i];
-    elTitle.textContent = item.q;
-    elBody.innerHTML = '';
-    item.a.forEach(t => { const p = document.createElement('p'); p.textContent = t; elBody.appendChild(p); });
-    const src = document.createElement('p');
-    src.className = 'src';
-    src.textContent = '── みちよ(ブログ「まいにちスピリチュアル」より)';
-    elBody.appendChild(src);
-    modal.classList.add('open');
-    modal.setAttribute('aria-hidden','false');
-  }
-  function closeBd(){ modal.classList.remove('open'); modal.setAttribute('aria-hidden','true'); }
-  document.getElementById('bdClose').addEventListener('click', closeBd);
-  document.getElementById('bdBackdrop').addEventListener('click', closeBd);
-  document.getElementById('bdMore').addEventListener('click', closeBd);
-  addEventListener('keydown', e => { if (e.key === 'Escape') closeBd(); });
-
-  /* ことば玉(水面の帯) */
+  /* トップに出す泡の数と、水面の帯の中の置き場所(x%, y%) */
+  const TEASER_SLOTS = [{x:12,y:34},{x:33,y:70},{x:52,y:32},{x:70,y:68},{x:88,y:36}];
   const wrap = document.getElementById('bubbles');
   document.getElementById('bdSea').style.backgroundImage = 'url(' + HERO_IMG_SRC + ')';
-  BREAKDOWN.forEach((item, i) => {
-    const b = item.bubble; if (!b) return;
-    const el = document.createElement('div');
+  const narrow = innerWidth < 640;
+  const latest = BREAKDOWN.map((item, i) => ({item, i})).slice(-TEASER_SLOTS.length).reverse();   // 新しいものから
+  latest.forEach(({item, i}, k) => {
+    const b = item.bubble || {label:[item.q]};
+    const slot = TEASER_SLOTS[k];
+    const el = document.createElement('a');
     el.className = 'bubble';
-    const jx = (Math.random() - .5) * 4, jy = (Math.random() - .5) * 5;   // 毎回すこしランダムに
-    const narrow = innerWidth < 640;                                          // スマホでは端の泡が切れないよう内側に寄せる
-    const bx = narrow ? Math.min(82, Math.max(18, b.x)) : b.x;
+    el.href = 'zukan/index.html#no-' + String(i + 1).padStart(2, '0');
+    const jx = (Math.random() - .5) * 4, jy = (Math.random() - .5) * 5;
+    const bx = narrow ? Math.min(82, Math.max(18, slot.x)) : slot.x;
     el.style.left = (bx + jx) + '%';
-    el.style.top  = (b.y + jy) + '%';
-    el.style.width = el.style.height = b.d + 'px';
+    el.style.top  = (slot.y + jy) + '%';
+    el.style.width = el.style.height = (b.d || 96) + 'px';
     el.style.setProperty('--dur', (6.5 + Math.random() * 3.5).toFixed(1) + 's');
     el.style.setProperty('--delay', (-Math.random() * 8).toFixed(1) + 's');
     el.innerHTML = b.label.join('<br>');
-    el.addEventListener('click', () => openBd(i));
+    el.setAttribute('aria-label', item.q + '(図鑑でひらく)');
     wrap.appendChild(el);
   });
   /* 図鑑が見えたとき、泡を1つだけ一度ふわっと膨らませる(触れられる合図) */
@@ -959,28 +803,6 @@ const BREAKDOWN = [
     }, {threshold:.5});
     io.observe(document.getElementById('bdSea'));
   }
-
-  /* 図鑑カード(小さめ・一覧) */
-  const grid = document.getElementById('bdGrid');
-  BREAKDOWN.forEach((item, i) => {
-    const c = item.card || {word:item.q, theme:""};
-    const el = document.createElement('button');
-    el.type = 'button'; el.className = 'bd-card';
-    const no = document.createElement('p'); no.className = 'no'; no.textContent = 'No.' + String(i+1).padStart(2,'0');
-    const pair = document.createElement('p'); pair.className = 'pair';
-    if (c.pair){
-      pair.innerHTML = '<span>' + c.pair[0] + '</span><span class="vs">と</span><span>' + c.pair[1] + '</span>';
-    } else {
-      pair.innerHTML = '<span>「' + c.word + '」</span>';
-    }
-    const th = document.createElement('p'); th.className = 'theme'; th.textContent = c.theme;
-    const g = document.createElement('p'); g.className = 'gist';
-    g.textContent = item.a[0].split('。')[0] + '。';
-    const op = document.createElement('p'); op.className = 'open'; op.textContent = '解説をひらく';
-    el.append(no, pair, th, g, op);
-    el.addEventListener('click', () => openBd(i));
-    grid.appendChild(el);
-  });
 })();
 
 /* 「この研究所について」の水面: 雪は降らない・カーソルでささやかに揺れるだけ */

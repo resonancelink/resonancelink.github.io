@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>意識の図鑑（魂のブレイクダウン） — スピリチュアル・メタサイエンス研究所</title>
+<meta name="description" content="似ているようで、まったく違う言葉を、魂の目線で見分ける「ことばの辞典」。「ワガママ」と「ありのまま」、「愛」と「執着」——スピリチュアルカウンセラー・みちよの意識の図鑑。">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="スピリチュアル・メタサイエンス研究所">
+<meta property="og:title" content="意識の図鑑（魂のブレイクダウン）">
+<meta property="og:description" content="似ているようで、まったく違う言葉を、魂の目線で見分ける「ことばの辞典」。">
+<meta property="og:url" content="https://resonancelink.com/zukan/">
+<meta property="og:image" content="https://resonancelink.com/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/svg+xml" href="../favicon.svg">
+<link rel="icon" type="image/png" sizes="180x180" href="../favicon.png">
+<link rel="apple-touch-icon" href="../favicon.png">
+<style>
+  :root{
+    --ink:#345f69; --ink-soft:#4f7d88; --white:#ffffff; --accent:#A8687F;
+    --bg:#f4f9fa;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth;scroll-padding-top:70px}
+  body{font-family:"Hiragino Mincho ProN","Yu Mincho","Noto Serif JP",serif;color:var(--ink);background:var(--bg)}
+
+  /* ---------- 神聖幾何学のマーク ---------- */
+  .sg{display:inline-block;width:1em;height:1em;vertical-align:-.12em;color:currentColor}
+  .kicker{font-size:12px;font-weight:600;letter-spacing:.42em;text-indent:.42em;color:var(--accent);margin-bottom:14px}
+  .kicker .sg{width:1.9em;height:1.9em;margin-right:.5em;vertical-align:-.55em;opacity:.9;color:var(--accent)}
+
+  /* ---------- 上部ナビ(このページでは最初から表示) ---------- */
+  .topnav{position:fixed;top:0;left:0;right:0;z-index:40;
+    background:rgba(244,249,250,.82);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);
+    border-bottom:1px solid rgba(110,151,160,.16)}
+  .topnav .in{max-width:1000px;margin:0 auto;display:flex;align-items:center;gap:18px;padding:0 18px;height:50px}
+  .topnav .home{display:flex;align-items:center;gap:8px;color:var(--ink);text-decoration:none;flex-shrink:0;
+    font-size:11.5px;letter-spacing:.18em;white-space:nowrap}
+  .topnav .home .sg{width:22px;height:22px;color:var(--accent)}
+  .topnav .home span{display:none}
+  .topnav ul{list-style:none;display:flex;gap:4px;margin-left:auto;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+  .topnav ul::-webkit-scrollbar{display:none}
+  .topnav li a{display:block;padding:8px 12px;font-size:13px;letter-spacing:.12em;color:var(--ink);
+    text-decoration:none;white-space:nowrap;border-bottom:2px solid transparent;transition:border-color .3s,color .3s}
+  .topnav li a:hover{color:var(--accent)}
+  .topnav li a.on{color:var(--accent);border-bottom-color:var(--accent)}
+  @media (min-width:761px){.topnav .home span{display:inline}}
+  @media (max-width:640px){.topnav .in{height:46px;gap:8px;padding:0 10px}.topnav li a{padding:8px 6px;font-size:12px;letter-spacing:.04em}}
+
+  /* ---------- 見出し ---------- */
+  .bd-head{max-width:760px;margin:0 auto;padding:118px 24px 26px;text-align:center}
+  .bd-head h1{font-size:clamp(22px,2.8vw,28px);letter-spacing:.28em;text-indent:.28em;font-weight:600;margin-bottom:14px;word-break:keep-all;color:var(--ink)}
+  .bd-head h1 .sub{font-size:.62em;letter-spacing:.14em;color:var(--ink-soft);white-space:nowrap}
+  .bd-head h1::after{content:"";display:block;width:44px;height:2px;margin:14px auto 0;border-radius:2px;
+    background:linear-gradient(90deg,#D8A7B1,#C5B4E3)}
+  .lede{font-size:15px;line-height:2.2;color:var(--ink-soft);letter-spacing:.06em;margin-bottom:0}
+  .lede strong{font-weight:600;color:var(--ink)}
+  @media (max-width:640px){.bd-head{padding-top:96px}.bd-head .lede br{display:none}}
+
+  /* ---------- 水面と泡 ---------- */
+  .bd-sea{position:relative;height:min(64vh,560px);overflow:hidden;background:#c9dfe4}
+  #seaWater{position:absolute;inset:0;width:100%;height:100%;display:block;cursor:default}
+  .bd-sea::after{content:"";position:absolute;inset:0;pointer-events:none;z-index:1;
+    background:linear-gradient(rgba(244,249,250,.95), rgba(244,249,250,0) 14%,
+                               rgba(244,249,250,0) 86%, rgba(244,249,250,.95))}
+  .bubbles{position:absolute;inset:0;z-index:2;pointer-events:none}
+  .bubble{position:absolute;transform:translate(-50%,-50%);border-radius:50%;
+    display:flex;align-items:center;justify-content:center;text-align:center;
+    cursor:pointer;pointer-events:auto;color:var(--ink);
+    background:radial-gradient(circle, rgba(255,255,255,.78) 0%, rgba(255,255,255,.48) 55%, rgba(255,255,255,0) 100%);
+    animation:bubblebob var(--dur,8s) ease-in-out var(--delay,0s) infinite;
+    font-size:12px;letter-spacing:.03em;line-height:1.65;font-weight:600;padding:0 6px;
+    text-shadow:0 1px 8px rgba(255,255,255,.95);
+    transition:background .6s ease,box-shadow .6s ease}
+  .bubble::before{content:"";position:absolute;inset:0;border-radius:50%;border:2px solid rgba(255,255,255,.7);filter:blur(2.5px)}
+  .bubble::after{content:"";position:absolute;inset:-20%;border-radius:50%;pointer-events:none;z-index:-1;
+    background:radial-gradient(circle, rgba(255,255,255,.95) 0%, rgba(255,255,255,.55) 38%, rgba(255,255,255,0) 70%);
+    opacity:0;transform:scale(.5);transition:opacity .6s ease,transform .8s cubic-bezier(.22,1,.36,1)}
+  .bubble:hover{background:radial-gradient(circle, rgba(255,255,255,.92) 0%, rgba(255,255,255,.62) 55%, rgba(255,255,255,.05) 100%);
+    box-shadow:0 0 28px 8px rgba(255,255,255,.6)}
+  .bubble:hover::after{opacity:1;transform:scale(1)}
+  @keyframes bubblebob{0%,100%{margin-top:0}50%{margin-top:-12px}}
+  .bubble.hello{animation:bubblehello 2.6s ease-in-out 1}
+  @keyframes bubblehello{0%,100%{transform:translate(-50%,-50%) scale(1)}35%{transform:translate(-50%,-50%) scale(1.22)}}
+  @media (max-width:640px){.bd-sea{height:560px}.bubble{font-size:11px}}
+  .bd-guide{max-width:900px;margin:0 auto;padding:36px 24px 18px;text-align:center;font-size:13.5px;letter-spacing:.14em;color:var(--ink-soft)}
+
+  /* ---------- 一覧カード ---------- */
+  .bd-grid{max-width:900px;margin:0 auto;padding:6px 24px 0;display:flex;flex-wrap:wrap;justify-content:center;gap:12px}
+  .bd-grid .bd-card{width:calc((100% - 24px)/3)}
+  .bd-card{position:relative;text-align:left;background:rgba(255,255,255,.8);
+    border:1px solid rgba(110,151,160,.2);border-radius:18px;padding:14px 16px 12px;
+    cursor:pointer;font-family:inherit;color:var(--ink);width:100%;
+    display:flex;flex-direction:column;align-items:flex-start;justify-content:flex-start;
+    box-shadow:0 8px 28px rgba(61,107,117,.06);isolation:isolate;
+    transition:transform .5s cubic-bezier(.22,1,.36,1),box-shadow .5s,border-color .5s}
+  .bd-card::before{content:"";position:absolute;inset:-9%;border-radius:inherit;pointer-events:none;z-index:-1;
+    background:radial-gradient(rgba(201,154,166,0) 54%, rgba(201,154,166,.22) 76%, rgba(201,154,166,.07) 90%, rgba(201,154,166,0) 100%);
+    opacity:0;transform:scale(.92);transition:opacity .8s ease,transform 1s cubic-bezier(.22,1,.36,1)}
+  .bd-card:hover{transform:translateY(-3px);box-shadow:0 16px 40px rgba(61,107,117,.12),0 0 20px 1px rgba(201,154,166,.2);border-color:rgba(201,154,166,.5)}
+  .bd-card:hover::before{opacity:1;transform:scale(1)}
+  .bd-card .no{font-size:10px;letter-spacing:.3em;color:var(--ink-soft);margin-bottom:6px}
+  .bd-card .pair{display:flex;align-items:baseline;flex-wrap:wrap;gap:4px 10px;
+    font-size:clamp(15px,1.4vw,16.5px);font-weight:600;letter-spacing:.06em;line-height:1.6;word-break:keep-all}
+  .bd-card .pair .vs{font-size:.7em;font-weight:400;color:#C99AA6;letter-spacing:.1em}
+  .bd-card .theme{font-size:11.5px;letter-spacing:.16em;color:var(--ink-soft);margin-top:3px}
+  .bd-card .open{margin-top:8px;font-size:11px;letter-spacing:.2em;color:var(--ink-soft)}
+  .bd-card .open::after{content:"→";margin-left:.4em;display:inline-block;transition:transform .4s}
+  .bd-card:hover .open::after{transform:translateX(4px)}
+  @media (max-width:640px){.bd-grid{gap:10px}.bd-grid .bd-card{width:calc((100% - 10px)/2)}
+    .bd-card{padding:12px 12px 10px}.bd-card .pair{font-size:14px}}
+  .bd-wrap{max-width:760px;margin:0 auto;padding:44px 24px 0;text-align:center}
+  .bd-note{font-size:13px;letter-spacing:.1em;color:var(--ink-soft)}
+
+  /* ---------- 深める(締め) ---------- */
+  .deepen{max-width:640px;margin:70px auto 0;padding:0 24px;text-align:center}
+  .deepen .box{background:rgba(255,255,255,.7);border-radius:24px;padding:48px 34px 44px;box-shadow:0 10px 40px rgba(61,107,117,.06)}
+  .deepen h2{font-size:clamp(20px,2.6vw,26px);letter-spacing:.28em;text-indent:.28em;font-weight:600;margin-bottom:16px;color:var(--ink)}
+  .deepen h2::after{content:"";display:block;width:44px;height:2px;margin:14px auto 0;border-radius:2px;background:linear-gradient(90deg,#D8A7B1,#C5B4E3)}
+  .deepen .lede{margin-bottom:28px}
+  .pillbtn{display:inline-block;font-family:inherit;font-size:15px;font-weight:500;letter-spacing:.12em;color:#fff;text-decoration:none;
+    background:linear-gradient(135deg,#D8A7B1,#C5B4E3);border-radius:999px;padding:13px 38px;
+    box-shadow:0 5px 18px rgba(216,167,177,.4);transition:transform .25s, box-shadow .25s}
+  .pillbtn:hover{transform:translateY(-2px);box-shadow:0 9px 24px rgba(197,180,227,.5)}
+  .deepen .sub-link{margin-top:20px;font-size:13.5px;letter-spacing:.1em;color:var(--ink-soft)}
+  .deepen .sub-link a{color:var(--ink-soft)}
+  .backhome{text-align:center;margin-top:40px;font-size:13px;letter-spacing:.2em}
+  .backhome a{color:var(--ink-soft);text-decoration:none;border-bottom:1px solid rgba(79,125,136,.4);padding-bottom:3px}
+  .backhome a:hover{color:var(--ink);border-bottom-color:var(--ink)}
+
+  /* ---------- FOOTER ---------- */
+  footer{padding:90px 20px 46px;text-align:center;font-size:12.5px;line-height:2.2;color:var(--ink-soft);letter-spacing:.08em}
+  footer .links{margin:22px 0 6px;font-size:12px;letter-spacing:.14em}
+  footer .links a{color:var(--ink-soft);text-decoration:none;border-bottom:1px solid rgba(90,135,145,.35);margin:0 8px;padding-bottom:2px}
+  footer .links a:hover{border-bottom-color:var(--ink)}
+  footer .unei{margin-top:14px;font-size:11.5px;letter-spacing:.1em}
+  footer .unei a{color:var(--ink-soft)}
+  footer .fname{letter-spacing:.3em;margin-bottom:14px;color:var(--ink-soft)}
+
+  /* ---------- ことばのカード(モーダル) ---------- */
+  #bdModal{position:fixed;inset:0;z-index:50;display:none;align-items:center;justify-content:center;padding:20px}
+  #bdModal.open{display:flex}
+  #bdModal .backdrop{position:absolute;inset:0;background:rgba(232,243,245,.78);backdrop-filter:blur(6px)}
+  #bdModal .card{position:relative;background:rgba(255,255,255,.97);border-radius:28px;
+    max-width:580px;width:100%;max-height:78vh;overflow:auto;padding:46px 34px 36px;
+    box-shadow:0 20px 60px rgba(61,107,117,.18);text-align:left}
+  #bdModal .no{font-size:10.5px;letter-spacing:.3em;color:var(--ink-soft);text-align:center;margin-bottom:8px}
+  #bdModal h3{font-size:18px;letter-spacing:.1em;margin-bottom:20px;color:var(--ink);font-weight:600;text-align:center;line-height:1.9}
+  #bdModal .card p{font-size:15px;line-height:2.2;letter-spacing:.05em;color:var(--ink);margin-bottom:12px}
+  #bdModal .src{font-size:12px;color:var(--ink-soft);letter-spacing:.14em}
+  #bdModal .nav{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-top:22px;font-size:13px;letter-spacing:.1em}
+  #bdModal .nav a,#bdModal .nav button{color:var(--ink-soft);text-decoration:none;background:none;border:none;font-family:inherit;font-size:inherit;letter-spacing:inherit;cursor:pointer}
+  #bdModal .nav a:hover,#bdModal .nav button:hover{color:var(--ink)}
+  #bdModal .nav .more{flex:1;text-align:center}
+  #bdModal .close{position:absolute;top:12px;right:18px;font-size:24px;color:var(--ink-soft);cursor:pointer;background:none;border:none;font-family:inherit;line-height:1}
+  @media (prefers-reduced-motion:reduce){
+    .bubble{animation:none}
+    .bubble::after,.bubble:hover::after,.bd-card::before,.bd-card:hover::before{transform:none}
+  }
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="sg-seed" viewBox="0 0 100 100">
+    <g fill="none" stroke="currentColor" stroke-width="1.6">
+      <circle cx="50" cy="50" r="16"/>
+      <circle cx="50" cy="34" r="16"/><circle cx="50" cy="66" r="16"/>
+      <circle cx="36.1" cy="42" r="16"/><circle cx="63.9" cy="42" r="16"/>
+      <circle cx="36.1" cy="58" r="16"/><circle cx="63.9" cy="58" r="16"/>
+      <circle cx="50" cy="50" r="33" stroke-width="1.2"/>
+    </g>
+  </symbol>
+</svg>
+
+<!-- ============ 上部ナビ ============ -->
+<nav class="topnav" id="topnav" aria-label="サイトの案内">
+  <div class="in">
+    <a class="home" href="../index.html"><svg class="sg" aria-hidden="true"><use href="#sg-seed"/></svg><span>スピリチュアル・メタサイエンス研究所</span></a>
+    <ul>
+      <li><a href="../index.html">ホーム</a></li>
+      <li><a href="#list">ことばの一覧</a></li>
+      <li><a href="../guidance/index.html">ガイダンス</a></li>
+      <li><a href="../index.html#rooms">体験室</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- ============ 見出し ============ -->
+<header class="bd-head" id="top">
+  <p class="kicker"><svg class="sg" aria-hidden="true"><use href="#sg-seed"/></svg>わかる</p>
+  <h1>意識の図鑑<span class="sub">（魂のブレイクダウン）</span></h1>
+  <p class="lede">「意識の図鑑」は、<strong>似ているようで、まったく違う言葉</strong>を、<br>
+  魂の目線で見分けるための"ことばの辞典"です。<br>
+  「ワガママ」と「ありのまま」、「愛」と「執着」——<br>
+  水面に漂う泡に、そっと触れてみてください。</p>
+</header>
+
+<!-- ============ 水面と泡 ============ -->
+<div class="bd-sea" id="bdSea">
+  <canvas id="seaWater"></canvas>
+  <div class="bubbles" id="bubbles"></div>
+</div>
+<p class="bd-guide">泡かカードに触れると、解説がひらきます</p>
+
+<!-- ============ 一覧 ============ -->
+<div class="bd-grid" id="list"></div>
+<div class="bd-wrap">
+  <p class="bd-note">少しずつ、増えていきます。</p>
+</div>
+
+<!-- ============ 深める(締め) ============ -->
+<section class="deepen" id="deepen">
+  <div class="box">
+    <p class="kicker"><svg class="sg" aria-hidden="true"><use href="#sg-seed"/></svg>深める</p>
+    <h2>もっと深く知りたくなったら</h2>
+    <p class="lede">意識とエネルギーのしくみを、暮らしの言葉で。<br>
+    週に一度、みちよのメルマガ（無料）でお届けしています。</p>
+    <a class="pillbtn" href="https://michiyospiritualcounsellor.substack.com/" target="_blank" rel="noopener">メルマガ（無料）を読む</a>
+    <p class="sub-link">迷ったとき、不安なときは <a href="../guidance/index.html">みちよのガイダンス</a> へ</p>
+  </div>
+  <p class="backhome"><a href="../index.html">← 研究所のホームに戻る</a></p>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer id="privacy">
+  <p class="fname">スピリチュアル・メタサイエンス研究所</p>
+  このサイトと各アプリは、ページの閲覧数のみを計測しています。<br>
+  あなたが引いたカードや診断の答えが、送信・記録されることはありません。
+  <p class="links"><a href="https://angelswayhealing.com/" target="_blank" rel="noopener">公式サイト</a> ｜ みちよの配信:
+    <a href="https://voicy.jp/channel/1756" target="_blank" rel="noopener">Voicy</a>
+    <a href="https://www.youtube.com/channel/UCM4Cxu05XHKE7H530RbWuYA" target="_blank" rel="noopener">YouTube</a>
+    <a href="https://ameblo.jp/michiyo-hikiyose/" target="_blank" rel="noopener">Ameblo</a>
+    <a href="https://michiyospiritualcounsellor.substack.com/" target="_blank" rel="noopener">Substack</a>
+  </p>
+  <p class="unei">運営: <a href="https://spiritualmetascienceacademy.org/" target="_blank" rel="noopener">一般社団法人スピリチュアル・メタサイエンス・アカデミー</a></p>
+  © みちよ
+</footer>
+
+<div id="bdModal" aria-hidden="true">
+  <div class="backdrop" id="bdBackdrop"></div>
+  <div class="card" role="dialog" aria-modal="true" aria-labelledby="bdTitle">
+    <button class="close" id="bdClose" aria-label="とじる">×</button>
+    <p class="no" id="bdNo"></p>
+    <h3 id="bdTitle"></h3>
+    <div id="bdBody"></div>
+    <p class="nav">
+      <button type="button" id="bdPrev">← まえ</button>
+      <a class="more" href="#list" id="bdMore">ほかのことばも見る</a>
+      <button type="button" id="bdNext">つぎ →</button>
+    </p>
+  </div>
+</div>
+
+<!-- 図鑑の正本(1配列)。項目を足すときは data.js だけを直す -->
+<script src="data.js"></script>
+<script src="../water.js"></script>
+<script>
+(() => {
+  const N = BREAKDOWN.length;
+  const pad = i => String(i + 1).padStart(2, '0');
+
+  /* ---------- 解説のカード(モーダル) ---------- */
+  const modal = document.getElementById('bdModal');
+  const elNo = document.getElementById('bdNo');
+  const elTitle = document.getElementById('bdTitle');
+  const elBody = document.getElementById('bdBody');
+  let cur = -1;
+  function openBd(i, pushHash = true){
+    if (i < 0 || i >= N) return;
+    cur = i;
+    const item = BREAKDOWN[i];
+    elNo.textContent = 'No.' + pad(i);
+    elTitle.textContent = item.q;
+    elBody.innerHTML = '';
+    item.a.forEach(t => { const p = document.createElement('p'); p.textContent = t; elBody.appendChild(p); });
+    const src = document.createElement('p');
+    src.className = 'src';
+    src.textContent = '── みちよ(ブログ「まいにちスピリチュアル」より)';
+    elBody.appendChild(src);
+    modal.querySelector('.card').scrollTop = 0;
+    modal.classList.add('open');
+    modal.setAttribute('aria-hidden', 'false');
+    /* 共有できるように、URLの末尾に #no-05 のような印を付ける */
+    if (pushHash && history.replaceState) history.replaceState(null, '', '#no-' + pad(i));
+  }
+  function closeBd(){
+    modal.classList.remove('open');
+    modal.setAttribute('aria-hidden', 'true');
+    if (history.replaceState) history.replaceState(null, '', location.pathname + location.search);
+  }
+  document.getElementById('bdClose').addEventListener('click', closeBd);
+  document.getElementById('bdBackdrop').addEventListener('click', closeBd);
+  document.getElementById('bdMore').addEventListener('click', closeBd);
+  document.getElementById('bdPrev').addEventListener('click', () => openBd((cur - 1 + N) % N));
+  document.getElementById('bdNext').addEventListener('click', () => openBd((cur + 1) % N));
+  addEventListener('keydown', e => {
+    if (!modal.classList.contains('open')) return;
+    if (e.key === 'Escape') closeBd();
+    if (e.key === 'ArrowLeft') openBd((cur - 1 + N) % N);
+    if (e.key === 'ArrowRight') openBd((cur + 1) % N);
+  });
+
+  /* ---------- 水面(カーソルで揺れ、ときどき波紋) ---------- */
+  createWater(document.getElementById('seaWater'), {image:'../water.jpg', flakes:true, hover:70, click:360, ambient:true});
+
+  /* ---------- ことば玉(泡)。位置が書いてない項目は、空いている所に自動で置く ---------- */
+  const wrap = document.getElementById('bubbles');
+  const narrow = innerWidth < 640;
+  const autoSlots = [];               // 自動配置のための予備の場所(x%, y%)
+  for (let r = 0; r < 4; r++) for (let c = 0; c < 5; c++) autoSlots.push({x: 12 + c * 19, y: 18 + r * 22});
+  const used = BREAKDOWN.filter(it => it.bubble && it.bubble.x != null).map(it => it.bubble);
+  const free = autoSlots.filter(s => !used.some(u => Math.abs(u.x - s.x) < 14 && Math.abs(u.y - s.y) < 16));
+  BREAKDOWN.forEach((item, i) => {
+    const b = item.bubble || {label:[item.q]};
+    let x = b.x, y = b.y;
+    if (x == null || y == null){ const s = free.shift() || {x:50, y:50}; x = s.x; y = s.y; }
+    const el = document.createElement('div');
+    el.className = 'bubble';
+    const jx = (Math.random() - .5) * 4, jy = (Math.random() - .5) * 5;
+    const bx = narrow ? Math.min(82, Math.max(18, x)) : x;
+    el.style.left = (bx + jx) + '%';
+    el.style.top  = (y + jy) + '%';
+    el.style.width = el.style.height = (b.d || 96) + 'px';
+    el.style.setProperty('--dur', (6.5 + Math.random() * 3.5).toFixed(1) + 's');
+    el.style.setProperty('--delay', (-Math.random() * 8).toFixed(1) + 's');
+    el.innerHTML = b.label.join('<br>');
+    el.setAttribute('role', 'button');
+    el.setAttribute('aria-label', item.q);
+    el.addEventListener('click', () => openBd(i));
+    wrap.appendChild(el);
+  });
+  /* 泡を1つだけ一度ふわっと膨らませる(触れられる合図) */
+  setTimeout(() => {
+    const first = wrap.querySelector('.bubble');
+    if (first){ first.classList.add('hello'); setTimeout(() => first.classList.remove('hello'), 2600); }
+  }, 900);
+
+  /* ---------- 一覧カード ---------- */
+  const grid = document.getElementById('list');
+  BREAKDOWN.forEach((item, i) => {
+    const c = item.card || {word:item.q, theme:""};
+    const el = document.createElement('button');
+    el.type = 'button'; el.className = 'bd-card';
+    const no = document.createElement('p'); no.className = 'no'; no.textContent = 'No.' + pad(i);
+    const pair = document.createElement('p'); pair.className = 'pair';
+    if (c.pair){
+      pair.innerHTML = '<span>' + c.pair[0] + '</span><span class="vs">と</span><span>' + c.pair[1] + '</span>';
+    } else {
+      pair.innerHTML = '<span>「' + c.word + '」</span>';
+    }
+    const th = document.createElement('p'); th.className = 'theme'; th.textContent = c.theme;
+    const op = document.createElement('p'); op.className = 'open'; op.textContent = '解説をひらく';
+    el.append(no, pair, th, op);
+    el.addEventListener('click', () => openBd(i));
+    grid.appendChild(el);
+  });
+
+  /* ---------- #no-05 や ?no=5 で開くと、その項目の解説をひらいた状態にする ---------- */
+  function fromUrl(){
+    const m = (location.hash.match(/no-(\d+)/) || location.search.match(/[?&]no=(\d+)/));
+    if (m){ const i = parseInt(m[1], 10) - 1; if (i >= 0 && i < N) openBd(i, false); }
+  }
+  fromUrl();
+  addEventListener('hashchange', fromUrl);
+})();
+</script>
+<script data-goatcounter="https://resonancelink.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>
