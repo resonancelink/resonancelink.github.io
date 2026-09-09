@@ -140,6 +140,7 @@
     if (on("footer")){
       const f = el("div", "pn-foot", `<p class="pn-name"><a href="${HOME}">スピリチュアル・メタサイエンス研究所</a></p>
         <p><a href="${HOME}">研究所のホーム</a>｜${LINKS.map(l => `<a href="${l.u}" target="_blank" rel="noopener">${l.t}</a>`).join("")}</p>
+        <p><a href="${HOME}install/">スマホのホーム画面に置く</a></p>
         <p class="pn-unei">運営: <a href="https://spiritualmetascienceacademy.org/" target="_blank" rel="noopener">一般社団法人スピリチュアル・メタサイエンス・アカデミー</a></p>`);
       document.body.appendChild(f);
     }

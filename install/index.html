@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light">
+<meta name="theme-color" content="#f4f9fa">
+<!-- 読み込み中の「最初の一瞬」も明るい地にする(本体のCSSより先に置く) -->
+<style>html{background:#f4f9fa;color-scheme:light}</style>
+<title>スマホのホーム画面に置く — スピリチュアル・メタサイエンス研究所</title>
+<meta name="description" content="スピリチュアル・メタサイエンス研究所を、アプリのようにスマホのホーム画面に置く手順。iPhone(Safari)・Android(Chrome)それぞれの置きかたと、YouTube・Instagram・LINEの中から開いたときの注意。">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="スピリチュアル・メタサイエンス研究所">
+<meta property="og:title" content="スマホのホーム画面に置く">
+<meta property="og:description" content="研究所を、アプリのようにスマホのホーム画面に置く手順。">
+<meta property="og:url" content="https://resonancelink.com/install/">
+<meta property="og:image" content="https://resonancelink.com/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/svg+xml" href="../favicon.svg">
+<link rel="icon" type="image/png" sizes="180x180" href="../favicon.png">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="manifest" href="../site.webmanifest">
+<meta name="apple-mobile-web-app-title" content="研究所">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<style>
+  :root{
+    --ink:#345f69; --ink-soft:#4f7d88; --white:#ffffff; --accent:#A8687F;
+    --bg:#f4f9fa;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth;scroll-padding-top:70px}
+  body{font-family:"Hiragino Mincho ProN","Yu Mincho","Noto Serif JP",serif;color:var(--ink);background:var(--bg)}
+
+  /* ---------- 神聖幾何学のマーク ---------- */
+  .sg{display:inline-block;width:1em;height:1em;vertical-align:-.12em;color:currentColor}
+  .kicker{font-size:12px;font-weight:600;letter-spacing:.42em;text-indent:.42em;color:var(--accent);margin-bottom:14px}
+  .kicker .sg{width:1.9em;height:1.9em;margin-right:.5em;vertical-align:-.55em;opacity:.9;color:var(--accent)}
+
+  /* ---------- 上部ナビ(このページでは最初から表示) ---------- */
+  .topnav{position:fixed;top:0;left:0;right:0;z-index:40;
+    background:rgba(244,249,250,.82);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);
+    border-bottom:1px solid rgba(110,151,160,.16)}
+  .topnav .in{max-width:1000px;margin:0 auto;display:flex;align-items:center;gap:18px;padding:0 18px;height:50px}
+  .topnav .home{display:flex;align-items:center;gap:8px;color:var(--ink);text-decoration:none;flex-shrink:0;
+    font-size:11.5px;letter-spacing:.18em;white-space:nowrap}
+  .topnav .home .sg{width:22px;height:22px;color:var(--accent)}
+  .topnav .home span{display:none}
+  .topnav ul{list-style:none;display:flex;gap:4px;margin-left:auto;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+  .topnav ul::-webkit-scrollbar{display:none}
+  .topnav li a{display:block;padding:8px 12px;font-size:13px;letter-spacing:.12em;color:var(--ink);
+    text-decoration:none;white-space:nowrap;border-bottom:2px solid transparent;transition:border-color .3s,color .3s}
+  .topnav li a:hover{color:var(--accent)}
+  @media (min-width:761px){.topnav .home span{display:inline}}
+  @media (max-width:640px){.topnav .in{height:46px;gap:8px;padding:0 10px}.topnav li a{padding:8px 6px;font-size:12px;letter-spacing:.04em}}
+
+  /* ---------- 見出し ---------- */
+  .bd-head{max-width:760px;margin:0 auto;padding:118px 24px 10px;text-align:center}
+  .bd-head h1{font-size:clamp(22px,2.8vw,28px);letter-spacing:.28em;text-indent:.28em;font-weight:600;margin-bottom:14px;word-break:keep-all;color:var(--ink)}
+  .bd-head h1::after{content:"";display:block;width:44px;height:2px;margin:14px auto 0;border-radius:2px;
+    background:linear-gradient(90deg,#D8A7B1,#C5B4E3)}
+  .lede{font-size:15px;line-height:2.2;color:var(--ink-soft);letter-spacing:.06em}
+  .lede strong{font-weight:600;color:var(--ink)}
+  @media (max-width:640px){.bd-head{padding-top:96px}.bd-head .lede br{display:none}}
+
+  /* ---------- 本文 ---------- */
+  .install{max-width:760px;margin:30px auto 0;padding:0 24px}
+  .install .box{background:rgba(255,255,255,.7);border-radius:24px;padding:40px 34px 36px;box-shadow:0 10px 40px rgba(61,107,117,.06)}
+
+  /* すでにホーム画面から開いているとき */
+  .install .done{display:none;text-align:center;font-size:14.5px;line-height:2.1;letter-spacing:.06em;color:var(--ink);
+    background:rgba(197,180,227,.16);border:1px solid rgba(197,180,227,.6);border-radius:14px;padding:16px 18px;margin-bottom:26px}
+  .install .done b{font-weight:600}
+  body.standalone .install .done{display:block}
+
+  .install .inapp{text-align:left;font-size:13px;line-height:2;letter-spacing:.04em;color:var(--ink);
+    background:rgba(216,167,177,.14);border:1px solid rgba(216,167,177,.45);border-radius:14px;padding:14px 18px;margin-bottom:22px}
+  .install .inapp b{font-weight:600}
+  .install .inapp.now{background:rgba(216,167,177,.3);border-color:#A8687F;box-shadow:0 0 0 3px rgba(216,167,177,.25)}
+  .install .how{display:flex;gap:16px;text-align:left;align-items:stretch}
+  .install .dev{flex:1;background:rgba(255,255,255,.8);border:1px solid rgba(110,151,160,.18);border-radius:18px;padding:22px 20px 18px}
+  .install .dev.mine{border-color:rgba(168,104,127,.55);box-shadow:0 0 0 3px rgba(216,167,177,.18)}
+  .install .dname{font-size:15px;font-weight:600;letter-spacing:.08em;margin-bottom:12px;color:var(--ink)}
+  .install .tag{display:none;font-size:10px;letter-spacing:.2em;color:#fff;background:linear-gradient(135deg,#D8A7B1,#C5B4E3);border-radius:999px;padding:2px 9px;margin-right:8px;vertical-align:2px;font-weight:500}
+  .install .dev.mine .tag{display:inline-block}
+  .install ol{margin:0;padding-left:1.4em;font-size:15px;line-height:2.1;letter-spacing:.04em;color:var(--ink)}
+  .install ol li{margin-bottom:6px}
+  .install ol b{font-weight:600}
+  .install ol .ic{background:rgba(110,151,160,.1);border-radius:6px;padding:0 5px}
+  .install .note{margin-top:12px;font-size:12.5px;line-height:1.9;letter-spacing:.04em;color:var(--ink-soft)}
+  .install .fine{margin-top:26px;text-align:center;font-size:13px;line-height:2;letter-spacing:.08em;color:var(--ink-soft)}
+
+  /* 置いたあと */
+  .after{max-width:760px;margin:44px auto 0;padding:0 24px;text-align:center}
+  .after h2{font-size:clamp(18px,2.2vw,22px);letter-spacing:.24em;text-indent:.24em;font-weight:600;color:var(--ink);margin-bottom:14px}
+  .after h2::after{content:"";display:block;width:36px;height:2px;margin:12px auto 0;border-radius:2px;background:linear-gradient(90deg,#D8A7B1,#C5B4E3)}
+  .after p{font-size:14.5px;line-height:2.1;letter-spacing:.06em;color:var(--ink-soft)}
+  .after p b{font-weight:600;color:var(--ink)}
+
+  .backhome{text-align:center;margin-top:44px;font-size:13px;letter-spacing:.2em}
+  .backhome a{color:var(--ink-soft);text-decoration:none;border-bottom:1px solid rgba(79,125,136,.4);padding-bottom:3px}
+  .backhome a:hover{color:var(--ink);border-bottom-color:var(--ink)}
+
+  /* ---------- FOOTER ---------- */
+  footer{padding:90px 20px 46px;text-align:center;font-size:12.5px;line-height:2.2;color:var(--ink-soft);letter-spacing:.08em}
+  footer .links{margin:22px 0 6px;font-size:12px;letter-spacing:.14em}
+  footer .links a{color:var(--ink-soft);text-decoration:none;border-bottom:1px solid rgba(90,135,145,.35);margin:0 8px;padding-bottom:2px}
+  footer .links a:hover{border-bottom-color:var(--ink)}
+  footer .unei{margin-top:14px;font-size:11.5px;letter-spacing:.1em}
+  footer .unei a{color:var(--ink-soft)}
+  footer .fname{letter-spacing:.3em;margin-bottom:14px;color:var(--ink-soft)}
+
+  /* ---------- スマホ ---------- */
+  @media (max-width:640px){
+    :root{--ink:#22454f;--ink-soft:#2f5c67}
+    h1,h2,strong,b,.kicker,.install .dname,.install ol b,.install .inapp b{font-weight:700}
+    .kicker{font-size:12.5px}
+    .lede{font-size:15.5px}
+    .install{margin-top:22px}
+    .install .box{padding:30px 20px 28px}
+    .install .how{flex-direction:column}
+    .install .inapp br{display:none}
+    .install .inapp{font-size:14px}
+    .install ol{font-size:16px}
+    .install .note,.install .fine,.install .done{font-size:14px}
+    .install .dname{font-size:16px}
+    .after p{font-size:15px}
+    .backhome{font-size:14px}
+  }
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="sg-seed" viewBox="0 0 100 100">
+    <g fill="none" stroke="currentColor" stroke-width="1.25">
+      <circle cx="50" cy="50" r="11"/><circle cx="50" cy="61" r="11"/><circle cx="40.5" cy="55.5" r="11"/><circle cx="40.5" cy="44.5" r="11"/><circle cx="50" cy="39" r="11"/><circle cx="59.5" cy="44.5" r="11"/><circle cx="59.5" cy="55.5" r="11"/><circle cx="50" cy="72" r="11"/><circle cx="30.9" cy="61" r="11"/><circle cx="30.9" cy="39" r="11"/><circle cx="50" cy="28" r="11"/><circle cx="69.1" cy="39" r="11"/><circle cx="69.1" cy="61" r="11"/><circle cx="69.1" cy="50" r="11"/><circle cx="59.5" cy="66.5" r="11"/><circle cx="40.5" cy="66.5" r="11"/><circle cx="30.9" cy="50" r="11"/><circle cx="40.5" cy="33.5" r="11"/><circle cx="59.5" cy="33.5" r="11"/>
+      <circle cx="50" cy="50" r="33" stroke-width="1.1"/><circle cx="50" cy="50" r="35.5" stroke-width="0.8"/>
+    </g>
+  </symbol>
+</svg>
+
+<!-- ============ 上部ナビ ============ -->
+<nav class="topnav" id="topnav" aria-label="サイトの案内">
+  <div class="in">
+    <a class="home" href="../index.html"><svg class="sg" aria-hidden="true"><use href="#sg-seed"/></svg><span>スピリチュアル・メタサイエンス研究所</span></a>
+    <ul>
+      <li><a href="../index.html">ホーム</a></li>
+      <li><a href="../index.html#rooms">体験室</a></li>
+      <li><a href="../zukan/index.html">意識の図鑑</a></li>
+      <li><a href="../guidance/index.html">ガイダンス</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- ============ 見出し ============ -->
+<header class="bd-head" id="top">
+  <p class="kicker"><svg class="sg" aria-hidden="true"><use href="#sg-seed"/></svg>いつでも</p>
+  <h1>スマホのホーム画面に置く</h1>
+  <p class="lede">この研究所は、<strong>アプリのようにスマホのホーム画面に置けます。</strong><br>
+  ひらくたびに検索しなくてよくなり、カードや診断がワンタップに。<br>
+  お使いのスマホの手順を、どうぞ。</p>
+</header>
+
+<!-- ============ 手順 ============ -->
+<section class="install" id="install">
+  <div class="box">
+    <p class="done" id="done"><b>いま、ホーム画面のアイコンからひらいています。</b><br>
+    もう置けていますので、この手順は要りません。<br>
+    ほかのスマホやタブレットに置くときの手順として、どうぞ。</p>
+
+    <p class="inapp" id="inapp"><b>YouTube・Instagram・LINE・X の中からこのページを開いた方へ。</b><br>
+    まず右上（または右下）の「…」から <b>「Safariで開く」</b>（Androidは <b>「Chromeで開く」</b>）を選んでください。<br>
+    アプリの中のブラウザのままだと「ホーム画面に追加」が出てきません。</p>
+
+    <div class="how">
+      <div class="dev" id="howIos">
+        <p class="dname"><span class="tag">あなたのスマホ</span>iPhone・iPad（Safari）</p>
+        <ol>
+          <li>画面の下にある <b class="ic">共有ボタン</b>（□から↑が出た印）をタップ</li>
+          <li>下にスクロールして <b>「ホーム画面に追加」</b> をタップ</li>
+          <li>右上の <b>「追加」</b> をタップ</li>
+        </ol>
+        <p class="note">Chromeで見ている場合は、右上の「…」→「ホーム画面に追加」です。</p>
+      </div>
+      <div class="dev" id="howAndroid">
+        <p class="dname"><span class="tag">あなたのスマホ</span>Android（Chrome）</p>
+        <ol>
+          <li>右上の <b class="ic">「⋮」</b>（縦の点3つ）をタップ</li>
+          <li><b>「ホーム画面に追加」</b>（または「アプリをインストール」）をタップ</li>
+          <li><b>「追加」</b> をタップ</li>
+        </ol>
+        <p class="note">ホーム画面に、水面のアイコンで「研究所」が置かれます。</p>
+      </div>
+    </div>
+    <p class="fine">ホーム画面のアイコンからひらくと、<br>ブラウザの枠がない、アプリのような画面になります。</p>
+  </div>
+</section>
+
+<!-- ============ 置いたあと ============ -->
+<section class="after" id="after">
+  <h2>置いたあとは</h2>
+  <p>水面のアイコンをタップするだけで、研究所がひらきます。<br>
+  <b>今日の１枚</b>のカードも、<b>魂診断</b>も、<b>意識の図鑑</b>も、そこからワンタップ。<br>
+  新しい部屋ができたときも、同じアイコンから入れます。</p>
+  <p class="backhome"><a href="../index.html">← 研究所のホームに戻る</a></p>
+</section>
+
+<script>
+(() => {
+  const ua = navigator.userAgent;
+  const isIos = /iPhone|iPad|iPod/.test(ua) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+  const isAndroid = /Android/.test(ua);
+  const sec = document.getElementById('install');
+  /* すでにホーム画面から開いているなら、「もう置けています」を上に出す(手順は残す) */
+  const standalone = matchMedia('(display-mode: standalone)').matches || navigator.standalone === true;
+  if (standalone) document.body.classList.add('standalone');
+  /* PCでは両方を並べて見せる。スマホでは自分の機種を上にして印を付ける */
+  if (isIos) document.getElementById('howIos').classList.add('mine');
+  else if (isAndroid) document.getElementById('howAndroid').classList.add('mine');
+  if (isAndroid) sec.querySelector('.how').prepend(document.getElementById('howAndroid'));
+  /* LINE・Instagram・Facebook・X などアプリの中のブラウザなら、「Safari/Chromeで開く」の案内を強調 */
+  if (/Line\/|Instagram|FBAN|FBAV|FB_IAB|Twitter|; wv\)/.test(ua)) document.getElementById('inapp').classList.add('now');
+})();
+</script>
+
+<!-- ============ FOOTER ============ -->
+<footer id="privacy">
+  <p class="fname">スピリチュアル・メタサイエンス研究所</p>
+  このサイトと各アプリは、ページの閲覧数のみを計測しています。<br>
+  あなたが引いたカードや診断の答えが、送信・記録されることはありません。
+  <p class="links"><a href="https://angelswayhealing.com/" target="_blank" rel="noopener">公式サイト</a> ｜ みちよの配信:
+    <a href="https://voicy.jp/channel/1756" target="_blank" rel="noopener">Voicy</a>
+    <a href="https://www.youtube.com/channel/UCM4Cxu05XHKE7H530RbWuYA" target="_blank" rel="noopener">YouTube</a>
+    <a href="https://ameblo.jp/michiyo-hikiyose/" target="_blank" rel="noopener">Ameblo</a>
+    <a href="https://michiyospiritualcounsellor.substack.com/" target="_blank" rel="noopener">Substack</a>
+  </p>
+  <p class="unei">運営: <a href="https://spiritualmetascienceacademy.org/" target="_blank" rel="noopener">一般社団法人スピリチュアル・メタサイエンス・アカデミー</a></p>
+  © みちよ
+</footer>
+<script data-goatcounter="https://resonancelink.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>
