@@ -30,7 +30,7 @@
     {t:"Ameblo",    u:"https://ameblo.jp/michiyo-hikiyose/"},
     {t:"Substack",  u:"https://michiyospiritualcounsellor.substack.com/"}
   ];
-  const SEED = '<svg class="pn-sg" viewBox="0 0 100 100" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="50" cy="50" r="16"/><circle cx="50" cy="34" r="16"/><circle cx="50" cy="66" r="16"/><circle cx="36.1" cy="42" r="16"/><circle cx="63.9" cy="42" r="16"/><circle cx="36.1" cy="58" r="16"/><circle cx="63.9" cy="58" r="16"/><circle cx="50" cy="50" r="33" stroke-width="1.6"/></g></svg>';
+  const SEED = '<svg class="pn-sg" viewBox="0 0 100 100" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="50" cy="50" r="11"/><circle cx="50" cy="61" r="11"/><circle cx="40.5" cy="55.5" r="11"/><circle cx="40.5" cy="44.5" r="11"/><circle cx="50" cy="39" r="11"/><circle cx="59.5" cy="44.5" r="11"/><circle cx="59.5" cy="55.5" r="11"/><circle cx="50" cy="72" r="11"/><circle cx="30.9" cy="61" r="11"/><circle cx="30.9" cy="39" r="11"/><circle cx="50" cy="28" r="11"/><circle cx="69.1" cy="39" r="11"/><circle cx="69.1" cy="61" r="11"/><circle cx="69.1" cy="50" r="11"/><circle cx="59.5" cy="66.5" r="11"/><circle cx="40.5" cy="66.5" r="11"/><circle cx="30.9" cy="50" r="11"/><circle cx="40.5" cy="33.5" r="11"/><circle cx="59.5" cy="33.5" r="11"/><circle cx="50" cy="50" r="33" stroke-width="1.4"/><circle cx="50" cy="50" r="35.5" stroke-width="1"/></g></svg>';
 
   const me = document.currentScript;
   const D = (me && me.dataset) || {};
