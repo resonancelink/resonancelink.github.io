@@ -100,18 +100,23 @@
   .star{position:absolute;transform:translate(-50%,-50%);display:flex;flex-direction:column;align-items:center;gap:8px;
     cursor:pointer;pointer-events:auto;color:#fff;z-index:3;
     animation:twinkle var(--dur,5s) ease-in-out var(--delay,0s) infinite}
-  .star .pt{width:15px;height:15px;position:relative;background:#fff8e6;
-    clip-path:polygon(50% 0,61% 39%,100% 50%,61% 61%,50% 100%,39% 61%,0 50%,39% 39%);
+  /* 星の形はマカバ(上向き・下向きの三角を重ねた六芒星)。光は大きく、やわらかく広がる */
+  .star .pt{width:24px;height:24px;position:relative;display:block;overflow:visible;
+    fill:rgba(255,248,226,.82);stroke:#fffdf5;stroke-width:3.5;stroke-linejoin:round;
+    filter:drop-shadow(0 0 6px rgba(255,236,190,.95));
     transition:transform .6s cubic-bezier(.22,1,.36,1)}
-  .star .glow{position:absolute;top:7px;left:50%;width:52px;height:52px;transform:translate(-50%,-50%);border-radius:50%;pointer-events:none;
-    background:radial-gradient(circle, rgba(255,245,215,.95) 0%, rgba(255,228,170,.4) 30%, rgba(255,255,255,0) 68%);
+  .star .glow{position:absolute;top:12px;left:50%;width:110px;height:110px;transform:translate(-50%,-50%);border-radius:50%;pointer-events:none;
+    background:radial-gradient(circle, rgba(255,246,220,.95) 0%, rgba(255,232,180,.55) 22%, rgba(255,222,160,.22) 45%, rgba(255,255,255,0) 70%);
+    animation:glowpulse var(--dur,5s) ease-in-out var(--delay,0s) infinite;
     transition:transform .8s cubic-bezier(.22,1,.36,1)}
+  @keyframes glowpulse{0%,100%{transform:translate(-50%,-50%) scale(.9);opacity:.8}50%{transform:translate(-50%,-50%) scale(1.15);opacity:1}}
   .star .lb{font-size:12.5px;font-weight:600;letter-spacing:.05em;line-height:1.55;text-align:center;white-space:nowrap;
     color:#fff;text-shadow:0 1px 6px rgba(8,22,40,.9),0 0 16px rgba(255,235,190,.55)}
-  .star:hover .pt{transform:scale(1.4) rotate(45deg)}
-  .star:hover .glow{transform:translate(-50%,-50%) scale(1.8)}
+  .star:hover .pt{transform:scale(1.35) rotate(30deg)}
+  .star:hover .glow{animation:none;transform:translate(-50%,-50%) scale(1.6);opacity:1}
   .star.hello .pt{animation:starhello 2.6s ease-in-out 1}
-  @keyframes starhello{0%,100%{transform:scale(1)}35%{transform:scale(1.8) rotate(45deg)}}
+  @keyframes starhello{0%,100%{transform:scale(1)}35%{transform:scale(1.7) rotate(30deg)}}
+  @media (prefers-reduced-motion:reduce){.star .glow{animation:none}}
   @keyframes twinkle{0%,100%{opacity:.8}50%{opacity:1}}
   .bd-sea .lines{position:absolute;inset:0;width:100%;height:100%;z-index:2;pointer-events:none}
   .bd-sea .lines polyline{fill:none;stroke:rgba(255,240,210,.32);stroke-width:1;stroke-dasharray:3 5;vector-effect:non-scaling-stroke}
@@ -385,6 +390,7 @@
   for (let r = 0; r < 4; r++) for (let c = 0; c < 5; c++) autoSlots.push({x: 12 + c * 19, y: 18 + r * 22});
   const used = BREAKDOWN.filter(it => it.bubble && it.bubble.x != null).map(it => it.bubble);
   const free = autoSlots.filter(s => !used.some(u => Math.abs(u.x - s.x) < 14 && Math.abs(u.y - s.y) < 16));
+  const MERKABA = '<svg class="pt" viewBox="0 0 100 100" aria-hidden="true"><polygon points="50,4 90,74 10,74"/><polygon points="50,96 10,26 90,26"/></svg>';
   const pts = [];
   BREAKDOWN.forEach((item, i) => {
     const b = item.bubble || {label:[item.q]};
@@ -398,7 +404,7 @@
     el.style.top  = by + '%';
     el.style.setProperty('--dur', (3.5 + Math.random() * 3).toFixed(1) + 's');
     el.style.setProperty('--delay', (-Math.random() * 5).toFixed(1) + 's');
-    el.innerHTML = '<span class="glow"></span><span class="pt"></span><span class="lb">' + b.label.join('') + '</span>';
+    el.innerHTML = '<span class="glow"></span>' + MERKABA + '<span class="lb">' + b.label.join('') + '</span>';
     el.setAttribute('role', 'button');
     el.setAttribute('aria-label', item.q);
     el.addEventListener('click', () => openBd(i));

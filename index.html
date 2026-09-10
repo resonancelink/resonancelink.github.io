@@ -353,20 +353,25 @@
   /* ---------- 最近ふえた言葉: 図鑑は泡、ラボは「水面に映る星」(金色の星+細い線で結ぶ) ---------- */
   /* 「最近ふえた言葉」の水面は少し夕暮れに沈めて、星が見えるように(泡は白いまま浮く) */
   .bd-sea.dusk::before{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;
-    background:linear-gradient(rgba(16,34,60,.22), rgba(14,30,54,.34) 55%, rgba(16,34,60,.26))}
+    background:linear-gradient(rgba(16,34,60,.3), rgba(14,30,54,.44) 55%, rgba(16,34,60,.34))}
   .star{position:absolute;transform:translate(-50%,-50%);display:flex;flex-direction:column;align-items:center;gap:7px;
     cursor:pointer;pointer-events:auto;text-decoration:none;color:var(--ink);z-index:3;
     animation:twinkle var(--dur,5s) ease-in-out var(--delay,0s) infinite}
-  .star .pt{width:18px;height:18px;position:relative;background:#fff3cf;
-    clip-path:polygon(50% 0,61% 39%,100% 50%,61% 61%,50% 100%,39% 61%,0 50%,39% 39%);
+  /* 星の形はマカバ(六芒星)。光は大きく、やわらかく広がる */
+  .star .pt{width:26px;height:26px;position:relative;display:block;overflow:visible;
+    fill:rgba(255,244,214,.88);stroke:#fffaf0;stroke-width:3.5;stroke-linejoin:round;
+    filter:drop-shadow(0 0 6px rgba(255,230,170,.95));
     transition:transform .6s cubic-bezier(.22,1,.36,1)}
-  .star .glow{position:absolute;top:9px;left:50%;width:56px;height:56px;transform:translate(-50%,-50%);border-radius:50%;pointer-events:none;
-    background:radial-gradient(circle, rgba(255,236,180,.95) 0%, rgba(240,210,140,.45) 35%, rgba(255,255,255,0) 70%);
+  .star .glow{position:absolute;top:13px;left:50%;width:120px;height:120px;transform:translate(-50%,-50%);border-radius:50%;pointer-events:none;
+    background:radial-gradient(circle, rgba(255,242,205,.95) 0%, rgba(250,222,160,.55) 22%, rgba(245,210,140,.22) 45%, rgba(255,255,255,0) 70%);
+    animation:glowpulse var(--dur,5s) ease-in-out var(--delay,0s) infinite;
     transition:transform .8s cubic-bezier(.22,1,.36,1),opacity .6s}
+  @keyframes glowpulse{0%,100%{transform:translate(-50%,-50%) scale(.9);opacity:.8}50%{transform:translate(-50%,-50%) scale(1.15);opacity:1}}
   .star .lb{font-size:12.5px;font-weight:600;letter-spacing:.04em;line-height:1.55;text-align:center;white-space:nowrap;color:#fff;
     text-shadow:0 1px 6px rgba(8,22,40,.85),0 0 14px rgba(255,235,190,.5)}
-  .star:hover .pt{transform:scale(1.35) rotate(45deg)}
-  .star:hover .glow{transform:translate(-50%,-50%) scale(1.7)}
+  .star:hover .pt{transform:scale(1.35) rotate(30deg)}
+  .star:hover .glow{animation:none;transform:translate(-50%,-50%) scale(1.6);opacity:1}
+  @media (prefers-reduced-motion:reduce){.star .glow{animation:none}}
   @keyframes twinkle{0%,100%{opacity:.82}50%{opacity:1}}
   .bd-sea .lines{position:absolute;inset:0;width:100%;height:100%;z-index:2;pointer-events:none}
   .bd-sea .lines polyline{fill:none;stroke:rgba(255,240,210,.45);stroke-width:1.1;stroke-dasharray:3 5;vector-effect:non-scaling-stroke}
@@ -1027,6 +1032,7 @@ const WEEKLY = {
   const zk = pick(BREAKDOWN, 'zukan/index.html', ''), hk = pick(HIKIYOSE, 'hikiyose/index.html', 'lab');
   const mixed = [];
   for (let k = 0; k < PER; k++){ if (zk[k]) mixed.push(zk[k]); if (hk[k]) mixed.push(hk[k]); }   // 図鑑・ラボを交互に
+  const MERKABA = '<svg class="pt" viewBox="0 0 100 100" aria-hidden="true"><polygon points="50,4 90,74 10,74"/><polygon points="50,96 10,26 90,26"/></svg>';
   const starPts = [];
   mixed.slice(0, SLOTS.length).forEach((e, k) => {
     const b = e.item.bubble || {label:[e.item.q]};
@@ -1039,7 +1045,7 @@ const WEEKLY = {
     if (e.cls === 'lab'){
       /* ラボの言葉 = 水面に映る星 */
       el.className = 'star';
-      el.innerHTML = '<span class="glow"></span><span class="pt"></span><span class="lb">' + b.label.join('') + '</span>';
+      el.innerHTML = '<span class="glow"></span>' + MERKABA + '<span class="lb">' + b.label.join('') + '</span>';
       el.style.setProperty('--dur', (3.5 + Math.random() * 3).toFixed(1) + 's');
       el.style.setProperty('--delay', (-Math.random() * 5).toFixed(1) + 's');
       el.setAttribute('aria-label', e.item.q + '(ラボでひらく)');
