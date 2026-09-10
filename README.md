@@ -10,6 +10,7 @@ resonancelink.com として GitHub Pages で公開するためのファイル一
 - `zukan/data.js` … 意識の図鑑の正本(1配列)。項目を足すのはこのファイルだけ
 - `hikiyose/index.html` … 引き寄せの法則ラボのページ。resonancelink.com/hikiyose/
 - `hikiyose/data.js` … ラボの正本(1配列 HIKIYOSE)。項目を足すのはこのファイルだけ(g=よくある誤解 / a=みちよの見方 / src=出典)
+- `start/index.html` … はじめての方へ(使いかた3ステップ)。トップの1行バーから飛ぶ
 - `yume/index.html` … 夢診断の準備中ページ(2027年公開予定)。トップの横長バーから飛ぶ
 - `site.webmanifest` / `apple-touch-icon.png` / `icon-192.png` / `icon-512.png` … スマホの「ホーム画面に追加」用(アプリ名・水面のアイコン・枠なし表示)。アイコンは water.jpg から生成(生成スクリプトは制作時のもの。作り直すときは Claude に頼む)
 - `portal-nav.js` … 各アプリ(今日の１枚・魂診断の家・好き診断)と図鑑ページが読み込む共通導線(上の帯・「研究所のほかの部屋」・共通フッター)。部屋が増えたら中の ROOMS に1行足す
