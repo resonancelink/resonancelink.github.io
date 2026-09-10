@@ -11,19 +11,19 @@
 :root{
   --ground:#F6F1EB; --paper:#FFFDFA; --paper-2:#FBF7F2; --ink:#453F3C; --ink-soft:#7A716C; --ink-faint:#A69C96;
   --line:#E7DDD3; --water:#7FA6B8; --water-deep:#4E7A8E; --water-mist:#DCE8ED;
-  --cover:#EFE6DC; --cover-2:#E6DACE; --shadow:rgba(70,55,40,.28); --focus:#4E7A8E;
+  --cover:#22414b; --cover-2:#132a32; --gold:#d9bf7a; --gold-2:#f1dea6; --gold-dim:rgba(217,191,122,.55); --shadow:rgba(20,35,42,.45); --focus:#4E7A8E;
 }
 @media (prefers-color-scheme: dark){
   :root:not([data-theme="light"]){
     --ground:#181F23; --paper:#232B30; --paper-2:#1F272B; --ink:#EAE3DC; --ink-soft:#B9AFA7; --ink-faint:#877D76;
     --line:#35403F; --water:#8FB6C7; --water-deep:#A9CCDA; --water-mist:#25353C;
-    --cover:#2A3338; --cover-2:#222A2E; --shadow:rgba(0,0,0,.6); --focus:#A9CCDA;
+    --cover:#1c353d; --cover-2:#0f2128; --shadow:rgba(0,0,0,.6); --focus:#A9CCDA;
   }
 }
 :root[data-theme="dark"]{
   --ground:#181F23; --paper:#232B30; --paper-2:#1F272B; --ink:#EAE3DC; --ink-soft:#B9AFA7; --ink-faint:#877D76;
   --line:#35403F; --water:#8FB6C7; --water-deep:#A9CCDA; --water-mist:#25353C;
-  --cover:#2A3338; --cover-2:#222A2E; --shadow:rgba(0,0,0,.6); --focus:#A9CCDA;
+  --cover:#1c353d; --cover-2:#0f2128; --shadow:rgba(0,0,0,.6); --focus:#A9CCDA;
 }
 *{box-sizing:border-box}
 html{-webkit-text-size-adjust:100%}
@@ -35,17 +35,45 @@ body{margin:0;background:var(--ground);color:var(--ink);font-family:"Zen Kaku Go
 
 /* ===== the book ===== */
 .book{position:relative;perspective:2200px;margin:0 auto;max-width:940px}
-/* cover */
-.cover{position:relative;margin:0 auto;width:min(440px,100%);aspect-ratio:3/4.1;background:linear-gradient(135deg,var(--cover) 0%,var(--cover-2) 100%);border-radius:4px 14px 14px 4px;box-shadow:0 24px 50px -22px var(--shadow),0 2px 0 rgba(255,255,255,.35) inset,-6px 0 0 -3px var(--paper),-10px 0 0 -5px var(--cover-2);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:36px 30px;cursor:pointer;transform-origin:left center;transition:transform 1s cubic-bezier(.4,.05,.2,1),opacity .9s ease;border:0;font:inherit;color:var(--ink)}
-.cover::before{content:"";position:absolute;left:14px;top:0;bottom:0;width:1px;background:rgba(0,0,0,.08)}
-.cover::after{content:"";position:absolute;inset:18px;border:1px solid rgba(80,60,40,.14);border-radius:3px 10px 10px 3px;pointer-events:none}
-.cover .eyebrow{font-family:"Shippori Mincho",serif;font-size:10.5px;letter-spacing:.36em;color:var(--ink-faint);margin-bottom:26px}
-.cover h1{font-family:"Shippori Mincho",serif;font-weight:500;font-size:clamp(26px,5vw,32px);letter-spacing:.2em;margin:0 0 16px;line-height:1.6}
-.cover .sub{font-family:"Shippori Mincho",serif;font-size:13.5px;color:var(--ink-soft);letter-spacing:.12em;line-height:2;margin:0}
-.cover .open{margin-top:auto;font-family:"Shippori Mincho",serif;font-size:12.5px;letter-spacing:.3em;color:var(--water-deep);display:flex;flex-direction:column;align-items:center;gap:10px}
-.cover .open::after{content:"";width:1px;height:26px;background:var(--water);opacity:.7;animation:drop 2.4s ease-in-out infinite}
-@keyframes drop{0%,100%{transform:scaleY(.4);transform-origin:top;opacity:.3}50%{transform:scaleY(1);opacity:.9}}
+/* cover ── 叡智の詰まった古い哲学書: 深い藍緑の革、金箔の二重罫と隅飾り、背の畝、金の小口 */
+.cover{position:relative;margin:0 auto;width:min(440px,100%);aspect-ratio:3/4.1;
+  background:
+    radial-gradient(ellipse at 30% 18%, rgba(255,255,255,.10), rgba(255,255,255,0) 55%),
+    radial-gradient(ellipse at 80% 90%, rgba(0,0,0,.28), rgba(0,0,0,0) 60%),
+    repeating-radial-gradient(circle at 20% 30%, rgba(255,255,255,.028) 0 1px, rgba(0,0,0,0) 1px 4px),
+    repeating-radial-gradient(circle at 70% 60%, rgba(0,0,0,.05) 0 1px, rgba(0,0,0,0) 1px 5px),
+    linear-gradient(160deg,var(--cover) 0%,var(--cover-2) 100%);
+  border-radius:3px 12px 12px 3px;
+  box-shadow:0 30px 60px -22px var(--shadow), 0 1px 0 rgba(255,255,255,.12) inset,
+    /* 金の小口(右側の紙の束) */ 4px 0 0 -1px #e9d9a8, 7px 0 0 -2px #d9c68a, 10px 0 0 -3px #c9b273,
+    /* 背 */ -7px 0 0 -3px var(--cover-2), -12px 0 0 -6px #0b181d;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:44px 34px 34px;cursor:pointer;
+  transform-origin:left center;transition:transform 1s cubic-bezier(.4,.05,.2,1),opacity .9s ease;border:0;font:inherit;color:var(--gold-2)}
+/* 背の畝(左端の縞) */
+.cover::before{content:"";position:absolute;left:0;top:0;bottom:0;width:22px;border-radius:3px 0 0 3px;
+  background:linear-gradient(90deg, rgba(0,0,0,.35), rgba(0,0,0,.05) 60%, rgba(255,255,255,.06)),
+    repeating-linear-gradient(180deg, rgba(0,0,0,0) 0 11%, rgba(217,191,122,.55) 11% 11.4%, rgba(0,0,0,0) 11.4% 12.2%, rgba(217,191,122,.55) 12.2% 12.6%, rgba(0,0,0,0) 12.6% 25%)}
+/* 金箔の二重罫 */
+.cover::after{content:"";position:absolute;inset:16px 16px 16px 34px;border:1.5px solid var(--gold-dim);border-radius:2px 8px 8px 2px;pointer-events:none;
+  outline:1px solid rgba(217,191,122,.28);outline-offset:4px;
+  box-shadow:inset 0 0 0 1px rgba(0,0,0,.2)}
+/* 四隅の飾り(小さな金の菱) */
+.cover .corner{position:absolute;width:14px;height:14px;pointer-events:none;color:var(--gold)}
+.cover .corner::before,.cover .corner::after{content:"";position:absolute;inset:0;border:1px solid currentColor;transform:rotate(45deg);opacity:.8}
+.cover .corner::after{inset:4px;background:currentColor;opacity:.55}
+.cover .c1{top:27px;left:45px}.cover .c2{top:27px;right:27px}.cover .c3{bottom:27px;left:45px}.cover .c4{bottom:27px;right:27px}
+/* 紋章(フラワー・オブ・ライフ)を金で */
+.cover .emblem{width:64px;height:64px;color:var(--gold);opacity:.95;margin:0 0 22px;filter:drop-shadow(0 0 6px rgba(217,191,122,.35))}
+.cover .eyebrow{font-family:"Shippori Mincho",serif;font-size:10.5px;letter-spacing:.42em;text-indent:.42em;color:var(--gold-dim);margin-bottom:20px}
+.cover h1{font-family:"Shippori Mincho",serif;font-weight:600;font-size:clamp(27px,5.2vw,34px);letter-spacing:.22em;margin:0 0 14px;line-height:1.7;color:var(--gold-2);
+  text-shadow:0 1px 0 rgba(0,0,0,.35),0 0 18px rgba(217,191,122,.25)}
+.cover .rule{width:120px;height:1px;background:linear-gradient(90deg,rgba(217,191,122,0),var(--gold),rgba(217,191,122,0));margin:4px 0 14px}
+.cover .sub{font-family:"Shippori Mincho",serif;font-size:13px;color:var(--gold);letter-spacing:.2em;line-height:2;margin:0;opacity:.9}
+.cover .latin{font-family:"Shippori Mincho",Georgia,serif;font-size:9.5px;letter-spacing:.34em;text-indent:.34em;color:var(--gold-dim);margin-top:30px;text-transform:uppercase}
+.cover .open{margin-top:auto;font-family:"Shippori Mincho",serif;font-size:12px;letter-spacing:.36em;text-indent:.36em;color:var(--gold);display:flex;flex-direction:column;align-items:center;gap:10px;opacity:.9}
+.cover .open::after{content:"";width:1px;height:26px;background:var(--gold);opacity:.6;animation:drop 2.4s ease-in-out infinite}
 .cover:hover{transform:rotateY(-6deg)}
+.cover:hover .emblem{filter:drop-shadow(0 0 12px rgba(241,222,166,.6))}
 .cover:focus-visible{outline:2px solid var(--focus);outline-offset:6px}
 .book.opened .cover{transform:rotateY(-95deg);opacity:0;pointer-events:none;position:absolute;left:50%;top:0}
 /* spread */
@@ -132,9 +160,13 @@ footer a{color:var(--water-deep);text-decoration:none;border-bottom:1px solid va
 
 <div class="book" id="book">
   <button class="cover" id="cover" type="button" aria-label="本をひらく">
+    <span class="corner c1"></span><span class="corner c2"></span><span class="corner c3"></span><span class="corner c4"></span>
+    <svg class="emblem" viewBox="0 0 100 100" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="50" cy="50" r="11"/><circle cx="50" cy="61" r="11"/><circle cx="40.5" cy="55.5" r="11"/><circle cx="40.5" cy="44.5" r="11"/><circle cx="50" cy="39" r="11"/><circle cx="59.5" cy="44.5" r="11"/><circle cx="59.5" cy="55.5" r="11"/><circle cx="50" cy="72" r="11"/><circle cx="30.9" cy="61" r="11"/><circle cx="30.9" cy="39" r="11"/><circle cx="50" cy="28" r="11"/><circle cx="69.1" cy="39" r="11"/><circle cx="69.1" cy="61" r="11"/><circle cx="69.1" cy="50" r="11"/><circle cx="59.5" cy="66.5" r="11"/><circle cx="40.5" cy="66.5" r="11"/><circle cx="30.9" cy="50" r="11"/><circle cx="40.5" cy="33.5" r="11"/><circle cx="59.5" cy="33.5" r="11"/><circle cx="50" cy="50" r="33" stroke-width="1.2"/><circle cx="50" cy="50" r="35.5" stroke-width="0.9"/></g></svg>
     <div class="eyebrow">迷ったとき、不安なときに</div>
     <h1>みちよの<br>ガイダンス</h1>
-    <p class="sub">── ひらく指針</p>
+    <span class="rule"></span>
+    <p class="sub">── ひらく指針 ──</p>
+    <div class="latin">Spiritual Meta-Science Institute</div>
     <div class="open">ひらく</div>
   </button>
 
