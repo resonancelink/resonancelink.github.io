@@ -7,13 +7,13 @@
 <meta name="theme-color" content="#f4f9fa">
 <!-- 読み込み中の「最初の一瞬」も明るい地にする(スマホのダークモードだと、CSSが届く前は黒い画面が出るため。本体のCSSより先に置く) -->
 <style>html{background:#f4f9fa;color-scheme:light}</style>
-<title>意識の図鑑（魂のブレイクダウン） — スピリチュアル・メタサイエンス研究所</title>
-<meta name="description" content="似ているようで、まったく違う言葉を、魂の目線で見分ける「ことばの辞典」。「ワガママ」と「ありのまま」、「愛」と「執着」——スピリチュアルカウンセラー・みちよの意識の図鑑。">
+<title>引き寄せの法則ラボ — スピリチュアル・メタサイエンス研究所</title>
+<meta name="description" content="引き寄せの法則を、〝願うテクニック〟から〝しくみ〟へ。よくある誤解と、みちよの見方を1語ずつ。引き寄せ関連の著書を持つスピリチュアルカウンセラー・みちよの「引き寄せの法則ラボ」。">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="スピリチュアル・メタサイエンス研究所">
-<meta property="og:title" content="意識の図鑑（魂のブレイクダウン）">
-<meta property="og:description" content="似ているようで、まったく違う言葉を、魂の目線で見分ける「ことばの辞典」。">
-<meta property="og:url" content="https://resonancelink.com/zukan/">
+<meta property="og:title" content="引き寄せの法則ラボ">
+<meta property="og:description" content="引き寄せの法則を、〝願うテクニック〟から〝しくみ〟へ。よくある誤解と、みちよの見方を1語ずつ。">
+<meta property="og:url" content="https://resonancelink.com/hikiyose/">
 <meta property="og:image" content="https://resonancelink.com/og.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -93,6 +93,30 @@
   .bubble.hello{animation:bubblehello 2.6s ease-in-out 1}
   @keyframes bubblehello{0%,100%{transform:translate(-50%,-50%) scale(1)}35%{transform:translate(-50%,-50%) scale(1.22)}}
   @media (max-width:640px){.bd-sea{height:560px}.bubble{font-size:11px}}
+  /* ---------- 夜の水面(ラボ): 水面を藍色に沈めて、言葉を星として映す ---------- */
+  .bd-sea.night::before{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;
+    background:linear-gradient(rgba(16,34,60,.58), rgba(14,30,54,.7) 50%, rgba(16,34,60,.62))}
+  .bd-sea.night::after{background:linear-gradient(rgba(244,249,250,.95), rgba(244,249,250,0) 12%, rgba(244,249,250,0) 88%, rgba(244,249,250,.95))}
+  .star{position:absolute;transform:translate(-50%,-50%);display:flex;flex-direction:column;align-items:center;gap:8px;
+    cursor:pointer;pointer-events:auto;color:#fff;z-index:3;
+    animation:twinkle var(--dur,5s) ease-in-out var(--delay,0s) infinite}
+  .star .pt{width:15px;height:15px;position:relative;background:#fff8e6;
+    clip-path:polygon(50% 0,61% 39%,100% 50%,61% 61%,50% 100%,39% 61%,0 50%,39% 39%);
+    transition:transform .6s cubic-bezier(.22,1,.36,1)}
+  .star .glow{position:absolute;top:7px;left:50%;width:52px;height:52px;transform:translate(-50%,-50%);border-radius:50%;pointer-events:none;
+    background:radial-gradient(circle, rgba(255,245,215,.95) 0%, rgba(255,228,170,.4) 30%, rgba(255,255,255,0) 68%);
+    transition:transform .8s cubic-bezier(.22,1,.36,1)}
+  .star .lb{font-size:12.5px;font-weight:600;letter-spacing:.05em;line-height:1.55;text-align:center;white-space:nowrap;
+    color:#fff;text-shadow:0 1px 6px rgba(8,22,40,.9),0 0 16px rgba(255,235,190,.55)}
+  .star:hover .pt{transform:scale(1.4) rotate(45deg)}
+  .star:hover .glow{transform:translate(-50%,-50%) scale(1.8)}
+  .star.hello .pt{animation:starhello 2.6s ease-in-out 1}
+  @keyframes starhello{0%,100%{transform:scale(1)}35%{transform:scale(1.8) rotate(45deg)}}
+  @keyframes twinkle{0%,100%{opacity:.8}50%{opacity:1}}
+  .bd-sea .lines{position:absolute;inset:0;width:100%;height:100%;z-index:2;pointer-events:none}
+  .bd-sea .lines polyline{fill:none;stroke:rgba(255,240,210,.32);stroke-width:1;stroke-dasharray:3 5;vector-effect:non-scaling-stroke}
+  @media (prefers-reduced-motion:reduce){.star{animation:none}}
+  @media (max-width:640px){.star .lb{font-size:12px}}
   .bd-guide{max-width:900px;margin:0 auto;padding:36px 24px 18px;text-align:center;font-size:13.5px;letter-spacing:.14em;color:var(--ink-soft)}
 
   /* ---------- 一覧カード ---------- */
@@ -167,6 +191,11 @@
   #bdModal h3{font-size:18px;letter-spacing:.1em;margin-bottom:20px;color:var(--ink);font-weight:600;text-align:center;line-height:1.9}
   #bdModal .card p{font-size:15px;line-height:2.2;letter-spacing:.05em;color:var(--ink);margin-bottom:12px}
   #bdModal .src{font-size:12px;color:var(--ink-soft);letter-spacing:.14em}
+  /* ラボ: 「よくある誤解」→「みちよの見方」の2段 */
+  #bdModal .lab-k{font-size:11px;letter-spacing:.32em;text-indent:.32em;margin:0 0 8px;font-weight:600}
+  #bdModal .lab-k-g{color:var(--ink-soft)}
+  #bdModal .lab-k-a{color:var(--accent);margin-top:18px;padding-top:16px;border-top:1px solid rgba(168,104,127,.18)}
+  #bdModal .card p.lab-g{color:var(--ink-soft);background:rgba(110,151,160,.07);border-radius:14px;padding:12px 16px}
   #bdModal .nav{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-top:22px;font-size:13px;letter-spacing:.1em}
   #bdModal .nav a,#bdModal .nav button{color:var(--ink-soft);text-decoration:none;background:none;border:none;font-family:inherit;font-size:inherit;letter-spacing:inherit;cursor:pointer}
   #bdModal .nav a:hover,#bdModal .nav button:hover{color:var(--ink)}
@@ -216,7 +245,7 @@
     <ul>
       <li><a href="../index.html">ホーム</a></li>
       <li><a href="#list">ことばの一覧</a></li>
-      <li><a href="../hikiyose/index.html">引き寄せラボ</a></li>
+      <li><a href="../zukan/index.html">意識の図鑑</a></li>
       <li><a href="../guidance/index.html">ガイダンス</a></li>
       <li><a href="../index.html#rooms">体験室</a></li>
     </ul>
@@ -225,25 +254,26 @@
 
 <!-- ============ 見出し ============ -->
 <header class="bd-head" id="top">
-  <p class="kicker"><svg class="sg" aria-hidden="true"><use href="#sg-seed"/></svg>わかる</p>
-  <h1>意識の図鑑<span class="sub">（魂のブレイクダウン）</span></h1>
-  <p class="lede">「意識の図鑑」は、<strong>似ているようで、まったく違う言葉</strong>を、<br>
-  魂の目線で見分けるための"ことばの辞典"です。<br>
-  「ワガママ」と「ありのまま」、「愛」と「執着」——<br>
-  水面に漂う泡に、そっと触れてみてください。</p>
+  <p class="kicker"><svg class="sg" aria-hidden="true"><use href="#sg-seed"/></svg>しくみを知る</p>
+  <h1>引き寄せの法則ラボ</h1>
+  <p class="lede">「引き寄せの法則ラボ」は、引き寄せを<strong>〝願うテクニック〟から〝しくみ〟へ</strong>戻す場所です。<br>
+  「波動」「執着」「手放す」「感謝」——<br>
+  よく誤解されている言葉を、ひとつずつ、みちよの見方でほどいていきます。<br>
+  夜の水面に映る星に、そっと触れてみてください。</p>
 </header>
 
 <!-- ============ 水面と泡 ============ -->
-<div class="bd-sea" id="bdSea">
+<div class="bd-sea night" id="bdSea">
   <canvas id="seaWater"></canvas>
+  <svg class="lines" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><polyline id="starLines" points=""/></svg>
   <div class="bubbles" id="bubbles"></div>
 </div>
-<p class="bd-guide">泡かカードに触れると、解説がひらきます</p>
+<p class="bd-guide">星かカードに触れると、「よくある誤解」と「みちよの見方」がひらきます</p>
 
 <!-- ============ 一覧 ============ -->
 <div class="bd-grid" id="list"></div>
 <div class="bd-wrap">
-  <p class="bd-note">少しずつ、増えていきます。</p>
+  <p class="bd-note">少しずつ、増えていきます。もっと深くは、みちよの著書『引き寄せの法則使いこなしブック』『マンガでわかる引き寄せの法則』に。</p>
 </div>
 
 <!-- ============ 深める(締め) ============ -->
@@ -254,7 +284,7 @@
     <p class="lede">意識とエネルギーのしくみを、暮らしの言葉で。<br>
     週に一度、みちよのメルマガ（無料）でお届けしています。</p>
     <a class="pillbtn" href="https://michiyospiritualcounsellor.substack.com/" target="_blank" rel="noopener">メルマガ（無料）を読む</a>
-    <p class="sub-link">迷ったとき、不安なときは <a href="../guidance/index.html">みちよのガイダンス</a> へ</p>
+    <p class="sub-link">似ていて違う言葉は <a href="../zukan/index.html">意識の図鑑</a> へ　／　迷ったとき、不安なときは <a href="../guidance/index.html">みちよのガイダンス</a> へ</p>
   </div>
   <p class="backhome"><a href="../index.html">← 研究所のホームに戻る</a></p>
 </section>
@@ -290,11 +320,12 @@
   </div>
 </div>
 
-<!-- 図鑑の正本(1配列)。項目を足すときは data.js だけを直す -->
+<!-- ラボの正本(1配列)。項目を足すときは data.js だけを直す -->
 <script src="data.js"></script>
 <script src="../water.js"></script>
 <script>
 (() => {
+  const BREAKDOWN = HIKIYOSE;
   const N = BREAKDOWN.length;
   const pad = i => String(i + 1).padStart(2, '0');
 
@@ -311,10 +342,15 @@
     elNo.textContent = 'No.' + pad(i);
     elTitle.textContent = item.q;
     elBody.innerHTML = '';
+    if (item.g){
+      const h = document.createElement('p'); h.className = 'lab-k lab-k-g'; h.textContent = 'よくある誤解'; elBody.appendChild(h);
+      const g = document.createElement('p'); g.className = 'lab-g'; g.textContent = item.g; elBody.appendChild(g);
+      const h2 = document.createElement('p'); h2.className = 'lab-k lab-k-a'; h2.textContent = 'みちよの見方'; elBody.appendChild(h2);
+    }
     item.a.forEach(t => { const p = document.createElement('p'); p.textContent = t; elBody.appendChild(p); });
     const src = document.createElement('p');
     src.className = 'src';
-    src.textContent = '── みちよ(ブログ「まいにちスピリチュアル」より)';
+    src.textContent = '── みちよ ' + (item.src || '(著書より)');
     elBody.appendChild(src);
     modal.querySelector('.card').scrollTop = 0;
     modal.classList.add('open');
@@ -342,35 +378,39 @@
   /* ---------- 水面(カーソルで揺れ、ときどき波紋) ---------- */
   createWater(document.getElementById('seaWater'), {image:'../water.jpg', flakes:true, hover:70, click:360, ambient:true});
 
-  /* ---------- ことば玉(泡)。位置が書いてない項目は、空いている所に自動で置く ---------- */
+  /* ---------- 水面に映る星。位置が書いてない項目は、空いている所に自動で置く ---------- */
   const wrap = document.getElementById('bubbles');
   const narrow = innerWidth < 640;
   const autoSlots = [];               // 自動配置のための予備の場所(x%, y%)
   for (let r = 0; r < 4; r++) for (let c = 0; c < 5; c++) autoSlots.push({x: 12 + c * 19, y: 18 + r * 22});
   const used = BREAKDOWN.filter(it => it.bubble && it.bubble.x != null).map(it => it.bubble);
   const free = autoSlots.filter(s => !used.some(u => Math.abs(u.x - s.x) < 14 && Math.abs(u.y - s.y) < 16));
+  const pts = [];
   BREAKDOWN.forEach((item, i) => {
     const b = item.bubble || {label:[item.q]};
     let x = b.x, y = b.y;
     if (x == null || y == null){ const s = free.shift() || {x:50, y:50}; x = s.x; y = s.y; }
     const el = document.createElement('div');
-    el.className = 'bubble';
-    const jx = (Math.random() - .5) * 4, jy = (Math.random() - .5) * 5;
-    const bx = narrow ? Math.min(82, Math.max(18, x)) : x;
-    el.style.left = (bx + jx) + '%';
-    el.style.top  = (y + jy) + '%';
-    el.style.width = el.style.height = (b.d || 96) + 'px';
-    el.style.setProperty('--dur', (6.5 + Math.random() * 3.5).toFixed(1) + 's');
-    el.style.setProperty('--delay', (-Math.random() * 8).toFixed(1) + 's');
-    el.innerHTML = b.label.join('<br>');
+    el.className = 'star';
+    const jx = (Math.random() - .5) * 3, jy = (Math.random() - .5) * 4;
+    const bx = (narrow ? Math.min(84, Math.max(16, x)) : x) + jx, by = y + jy;
+    el.style.left = bx + '%';
+    el.style.top  = by + '%';
+    el.style.setProperty('--dur', (3.5 + Math.random() * 3).toFixed(1) + 's');
+    el.style.setProperty('--delay', (-Math.random() * 5).toFixed(1) + 's');
+    el.innerHTML = '<span class="glow"></span><span class="pt"></span><span class="lb">' + b.label.join('') + '</span>';
     el.setAttribute('role', 'button');
     el.setAttribute('aria-label', item.q);
     el.addEventListener('click', () => openBd(i));
     wrap.appendChild(el);
+    pts.push({x: bx, y: by});
   });
-  /* 泡を1つだけ一度ふわっと膨らませる(触れられる合図) */
+  /* 星どうしを細い線で結ぶ(左から右へ、星座のように) */
+  pts.sort((a, b) => a.x - b.x);
+  document.getElementById('starLines').setAttribute('points', pts.map(p => p.x.toFixed(1) + ',' + p.y.toFixed(1)).join(' '));
+  /* 星を1つだけ一度ふわっと光らせる(触れられる合図) */
   setTimeout(() => {
-    const first = wrap.querySelector('.bubble');
+    const first = wrap.querySelector('.star');
     if (first){ first.classList.add('hello'); setTimeout(() => first.classList.remove('hello'), 2600); }
   }, 900);
 
@@ -385,10 +425,10 @@
     if (c.pair){
       pair.innerHTML = '<span>' + c.pair[0] + '</span><span class="vs">と</span><span>' + c.pair[1] + '</span>';
     } else {
-      pair.innerHTML = '<span>「' + c.word + '」</span>';
+      pair.innerHTML = '<span>' + (c.word.startsWith('「') ? c.word : '「' + c.word + '」') + '</span>';
     }
     const th = document.createElement('p'); th.className = 'theme'; th.textContent = c.theme;
-    const op = document.createElement('p'); op.className = 'open'; op.textContent = '解説をひらく';
+    const op = document.createElement('p'); op.className = 'open'; op.textContent = '誤解と見方をひらく';
     el.append(no, pair, th, op);
     el.addEventListener('click', () => openBd(i));
     grid.appendChild(el);
@@ -403,7 +443,7 @@
   addEventListener('hashchange', fromUrl);
 })();
 </script>
-<script src="../portal-nav.js" defer data-app="zukan" data-bar="off" data-footer="off" data-rooms-target=".bd-wrap"></script>
+<script src="../portal-nav.js" defer data-app="hikiyose" data-bar="off" data-footer="off" data-rooms-target=".bd-wrap"></script>
 <script data-goatcounter="https://resonancelink.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>
 </html>

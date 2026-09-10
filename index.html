@@ -7,13 +7,13 @@
 <meta name="theme-color" content="#f4f9fa">
 <!-- 読み込み中の「最初の一瞬」も明るい地にする(スマホのダークモードだと、CSSが届く前は黒い画面が出るため。本体のCSSより先に置く) -->
 <style>html{background:#f4f9fa;color-scheme:light}</style>
-<title>スピリチュアル・メタサイエンス研究所 — 見えない世界を、やさしく紐解く場所</title>
-<meta name="description" content="見えない世界を、やさしく紐解く場所。スピリチュアルを、自分のために使う。スピリチュアルカウンセラー・みちよの無料アプリ(今日の１枚・魂診断の家・好き診断)と「意識の図鑑」。">
+<title>スピリチュアル・メタサイエンス研究所 — 意識＝エネルギーのしくみを、知る場所</title>
+<meta name="description" content="意識＝エネルギーのしくみを、知る場所。スピリチュアルを、自分のために使う。スピリチュアルカウンセラー・みちよの「意識の図鑑」「引き寄せの法則ラボ」「みちよのガイダンス」と無料アプリ(今日の１枚・魂診断の家・好き診断)。">
 <!-- OGP: og:image は公開先の絶対URLに置き換える(同梱の og.jpg を同じ場所に置く) -->
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="スピリチュアル・メタサイエンス研究所">
 <meta property="og:title" content="スピリチュアル・メタサイエンス研究所">
-<meta property="og:description" content="見えない世界を、やさしく紐解く場所。スピリチュアルを、自分のために使う。">
+<meta property="og:description" content="意識＝エネルギーのしくみを、知る場所。スピリチュアルを、自分のために使う。">
 <meta property="og:url" content="https://resonancelink.com/">
 <meta property="og:image" content="https://resonancelink.com/og.jpg">
 <meta property="og:image:width" content="1200">
@@ -80,8 +80,8 @@
   .hero h1{font-size:clamp(21px,3.6vw,40px);font-weight:500;letter-spacing:.3em;text-indent:.3em;
     color:var(--ink);text-shadow:0 1px 14px rgba(255,255,255,.9);
     word-break:keep-all;text-align:center;padding:0 16px}
-  .hero p.tagline{margin-top:16px;font-size:clamp(13px,1.5vw,17px);letter-spacing:.25em;color:var(--ink-soft);
-    text-shadow:0 1px 10px rgba(255,255,255,.9)}
+  .hero p.tagline{margin-top:20px;font-size:clamp(16px,2.05vw,24px);letter-spacing:.24em;text-indent:.24em;color:var(--ink);font-weight:500;
+    text-shadow:0 1px 14px rgba(255,255,255,.95),0 0 28px rgba(255,255,255,.7)}
   .hero p.tagline2{margin-top:12px;font-size:clamp(12px,1.35vw,15.5px);letter-spacing:.2em;color:var(--ink);
     text-shadow:0 1px 12px rgba(255,255,255,.95);pointer-events:auto}
   .hero p.tagline2 a{color:var(--ink);text-decoration:none;border-bottom:1px solid rgba(61,107,117,.45);
@@ -162,6 +162,28 @@
   @media (prefers-reduced-motion:reduce){
     .circle,.circle:hover::before,.circle:hover::after{animation:none}}
 
+  /* ---------- 円のゴールドの光: PCはカーソルを当てると淡いゴールドにぼわんと光る。水面の波紋・雪はそのまま ---------- */
+  .hero .concepts .circle{transition:transform 1s cubic-bezier(.22,1,.36,1),box-shadow 1.1s ease,background 1.1s ease}
+  .hero .concepts .circle:hover{transform:scale(1.04);
+    background:radial-gradient(circle,
+      rgba(255,252,242,.96) 0%, rgba(251,241,214,.78) 50%,
+      rgba(243,226,178,.36) 72%, rgba(255,255,255,0) 100%);
+    box-shadow:0 0 34px 12px rgba(233,212,158,.55), 0 0 90px 34px rgba(233,212,158,.26)}
+  .hero .concepts .circle:hover::before{border-color:rgba(238,218,166,.9)}
+  .hero .concepts .circle:hover::after{border-color:rgba(238,218,166,.5)}
+  /* スマホ(カーソルが無い端末)では、3つの円が順番にゆっくりゴールドに呼吸する(触らなくても「ここが入口」と伝える) */
+  @keyframes goldbreathe{
+    0%,100%{box-shadow:0 0 0 0 rgba(233,212,158,0)}
+    12%{box-shadow:0 0 30px 10px rgba(233,212,158,.5), 0 0 70px 26px rgba(233,212,158,.22)}
+    30%{box-shadow:0 0 0 0 rgba(233,212,158,0)}}
+  @media (hover:none){
+    .hero .concepts .circle{animation:breathe 7s ease-in-out infinite, goldbreathe 21s ease-in-out var(--gd,0s) infinite}
+    .hero .concepts .circle:nth-child(1){--gd:0s}
+    .hero .concepts .circle:nth-child(2){--gd:7s}
+    .hero .concepts .circle:nth-child(3){--gd:14s}
+  }
+  @media (prefers-reduced-motion:reduce){.hero .concepts .circle{animation:none}}
+
   /* HERO内の3つの円 */
   .concepts{position:absolute;z-index:3;left:50%;transform:translateX(-50%);bottom:9vh;
     width:max-content;max-width:calc(100% - 24px);pointer-events:auto;
@@ -177,8 +199,25 @@
     background:linear-gradient(90deg,#D8A7B1,#C5B4E3);opacity:1}
   .lede{font-size:15px;line-height:2.2;color:var(--ink-soft);letter-spacing:.06em;margin-bottom:34px}
 
+  /* ---------- 夢診断の予告バー(HERO直下・メルマガの上。2027年公開まで、準備中ページ yume/ へ) ---------- */
+  .yume-bar{max-width:700px;margin:44px auto 0;padding:0 24px}
+  .yume-bar a{display:flex;align-items:center;gap:16px;text-decoration:none;color:#fff;
+    background:linear-gradient(135deg,#9a8cc9 0%,#b59ccf 45%,#c99ab0 100%);
+    border:1px solid rgba(255,255,255,.35);border-radius:999px;padding:16px 26px 16px 20px;
+    box-shadow:0 10px 30px rgba(154,140,201,.32), inset 0 1px 0 rgba(255,255,255,.35);
+    transition:box-shadow .5s,transform .5s cubic-bezier(.22,1,.36,1),filter .5s}
+  .yume-bar a:hover{box-shadow:0 16px 38px rgba(154,140,201,.42), inset 0 1px 0 rgba(255,255,255,.35);transform:translateY(-2px);filter:brightness(1.04)}
+  .yume-bar .sg{width:34px;height:34px;flex-shrink:0;color:#fff;opacity:.95;filter:drop-shadow(0 0 6px rgba(255,255,255,.6))}
+  .yume-bar .t{font-size:17px;font-weight:600;letter-spacing:.2em;white-space:nowrap;text-shadow:0 1px 8px rgba(90,70,140,.35)}
+  .yume-bar .d{font-size:13.5px;letter-spacing:.06em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;opacity:.95}
+  .yume-bar .soon{margin-left:auto;font-size:11px;letter-spacing:.16em;white-space:nowrap;
+    border:1px solid rgba(255,255,255,.65);border-radius:999px;padding:4px 12px;background:rgba(255,255,255,.14)}
+  .yume-bar .arrow{font-size:15px;flex-shrink:0}
+  @media (max-width:640px){.yume-bar{margin-top:30px}.yume-bar a{gap:12px;padding:14px 18px 14px 16px}
+    .yume-bar .d{display:none}.yume-bar .t{font-size:16px}.yume-bar .soon{font-size:11px;padding:3px 10px}.yume-bar .sg{width:30px;height:30px}}
+
   /* ---------- 今週のSubstack(HERO直下・手動差し替え) ---------- */
-  .weekly{max-width:700px;margin:56px auto 0;padding:0 24px}
+  .weekly{max-width:700px;margin:24px auto 0;padding:0 24px}
   .weekly .bar{position:relative;background:rgba(255,255,255,.6);border-radius:24px;padding:26px 30px 24px;
     box-shadow:0 8px 30px rgba(61,107,117,.05);text-align:left}
 
@@ -197,7 +236,7 @@
   .weekly .wm a::after{content:"→";margin-left:.4em}
   .weekly .wm a:hover{border-bottom-color:var(--ink);color:var(--ink)}
   .weekly .wm a{display:inline-block}
-  @media (max-width:640px){.weekly{margin-top:40px}.weekly .bar{padding:22px 20px 20px}.weekly .wx{-webkit-line-clamp:4}
+  @media (max-width:640px){.weekly{margin-top:18px}.weekly .bar{padding:22px 20px 20px}.weekly .wx{-webkit-line-clamp:4}
     .weekly .wm .sub{display:block;margin:10px 0 0}}
 
   /* ---------- お知らせ ---------- */
@@ -284,6 +323,60 @@
                                rgba(244,249,250,0) 86%, rgba(244,249,250,.95))}
   .bd-sea .bubbles{position:absolute;inset:0;z-index:2}
 
+
+  /* ---------- はじめての方へ(使いかた3ステップ) ---------- */
+  section.block.howto{max-width:1000px;padding-top:84px}
+  .steps{display:flex;gap:clamp(14px,2vw,22px);flex-wrap:wrap;justify-content:center;align-items:stretch;margin-top:6px;text-align:left}
+  .step{position:relative;width:min(100%,300px);display:flex;flex-direction:column;gap:8px;text-decoration:none;color:var(--ink);
+    background:rgba(255,255,255,.55);border:1px solid rgba(110,151,160,.14);border-radius:24px;padding:24px 22px 22px;
+    box-shadow:0 10px 36px rgba(61,107,117,.06);isolation:isolate;
+    transition:transform .6s cubic-bezier(.22,1,.36,1),box-shadow .6s,background .6s}
+  .step::before{content:"";position:absolute;inset:-30% -14%;border-radius:50%;pointer-events:none;z-index:-1;
+    background:radial-gradient(closest-side at 30% 40%, rgba(216,167,177,.55), rgba(216,167,177,0)),
+               radial-gradient(closest-side at 72% 66%, rgba(197,180,227,.45), rgba(197,180,227,0));
+    filter:blur(26px);opacity:0;transform:scale(.8);transition:opacity 1s ease,transform 1.4s cubic-bezier(.22,1,.36,1)}
+  .step:hover{transform:translateY(-4px);box-shadow:0 18px 44px rgba(61,107,117,.12);background:rgba(255,255,255,.8)}
+  .step:hover::before{opacity:1;transform:scale(1.05)}
+  .step .n{font-size:12px;letter-spacing:.3em;color:var(--accent);font-weight:600}
+  .step .n::before{content:"STEP ";letter-spacing:.24em}
+  .step .st{font-size:16px;font-weight:600;letter-spacing:.06em;line-height:1.7;word-break:keep-all}
+  .step .sd{font-size:14px;line-height:2;letter-spacing:.03em;color:var(--ink);flex:1}
+  .step .sl{margin-top:6px;font-size:12.5px;letter-spacing:.14em;color:var(--ink-soft)}
+  .step .sl b{font-weight:600;color:var(--accent);cursor:pointer}
+  .step .sl b:hover{text-decoration:underline;text-underline-offset:4px}
+  .howto-install{margin-top:26px;font-size:13px;letter-spacing:.12em}
+  .howto-install a{color:var(--ink-soft);text-decoration:none;border-bottom:1px solid rgba(79,125,136,.4);padding-bottom:2px}
+  .howto-install a:hover{color:var(--ink);border-bottom-color:var(--ink)}
+  @media (max-width:640px){section.block.howto{padding-top:64px}.steps{gap:12px}.step{width:min(100%,360px);padding:20px 18px 18px}
+    .step .st{font-size:16px}.step .sd{font-size:15px}.step .sl{font-size:13.5px}.howto-install{font-size:14px}}
+
+  /* ---------- 最近ふえた言葉: 図鑑は泡、ラボは「水面に映る星」(金色の星+細い線で結ぶ) ---------- */
+  /* 「最近ふえた言葉」の水面は少し夕暮れに沈めて、星が見えるように(泡は白いまま浮く) */
+  .bd-sea.dusk::before{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;
+    background:linear-gradient(rgba(16,34,60,.22), rgba(14,30,54,.34) 55%, rgba(16,34,60,.26))}
+  .star{position:absolute;transform:translate(-50%,-50%);display:flex;flex-direction:column;align-items:center;gap:7px;
+    cursor:pointer;pointer-events:auto;text-decoration:none;color:var(--ink);z-index:3;
+    animation:twinkle var(--dur,5s) ease-in-out var(--delay,0s) infinite}
+  .star .pt{width:18px;height:18px;position:relative;background:#fff3cf;
+    clip-path:polygon(50% 0,61% 39%,100% 50%,61% 61%,50% 100%,39% 61%,0 50%,39% 39%);
+    transition:transform .6s cubic-bezier(.22,1,.36,1)}
+  .star .glow{position:absolute;top:9px;left:50%;width:56px;height:56px;transform:translate(-50%,-50%);border-radius:50%;pointer-events:none;
+    background:radial-gradient(circle, rgba(255,236,180,.95) 0%, rgba(240,210,140,.45) 35%, rgba(255,255,255,0) 70%);
+    transition:transform .8s cubic-bezier(.22,1,.36,1),opacity .6s}
+  .star .lb{font-size:12.5px;font-weight:600;letter-spacing:.04em;line-height:1.55;text-align:center;white-space:nowrap;color:#fff;
+    text-shadow:0 1px 6px rgba(8,22,40,.85),0 0 14px rgba(255,235,190,.5)}
+  .star:hover .pt{transform:scale(1.35) rotate(45deg)}
+  .star:hover .glow{transform:translate(-50%,-50%) scale(1.7)}
+  @keyframes twinkle{0%,100%{opacity:.82}50%{opacity:1}}
+  .bd-sea .lines{position:absolute;inset:0;width:100%;height:100%;z-index:2;pointer-events:none}
+  .bd-sea .lines polyline{fill:none;stroke:rgba(255,240,210,.45);stroke-width:1.1;stroke-dasharray:3 5;vector-effect:non-scaling-stroke}
+  @media (prefers-reduced-motion:reduce){.star{animation:none}}
+  @media (max-width:640px){.star .lb{font-size:11.5px}}
+  .bd-cta .pillbtn + .pillbtn{margin-left:12px}
+  .pillbtn.gold{color:#4a3d1c;background:linear-gradient(135deg,#f6ead0 0%,#e9d49e 50%,#f3e3bb 100%);
+    border:1px solid rgba(196,168,96,.55);box-shadow:0 5px 18px rgba(196,168,96,.28), inset 0 1px 0 rgba(255,255,255,.7)}
+  .pillbtn.gold:hover{box-shadow:0 9px 24px rgba(196,168,96,.4), inset 0 1px 0 rgba(255,255,255,.7)}
+  @media (max-width:640px){.bd-cta .pillbtn{display:block;width:max-content;margin:0 auto}.bd-cta .pillbtn + .pillbtn{margin:12px auto 0}}
 
   /* ---------- 体験室(アプリのカード) ---------- */
   .rooms{display:flex;gap:clamp(18px,2.6vw,32px);flex-wrap:wrap;justify-content:center;
@@ -392,7 +485,7 @@
     /* HERO: 文字の間に息をさせる(タイトル→一言→図鑑への一行→ことば→円、を段ごとに離す) */
     .hero h1{font-size:21px;line-height:1.9;letter-spacing:.18em;text-indent:.18em}
     .hero .sg-title{margin-bottom:18px}
-    .hero p.tagline{margin-top:18px;font-size:14.5px;letter-spacing:.2em;line-height:1.9}
+    .hero p.tagline{margin-top:18px;font-size:17px;letter-spacing:.16em;text-indent:.16em;line-height:1.9;font-weight:600;padding:0 12px}
     .hero p.tagline2{margin-top:4px;font-size:13.5px;letter-spacing:.14em;line-height:1.9;text-align:center;padding:0 16px}
     .hero p.tagline2 a{border-bottom:none}
     .hero p.tagline2 .to{display:block;margin:4px 0 0;font-size:.9em;color:var(--ink-soft);
@@ -409,7 +502,7 @@
     .concepts{position:relative;left:auto;bottom:auto;transform:none;margin:0 auto 18px;padding:0 6px;
       flex-wrap:nowrap;gap:10px;width:100%;max-width:100%;justify-content:center}
     .concepts .circle{--d:min(112px, calc((100vw - 44px) / 3))}
-    .concepts .circle h2{font-size:12px;letter-spacing:.06em;padding:0 6px}
+    .concepts .circle h2{font-size:12px;letter-spacing:.06em;padding:0 6px;word-break:keep-all;line-height:1.6}
     .concepts .circle .mark{margin-bottom:4px}
     .hint{position:relative;bottom:auto;padding-bottom:12px;font-size:12px;color:rgba(58,102,114,.85)}
     .kicker{font-size:12.5px}
@@ -437,7 +530,7 @@
 </style>
 </head>
 <body>
-<!-- 神聖幾何学のマーク(線画・色は currentColor)。sg-seed=フラワー・オブ・ライフ(共通マーク・idは互換のため sg-seed のまま) / sg-cube=メタトロンキューブ(図鑑) / sg-vesica=ヴェシカ・パイシス(ガイダンス) / sg-merkaba=マカバ(夢診断) -->
+<!-- 神聖幾何学のマーク(線画・色は currentColor)。sg-seed=フラワー・オブ・ライフ(共通マーク・idは互換のため sg-seed のまま) / sg-cube=メタトロンキューブ(図鑑) / sg-torus=トーラス(引き寄せの法則ラボ) / sg-vesica=ヴェシカ・パイシス(ガイダンス) / sg-merkaba=マカバ(夢診断・準備中) -->
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
   <symbol id="sg-seed" viewBox="0 0 100 100">
     <g fill="none" stroke="currentColor" stroke-width="1.25">
@@ -460,6 +553,17 @@
       <path d="M50 26 L50 74" stroke-width="1"/>
     </g>
   </symbol>
+  <symbol id="sg-torus" viewBox="0 0 100 100">
+    <g fill="none" stroke="currentColor" stroke-width="1.5">
+      <ellipse cx="50" cy="50" rx="42" ry="15"/>
+      <ellipse cx="50" cy="50" rx="42" ry="15" transform="rotate(30 50 50)"/>
+      <ellipse cx="50" cy="50" rx="42" ry="15" transform="rotate(60 50 50)"/>
+      <ellipse cx="50" cy="50" rx="42" ry="15" transform="rotate(90 50 50)"/>
+      <ellipse cx="50" cy="50" rx="42" ry="15" transform="rotate(120 50 50)"/>
+      <ellipse cx="50" cy="50" rx="42" ry="15" transform="rotate(150 50 50)"/>
+      <circle cx="50" cy="50" r="42" stroke-width="1.1"/>
+    </g>
+  </symbol>
   <symbol id="sg-merkaba" viewBox="0 0 100 100">
     <g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round">
       <polygon points="50,10 86,72 14,72"/>
@@ -476,10 +580,10 @@
     <a class="home" href="#hero"><svg class="sg" aria-hidden="true"><use href="#sg-seed"/></svg><span>スピリチュアル・メタサイエンス研究所</span></a>
     <ul>
       <li><a href="#weekly"><span class="l">今週のメルマガ</span><span class="s">メルマガ</span></a></li>
+      <li><a href="#howto"><span class="l">使いかた</span><span class="s">使いかた</span></a></li>
       <li><a href="#notice">お知らせ</a></li>
       <li><a href="#intro"><span class="l">研究所について</span><span class="s">研究所</span></a></li>
       <li><a href="#rooms">体験室</a></li>
-      <li><a href="#breakdown"><span class="l">意識の図鑑</span><span class="s">図鑑</span></a></li>
       <li><a href="#deepen">深める</a></li>
     </ul>
   </div>
@@ -490,8 +594,7 @@
   <canvas id="water"></canvas>
   <div class="hero-inner">
     <h1><svg class="sg sg-title" aria-hidden="true"><use href="#sg-seed"/></svg>スピリチュアル・<wbr>メタサイエンス<wbr>研究所</h1>
-    <p class="tagline">見えない世界を、やさしく紐解く場所</p>
-    <p class="tagline2"><a href="#breakdown">スピリチュアルを、自分のために使う。<span class="to">意識の図鑑へ</span></a></p>
+    <p class="tagline">意識＝エネルギーのしくみを、知る場所</p>
     <div class="kotoba-area">
       <p class="kotoba-label">みちよのことば</p>
       <div class="kotoba" id="kotoba">
@@ -507,17 +610,16 @@
       <h2>意識の図鑑</h2>
       <p>似ているようで、<br>まったく違う言葉を、<br>魂の目線で見分ける。</p>
     </a>
+    <a class="circle" href="hikiyose/index.html">
+      <div class="mark"><svg class="sg" aria-hidden="true"><use href="#sg-torus"/></svg></div>
+      <h2>引き寄せの<wbr>法則ラボ</h2>
+      <p>なぜ叶う、なぜ叶わない。<br>そのしくみを、<br>知る。</p>
+    </a>
     <a class="circle" href="guidance/index.html">
       <div class="mark"><svg class="sg" aria-hidden="true"><use href="#sg-vesica"/></svg></div>
-      <h2>みちよのガイダンス</h2>
+      <h2>みちよの<wbr>ガイダンス</h2>
       <p>迷ったとき、<br>不安なときに、<br>ひらく指針。</p>
     </a>
-    <div class="circle soon">
-      <div class="mark"><svg class="sg" aria-hidden="true"><use href="#sg-merkaba"/></svg></div>
-      <h2>夢診断</h2>
-      <p>夢のことばを、<br>ひらく。</p>
-      <span class="soon-label">2027年公開予定</span>
-    </div>
   </nav>
   <p class="hint">水面に、そっと触れてみてください</p>
 </section>
@@ -684,6 +786,17 @@ createWater(document.getElementById('water'), {flakes:true, hover:65, click:420,
 
 </script>
 
+<!-- ============ 夢診断の予告バー(2027年公開予定。公開したら、ここを消して円に戻すか、href をアプリに差し替える) ============ -->
+<section class="yume-bar" id="yume">
+  <a href="yume/">
+    <svg class="sg" aria-hidden="true"><use href="#sg-merkaba"/></svg>
+    <span class="t">夢診断</span>
+    <span class="d">夢のことばを、ひらく部屋。いま準備中です。</span>
+    <span class="soon">2027年公開予定</span>
+    <span class="arrow">→</span>
+  </a>
+</section>
+
 <!-- ============ 今週のSubstack ============
   下の WEEKLY の4行(ep=第N回/title/url/excerpt)が中身。公開後は GitHub Actions(.github/workflows/weekly-substack.yml)が
   毎週土曜にSubstackの配信を読んで自動で書き換える。手で直してもよい(形式を崩さなければ次の自動更新で上書きされるだけ)。
@@ -713,6 +826,35 @@ const WEEKLY = {
   document.getElementById('wkMore').href = WEEKLY.url;
 })();
 </script>
+
+<!-- ============ はじめての方へ(使いかた3ステップ) ============ -->
+<section class="block howto" id="howto">
+  <p class="kicker"><svg class="sg" aria-hidden="true"><use href="#sg-seed"/></svg>はじめての方へ</p>
+  <h3>この研究所の使いかた</h3>
+  <p class="lede">読む・ひらく・遊ぶ。三つの入口があります。<br>
+  どこから入っても、行き着くのは「自分で気づいて、自分で答えを出せる」あなたです。</p>
+  <div class="steps">
+    <a class="step" href="zukan/index.html">
+      <span class="n">1</span>
+      <span class="st">気になる言葉を、調べる</span>
+      <span class="sd">「愛と執着」「波動」「手放す」——似ていて違う言葉、誤解されやすい言葉を、みちよの見方で。</span>
+      <span class="sl">意識の図鑑 ／ <b data-href="hikiyose/index.html">引き寄せの法則ラボ</b> →</span>
+    </a>
+    <a class="step" href="guidance/index.html">
+      <span class="n">2</span>
+      <span class="st">迷ったとき、不安なときに、ひらく</span>
+      <span class="sd">悩みの種類から、みちよの答えと「自分への問い」が届きます。誰にも送信されません。</span>
+      <span class="sl">みちよのガイダンス →</span>
+    </a>
+    <a class="step" href="#rooms">
+      <span class="n">3</span>
+      <span class="st">遊びながら、自分を知る</span>
+      <span class="sd">今日の１枚を引く、魂診断の家の扉をひらく、「好き！」を見つける。いちばんやさしい入口です。</span>
+      <span class="sl">体験室 →</span>
+    </a>
+  </div>
+  <p class="howto-install"><a href="install/">スマホのホーム画面に置くと、アプリのように使えます →</a></p>
+</section>
 
 <!-- ============ お知らせ ============ -->
 <section class="notice" id="notice">
@@ -799,23 +941,23 @@ const WEEKLY = {
   </nav>
 </section>
 
-<!-- ============ 魂のブレイクダウン ============ -->
-<section id="breakdown">
+<!-- ============ 最近ふえた言葉(図鑑とラボの新着を、水面の泡で) ============ -->
+<section id="recent">
   <div class="bd-head">
-    <p class="kicker"><svg class="sg" aria-hidden="true"><use href="#sg-seed"/></svg>わかる</p>
-    <h3>意識の図鑑<span class="sub">（魂のブレイクダウン）</span></h3>
-    <p class="lede">「意識の図鑑」は、<strong>似ているようで、まったく違う言葉</strong>を、<br>
-    魂の目線で見分けるための"ことばの辞典"です。<br>
-    「ワガママ」と「ありのまま」、「愛」と「執着」——<br>
-    水面に漂う泡に、そっと触れてみてください。</p>
+    <p class="kicker"><svg class="sg" aria-hidden="true"><use href="#sg-seed"/></svg>ふえる</p>
+    <h3>最近ふえた言葉</h3>
+    <p class="lede"><strong>意識の図鑑</strong>と<strong>引き寄せの法則ラボ</strong>に、新しく加わった言葉です。<br>
+    水面に漂う泡と、映る星に、そっと触れてみてください。</p>
   </div>
-  <div class="bd-sea" id="bdSea">
+  <div class="bd-sea dusk" id="bdSea">
+    <svg class="lines" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><polyline id="starLines" points=""/></svg>
     <div class="bubbles" id="bubbles"></div>
   </div>
   <div class="bd-cta">
-    <p class="bd-guide">泡に触れると、そのことばの解説がひらきます</p>
+    <p class="bd-guide">泡は図鑑、金色の星はラボの言葉。触れると、その解説がひらきます</p>
     <a class="pillbtn" href="zukan/index.html">図鑑をひらく</a>
-    <p class="bd-note">すべてのことばは、図鑑のページに。少しずつ、増えていきます。</p>
+    <a class="pillbtn gold" href="hikiyose/index.html">ラボをひらく</a>
+    <p class="bd-note">どちらも、少しずつ増えていきます。</p>
   </div>
 </section>
 
@@ -869,34 +1011,53 @@ const WEEKLY = {
 </footer>
 
 
-<!-- 意識の図鑑の正本は zukan/data.js(1配列)。ここでは新しい順に数個だけ泡にして、図鑑ページ(zukan/)へ案内する -->
+<!-- 図鑑の正本は zukan/data.js、ラボの正本は hikiyose/data.js。ここでは両方の新しい順に数個ずつ泡にして、それぞれのページへ案内する -->
 <script src="zukan/data.js"></script>
+<script src="hikiyose/data.js"></script>
 <script>
 (() => {
-  /* トップに出す泡の数と、水面の帯の中の置き場所(x%, y%) */
-  const TEASER_SLOTS = [{x:12,y:34},{x:33,y:70},{x:52,y:32},{x:70,y:68},{x:88,y:36}];
+  /* トップに出す泡の置き場所(x%, y%)。図鑑3つ+ラボ3つ=6つ(数を変えるときは SLOTS の数と PER を合わせる) */
+  const SLOTS = [{x:10,y:30},{x:27,y:64},{x:46,y:28},{x:62,y:66},{x:78,y:30},{x:92,y:62}];
+  const PER = 3;
   const wrap = document.getElementById('bubbles');
   document.getElementById('bdSea').style.backgroundImage = 'url(' + HERO_IMG_SRC + ')';
   const narrow = innerWidth < 640;
-  const latest = BREAKDOWN.map((item, i) => ({item, i})).slice(-TEASER_SLOTS.length).reverse();   // 新しいものから
-  latest.forEach(({item, i}, k) => {
-    const b = item.bubble || {label:[item.q]};
-    const slot = TEASER_SLOTS[k];
-    const el = document.createElement('a');
-    el.className = 'bubble';
-    el.href = 'zukan/index.html#no-' + String(i + 1).padStart(2, '0');
+  const pad = i => String(i + 1).padStart(2, '0');
+  const pick = (arr, page, cls) => arr.map((item, i) => ({item, i, page, cls})).slice(-PER).reverse();   // 新しいものから
+  const zk = pick(BREAKDOWN, 'zukan/index.html', ''), hk = pick(HIKIYOSE, 'hikiyose/index.html', 'lab');
+  const mixed = [];
+  for (let k = 0; k < PER; k++){ if (zk[k]) mixed.push(zk[k]); if (hk[k]) mixed.push(hk[k]); }   // 図鑑・ラボを交互に
+  const starPts = [];
+  mixed.slice(0, SLOTS.length).forEach((e, k) => {
+    const b = e.item.bubble || {label:[e.item.q]};
+    const slot = SLOTS[k];
     const jx = (Math.random() - .5) * 4, jy = (Math.random() - .5) * 5;
-    const bx = narrow ? Math.min(82, Math.max(18, slot.x)) : slot.x;
-    el.style.left = (bx + jx) + '%';
-    el.style.top  = (slot.y + jy) + '%';
-    el.style.width = el.style.height = (b.d || 96) + 'px';
-    el.style.setProperty('--dur', (6.5 + Math.random() * 3.5).toFixed(1) + 's');
-    el.style.setProperty('--delay', (-Math.random() * 8).toFixed(1) + 's');
-    el.innerHTML = b.label.join('<br>');
-    el.setAttribute('aria-label', item.q + '(図鑑でひらく)');
+    const bx = (narrow ? Math.min(84, Math.max(16, slot.x)) : slot.x) + jx, by = slot.y + jy;
+    const el = document.createElement('a');
+    el.href = e.page + '#no-' + pad(e.i);
+    el.style.left = bx + '%'; el.style.top = by + '%';
+    if (e.cls === 'lab'){
+      /* ラボの言葉 = 水面に映る星 */
+      el.className = 'star';
+      el.innerHTML = '<span class="glow"></span><span class="pt"></span><span class="lb">' + b.label.join('') + '</span>';
+      el.style.setProperty('--dur', (3.5 + Math.random() * 3).toFixed(1) + 's');
+      el.style.setProperty('--delay', (-Math.random() * 5).toFixed(1) + 's');
+      el.setAttribute('aria-label', e.item.q + '(ラボでひらく)');
+      starPts.push({x: bx, y: by});
+    } else {
+      el.className = 'bubble';
+      el.style.width = el.style.height = (b.d || 96) + 'px';
+      el.style.setProperty('--dur', (6.5 + Math.random() * 3.5).toFixed(1) + 's');
+      el.style.setProperty('--delay', (-Math.random() * 8).toFixed(1) + 's');
+      el.innerHTML = b.label.join('<br>');
+      el.setAttribute('aria-label', e.item.q + '(図鑑でひらく)');
+    }
     wrap.appendChild(el);
   });
-  /* 図鑑が見えたとき、泡を1つだけ一度ふわっと膨らませる(触れられる合図) */
+  /* 星どうしを細い線で結ぶ(星座のように) */
+  starPts.sort((a, b) => a.x - b.x);
+  document.getElementById('starLines').setAttribute('points', starPts.map(p => p.x.toFixed(1) + ',' + p.y.toFixed(1)).join(' '));
+  /* 見えたとき、泡を1つだけ一度ふわっと膨らませる(触れられる合図) */
   if ('IntersectionObserver' in window){
     const io = new IntersectionObserver(es => {
       if (es.some(e => e.isIntersecting)){
@@ -907,6 +1068,10 @@ const WEEKLY = {
     }, {threshold:.5});
     io.observe(document.getElementById('bdSea'));
   }
+  /* 使いかた STEP1 の「引き寄せの法則ラボ」だけは、カードとは別の行き先へ */
+  document.querySelectorAll('.step .sl b[data-href]').forEach(b => {
+    b.addEventListener('click', ev => { ev.preventDefault(); ev.stopPropagation(); location.href = b.dataset.href; });
+  });
 })();
 
 /* 「この研究所について」の水面: 雪は降らない・カーソルでささやかに揺れるだけ */

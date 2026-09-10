@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light">
+<meta name="theme-color" content="#f4f9fa">
+<style>html{background:#f4f9fa;color-scheme:light}</style>
+<title>夢診断（2027年公開予定） — スピリチュアル・メタサイエンス研究所</title>
+<meta name="description" content="夢のことばを、みちよの見方でひらく「夢診断」。2027年公開予定・いま準備中です。公開のお知らせは、みちよの無料メルマガで。">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="スピリチュアル・メタサイエンス研究所">
+<meta property="og:title" content="夢診断（2027年公開予定）">
+<meta property="og:description" content="夢のことばを、みちよの見方でひらく。2027年公開予定・準備中です。">
+<meta property="og:url" content="https://resonancelink.com/yume/">
+<meta property="og:image" content="https://resonancelink.com/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/svg+xml" href="../favicon.svg">
+<link rel="icon" type="image/png" sizes="180x180" href="../favicon.png">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="manifest" href="../site.webmanifest">
+<meta name="apple-mobile-web-app-title" content="研究所">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<style>
+  :root{
+    --ink:#345f69; --ink-soft:#4f7d88; --white:#ffffff; --accent:#A8687F;
+    --bg:#f4f9fa;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth;scroll-padding-top:70px}
+  body{font-family:"Hiragino Mincho ProN","Yu Mincho","Noto Serif JP",serif;color:var(--ink);background:var(--bg)}
+
+  .sg{display:inline-block;width:1em;height:1em;vertical-align:-.12em;color:currentColor}
+  .kicker{font-size:12px;font-weight:600;letter-spacing:.42em;text-indent:.42em;color:var(--accent);margin-bottom:14px}
+  .kicker .sg{width:1.9em;height:1.9em;margin-right:.5em;vertical-align:-.55em;opacity:.9;color:var(--accent)}
+
+  /* ---------- 上部ナビ(このページでは最初から表示) ---------- */
+  .topnav{position:fixed;top:0;left:0;right:0;z-index:40;
+    background:rgba(244,249,250,.82);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);
+    border-bottom:1px solid rgba(110,151,160,.16)}
+  .topnav .in{max-width:1000px;margin:0 auto;display:flex;align-items:center;gap:18px;padding:0 18px;height:50px}
+  .topnav .home{display:flex;align-items:center;gap:8px;color:var(--ink);text-decoration:none;flex-shrink:0;
+    font-size:11.5px;letter-spacing:.18em;white-space:nowrap}
+  .topnav .home .sg{width:22px;height:22px;color:var(--accent)}
+  .topnav .home span{display:none}
+  .topnav ul{list-style:none;display:flex;gap:4px;margin-left:auto;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+  .topnav ul::-webkit-scrollbar{display:none}
+  .topnav li a{display:block;padding:8px 12px;font-size:13px;letter-spacing:.12em;color:var(--ink);
+    text-decoration:none;white-space:nowrap;border-bottom:2px solid transparent;transition:border-color .3s,color .3s}
+  .topnav li a:hover{color:var(--accent)}
+  @media (min-width:761px){.topnav .home span{display:inline}}
+  @media (max-width:640px){.topnav .in{height:46px;gap:8px;padding:0 10px}.topnav li a{padding:8px 6px;font-size:12px;letter-spacing:.04em}}
+
+  /* ---------- 見出し ---------- */
+  .bd-head{max-width:760px;margin:0 auto;padding:118px 24px 26px;text-align:center}
+  .bd-head h1{font-size:clamp(22px,2.8vw,28px);letter-spacing:.28em;text-indent:.28em;font-weight:600;margin-bottom:14px;word-break:keep-all;color:var(--ink)}
+  .bd-head h1 .sg{width:1.15em;height:1.15em;margin-right:.3em;vertical-align:-.2em;color:var(--ink-soft)}
+  .bd-head h1::after{content:"";display:block;width:44px;height:2px;margin:14px auto 0;border-radius:2px;
+    background:linear-gradient(90deg,#D8A7B1,#C5B4E3)}
+  .soon-label{display:inline-block;margin:0 0 16px;font-size:11px;letter-spacing:.24em;text-indent:.24em;
+    color:var(--ink-soft);border:1px solid rgba(110,151,160,.4);border-radius:999px;padding:4px 14px}
+  .lede{font-size:15px;line-height:2.2;color:var(--ink-soft);letter-spacing:.06em;margin-bottom:0}
+  .lede strong{font-weight:600;color:var(--ink)}
+  @media (max-width:640px){.bd-head{padding-top:96px}.bd-head .lede br{display:none}}
+
+  /* ---------- 水面と、夢のことばの泡(まだ触れない) ---------- */
+  .bd-sea{position:relative;height:min(50vh,420px);overflow:hidden;background:#c9dfe4}
+  #seaWater{position:absolute;inset:0;width:100%;height:100%;display:block;cursor:default}
+  .bd-sea::after{content:"";position:absolute;inset:0;pointer-events:none;z-index:1;
+    background:linear-gradient(rgba(244,249,250,.95), rgba(244,249,250,0) 14%, rgba(244,249,250,0) 86%, rgba(244,249,250,.95))}
+  .bubbles{position:absolute;inset:0;z-index:2;pointer-events:none}
+  .bubble{position:absolute;transform:translate(-50%,-50%);border-radius:50%;
+    display:flex;align-items:center;justify-content:center;text-align:center;color:var(--ink);
+    background:radial-gradient(circle, rgba(255,255,255,.7) 0%, rgba(255,255,255,.4) 55%, rgba(255,255,255,0) 100%);
+    animation:bubblebob var(--dur,8s) ease-in-out var(--delay,0s) infinite;
+    font-size:12px;letter-spacing:.03em;line-height:1.65;font-weight:600;padding:0 6px;opacity:.72;
+    text-shadow:0 1px 8px rgba(255,255,255,.95)}
+  .bubble::before{content:"";position:absolute;inset:0;border-radius:50%;border:2px solid rgba(255,255,255,.6);filter:blur(2.5px)}
+  @keyframes bubblebob{0%,100%{margin-top:0}50%{margin-top:-12px}}
+  @media (prefers-reduced-motion:reduce){.bubble{animation:none}}
+  .bd-guide{max-width:900px;margin:0 auto;padding:30px 24px 0;text-align:center;font-size:13.5px;letter-spacing:.14em;color:var(--ink-soft)}
+
+  /* ---------- 準備中の案内 ---------- */
+  .about{max-width:640px;margin:44px auto 0;padding:0 24px;text-align:center}
+  .about .box{background:rgba(255,255,255,.7);border-radius:24px;padding:48px 34px 44px;box-shadow:0 10px 40px rgba(61,107,117,.06)}
+  .about h2{font-size:clamp(19px,2.4vw,24px);letter-spacing:.24em;text-indent:.24em;font-weight:600;margin-bottom:16px;color:var(--ink)}
+  .about h2::after{content:"";display:block;width:44px;height:2px;margin:14px auto 0;border-radius:2px;background:linear-gradient(90deg,#D8A7B1,#C5B4E3)}
+  .about .body{font-size:15px;line-height:2.3;letter-spacing:.06em;color:var(--ink);margin-bottom:26px;text-align:left}
+  .about .body strong{font-weight:600}
+  .pillbtn{display:inline-block;font-family:inherit;font-size:15px;font-weight:500;letter-spacing:.12em;color:#fff;text-decoration:none;
+    background:linear-gradient(135deg,#D8A7B1,#C5B4E3);border-radius:999px;padding:13px 38px;
+    box-shadow:0 5px 18px rgba(216,167,177,.4);transition:transform .25s, box-shadow .25s}
+  .pillbtn:hover{transform:translateY(-2px);box-shadow:0 9px 24px rgba(197,180,227,.5)}
+  .about .fine{margin-top:20px;font-size:12.5px;letter-spacing:.08em;color:var(--ink-soft);line-height:2}
+  .about .fine a{color:var(--ink-soft)}
+  .backhome{text-align:center;margin-top:40px;font-size:13px;letter-spacing:.2em}
+  .backhome a{color:var(--ink-soft);text-decoration:none;border-bottom:1px solid rgba(79,125,136,.4);padding-bottom:3px}
+  .backhome a:hover{color:var(--ink);border-bottom-color:var(--ink)}
+  @media (max-width:640px){.about .box{padding:38px 22px 32px}.about .body br{display:none}}
+
+  /* ---------- FOOTER ---------- */
+  footer{padding:90px 20px 46px;text-align:center;font-size:12.5px;line-height:2.2;color:var(--ink-soft);letter-spacing:.08em}
+  footer .links{margin:22px 0 6px;font-size:12px;letter-spacing:.14em}
+  footer .links a{color:var(--ink-soft);text-decoration:none;border-bottom:1px solid rgba(90,135,145,.35);margin:0 8px;padding-bottom:2px}
+  footer .links a:hover{border-bottom-color:var(--ink)}
+  footer .unei{margin-top:14px;font-size:11.5px;letter-spacing:.1em}
+  footer .unei a{color:var(--ink-soft)}
+  footer .fname{letter-spacing:.3em;margin-bottom:14px;color:var(--ink-soft)}
+
+  /* ---------- スマホの読みやすさ ---------- */
+  @media (max-width:640px){
+    :root{--ink:#22454f;--ink-soft:#2f5c67}
+    h1,h2,strong,b,.kicker,.bubble{font-weight:700}
+    .kicker{font-size:12.5px}
+    .lede{font-size:15.5px}
+    .bd-guide{font-size:14px}
+    .about .body{font-size:15.5px}
+    .about .fine{font-size:13.5px}
+    .backhome{font-size:14px}
+    footer{font-size:13.5px}
+    footer .links{font-size:13px}
+    footer .unei{font-size:12.5px}
+  }
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="sg-seed" viewBox="0 0 100 100">
+    <g fill="none" stroke="currentColor" stroke-width="1.25">
+      <circle cx="50" cy="50" r="11"/><circle cx="50" cy="61" r="11"/><circle cx="40.5" cy="55.5" r="11"/><circle cx="40.5" cy="44.5" r="11"/><circle cx="50" cy="39" r="11"/><circle cx="59.5" cy="44.5" r="11"/><circle cx="59.5" cy="55.5" r="11"/><circle cx="50" cy="72" r="11"/><circle cx="30.9" cy="61" r="11"/><circle cx="30.9" cy="39" r="11"/><circle cx="50" cy="28" r="11"/><circle cx="69.1" cy="39" r="11"/><circle cx="69.1" cy="61" r="11"/><circle cx="69.1" cy="50" r="11"/><circle cx="59.5" cy="66.5" r="11"/><circle cx="40.5" cy="66.5" r="11"/><circle cx="30.9" cy="50" r="11"/><circle cx="40.5" cy="33.5" r="11"/><circle cx="59.5" cy="33.5" r="11"/>
+      <circle cx="50" cy="50" r="33" stroke-width="1.1"/><circle cx="50" cy="50" r="35.5" stroke-width="0.8"/>
+    </g>
+  </symbol>
+  <symbol id="sg-merkaba" viewBox="0 0 100 100">
+    <g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round">
+      <polygon points="50,10 86,72 14,72"/>
+      <polygon points="50,90 14,28 86,28"/>
+      <circle cx="50" cy="50" r="42" stroke-width="1.1"/>
+      <circle cx="50" cy="50" r="7" stroke-width="1.2"/>
+    </g>
+  </symbol>
+</svg>
+
+<!-- ============ 上部ナビ ============ -->
+<nav class="topnav" id="topnav" aria-label="サイトの案内">
+  <div class="in">
+    <a class="home" href="../index.html"><svg class="sg" aria-hidden="true"><use href="#sg-seed"/></svg><span>スピリチュアル・メタサイエンス研究所</span></a>
+    <ul>
+      <li><a href="../index.html">ホーム</a></li>
+      <li><a href="../zukan/index.html">意識の図鑑</a></li>
+      <li><a href="../hikiyose/index.html">引き寄せラボ</a></li>
+      <li><a href="../guidance/index.html">ガイダンス</a></li>
+      <li><a href="../index.html#rooms">体験室</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- ============ 見出し ============ -->
+<header class="bd-head" id="top">
+  <p class="kicker"><svg class="sg" aria-hidden="true"><use href="#sg-seed"/></svg>準備中</p>
+  <h1><svg class="sg" aria-hidden="true"><use href="#sg-merkaba"/></svg>夢診断</h1>
+  <p class="soon-label">2027年公開予定</p>
+  <p class="lede">夜に見た夢の「ことば」を、みちよの見方でひらく部屋。<br>
+  いま、静かに準備をしています。</p>
+</header>
+
+<!-- ============ 水面(夢のことばが、まだ届かない深さに漂っている) ============ -->
+<div class="bd-sea" id="bdSea">
+  <canvas id="seaWater"></canvas>
+  <div class="bubbles" id="bubbles"></div>
+</div>
+<p class="bd-guide">夢のことばは、公開の日まで水面の下に。</p>
+
+<!-- ============ 案内 ============ -->
+<section class="about" id="about">
+  <div class="box">
+    <p class="kicker"><svg class="sg" aria-hidden="true"><use href="#sg-seed"/></svg>この部屋について</p>
+    <h2>夢は、意識からの手紙</h2>
+    <p class="body">蛇、海、歯、空を飛ぶ——夢に出てくるものは、<strong>あなたの意識が、あなたに向けて送っている「ことば」</strong>です。<br>
+    「夢診断」では、よく見る夢のことばを、吉凶の占いではなく、〈いま、あなたのエネルギーがどう動いているか〉を知るための手がかりとして、みちよの見方でひらいていきます。</p>
+    <p class="body">公開は2027年の予定です。できあがったら、まずメルマガでお知らせします。</p>
+    <a class="pillbtn" href="https://michiyospiritualcounsellor.substack.com/subscribe" target="_blank" rel="noopener">メルマガ（無料）で知らせを受け取る</a>
+    <p class="fine">待っているあいだは、<a href="../zukan/index.html">意識の図鑑</a>・<a href="../hikiyose/index.html">引き寄せの法則ラボ</a>・<a href="../guidance/index.html">みちよのガイダンス</a> をどうぞ。</p>
+  </div>
+  <p class="backhome"><a href="../index.html">← 研究所のホームに戻る</a></p>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer id="privacy">
+  <p class="fname">スピリチュアル・メタサイエンス研究所</p>
+  このサイトと各アプリは、ページの閲覧数のみを計測しています。<br>
+  あなたが引いたカードや診断の答えが、送信・記録されることはありません。
+  <p class="links"><a href="https://angelswayhealing.com/" target="_blank" rel="noopener">公式サイト</a> ｜ みちよの配信:
+    <a href="https://voicy.jp/channel/1756" target="_blank" rel="noopener">Voicy</a>
+    <a href="https://www.youtube.com/channel/UCM4Cxu05XHKE7H530RbWuYA" target="_blank" rel="noopener">YouTube</a>
+    <a href="https://ameblo.jp/michiyo-hikiyose/" target="_blank" rel="noopener">Ameblo</a>
+    <a href="https://michiyospiritualcounsellor.substack.com/" target="_blank" rel="noopener">Substack</a>
+  </p>
+  <p class="links" style="margin-top:0"><a href="../install/">スマホのホーム画面に置く</a></p>
+  <p class="unei">運営: <a href="https://spiritualmetascienceacademy.org/" target="_blank" rel="noopener">一般社団法人スピリチュアル・メタサイエンス・アカデミー</a></p>
+  © みちよ
+</footer>
+
+<script src="../water.js"></script>
+<script>
+(() => {
+  createWater(document.getElementById('seaWater'), {image:'../water.jpg', flakes:true, hover:70, click:360, ambient:true});
+  /* まだ触れない、夢のことばの泡(見本)。公開時にアプリ本体へ差し替える */
+  const WORDS = [
+    {label:["蛇"], x:14, y:34, d:84}, {label:["海"], x:36, y:66, d:78}, {label:["歯が","抜ける"], x:56, y:30, d:88},
+    {label:["空を","飛ぶ"], x:76, y:64, d:86}, {label:["追われる"], x:90, y:30, d:80}
+  ];
+  const wrap = document.getElementById('bubbles');
+  const narrow = innerWidth < 640;
+  WORDS.forEach(b => {
+    const el = document.createElement('div');
+    el.className = 'bubble';
+    const bx = narrow ? Math.min(82, Math.max(18, b.x)) : b.x;
+    el.style.left = bx + '%'; el.style.top = b.y + '%';
+    el.style.width = el.style.height = b.d + 'px';
+    el.style.setProperty('--dur', (6.5 + Math.random() * 3.5).toFixed(1) + 's');
+    el.style.setProperty('--delay', (-Math.random() * 8).toFixed(1) + 's');
+    el.innerHTML = b.label.join('<br>');
+    wrap.appendChild(el);
+  });
+})();
+</script>
+<script src="../portal-nav.js" defer data-app="yume" data-bar="off" data-footer="off" data-rooms="off"></script>
+<script data-goatcounter="https://resonancelink.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>

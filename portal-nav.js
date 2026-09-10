@@ -21,6 +21,7 @@
     {id:"tamashii", name:"魂診断の家",               sub:"使命・星・種、あなたの魂の来歴",   url:"https://resonancelink.com/tamashii_shindan/"},
     {id:"suki",     name:"自分の「好き！」診断",      sub:"暮らしに眠る「好き」を見つける",   url:"https://resonancelink.com/suki_shindan/"},
     {id:"zukan",    name:"意識の図鑑",               sub:"似ていて違う言葉を、魂の目線で",   url:"https://resonancelink.com/zukan/"},
+    {id:"hikiyose", name:"引き寄せの法則ラボ",        sub:"よくある誤解と、みちよの見方",     url:"https://resonancelink.com/hikiyose/"},
     {id:"guidance", name:"みちよのガイダンス",        sub:"迷ったとき、不安なときにひらく",   url:"https://resonancelink.com/guidance/"}
   ];
   const LINKS = [
