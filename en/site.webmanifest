@@ -1,0 +1,25 @@
+{
+  "name": "Spiritual Metascience Institute",
+  "short_name": "Metascience",
+  "description": "Explore consciousness and energy with Michiyo.",
+  "lang": "en",
+  "start_url": "/en/",
+  "scope": "/en/",
+  "display": "standalone",
+  "background_color": "#f4f9fa",
+  "theme_color": "#f4f9fa",
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "id": "/en/"
+}

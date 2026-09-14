@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light">
+<meta name="theme-color" content="#f4f9fa">
+<title>Start Here — Spiritual Metascience Institute</title>
+<meta name="description" content="Find your way around the Spiritual Metascience Institute. Explore ideas, open Michiyo’s Guidance, or get to know yourself through playful experiences.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Spiritual Metascience Institute">
+<meta property="og:title" content="Start Here — A Guide to the Institute">
+<meta property="og:description" content="Read, reflect, and play. Three ways to begin exploring.">
+<meta property="og:url" content="https://resonancelink.com/en/start/">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="ja_JP">
+<meta property="og:image" content="https://resonancelink.com/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://resonancelink.com/en/start/">
+<link rel="alternate" hreflang="ja" href="https://resonancelink.com/start/">
+<link rel="alternate" hreflang="en" href="https://resonancelink.com/en/start/">
+<link rel="alternate" hreflang="x-default" href="https://resonancelink.com/start/">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" type="image/png" sizes="180x180" href="/favicon.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/en/site.webmanifest">
+<meta name="apple-mobile-web-app-title" content="Spiritual Metascience Institute">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<style>
+  :root{--ink:#345f69;--ink-soft:#4f7d88;--white:#fff;--accent:#A8687F;--bg:#f4f9fa}
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth;scroll-padding-top:80px;background:var(--bg);color-scheme:light}
+  body{font-family:Georgia,"Times New Roman",serif;color:var(--ink);background:var(--bg);line-height:1.7;overflow-wrap:break-word}
+  a:focus-visible{outline:3px solid var(--accent);outline-offset:5px;border-radius:4px}
+  .skip-link{position:fixed;top:8px;left:12px;z-index:80;padding:8px 14px;background:#fff;color:var(--ink);transform:translateY(-180%)}
+  .skip-link:focus{transform:translateY(0)}
+  .sg{display:inline-block;width:1em;height:1em;vertical-align:-.12em;color:currentColor}
+  .kicker{font-size:12px;font-weight:600;letter-spacing:.17em;color:var(--accent);margin-bottom:14px}
+  .kicker .sg{width:1.9em;height:1.9em;margin-right:.5em;vertical-align:-.55em;opacity:.9;color:var(--accent)}
+
+  .topnav{position:fixed;top:0;left:0;right:0;z-index:40;background:rgba(244,249,250,.88);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid rgba(110,151,160,.16)}
+  .topnav .in{max-width:1000px;margin:0 auto;display:flex;align-items:center;gap:20px;padding:0 18px;height:64px}
+  .topnav .home{display:flex;align-items:center;gap:8px;color:var(--ink);text-decoration:none;flex-shrink:1;min-width:0;font-size:12px;letter-spacing:.02em}
+  .topnav .home .sg{width:22px;height:22px;color:var(--accent);flex-shrink:0}
+  .topnav .home span{max-width:240px;line-height:1.35}
+  .topnav ul{list-style:none;display:flex;gap:8px;margin-left:auto;flex-shrink:0}
+  .topnav li a{display:block;padding:8px 6px;font-size:13px;letter-spacing:.02em;color:var(--ink);text-decoration:none;white-space:nowrap;border-bottom:2px solid transparent;transition:border-color .3s,color .3s}
+  .topnav li a:hover{color:var(--accent)}
+  .topnav li a[aria-current="page"]{border-color:var(--accent)}
+  .language-switch{display:flex;align-items:center;gap:7px;flex-shrink:0;font-family:Arial,sans-serif;font-size:11px;white-space:nowrap;letter-spacing:0}
+  .language-switch a{color:var(--ink-soft);text-decoration:underline;text-underline-offset:3px}
+  .language-switch [aria-current]{font-weight:700;color:var(--accent)}
+
+  .bd-head{max-width:820px;margin:0 auto;padding:120px 24px 36px;text-align:center}
+  .bd-head h1{font-size:clamp(27px,4vw,39px);line-height:1.3;letter-spacing:.01em;font-weight:600;margin-bottom:14px;color:var(--ink);text-wrap:balance}
+  .bd-head h1::after,.about h2::after{content:"";display:block;width:44px;height:2px;margin:14px auto 0;border-radius:2px;background:linear-gradient(90deg,#D8A7B1,#C5B4E3)}
+  .lede{font-size:17px;line-height:1.9;color:var(--ink-soft);letter-spacing:.005em}
+  .translation-note{font-family:Arial,sans-serif;font-size:12px;line-height:1.7;letter-spacing:.01em;color:var(--ink-soft);margin:22px auto 0;max-width:610px}
+
+  .howto{max-width:1000px;margin:0 auto;padding:0 24px;text-align:center}
+  .steps{display:flex;gap:clamp(14px,2vw,22px);flex-wrap:wrap;justify-content:center;align-items:stretch;margin-top:6px;text-align:left}
+  .step{position:relative;width:min(100%,300px);display:flex;flex-direction:column;gap:8px;color:var(--ink);background:rgba(255,255,255,.62);border:1px solid rgba(110,151,160,.14);border-radius:24px;padding:24px 22px 22px;box-shadow:0 10px 36px rgba(61,107,117,.06);isolation:isolate;transition:transform .6s cubic-bezier(.22,1,.36,1),box-shadow .6s,background .6s}
+  .step::before{content:"";position:absolute;inset:-30% -14%;border-radius:50%;pointer-events:none;z-index:-1;background:radial-gradient(closest-side at 30% 40%,rgba(216,167,177,.55),rgba(216,167,177,0)),radial-gradient(closest-side at 72% 66%,rgba(197,180,227,.45),rgba(197,180,227,0));filter:blur(26px);opacity:0;transform:scale(.8);transition:opacity 1s ease,transform 1.4s cubic-bezier(.22,1,.36,1)}
+  .step:hover{transform:translateY(-4px);box-shadow:0 18px 44px rgba(61,107,117,.12);background:rgba(255,255,255,.85)}
+  .step:hover::before{opacity:1;transform:scale(1.05)}
+  .step .n{font-size:12px;letter-spacing:.3em;color:var(--accent);font-weight:600}
+  .step .n::before{content:"STEP ";letter-spacing:.24em}
+  .step .st{font-size:20px;font-weight:600;letter-spacing:.01em;line-height:1.45;text-wrap:balance}
+  .step .sd{font-size:15px;line-height:1.9;letter-spacing:.005em;color:var(--ink);flex:1}
+  .step .sl{display:flex;flex-direction:column;align-items:flex-start;gap:12px;margin-top:6px;font-size:14px;letter-spacing:.01em;color:var(--ink-soft);line-height:1.55}
+  .step .sl a{font-weight:600;color:var(--accent);text-decoration:none}
+  .step .sl a:hover{text-decoration:underline;text-underline-offset:4px}
+  .sl small,.pillbtn small{display:block;font-family:Arial,sans-serif;font-size:11px;font-weight:400;letter-spacing:.015em}
+  .sl small{color:var(--ink-soft);margin-top:3px}
+  .howto-install{max-width:640px;margin:30px auto 0;font-size:13.5px;line-height:1.9;letter-spacing:.01em}
+  .howto-install a{color:var(--ink-soft);text-decoration:none;border-bottom:1px solid rgba(79,125,136,.4);padding-bottom:2px}
+  .howto-install a:hover{color:var(--ink);border-bottom-color:var(--ink)}
+  .howto-install small,footer small{font-family:Arial,sans-serif;font-size:11px;white-space:nowrap}
+  .howto-install small{display:block}
+
+  .bd-sea{position:relative;height:min(36vh,300px);margin-top:56px;overflow:hidden;background:#c9dfe4}
+  #seaWater{position:absolute;inset:0;width:100%;height:100%;display:block;cursor:default}
+  .bd-sea::after{content:"";position:absolute;inset:0;pointer-events:none;z-index:1;background:linear-gradient(rgba(244,249,250,.95),rgba(244,249,250,0) 14%,rgba(244,249,250,0) 86%,rgba(244,249,250,.95))}
+
+  .about{max-width:700px;margin:44px auto 0;padding:0 24px;text-align:center}
+  .about .box{background:rgba(255,255,255,.7);border-radius:24px;padding:48px 34px 44px;box-shadow:0 10px 40px rgba(61,107,117,.06)}
+  .about h2{font-size:clamp(23px,3vw,28px);letter-spacing:.01em;font-weight:600;margin-bottom:16px;color:var(--ink);line-height:1.4;text-wrap:balance}
+  .about .body{font-size:16px;line-height:1.9;letter-spacing:.005em;color:var(--ink);margin-bottom:26px}
+  .pillbtn{display:inline-block;font-family:inherit;font-size:15px;font-weight:500;letter-spacing:.01em;line-height:1.7;color:#fff;text-decoration:none;background:linear-gradient(135deg,#956071,#766397);border-radius:999px;padding:13px 26px;box-shadow:0 5px 18px rgba(216,167,177,.4);transition:transform .25s,box-shadow .25s}
+  .pillbtn:hover{transform:translateY(-2px);box-shadow:0 9px 24px rgba(197,180,227,.5)}
+  .pillbtn small{margin-top:3px;font-size:10px}
+  .backhome{margin-top:40px;font-size:13px;letter-spacing:.015em;line-height:1.8}
+  .backhome a{color:var(--ink-soft);text-decoration:none;border-bottom:1px solid rgba(79,125,136,.4);padding-bottom:3px}
+  .backhome a:hover{color:var(--ink);border-bottom-color:var(--ink)}
+
+  footer{max-width:860px;margin:0 auto;padding:80px 20px 46px;text-align:center;font-size:12.5px;line-height:1.9;color:var(--ink-soft);letter-spacing:.01em}
+  footer .fname{letter-spacing:.06em;margin-bottom:14px;font-size:15px}
+  footer .links{margin:16px 0 6px;font-size:12px;letter-spacing:.01em;line-height:2}
+  footer .links a{display:inline-block;color:var(--ink-soft);text-decoration:none;border-bottom:1px solid rgba(90,135,145,.35);margin:0 8px;padding-bottom:2px}
+  footer .links a:hover{border-bottom-color:var(--ink)}
+  footer .unei{margin:24px 0 10px;font-size:11.5px;letter-spacing:.01em;line-height:1.9}
+  footer .unei a{color:var(--ink-soft)}
+  .footer-label{margin-top:18px;font-size:12px}
+  footer .social-links{margin-top:4px;display:flex;gap:6px 16px;justify-content:center;flex-wrap:wrap}
+  footer .social-links a{margin:0}
+
+  @media (max-width:760px){.topnav .home span{display:none}.topnav .in{height:58px;gap:16px;padding:0 16px}.bd-head{padding-top:106px}}
+  @media (max-width:640px){
+    :root{--ink:#22454f;--ink-soft:#2f5c67}
+    h1,h2,.kicker{font-weight:700}
+    .kicker{font-size:12.5px}
+    .bd-head .lede br{display:none}
+    .steps{gap:12px}.step{width:min(100%,360px);padding:20px 18px 18px}
+    .howto-install{font-size:14px}
+    .about .box{padding:38px 22px 32px}.about .body br{display:none}
+    .backhome{font-size:14px}
+    footer{font-size:13.5px}footer .links{font-size:13px}footer .unei{font-size:12.5px}
+  }
+  @media (max-width:380px){.topnav .in{gap:8px;padding:0 10px}.topnav ul{gap:4px}.topnav li a{padding:8px 4px;font-size:12px}.language-switch{gap:5px;font-size:10px}.bd-head,.howto{padding-left:20px;padding-right:20px}.about{padding:0 18px}.about .box{padding:32px 20px}.pillbtn{font-size:14px;padding:13px 18px}.translation-note br{display:none}}
+  @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.step,.step::before,.pillbtn{transition:none}.step:hover,.pillbtn:hover{transform:none}}
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="sg-seed" viewBox="0 0 100 100">
+    <g fill="none" stroke="currentColor" stroke-width="1.25">
+      <circle cx="50" cy="50" r="11"/><circle cx="50" cy="61" r="11"/><circle cx="40.5" cy="55.5" r="11"/><circle cx="40.5" cy="44.5" r="11"/><circle cx="50" cy="39" r="11"/><circle cx="59.5" cy="44.5" r="11"/><circle cx="59.5" cy="55.5" r="11"/><circle cx="50" cy="72" r="11"/><circle cx="30.9" cy="61" r="11"/><circle cx="30.9" cy="39" r="11"/><circle cx="50" cy="28" r="11"/><circle cx="69.1" cy="39" r="11"/><circle cx="69.1" cy="61" r="11"/><circle cx="69.1" cy="50" r="11"/><circle cx="59.5" cy="66.5" r="11"/><circle cx="40.5" cy="66.5" r="11"/><circle cx="30.9" cy="50" r="11"/><circle cx="40.5" cy="33.5" r="11"/><circle cx="59.5" cy="33.5" r="11"/>
+      <circle cx="50" cy="50" r="33" stroke-width="1.1"/><circle cx="50" cy="50" r="35.5" stroke-width="0.8"/>
+    </g>
+  </symbol>
+</svg>
+
+<nav class="topnav" id="topnav" aria-label="Main navigation">
+  <div class="in">
+    <a class="home" href="/en/" aria-label="Spiritual Metascience Institute home"><svg class="sg" aria-hidden="true"><use href="#sg-seed"/></svg><span>Spiritual Metascience Institute</span></a>
+    <ul>
+      <li><a href="/en/">Home</a></li>
+      <li><a href="/en/start/" aria-current="page">Start here</a></li>
+    </ul>
+    <div class="language-switch" aria-label="Language">
+      <a href="/start/" lang="ja" hreflang="ja">日本語</a><span aria-hidden="true">/</span><span lang="en" aria-current="true">English</span>
+    </div>
+  </div>
+</nav>
+
+<header class="bd-head" id="top">
+  <p class="kicker"><svg class="sg" aria-hidden="true"><use href="#sg-seed"/></svg>START HERE</p>
+  <h1>A guide to the Institute</h1>
+  <p class="lede">Read, reflect, and play. Three ways to begin.<br>
+  Wherever you start, the path leads back to your own insights and answers.</p>
+  <p class="translation-note">The home page and this guide are available in English.<br>The articles, guidance, and experiences linked below are currently in Japanese.</p>
+</header>
+
+<main id="main">
+<section class="howto" id="howto" aria-label="Three ways to explore">
+  <div class="steps">
+    <div class="step">
+      <span class="n">1</span>
+      <h2 class="st">Explore a word that speaks to you</h2>
+      <p class="sd">Love and attachment. Vibration. Letting go. Explore ideas that can seem alike or be easy to misunderstand, through Michiyo’s perspective.</p>
+      <div class="sl"><a href="/zukan/">Atlas of Consciousness → <small>In Japanese</small></a><a href="/hikiyose/">Law of Attraction Lab → <small>In Japanese</small></a></div>
+    </div>
+    <div class="step">
+      <span class="n">2</span>
+      <h2 class="st">Find guidance when you feel unsure</h2>
+      <p class="sd">Choose what is on your mind to find Michiyo’s response and a question for your own reflection. Your choices are not sent to anyone.</p>
+      <div class="sl"><a href="/guidance/">Michiyo’s Guidance → <small>In Japanese</small></a></div>
+    </div>
+    <div class="step">
+      <span class="n">3</span>
+      <h2 class="st">Get to know yourself through play</h2>
+      <p class="sd">Draw a card for today, open a door in the House of the Soul, or discover what you love. This is a gentle place to begin. The experiences are currently in Japanese.</p>
+      <div class="sl"><a href="/en/#rooms">Explore the experiences →</a></div>
+    </div>
+  </div>
+  <p class="howto-install"><a href="/install/">Add the site to your phone’s home screen to use it like an app → <small>In Japanese</small></a></p>
+</section>
+
+<div class="bd-sea" id="bdSea" aria-hidden="true">
+  <canvas id="seaWater"></canvas>
+</div>
+
+<section class="about" id="about" aria-labelledby="newsletter-title">
+  <div class="box">
+    <p class="kicker"><svg class="sg" aria-hidden="true"><use href="#sg-seed"/></svg>KEEP EXPLORING</p>
+    <h2 id="newsletter-title">A weekly note from Michiyo</h2>
+    <p class="body">Consciousness and energy, in everyday words.<br>Michiyo’s free newsletter arrives every Saturday.</p>
+    <a class="pillbtn" href="https://michiyospiritualcounsellor.substack.com/" target="_blank" rel="noopener">Read the free newsletter <small>In Japanese · Opens in a new tab</small></a>
+  </div>
+  <p class="backhome"><a href="/en/">← Back to the Institute home</a></p>
+</section>
+</main>
+
+<footer id="privacy">
+  <p class="fname">Spiritual Metascience Institute</p>
+  <p>This site and its apps count page views only.<br>
+  The cards you draw and your quiz answers are not sent or recorded.</p>
+  <p class="links"><a href="https://angelswayhealing.com/" target="_blank" rel="noopener">Official website <small>In Japanese</small></a></p>
+  <p class="footer-label">More from Michiyo <span>(in Japanese)</span></p>
+  <p class="links social-links">
+    <a href="https://voicy.jp/channel/1756" target="_blank" rel="noopener">Voicy</a>
+    <a href="https://www.youtube.com/channel/UCM4Cxu05XHKE7H530RbWuYA" target="_blank" rel="noopener">YouTube</a>
+    <a href="https://ameblo.jp/michiyo-hikiyose/" target="_blank" rel="noopener">Ameblo</a>
+    <a href="https://michiyospiritualcounsellor.substack.com/" target="_blank" rel="noopener">Substack</a>
+  </p>
+  <p class="links"><a href="/install/">Add to your phone’s home screen <small>In Japanese</small></a></p>
+  <p class="unei">Operated by <a href="https://spiritualmetascienceacademy.org/" target="_blank" rel="noopener">Spiritual Metascience Academy <small>In Japanese</small></a></p>
+  <p>© Michiyo</p>
+</footer>
+
+<script src="/water.js"></script>
+<script>
+(() => {
+  createWater(document.getElementById('seaWater'), {image:'/water.jpg', flakes:true, hover:70, click:360, ambient:true});
+})();
+</script>
+<script data-goatcounter="https://resonancelink.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
+</body>
+</html>

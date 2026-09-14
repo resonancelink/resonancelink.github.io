@@ -1,0 +1,6 @@
+.language-switch{position:absolute;top:12px;right:18px;z-index:50;display:flex;gap:9px;align-items:center;font:13px/1.5 Georgia,"Yu Mincho",serif;letter-spacing:.02em;color:#345f69;background:rgba(255,255,255,.82);border:1px solid rgba(79,125,136,.2);border-radius:999px;padding:6px 14px}
+.language-switch a{color:inherit;text-decoration:underline;text-underline-offset:3px}
+.language-switch [aria-current]{font-weight:700}
+.language-switch a:focus-visible{outline:2px solid #a8687f;outline-offset:4px}
+.language-switch.language-switch-below-nav{top:58px}
+@media(max-width:640px){.language-switch{top:8px;right:12px;font-size:12px;padding:5px 11px}.hero-inner{padding-top:max(68px,6vh)!important}}

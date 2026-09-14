@@ -1,0 +1,61 @@
+@import url('/en/language-switch.css');
+body{font-family:Georgia,'Times New Roman',serif}
+body p,body h1,body h2,body h3,body a,body span,body figcaption{letter-spacing:.015em;text-indent:0;word-break:normal}
+.hero{min-height:760px}
+.hero-inner{padding-top:82px}
+.hero h1{font-size:clamp(28px,3.4vw,46px);line-height:1.2;letter-spacing:.055em}
+.en-title-break{display:none}
+.hero p.tagline{font-size:clamp(16px,1.7vw,23px);letter-spacing:.04em;text-align:center;padding:0 22px}
+.kotoba-area{max-width:760px;padding-bottom:29vh}
+.kotoba-text{font-size:clamp(18px,1.8vw,24px);line-height:1.65;letter-spacing:.015em}
+.kotoba-src{font-size:12px;line-height:1.7;letter-spacing:.015em;max-width:660px}
+.kotoba-label,.kicker{letter-spacing:.16em}
+.concepts{gap:36px;bottom:7vh}
+.concepts .circle{--d:210px;padding:12px}
+.concepts .circle h2{font-size:17px;line-height:1.3;letter-spacing:.02em}
+.concepts .circle p{font-size:12px;line-height:1.6;margin-top:6px;letter-spacing:0}
+.language-note{font:10px/1.5 Georgia,serif;margin-top:5px;opacity:.85}
+.topnav li a{font-size:13px;letter-spacing:.01em;padding:8px 10px}
+.topnav .home{letter-spacing:.02em}
+.bars{max-width:860px}
+.start-bar .d,.weekly .line .d,.yume-bar .d{white-space:normal;overflow:visible;line-height:1.65}
+.bars .t{letter-spacing:.02em;white-space:normal}
+.weekly small{display:block;font-size:10px;line-height:1.5;font-weight:400}
+.yume-bar a{flex-wrap:wrap}
+.yume-bar .d{flex:1;min-width:180px}
+.yume-bar .soon{white-space:normal;letter-spacing:.02em}
+.notice .name,.notice .pair-name{letter-spacing:.015em;line-height:1.6}
+.notice .detail,.notice .pair-detail,.lede,.intro .ibody{letter-spacing:.01em;line-height:1.85}
+.intro .ilead{letter-spacing:.01em;line-height:1.7}
+.intro .below{max-width:680px;text-align:left}
+.intro .ibody br{display:none}
+.intro .profile,.intro .first{letter-spacing:.01em;line-height:1.8}
+.intro .photo{width:44%}
+.intro figcaption .sm{line-height:1.8}
+.app h2{font-size:21px;line-height:1.4;letter-spacing:.015em}
+.app p.desc{line-height:1.8;letter-spacing:.01em}
+.app .meta{letter-spacing:.01em;line-height:1.6}
+.app .go{font-size:12px;letter-spacing:.01em;padding:10px 18px;margin-top:auto}
+.app .meta{margin-bottom:20px}
+.pillbtn{letter-spacing:.01em;white-space:normal;max-width:100%;line-height:1.6}
+.bubble{font-size:12px;line-height:1.5;letter-spacing:0}
+.star .lb{white-space:normal;width:160px;max-width:160px;font-size:12px;line-height:1.5;letter-spacing:0}
+.bd-cta .bd-guide{max-width:700px;margin-left:auto;margin-right:auto;line-height:1.8}
+.block h3,.bd-head h3,.install h3,.deepen h3{letter-spacing:.035em;line-height:1.4;text-indent:0}
+.install .fine,.deepen .sub-link{letter-spacing:.01em;line-height:1.8}
+footer,footer .fname,footer .links,footer .unei{letter-spacing:.01em}
+footer .links a{display:inline-block}
+a:focus-visible,.kotoba:focus-visible{outline:2px solid #a8687f;outline-offset:5px}
+@media(max-width:760px){.intro .photo{width:100%}.concepts{gap:16px}.concepts .circle{--d:190px}}
+@media(max-width:640px){
+ .hero{min-height:100svh}.hero-inner{padding-top:76px!important}.hero h1{font-size:29px;line-height:1.3;letter-spacing:.035em;padding:0 20px}.en-title-break{display:block}
+ .hero .sg-title{width:32px;height:32px;margin-bottom:16px}.hero p.tagline{font-size:17px;line-height:1.6;margin-top:16px;letter-spacing:.02em}
+ .kotoba-area{padding:34px 22px 26px;min-height:270px}.kotoba-text{font-size:18px;line-height:1.75;letter-spacing:.01em}.kotoba-src{font-size:11px;line-height:1.7;letter-spacing:.01em}.kotoba-label{font-size:12px;margin-bottom:20px}
+ .concepts{gap:8px;padding:0 10px;margin-bottom:22px;bottom:auto}.concepts .circle{--d:min(122px,calc((100vw - 36px)/3));padding:5px}.concepts .circle h2{font-size:12px;line-height:1.4;letter-spacing:0;padding:0 2px}.concepts .circle .mark .sg{width:22px;height:22px}.language-note{font-size:9px}
+ .hint{font-size:11px;letter-spacing:.05em}.topnav .home span{display:none}.topnav li a{font-size:12px;padding:8px 6px}
+ .bars{padding:0 16px}.start-bar .d{display:block;flex-basis:100%;order:3;padding-left:36px}.yume-bar .d{display:none}.yume-bar .t{font-size:16px}.yume-bar .soon{font-size:10px;max-width:110px}.yume-bar a{gap:10px;padding:14px}
+ .notice .box{padding-left:22px;padding-right:22px}.notice .name{font-size:21px}.notice .pair-name{font-size:18px}.notice .detail{font-size:15px}.notice .pillbtn{font-size:13px}
+ .intro .ibody{font-size:16px;line-height:1.9}.intro .ilead{font-size:20px;line-height:1.6}.intro .inner2,.intro .below{max-width:100%}.intro .profile{overflow-wrap:anywhere}
+ .app .go{font-size:13px}.bd-sea{height:650px}.bubble{font-size:11px;width:124px!important;height:124px!important}.star .lb{width:132px;max-width:132px;font-size:11px}
+ .bd-cta .pillbtn{width:auto;max-width:280px}.install .box,.deepen .box{padding:32px 20px}.install h3,.deepen h3{font-size:25px;letter-spacing:.02em}.install .fine{font-size:13px}
+}
