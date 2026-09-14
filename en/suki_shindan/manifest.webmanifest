@@ -1,7 +1,7 @@
 {
   "name": "Discover What You Love",
   "short_name": "Discover What You Love",
-  "lang": "en",
+  "lang": "en-GB",
   "start_url": "/en/suki_shindan/",
   "scope": "/en/suki_shindan/",
   "display": "standalone",

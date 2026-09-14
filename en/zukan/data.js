@@ -18,7 +18,7 @@ const BREAKDOWN = [
       "d": 106
     },
     "a": [
-      "The Japanese word wagamama can be read as allowing the self to be as it is: being the person you truly are. ‘I want this,’ ‘I love this,’ ‘I don’t like this’—having those feelings is a sign that you are you. Honoring your feelings is not selfish; it is living as yourself.",
+      "The Japanese word wagamama can be read as allowing the self to be as it is: being the person you truly are. ‘I want this,’ ‘I love this,’ ‘I don’t like this’—having those feelings is a sign that you are you. Honouring your feelings is not selfish; it is living as yourself.",
       "How is this different from defiantly refusing to change? Look at whether the person seems happy. Someone who is truly at ease being themselves tends to be cheerful, without leaving a negative impression on the people around them."
     ]
   },
@@ -41,12 +41,12 @@ const BREAKDOWN = [
       "d": 102
     },
     "a": [
-      "If emotions were crayons, you could not create a whole picture using only bright colors. You need dark colors, too. Negative is simply one side of a pair. In fact, highly creative people often have negative thoughts.",
+      "If emotions were crayons, you could not create a whole picture using only bright colours. You need dark colours, too. Negative is simply one side of a pair. In fact, highly creative people often have negative thoughts.",
       "It may sound like a paradox, but accepting the negative is what makes you truly positive. Remember that the deeper negativity lies in the part of you that rejects negative feelings."
     ]
   },
   {
-    "q": "Recognizing the voice of your heart and the voice of your head",
+    "q": "Recognising the voice of your heart and the voice of your head",
     "card": {
       "pair": [
         "Your heart",
@@ -84,7 +84,7 @@ const BREAKDOWN = [
       "d": 98
     },
     "a": [
-      "This does not mean being idle, being lazy, or doing nothing. It means stopping the things you force yourself to endure. Enduring takes energy, too. Redirect that energy toward what you love and truly want to do. That is what it means to stop pushing yourself.",
+      "This does not mean being idle, being lazy, or doing nothing. It means stopping the things you force yourself to endure. Enduring takes energy, too. Redirect that energy towards what you love and truly want to do. That is what it means to stop pushing yourself.",
       "Begin by becoming more sensitive to the feelings that tell you something hurts or feels too hard."
     ]
   },
@@ -107,7 +107,7 @@ const BREAKDOWN = [
       "d": 102
     },
     "a": [
-      "Spirituality is not about leaning on or clinging to something unseen. It helps you recognize the strength you already have, and realize that you can make your own way. All the answers are within you.",
+      "Spirituality is not about leaning on or clinging to something unseen. It helps you recognise the strength you already have, and realise that you can make your own way. All the answers are within you.",
       "Dependence arises when you lose faith in your own ability to live. Please remember: you have the power to live your life as yourself."
     ]
   },
@@ -127,7 +127,7 @@ const BREAKDOWN = [
       "d": 98
     },
     "a": [
-      "Loving yourself is not about indulging yourself or excusing selfish behavior. It means accepting yourself unconditionally, rather than saying, ‘I can love myself once I can do this.’ Put very simply, it is a state in which you are not driving yourself into a corner.",
+      "Loving yourself is not about indulging yourself or excusing selfish behaviour. It means accepting yourself unconditionally, rather than saying, ‘I can love myself once I can do this.’ Put very simply, it is a state in which you are not driving yourself into a corner.",
       "You are the one person in this world who can accept you unconditionally."
     ]
   },
@@ -171,7 +171,7 @@ const BREAKDOWN = [
     },
     "a": [
       "Feeling good does not mean being exuberant or full of excitement. It means feeling even a little better than you do right now. You do not have to leap straight into being full of energy.",
-      "Putting on a cheerful face is not truly feeling good, because it is being untruthful through your energy. Think of feeling good as kindness toward yourself: trying to help yourself feel even a little more at ease."
+      "Putting on a cheerful face is not truly feeling good, because it is being untruthful through your energy. Think of feeling good as kindness towards yourself: trying to help yourself feel even a little more at ease."
     ]
   },
   {
@@ -237,7 +237,7 @@ const BREAKDOWN = [
     },
     "a": [
       "Someone you admire probably carries a quality you want to find within yourself. But the moment you worship them—‘I have nothing like that; they are special’—you take power away from yourself. You are saying, ‘I have no power, so I want you to give me yours.’",
-      "Both admiration and worship begin with a response to the same energy. You would not respond if you did not carry something of it yourself. Recognizing and using that same quality within you can help you enjoy your own life more fully."
+      "Both admiration and worship begin with a response to the same energy. You would not respond if you did not carry something of it yourself. Recognising and using that same quality within you can help you enjoy your own life more fully."
     ]
   },
   {
@@ -283,7 +283,7 @@ const BREAKDOWN = [
     },
     "a": [
       "Letting go may sound like abandoning or throwing something away, but it is a little different. You cannot receive something in a tightly clenched hand. Letting go means opening that hand, making yourself ready to receive something new. It is not giving up.",
-      "‘If I let this go, something good might never come again.’ That fear is what lies beneath attachment to the old. Yet when you actually let go, you often realize, ‘Oh, this was right for me.’ Letting go is the first step toward welcoming new good things, opportunities, and guidance."
+      "‘If I let this go, something good might never come again.’ That fear is what lies beneath attachment to the old. Yet when you actually let go, you often realise, ‘Oh, this was right for me.’ Letting go is the first step towards welcoming new good things, opportunities, and guidance."
     ]
   }
 ];

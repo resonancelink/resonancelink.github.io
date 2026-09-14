@@ -1,7 +1,7 @@
 {
   "name": "Today\u2019s Card",
   "short_name": "Today\u2019s Card",
-  "lang": "en",
+  "lang": "en-GB",
   "start_url": "/en/michiyo_oraclecards/",
   "scope": "/en/michiyo_oraclecards/",
   "display": "standalone",

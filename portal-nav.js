@@ -125,7 +125,7 @@
       const currentRoom = ROOMS.find(r => r.id === app);
       if (currentRoom) {
         const english = document.createElement("a");
-        english.className = "pn-english"; english.lang = "en"; english.hreflang = "en";
+        english.className = "pn-english"; english.lang = "en-GB"; english.hreflang = "en-GB";
         english.textContent = "English";
         const suffix = location.pathname.endsWith("/about.html") ? "about.html" : "";
         const setLanguageLink = () => { english.href = currentRoom.url.replace("resonancelink.com/", "resonancelink.com/en/") + suffix + location.hash; };

@@ -1,6 +1,6 @@
-# English edition
+# British English edition
 
-Translation snapshot: September 14, 2026.
+Translation snapshot: 14 September 2026.
 
 The English edition includes the home page and visitor guide, all 13 Atlas of Consciousness entries, all 12 Law of Attraction Lab entries, all 67 Guidance answers across 12 categories, all 77 oracle cards, the Soul Compass, and all 18 questions and six result types in Discover What You Love. Questions, answers, reflection prompts, result descriptions, and navigation are translated.
 
@@ -20,6 +20,8 @@ Question order, answer weights, result keys, numerology calculations, and tie ha
 - Preview with an HTTP server rooted at the repository. Opening HTML files directly does not reproduce root-relative paths.
 - Newsletter articles, videos, books, external services, installation instructions, and the dream experience announcement retain their Japanese destinations, identified where linked. This edition does not translate third-party websites.
 
-Brand/course names are working translations; Japanese book titles are romanized where no official English edition was established. Guidance source dates and identifiers are preserved, with translated titles. Support information links to the provider's multilingual service page instead of implying that Japanese-only support details apply to English readers.
+Brand/course names are working translations; Japanese book titles are romanised where no official English edition was established. Guidance source dates and identifiers are preserved, with translated titles. Support information links to the provider's multilingual service page instead of implying that Japanese-only support details apply to English readers.
 
 Validation covered complete content counts, script syntax, internal links, 821 calculation comparisons against the original logic, and browser flows through the actual question and result screens. Publication uses the existing GitHub Pages configuration; no domain or hosting setting change is required.
+
+Use British English (en-GB) for new copy: -ise spellings, counsellor/counselling, colour, centre, travelling, and day–month–year dates. Use practice as a noun and practise as a verb. Preserve code identifiers, original artwork and source reference dates.

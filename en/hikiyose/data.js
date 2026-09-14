@@ -39,7 +39,7 @@ const HIKIYOSE = [
     "g": "Many people think of vibration as something suspicious or mysterious that only specially gifted people can sense.",
     "a": [
       "We all send and receive vibration every day. You see someone looking radiant and think, ‘Did something good happen?’ Or you sense the uneasiness of a worried person, even when they say nothing. What we commonly call their atmosphere is vibration.",
-      "We are like speakers: what we hold within becomes vibration that reaches the people around us. And just as you tune a radio to the program you want, what comes to you matches the frequency of what you hold in your heart."
+      "We are like speakers: what we hold within becomes vibration that reaches the people around us. And just as you tune a radio to the programme you want, what comes to you matches the frequency of what you hold in your heart."
     ],
     "src": "Hikiyose no Hosoku Tsukaikonashi Bukku (book in Japanese)"
   },
@@ -214,8 +214,8 @@ const HIKIYOSE = [
     },
     "g": "You may believe that making a wish come true means repeating it many times a day and carefully working out the whole route to getting there.",
     "a": [
-      "There are four steps to practicing attraction. First, decide clearly what you want. Second, hold a clear image: skip the route and see the result you want. Third, set it aside completely for a while, trusting it to unfold. Fourth, feel good, as though it has already happened.",
-      "You need to send your wish out only once. After that, bring the happy feeling of its fulfillment into everyday life. When you imagine, the key is not simply to look at a picture, but to become the feeling."
+      "There are four steps to practising attraction. First, decide clearly what you want. Second, hold a clear image: skip the route and see the result you want. Third, set it aside completely for a while, trusting it to unfold. Fourth, feel good, as though it has already happened.",
+      "You need to send your wish out only once. After that, bring the happy feeling of its fulfilment into everyday life. When you imagine, the key is not simply to look at a picture, but to become the feeling."
     ],
     "src": "Hikiyose no Hosoku Tsukaikonashi Bukku; Manga de Wakaru Hikiyose no Hosoku (books in Japanese)"
   },
@@ -236,7 +236,7 @@ const HIKIYOSE = [
     },
     "g": "If attraction brings things with the same vibration as you, meeting a difficult person or situation can make you ask, ‘What is wrong with me that attracted this?’ This is one of the greatest misunderstandings about attraction.",
     "a": [
-      "What resonates is not the behavior on the surface. A stubborn father or a boss who blames others for mistakes may seem nothing like you. What you share can be a deeper feeling, such as a strong sense of responsibility or a longing to be recognized.",
+      "What resonates is not the behaviour on the surface. A stubborn father or a boss who blames others for mistakes may seem nothing like you. What you share can be a deeper feeling, such as a strong sense of responsibility or a longing to be recognised.",
       "When something you did not wish for happens, see it as an invitation to notice hidden awareness within. Instead of blaming yourself, find and acknowledge the feeling underneath. As that inner feeling changes, your vibration changes, and the attraction naturally stops working in the same way. Even unwanted attraction can be a mirror of your inner world."
     ],
     "src": "Manga de Wakaru Hikiyose no Hosoku; Hikiyose no Hosoku Tsukaikonashi Bukku (books in Japanese)"
