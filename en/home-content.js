@@ -5,8 +5,8 @@ const BREAKDOWN = [
     "q": "Admiration and worship: similar, but different",
     "bubble": {
       "label": [
-        "Admiration",
-        "& worship"
+        "Admiration &",
+        "worship"
       ]
     }
   },
@@ -25,8 +25,8 @@ const BREAKDOWN = [
     "q": "The difference between letting go and giving up",
     "bubble": {
       "label": [
-        "Letting go",
-        "& giving up"
+        "Letting go &",
+        "giving up"
       ]
     }
   }
@@ -48,8 +48,7 @@ const HIKIYOSE = [
     "bubble": {
       "label": [
         "Unpleasant",
-        "experiences",
-        "& attraction"
+        "experiences"
       ]
     }
   },

@@ -3,7 +3,7 @@ const HIKIYOSE = [
     "q": "What is the law of attraction?",
     "card": {
       "word": "The law of attraction",
-      "theme": "More than a wishing technique"
+      "theme": "Not a wishing technique"
     },
     "bubble": {
       "label": [
@@ -16,8 +16,8 @@ const HIKIYOSE = [
     },
     "g": "It is often understood as a method for getting what you want by wishing hard enough: something you learn from books and seminars until you have mastered the correct technique.",
     "a": [
-      "Simply put, attraction is the power of what a person holds within bringing that inner reality into outward experience. What is inside shows up outside, and similar things gather together. Like the saying ‘birds of a feather flock together,’ it is an inherently natural and simple principle.",
-      "The harder you try to study it, the further away it can feel. It is something you learn through your body and senses, like driving a car, rather than filling your head with facts. People who use it successfully may be drawing on its essence naturally, without even knowing the term ‘law of attraction.’"
+      "Simply put, attraction means that the power of what a person holds within sets something in motion, and that feeling becomes reality. What is inside shows up outside, and similar things gather together. Like the saying ‘birds of a feather flock together’, it is an inherently natural and simple principle.",
+      "The harder you try to study it, the further away it can feel. It is something you learn through your body and senses, like driving a car, rather than filling your head with facts. People who are successful are naturally using its essence, even if they have never heard the words ‘law of attraction’."
     ],
     "src": "Hikiyose no Hosoku Tsukaikonashi Bukku (book in Japanese)"
   },
@@ -39,7 +39,7 @@ const HIKIYOSE = [
     "g": "Many people think of vibration as something suspicious or mysterious that only specially gifted people can sense.",
     "a": [
       "We all send and receive vibration every day. You see someone looking radiant and think, ‘Did something good happen?’ Or you sense the uneasiness of a worried person, even when they say nothing. What we commonly call their atmosphere is vibration.",
-      "We are like speakers: what we hold within becomes vibration that reaches the people around us. And just as you tune a radio to the programme you want, what comes to you matches the frequency of what you hold in your heart."
+      "We are like speakers: what we hold within becomes vibration that reaches the people around us. And just as you tune a radio to the programme you want to hear, only what matches the frequency of what you hold within is drawn to you."
     ],
     "src": "Hikiyose no Hosoku Tsukaikonashi Bukku (book in Japanese)"
   },
@@ -60,8 +60,8 @@ const HIKIYOSE = [
     },
     "g": "Hearing ‘thoughts become reality,’ you may assume that thinking hard can attract something. You keep thinking and concentrating, and then wonder why nothing happens.",
     "a": [
-      "Here, ‘thought’ means holding something deeply in your awareness. It is closer to feeling than to intellectual thinking. Planning and reviewing use the head. Feeling your heart soften at a beautiful flower, or flutter as you think of someone you love, is a different experience.",
-      "It is that inner feeling that becomes reality. Attraction works in the realm of feeling and sensing, rather than analysis. What lives deep in your heart is what matters."
+      "Here, ‘thought’ means holding something deeply in your awareness. It is closer to feeling than to intellectual thinking. Planning and reviewing use the head. Feeling your heart soften at a beautiful flower, or flutter as you think of someone you love—that is the state of feeling.",
+      "It is that inner feeling that becomes reality. Attraction works in the realm of feeling and sensing, rather than thinking. What that feeling deep in your chest actually is—that alone is what matters."
     ],
     "src": "Hikiyose no Hosoku Tsukaikonashi Bukku (book in Japanese)"
   },
@@ -90,7 +90,7 @@ const HIKIYOSE = [
   {
     "q": "Do negative thoughts attract bad things?",
     "card": {
-      "word": "Forced positivity",
+      "word": "False positivity",
       "theme": "Covered-up feelings are still there"
     },
     "bubble": {
@@ -127,7 +127,7 @@ const HIKIYOSE = [
     "g": "‘The more strongly I wish, the more likely it is to happen.’ So you think about your wish day and night, checking whether it will really happen and when.",
     "a": [
       "When you ask, ‘Will it really happen? When will it become real?’ your vibration is expressing doubt: ‘My joy could never become reality.’ That brings anxiety and impatience. Attachment is the feeling on the other side of ‘It might never happen.’",
-      "By contrast, trusting that it will happen feels like resting in trust, without fear or doubt. If your heart answers yes, you can relax. You will probably feel a little relief in your chest."
+      "By contrast, when you can say, ‘I trust this will come true,’ you are at ease and leaving it in larger hands, and there is no fear or doubt in it. If your heart answers yes, you can relax. You will probably feel a little relief in your chest."
     ],
     "src": "Manga de Wakaru Hikiyose no Hosoku (book in Japanese)"
   },
@@ -176,7 +176,7 @@ const HIKIYOSE = [
     "src": "Hikiyose no Hosoku Tsukaikonashi Bukku; Manga de Wakaru Hikiyose no Hosoku (books in Japanese)"
   },
   {
-    "q": "A sense of lack becomes more lack",
+    "q": "‘Not having’ becomes real, just as it is",
     "card": {
       "word": "Lack and abundance",
       "theme": "What you attend to grows"
@@ -192,8 +192,8 @@ const HIKIYOSE = [
     },
     "g": "‘I wish because something is missing.’ No money, no partner, no time—you begin with lack and try to fill it through attraction.",
     "a": [
-      "In the law of attraction, a sense of having becomes more having, and a sense of not having becomes more absence. Believing deeply that you are loved draws experiences of being loved; strongly feeling unlovable draws experiences of not being loved. When you feel unhappy because something is missing, that unhappiness becomes your reality.",
-      "We receive some form of abundance or joy every day, often without noticing. Write down the good things you received today, both material and emotional. Acknowledging what is present gives it energy and makes room for more good things."
+      "In the law of attraction, what you hold as ‘there’ takes form just as it is, and what you hold as ‘not there’ also takes form just as it is. Believing deeply that you are loved draws experiences of being loved; strongly feeling unlovable draws experiences of not being loved. When you feel unhappy because something is missing, that unhappiness becomes your reality.",
+      "We receive some form of abundance or joy every day, often without noticing. Write down the good things you received today, both material and things you cannot hold in your hand. Acknowledging what is present gives it energy and makes room for more good things."
     ],
     "src": "Hikiyose no Hosoku Tsukaikonashi Bukku (book in Japanese)"
   },
@@ -234,10 +234,10 @@ const HIKIYOSE = [
       "y": 24,
       "d": 104
     },
-    "g": "If attraction brings things with the same vibration as you, meeting a difficult person or situation can make you ask, ‘What is wrong with me that attracted this?’ This is one of the greatest misunderstandings about attraction.",
+    "g": "If attraction brings things with the same vibration as you, meeting a difficult person or situation can make you ask, ‘What is wrong with me that attracted this?’ This is the point about attraction that is most often misunderstood.",
     "a": [
-      "What resonates is not the behaviour on the surface. A stubborn father or a boss who blames others for mistakes may seem nothing like you. What you share can be a deeper feeling, such as a strong sense of responsibility or a longing to be recognised.",
-      "When something you did not wish for happens, see it as an invitation to notice hidden awareness within. Instead of blaming yourself, find and acknowledge the feeling underneath. As that inner feeling changes, your vibration changes, and the attraction naturally stops working in the same way. Even unwanted attraction can be a mirror of your inner world."
+      "What resonates is not the behaviour on the surface. A stubborn father, a boss who blames others for their mistakes—you are not like that, and yet you draw them to you, because deeper down there is a feeling you share: a strong sense of responsibility, perhaps, or a wish to be recognised.",
+      "When something you did not wish for happens, it is a sign saying, ‘Do notice the consciousness hidden inside you.’ Instead of blaming yourself, find and acknowledge the feeling underneath. As that inner feeling changes, your vibration changes, and the attraction naturally stops working in the same way. Even unwanted attraction can be a mirror of your inner world."
     ],
     "src": "Manga de Wakaru Hikiyose no Hosoku; Hikiyose no Hosoku Tsukaikonashi Bukku (books in Japanese)"
   },

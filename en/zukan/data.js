@@ -19,7 +19,7 @@ const BREAKDOWN = [
     },
     "a": [
       "The Japanese word wagamama can be read as allowing the self to be as it is: being the person you truly are. ‘I want this,’ ‘I love this,’ ‘I don’t like this’—having those feelings is a sign that you are you. Honouring your feelings is not selfish; it is living as yourself.",
-      "How is this different from defiantly refusing to change? Look at whether the person seems happy. Someone who is truly at ease being themselves tends to be cheerful, without leaving a negative impression on the people around them."
+      "And how does this differ from simply brazening it out? Look at whether the person seems happy. Someone who is truly living as they are tends to be cheerful, and does not leave those around them with a negative impression."
     ]
   },
   {
@@ -42,7 +42,7 @@ const BREAKDOWN = [
     },
     "a": [
       "If emotions were crayons, you could not create a whole picture using only bright colours. You need dark colours, too. Negative is simply one side of a pair. In fact, highly creative people often have negative thoughts.",
-      "It may sound like a paradox, but accepting the negative is what makes you truly positive. Remember that the deeper negativity lies in the part of you that rejects negative feelings."
+      "It may sound like a paradox, but accepting the negative is what makes you truly positive. Do know that the truly negative thing is the consciousness that dislikes the negative."
     ]
   },
   {
@@ -89,13 +89,13 @@ const BREAKDOWN = [
     ]
   },
   {
-    "q": "True spirituality does not depend on someone else",
+    "q": "There is no dependency in true spirituality",
     "card": {
       "pair": [
         "Spirituality",
         "Dependence"
       ],
-      "theme": "Finding your own strength"
+      "theme": "No dependency in true spirituality"
     },
     "bubble": {
       "label": [
@@ -150,7 +150,7 @@ const BREAKDOWN = [
       "d": 92
     },
     "a": [
-      "You cannot change your fate, but you can change your destiny. Fate is the time, country, and place you were born into: the roots and foundation of a tree. Your will and your destiny determine what kind of tree grows from that foundation.",
+      "You cannot change your fate, but you can change your destiny. Fate is the time, country, and place you were born into: the roots and foundation of a tree. What decides the kind of tree that grows on that foundation is your will—and that is your destiny.",
       "Your own consciousness shapes your fortune. When that consciousness is healthy for you, life begins to move in a good direction."
     ]
   },
@@ -190,7 +190,7 @@ const BREAKDOWN = [
       "d": 94
     },
     "a": [
-      "Accepting yourself because you did something good or achieved a result is not true self-acceptance. The moment you cannot do those things, you head straight into rejecting yourself.",
+      "Accepting yourself because you did something good or achieved a result is not true self-acceptance. The moment you cannot do those things, you head straight into rejecting yourself completely.",
       "True self-acceptance means being able to say, ‘It’s okay to be me,’ whatever happens. It is looking at the self who is doing their best to live and saying, ‘You are okay, just as you are.’"
     ]
   },
@@ -237,7 +237,7 @@ const BREAKDOWN = [
     },
     "a": [
       "Someone you admire probably carries a quality you want to find within yourself. But the moment you worship them—‘I have nothing like that; they are special’—you take power away from yourself. You are saying, ‘I have no power, so I want you to give me yours.’",
-      "Both admiration and worship begin with a response to the same energy. You would not respond if you did not carry something of it yourself. Recognising and using that same quality within you can help you enjoy your own life more fully."
+      "Admiration and worship are both signs that you are responding to the same energy. You would not respond if you did not carry something of it yourself. Recognising and using that same quality within you can help you enjoy your own life more fully."
     ]
   },
   {
