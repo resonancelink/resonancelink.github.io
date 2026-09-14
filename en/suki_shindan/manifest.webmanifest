@@ -1,0 +1,22 @@
+{
+  "name": "Discover What You Love",
+  "short_name": "Discover What You Love",
+  "lang": "en",
+  "start_url": "/en/suki_shindan/",
+  "scope": "/en/suki_shindan/",
+  "display": "standalone",
+  "background_color": "#FDF9F6",
+  "theme_color": "#FDF9F6",
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

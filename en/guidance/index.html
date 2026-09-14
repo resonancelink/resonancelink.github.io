@@ -1,0 +1,2372 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#F6F1EB">
+<title>Michiyo’s Guidance — Spiritual Metascience Institute</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600&family=Zen+Kaku+Gothic+New:wght@300;400;500&display=swap">
+<style>
+:root{
+  --ground:#F6F1EB; --paper:#FFFDFA; --paper-2:#FBF7F2; --ink:#453F3C; --ink-soft:#7A716C; --ink-faint:#A69C96;
+  --line:#E7DDD3; --water:#7FA6B8; --water-deep:#4E7A8E; --water-mist:#DCE8ED;
+  --cover:#22414b; --cover-2:#132a32; --gold:#d9bf7a; --gold-2:#f1dea6; --gold-dim:rgba(217,191,122,.55); --shadow:rgba(20,35,42,.45); --focus:#4E7A8E;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --ground:#181F23; --paper:#232B30; --paper-2:#1F272B; --ink:#EAE3DC; --ink-soft:#B9AFA7; --ink-faint:#877D76;
+    --line:#35403F; --water:#8FB6C7; --water-deep:#A9CCDA; --water-mist:#25353C;
+    --cover:#1c353d; --cover-2:#0f2128; --shadow:rgba(0,0,0,.6); --focus:#A9CCDA;
+  }
+}
+:root[data-theme="dark"]{
+  --ground:#181F23; --paper:#232B30; --paper-2:#1F272B; --ink:#EAE3DC; --ink-soft:#B9AFA7; --ink-faint:#877D76;
+  --line:#35403F; --water:#8FB6C7; --water-deep:#A9CCDA; --water-mist:#25353C;
+  --cover:#1c353d; --cover-2:#0f2128; --shadow:rgba(0,0,0,.6); --focus:#A9CCDA;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--ground);color:var(--ink);font-family:"Zen Kaku Gothic New","Hiragino Kaku Gothic ProN","Noto Sans JP",sans-serif;line-height:1.9;letter-spacing:.02em;min-height:100vh;overflow-x:hidden;position:relative}
+#water{position:fixed;top:-60px;left:-60px;width:calc(100% + 120px);height:calc(100% + 120px);z-index:0;pointer-events:none;filter:blur(20px);opacity:.9}
+.mincho{font-family:"Shippori Mincho","Hiragino Mincho ProN","Yu Mincho",serif}
+.wrap{position:relative;z-index:1;max-width:1000px;margin:0 auto;padding:40px 18px 70px}
+.top{font-family:"Shippori Mincho",serif;font-size:11px;letter-spacing:.36em;color:var(--ink-faint);text-align:center;margin:0 0 18px}
+
+/* ===== the book ===== */
+.book{position:relative;perspective:2200px;margin:0 auto;max-width:940px}
+/* cover ── 叡智の詰まった古い哲学書: 深い藍緑の革、金箔の二重罫と隅飾り、背の畝、金の小口 */
+.cover{position:relative;margin:0 auto;width:min(440px,100%);aspect-ratio:3/4.1;
+  background:
+    radial-gradient(ellipse at 30% 18%, rgba(255,255,255,.10), rgba(255,255,255,0) 55%),
+    radial-gradient(ellipse at 80% 90%, rgba(0,0,0,.28), rgba(0,0,0,0) 60%),
+    repeating-radial-gradient(circle at 20% 30%, rgba(255,255,255,.028) 0 1px, rgba(0,0,0,0) 1px 4px),
+    repeating-radial-gradient(circle at 70% 60%, rgba(0,0,0,.05) 0 1px, rgba(0,0,0,0) 1px 5px),
+    linear-gradient(160deg,var(--cover) 0%,var(--cover-2) 100%);
+  border-radius:3px 12px 12px 3px;
+  box-shadow:0 30px 60px -22px var(--shadow), 0 1px 0 rgba(255,255,255,.12) inset,
+    /* 金の小口(右側の紙の束) */ 4px 0 0 -1px #e9d9a8, 7px 0 0 -2px #d9c68a, 10px 0 0 -3px #c9b273,
+    /* 背 */ -7px 0 0 -3px var(--cover-2), -12px 0 0 -6px #0b181d;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:44px 34px 34px;cursor:pointer;
+  transform-origin:left center;transition:transform 1s cubic-bezier(.4,.05,.2,1),opacity .9s ease;border:0;font:inherit;color:var(--gold-2)}
+/* 背の畝(左端の縞) */
+.cover::before{content:"";position:absolute;left:0;top:0;bottom:0;width:22px;border-radius:3px 0 0 3px;
+  background:linear-gradient(90deg, rgba(0,0,0,.35), rgba(0,0,0,.05) 60%, rgba(255,255,255,.06)),
+    repeating-linear-gradient(180deg, rgba(0,0,0,0) 0 11%, rgba(217,191,122,.55) 11% 11.4%, rgba(0,0,0,0) 11.4% 12.2%, rgba(217,191,122,.55) 12.2% 12.6%, rgba(0,0,0,0) 12.6% 25%)}
+/* 金箔の二重罫 */
+.cover::after{content:"";position:absolute;inset:16px 16px 16px 34px;border:1.5px solid var(--gold-dim);border-radius:2px 8px 8px 2px;pointer-events:none;
+  outline:1px solid rgba(217,191,122,.28);outline-offset:4px;
+  box-shadow:inset 0 0 0 1px rgba(0,0,0,.2)}
+/* 四隅の飾り(小さな金の菱) */
+.cover .corner{position:absolute;width:14px;height:14px;pointer-events:none;color:var(--gold)}
+.cover .corner::before,.cover .corner::after{content:"";position:absolute;inset:0;border:1px solid currentColor;transform:rotate(45deg);opacity:.8}
+.cover .corner::after{inset:4px;background:currentColor;opacity:.55}
+.cover .c1{top:27px;left:45px}.cover .c2{top:27px;right:27px}.cover .c3{bottom:27px;left:45px}.cover .c4{bottom:27px;right:27px}
+/* 紋章(フラワー・オブ・ライフ)を金で */
+.cover .emblem{width:64px;height:64px;color:var(--gold);opacity:.95;margin:0 0 22px;filter:drop-shadow(0 0 6px rgba(217,191,122,.35))}
+.cover .eyebrow{font-family:"Shippori Mincho",serif;font-size:10.5px;letter-spacing:.42em;text-indent:.42em;color:var(--gold-dim);margin-bottom:20px}
+.cover h1{font-family:"Shippori Mincho",serif;font-weight:600;font-size:clamp(27px,5.2vw,34px);letter-spacing:.22em;margin:0 0 14px;line-height:1.7;color:var(--gold-2);
+  text-shadow:0 1px 0 rgba(0,0,0,.35),0 0 18px rgba(217,191,122,.25)}
+.cover .rule{width:120px;height:1px;background:linear-gradient(90deg,rgba(217,191,122,0),var(--gold),rgba(217,191,122,0));margin:4px 0 14px}
+.cover .sub{font-family:"Shippori Mincho",serif;font-size:13px;color:var(--gold);letter-spacing:.2em;line-height:2;margin:0;opacity:.9}
+.cover .latin{font-family:"Shippori Mincho",Georgia,serif;font-size:9.5px;letter-spacing:.34em;text-indent:.34em;color:var(--gold-dim);margin-top:30px;text-transform:uppercase}
+.cover .open{margin-top:auto;font-family:"Shippori Mincho",serif;font-size:12px;letter-spacing:.36em;text-indent:.36em;color:var(--gold);display:flex;flex-direction:column;align-items:center;gap:10px;opacity:.9}
+.cover .open::after{content:"";width:1px;height:26px;background:var(--gold);opacity:.6;animation:drop 2.4s ease-in-out infinite}
+.cover:hover{transform:rotateY(-6deg)}
+.cover:hover .emblem{filter:drop-shadow(0 0 12px rgba(241,222,166,.6))}
+.cover:focus-visible{outline:2px solid var(--focus);outline-offset:6px}
+.book.opened .cover{transform:rotateY(-95deg);opacity:0;pointer-events:none;position:absolute;left:50%;top:0}
+/* spread */
+.spread{display:none;grid-template-columns:1fr 1fr;position:relative;background:var(--paper);border-radius:6px;box-shadow:0 30px 60px -28px var(--shadow),0 1px 0 var(--line)}
+.book.opened .spread{display:grid;animation:reveal 1s cubic-bezier(.2,.7,.2,1) both}
+@keyframes reveal{from{opacity:0;transform:translateY(10px) scale(.985)}to{opacity:1;transform:none}}
+.spread::before{content:"";position:absolute;left:50%;top:0;bottom:0;width:60px;margin-left:-30px;background:linear-gradient(90deg,transparent 0,rgba(70,50,30,.06) 45%,rgba(70,50,30,.10) 50%,rgba(70,50,30,.06) 55%,transparent 100%);pointer-events:none;z-index:2}
+.page{position:relative;padding:44px 44px 40px;min-height:560px;display:flex;flex-direction:column;background:var(--paper)}
+.page.l{border-radius:6px 0 0 6px;box-shadow:inset -1px 0 0 var(--line)}
+.page.r{border-radius:0 6px 6px 0}
+.page::after{content:attr(data-folio);position:absolute;bottom:16px;font-family:"Shippori Mincho",serif;font-size:10.5px;letter-spacing:.24em;color:var(--ink-faint)}
+.page.l::after{left:44px}.page.r::after{right:44px}
+/* page turn */
+.page.turn{animation:turn .85s cubic-bezier(.3,.1,.2,1) both;transform-origin:left center}
+.page.l.turn{animation-name:turnL;transform-origin:right center}
+@keyframes turn{from{transform:rotateY(-24deg);opacity:0;box-shadow:-30px 0 40px -30px var(--shadow)}to{transform:none;opacity:1}}
+@keyframes turnL{from{opacity:0;transform:translateX(-6px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion: reduce){.page.turn,.book.opened .spread,.cover,.cover .open::after{animation:none;transition:none}}
+/* page typography */
+.kicker{font-family:"Shippori Mincho",serif;font-size:11.5px;letter-spacing:.3em;color:var(--water-deep);margin:0 0 18px;display:flex;align-items:center;gap:12px}
+.kicker::after{content:"";flex:1;height:1px;background:var(--line)}
+.ptitle{font-family:"Shippori Mincho",serif;font-weight:500;font-size:22px;letter-spacing:.14em;margin:0 0 10px;line-height:1.6;text-wrap:balance}
+.plead{font-size:13.5px;color:var(--ink-soft);line-height:2;margin:0 0 22px;max-width:28em}
+.toc{list-style:none;padding:0;margin:0;border-top:1px solid var(--line)}
+.toc button{appearance:none;width:100%;background:transparent;border:0;border-bottom:1px solid var(--line);text-align:left;font:inherit;color:var(--ink);cursor:pointer;padding:13px 26px 13px 0;position:relative;display:grid;grid-template-columns:1fr;row-gap:2px;transition:color .3s,padding-left .4s cubic-bezier(.2,.7,.2,1)}
+.toc .name{font-family:"Shippori Mincho",serif;font-size:16px;letter-spacing:.08em;line-height:1.5}
+.toc .hint{font-size:11.5px;color:var(--ink-faint);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;line-height:1.6}
+.toc button::after{content:"";position:absolute;right:8px;top:50%;width:6px;height:6px;margin-top:-4px;border-top:1px solid var(--ink-faint);border-right:1px solid var(--ink-faint);transform:rotate(45deg);transition:border-color .3s,right .4s}
+.toc button:hover,.toc button:focus-visible{color:var(--water-deep);padding-left:8px;outline:none}
+.toc button:hover::after,.toc button:focus-visible::after{border-color:var(--water-deep);right:4px}
+.toc.items button{padding:15px 26px 15px 0}
+.toc.items .name{font-family:inherit;font-size:15px;letter-spacing:.03em;line-height:1.7}
+.textlink{appearance:none;background:transparent;border:0;padding:6px 2px;color:var(--ink-soft);font:inherit;font-family:"Shippori Mincho",serif;font-size:13px;letter-spacing:.12em;cursor:pointer;border-bottom:1px solid var(--line);transition:color .3s,border-color .3s}
+.textlink:hover,.textlink:focus-visible{color:var(--water-deep);border-bottom-color:var(--water);outline:none}
+.links{display:flex;flex-wrap:wrap;gap:10px 26px;margin-top:auto;padding-top:26px}
+.src+.links{margin-top:0;padding-top:22px}
+.back{appearance:none;background:transparent;border:0;color:var(--ink-faint);font:inherit;font-family:"Shippori Mincho",serif;font-size:12.5px;letter-spacing:.12em;cursor:pointer;padding:0;margin:0 0 22px;align-self:flex-start}
+.back:hover,.back:focus-visible{color:var(--water-deep);outline:none}
+/* answer pages */
+.chosen{border-left:1px solid var(--water);padding-left:16px;margin:0 0 24px}
+.chosen .lab{font-size:11px;letter-spacing:.24em;color:var(--ink-faint);margin:0 0 4px}
+.chosen .q{font-family:"Shippori Mincho",serif;font-size:15px;color:var(--ink-soft);margin:0;line-height:1.8}
+.hitokoto{font-family:"Shippori Mincho",serif;font-size:21px;font-weight:500;letter-spacing:.1em;line-height:1.75;margin:0 0 28px;padding-bottom:22px;border-bottom:1px solid var(--line);text-wrap:balance}
+.body{font-size:14.5px;line-height:2.05;margin:0}
+.body p{margin:0 0 1.35em}
+.body p:last-child{margin-bottom:0}
+.sign{font-family:"Shippori Mincho",serif;color:var(--ink-soft);font-size:13px;letter-spacing:.16em;margin:8px 0 0;text-align:right}
+.toi-wrap{margin:auto 0;padding:10px 0 40px}
+.toi-text{font-family:"Shippori Mincho",serif;font-size:20px;line-height:2.05;letter-spacing:.08em;margin:0 0 20px;text-wrap:balance}
+.toi-after{font-size:12.5px;color:var(--ink-soft);line-height:2;margin:0}
+.src{margin:auto 0 0;padding-top:18px;border-top:1px solid var(--line)}
+.src h3{font-family:"Shippori Mincho",serif;font-size:11px;letter-spacing:.26em;color:var(--ink-faint);margin:0 0 8px;font-weight:400}
+.src ul{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:4px}
+.src li{font-size:11.5px;color:var(--ink-soft);line-height:1.7}
+.src li span{color:var(--ink-faint);font-variant-numeric:tabular-nums}
+/* footer */
+footer{max-width:720px;margin:56px auto 0;padding-top:24px;border-top:1px solid var(--line);font-size:12.5px;color:var(--ink-soft);line-height:2}
+footer p{margin:0 0 12px}
+footer .about{color:var(--ink);font-size:13px}
+footer a{color:var(--water-deep);text-decoration:none;border-bottom:1px solid var(--water-mist)}
+.help{font-size:12px;color:var(--ink-faint)}
+.foot-links{display:flex;flex-wrap:wrap;gap:8px 22px;margin-top:6px}
+.copy{font-family:"Shippori Mincho",serif;font-size:11px;letter-spacing:.2em;color:var(--ink-faint);margin-top:22px;text-align:center}
+/* mobile: pages stack */
+@media (max-width:720px){
+  .wrap{padding:28px 12px 60px}
+  .spread{grid-template-columns:1fr}
+  .spread::before{display:none}
+  .page{padding:34px 26px 34px;min-height:0}
+  .page.l{border-radius:6px 6px 0 0;box-shadow:inset 0 -1px 0 var(--line)}
+  .page.r{border-radius:0 0 6px 6px}
+  .page.turn{animation-name:slide}
+  @keyframes slide{from{opacity:0;transform:translateX(14px)}to{opacity:1;transform:none}}
+  .page::after{bottom:12px}
+  .book.opened .cover{display:none}
+}
+</style>
+
+
+
+
+
+<meta name="description" content="Open one of 67 reflections and find a question to carry with you, in your own time.">
+<meta property="og:title" content="Michiyo’s Guidance">
+<meta property="og:description" content="Open one of 67 reflections and find a question to carry with you, in your own time.">
+<meta property="og:url" content="https://resonancelink.com/en/guidance/">
+<meta property="og:locale" content="en_US">
+<link rel="canonical" href="https://resonancelink.com/en/guidance/">
+<link rel="alternate" hreflang="en" href="https://resonancelink.com/en/guidance/">
+<link rel="alternate" hreflang="ja" href="https://resonancelink.com/guidance/">
+<link rel="alternate" hreflang="x-default" href="https://resonancelink.com/guidance/">
+<link rel="manifest" href="/en/guidance/manifest.webmanifest">
+<link rel="stylesheet" href="/en/content.css">
+<script src="/en/portal-nav.js" defer data-app="guidance" data-page="guidance"></script>
+</head>
+<body class="english-page page-guidance">
+
+<canvas id="water" aria-hidden="true"></canvas>
+<div class="wrap">
+<p class="top">Spiritual Meta-Science</p>
+
+<div class="book" id="book">
+  <button class="cover" id="cover" type="button" aria-label="Open the book">
+    <span class="corner c1"></span><span class="corner c2"></span><span class="corner c3"></span><span class="corner c4"></span>
+    <svg class="emblem" viewBox="0 0 100 100" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="50" cy="50" r="11"/><circle cx="50" cy="61" r="11"/><circle cx="40.5" cy="55.5" r="11"/><circle cx="40.5" cy="44.5" r="11"/><circle cx="50" cy="39" r="11"/><circle cx="59.5" cy="44.5" r="11"/><circle cx="59.5" cy="55.5" r="11"/><circle cx="50" cy="72" r="11"/><circle cx="30.9" cy="61" r="11"/><circle cx="30.9" cy="39" r="11"/><circle cx="50" cy="28" r="11"/><circle cx="69.1" cy="39" r="11"/><circle cx="69.1" cy="61" r="11"/><circle cx="69.1" cy="50" r="11"/><circle cx="59.5" cy="66.5" r="11"/><circle cx="40.5" cy="66.5" r="11"/><circle cx="30.9" cy="50" r="11"/><circle cx="40.5" cy="33.5" r="11"/><circle cx="59.5" cy="33.5" r="11"/><circle cx="50" cy="50" r="33" stroke-width="1.2"/><circle cx="50" cy="50" r="35.5" stroke-width="0.9"/></g></svg>
+    <div class="eyebrow">When you feel unsure or anxious</div>
+    <h1>Michiyo’s<br> Guidance</h1>
+    <span class="rule"></span>
+    <p class="sub">— A little guidance to open —</p>
+    <div class="latin">Spiritual Meta-Science Institute</div>
+    <div class="open">Open</div>
+  </button>
+
+  <div class="spread" id="spread" aria-live="polite">
+    <section class="page l" id="pl" data-folio=""></section>
+    <section class="page r" id="pr" data-folio=""></section>
+  </div>
+</div>
+
+<footer>
+  <p class="about" id="about"></p>
+  <p class="help" id="help"></p>
+  <p id="quiet"></p>
+  <div class="foot-links" id="links"></div>
+  <p class="copy">© Michiyo</p>
+</footer>
+</div>
+
+<script>
+const CONFIG = {
+  aboutText: "Michiyo’s Guidance draws on twenty years of her words in blogs, Voicy, YouTube, and books. These are selected reflections, rather than personal replies. The answers are within you.",
+  helpText: "When distress feels intense or too much to carry alone, reach out to someone close to you or a professional support service where you live. For support in Japan, see the Yorisoi multilingual service linked below.",
+  quietText: "When you want to go deeper",
+  substackUrl: "https://michiyospiritualcounsellor.substack.com/", substackLabel: "Newsletter · In Japanese",
+  portalUrl: "/en/", portalLabel: "Back to the Institute",
+  privacyUrl: "/en/#privacy", privacyLabel: "Privacy"
+};
+const DATA = {
+  "catalog": {
+    "categories": [
+      {
+        "id": "cat01",
+        "name": "Relationships"
+      },
+      {
+        "id": "cat02",
+        "name": "Comparison & recognition"
+      },
+      {
+        "id": "cat03",
+        "name": "Finding yourself"
+      },
+      {
+        "id": "cat04",
+        "name": "Work & ways of working"
+      },
+      {
+        "id": "cat05",
+        "name": "Money & abundance"
+      },
+      {
+        "id": "cat06",
+        "name": "Love & partnership"
+      },
+      {
+        "id": "cat07",
+        "name": "Family & parenting"
+      },
+      {
+        "id": "cat08",
+        "name": "Living with feelings"
+      },
+      {
+        "id": "cat09",
+        "name": "Anxiety, uncertainty & decisions"
+      },
+      {
+        "id": "cat10",
+        "name": "A tired heart & body"
+      },
+      {
+        "id": "cat11",
+        "name": "Life & meaning"
+      },
+      {
+        "id": "cat12",
+        "name": "Spirituality & the AI era"
+      }
+    ],
+    "items": [
+      {
+        "id": "q001",
+        "category": "cat01",
+        "label": "I cannot speak honestly because I am afraid of being disliked"
+      },
+      {
+        "id": "q002",
+        "category": "cat01",
+        "label": "Relationships at work feel exhausting"
+      },
+      {
+        "id": "q003",
+        "category": "cat01",
+        "label": "There is someone I find especially difficult"
+      },
+      {
+        "id": "q004",
+        "category": "cat01",
+        "label": "I cannot say no when someone asks"
+      },
+      {
+        "id": "q005",
+        "category": "cat01",
+        "label": "Other people’s moods and feelings pull me around"
+      },
+      {
+        "id": "q006",
+        "category": "cat01",
+        "label": "I expect things of people and end up feeling betrayed"
+      },
+      {
+        "id": "q007",
+        "category": "cat02",
+        "label": "Comparing myself with others leaves me feeling low"
+      },
+      {
+        "id": "q008",
+        "category": "cat02",
+        "label": "I struggle when others do not recognize me"
+      },
+      {
+        "id": "q009",
+        "category": "cat02",
+        "label": "I cannot wholeheartedly celebrate someone else’s happiness"
+      },
+      {
+        "id": "q010",
+        "category": "cat02",
+        "label": "I keep criticizing myself for things that are already over"
+      },
+      {
+        "id": "q011",
+        "category": "cat02",
+        "label": "I cannot seem to feel confident"
+      },
+      {
+        "id": "q012",
+        "category": "cat03",
+        "label": "I do not really know what being myself means"
+      },
+      {
+        "id": "q013",
+        "category": "cat03",
+        "label": "I do not know what I want to do"
+      },
+      {
+        "id": "q014",
+        "category": "cat03",
+        "label": "I do not understand what loving myself means"
+      },
+      {
+        "id": "q015",
+        "category": "cat03",
+        "label": "I am always watching other people’s reactions"
+      },
+      {
+        "id": "q016",
+        "category": "cat03",
+        "label": "Being alive feels somehow exhausting"
+      },
+      {
+        "id": "q017",
+        "category": "cat04",
+        "label": "I cannot seem to switch into work mode"
+      },
+      {
+        "id": "q018",
+        "category": "cat04",
+        "label": "I want to turn what I love into my work"
+      },
+      {
+        "id": "q019",
+        "category": "cat04",
+        "label": "I cannot picture my future career"
+      },
+      {
+        "id": "q020",
+        "category": "cat04",
+        "label": "I work hard but do not feel rewarded"
+      },
+      {
+        "id": "q021",
+        "category": "cat04",
+        "label": "My sense of responsibility drives me too hard"
+      },
+      {
+        "id": "q022",
+        "category": "cat04",
+        "label": "Whatever I do, I do not see results"
+      },
+      {
+        "id": "q023",
+        "category": "cat04",
+        "label": "I am pushing myself too hard but cannot quit"
+      },
+      {
+        "id": "q024",
+        "category": "cat05",
+        "label": "Thinking about money makes me anxious"
+      },
+      {
+        "id": "q025",
+        "category": "cat05",
+        "label": "I economize but cannot seem to save"
+      },
+      {
+        "id": "q026",
+        "category": "cat05",
+        "label": "I keep spending on things I do not need"
+      },
+      {
+        "id": "q027",
+        "category": "cat05",
+        "label": "I feel guilty spending money on myself"
+      },
+      {
+        "id": "q028",
+        "category": "cat05",
+        "label": "I cannot release my money blocks"
+      },
+      {
+        "id": "q029",
+        "category": "cat05",
+        "label": "Thinking about old age frightens me"
+      },
+      {
+        "id": "q030",
+        "category": "cat06",
+        "label": "Romantic relationships never seem to work out"
+      },
+      {
+        "id": "q031",
+        "category": "cat06",
+        "label": "My partner and I keep missing each other emotionally"
+      },
+      {
+        "id": "q032",
+        "category": "cat06",
+        "label": "I cannot stop feeling angry with my partner"
+      },
+      {
+        "id": "q033",
+        "category": "cat06",
+        "label": "I cannot stop thinking about that person"
+      },
+      {
+        "id": "q034",
+        "category": "cat06",
+        "label": "I cannot decide whether to end a relationship"
+      },
+      {
+        "id": "q035",
+        "category": "cat07",
+        "label": "Seeing my mother leaves me feeling distressed"
+      },
+      {
+        "id": "q036",
+        "category": "cat07",
+        "label": "I still cannot be myself around my parents"
+      },
+      {
+        "id": "q037",
+        "category": "cat07",
+        "label": "I cannot stop worrying about my child"
+      },
+      {
+        "id": "q038",
+        "category": "cat07",
+        "label": "My child has stopped going to school"
+      },
+      {
+        "id": "q039",
+        "category": "cat07",
+        "label": "Thinking but we are family makes things hurt more"
+      },
+      {
+        "id": "q040",
+        "category": "cat07",
+        "label": "I am always the one carrying the household responsibilities"
+      },
+      {
+        "id": "q041",
+        "category": "cat08",
+        "label": "I cannot stop feeling irritated"
+      },
+      {
+        "id": "q042",
+        "category": "cat08",
+        "label": "I feel unsettled but cannot explain why"
+      },
+      {
+        "id": "q043",
+        "category": "cat08",
+        "label": "I cannot seem to move out of a low mood"
+      },
+      {
+        "id": "q044",
+        "category": "cat08",
+        "label": "There is someone I cannot forgive"
+      },
+      {
+        "id": "q045",
+        "category": "cat08",
+        "label": "I dislike myself for thinking negatively"
+      },
+      {
+        "id": "q046",
+        "category": "cat09",
+        "label": "I feel overwhelmed by anxiety about the future"
+      },
+      {
+        "id": "q047",
+        "category": "cat09",
+        "label": "I simply cannot decide"
+      },
+      {
+        "id": "q048",
+        "category": "cat09",
+        "label": "I desperately want to know the right answer"
+      },
+      {
+        "id": "q049",
+        "category": "cat09",
+        "label": "I want to change but cannot"
+      },
+      {
+        "id": "q050",
+        "category": "cat09",
+        "label": "I cannot be satisfied unless it is perfect"
+      },
+      {
+        "id": "q051",
+        "category": "cat09",
+        "label": "Fear of failure keeps me from acting"
+      },
+      {
+        "id": "q052",
+        "category": "cat10",
+        "label": "Rest does not seem to take away my tiredness"
+      },
+      {
+        "id": "q053",
+        "category": "cat10",
+        "label": "I find it hard to sleep at night"
+      },
+      {
+        "id": "q054",
+        "category": "cat10",
+        "label": "My physical symptoms are not improving"
+      },
+      {
+        "id": "q055",
+        "category": "cat10",
+        "label": "There are things I want to do, but I have no time"
+      },
+      {
+        "id": "q056",
+        "category": "cat10",
+        "label": "Whatever I start, I cannot keep it up"
+      },
+      {
+        "id": "q057",
+        "category": "cat11",
+        "label": "I lose sight of what I am living for"
+      },
+      {
+        "id": "q058",
+        "category": "cat11",
+        "label": "I want to know my life’s purpose"
+      },
+      {
+        "id": "q059",
+        "category": "cat11",
+        "label": "It feels as though my life has stopped"
+      },
+      {
+        "id": "q060",
+        "category": "cat11",
+        "label": "I feel I have no freedom"
+      },
+      {
+        "id": "q061",
+        "category": "cat11",
+        "label": "I keep thinking I am unlucky"
+      },
+      {
+        "id": "q062",
+        "category": "cat12",
+        "label": "Years of spiritual practice have not changed anything"
+      },
+      {
+        "id": "q063",
+        "category": "cat12",
+        "label": "The law of attraction does not seem to work for me"
+      },
+      {
+        "id": "q064",
+        "category": "cat12",
+        "label": "I feel pressured to raise my vibration"
+      },
+      {
+        "id": "q065",
+        "category": "cat12",
+        "label": "I find myself depending on someone or something"
+      },
+      {
+        "id": "q066",
+        "category": "cat12",
+        "label": "I worry that AI will take my job"
+      },
+      {
+        "id": "q067",
+        "category": "cat12",
+        "label": "I feel a little afraid of talking to AI about my worries"
+      }
+    ]
+  },
+  "answers": {
+    "q001": {
+      "hitokoto": "The fear of being disliked can be an invitation to love yourself",
+      "body": "Many people know the pain of being unable to say what they want because they fear being disliked.\n\nThat desperate wish to be liked may have less to do with others than with a moment when you do not like yourself. Without your own acceptance, you seek reassurance through someone else’s affection.\n\nYet people who are naturally liked are not always trying to be liked. Their unforced honesty puts others at ease.\n\nSharing an honest feeling is like offering a little introduction: this is who I am. Today, try putting just one thought into words.",
+      "toi": "Behind I cannot say it, is there someone who might dislike you, or a part of you that dislikes yourself? Look gently for a moment.",
+      "sources": [
+        {
+          "media": "Ameblo blog · Japanese source",
+          "date": "2024-08-18",
+          "title": "The fear of being disliked is a sign to love yourself",
+          "id": "20240818_01"
+        },
+        {
+          "media": "Ameblo blog · Japanese source",
+          "date": "2025-02-14",
+          "title": "People who are naturally liked are not trying to be liked",
+          "id": "20250214_01"
+        },
+        {
+          "media": "Ameblo blog · Japanese source",
+          "date": "2026-01-08",
+          "title": "You can express your feelings honestly without being disliked",
+          "id": "20260108_01"
+        }
+      ]
+    },
+    "q002": {
+      "hitokoto": "People who trouble you can mirror your inner world",
+      "body": "Difficult relationships at work are among the most common concerns people bring to me.\n\nA workplace gathers people of different ages and backgrounds around the shared interests of work. What lingers is often less the work itself than a collision of wishes to be understood.\n\nSomeone who troubles you can also be a mirror of your inner world. The more you suppress yourself with I must not say what I think, the more you may notice someone who speaks without restraint.\n\nToday, try looking at one person with the question: what might they be afraid of? The view may change before you ever try to change them.",
+      "toi": "What might it mean to share this place with these people now? What within you is being stirred through them?",
+      "sources": [
+        {
+          "media": "Ameblo blog · Japanese source",
+          "date": "2024-06-09",
+          "title": "What to know when workplace relationships hurt",
+          "id": "20240609_01"
+        },
+        {
+          "media": "Ameblo blog · Japanese source",
+          "date": "2024-10-17",
+          "title": "Workplace relationships are both cool and messy",
+          "id": "20241017_01"
+        },
+        {
+          "media": "Ameblo blog · Japanese source",
+          "date": "2026-05-12",
+          "title": "What happens when you face the pain of relationships",
+          "id": "20260512_01"
+        }
+      ]
+    },
+    "q003": {
+      "hitokoto": "Something of yourself lives within that discomfort",
+      "body": "Sometimes the person you want to avoid keeps appearing before you. Avoiding them may leave the relationship unchanged, or make it more tangled.\n\nAsk yourself why this person feels so difficult. As you put the heart’s small responses into words, you might discover something like: they openly do what I will not let myself do.\n\nWhat troubles you can conceal something you truly want, or something you have held back. The feeling may not be created by the other person; something already within you is being touched.",
+      "toi": "What about this person catches you most? Something you have made yourself endure may be waiting there.",
+      "sources": [
+        {
+          "media": "Ameblo blog · Japanese source",
+          "date": "2025-11-11",
+          "title": "A way to stop attracting people you find difficult",
+          "id": "20251111_02"
+        },
+        {
+          "media": "Ameblo blog · Japanese source",
+          "date": "2025-05-29",
+          "title": "The real you reflected in someone you dislike",
+          "id": "20250529_01"
+        },
+        {
+          "media": "Ameblo blog · Japanese source",
+          "date": "2026-02-28",
+          "title": "Noticing what lies beyond dislike can help you like yourself",
+          "id": "20260228_02"
+        }
+      ]
+    },
+    "q004": {
+      "hitokoto": "Say yes to your own judgment",
+      "body": "You may find it hard to refuse because you do not want to hurt someone, seem unkind, or damage a relationship.\n\nBut a connection that requires you to endure what you do not want is not a true bond. A relationship that breaks because of a no may not have been the connection you believed it was.\n\nWhen you cannot say yes to your own no, it is harder for that no to reach the other person. No is a positive statement of intention that protects your comfort and boundaries.\n\nOffer acceptance to your own judgment. Today, make one small decision by asking what you want.",
+      "toi": "Does this yes come from desire, or from fear of being disliked? Simply notice the difference.",
+      "sources": [
+        {
+          "media": "Ameblo blog · Japanese source",
+          "date": "2024-09-13",
+          "title": "Saying yes to your judgment helps you say no to others",
+          "id": "20240913_01"
+        },
+        {
+          "media": "Ameblo blog · Japanese source",
+          "date": "2024-02-27",
+          "title": "Learning to say no restores energy",
+          "id": "20240227_01"
+        },
+        {
+          "media": "Ameblo blog · Japanese source",
+          "date": "2025-01-31",
+          "title": "Protecting your boundaries: you may say no",
+          "id": "20250131_02"
+        }
+      ]
+    },
+    "q005": {
+      "hitokoto": "The person who needs your care now is you",
+      "body": "Feeling tossed about by someone’s mood may come from your sensitivity. You read their energy first, put them before yourself, and find you have pushed too hard.\n\nAt such times, the person who most needs your care may be you. Bringing energy back within strengthens your foundation and makes it harder for others to carry your attention away.\n\nLet feelings move instead of storing them up: writing in a notebook or singing karaoke can help. Sensitivity is one of your qualities, not something to hate. Welcoming it can gradually make life easier.",
+      "toi": "How do I feel right now? Before reading the other person’s face, look at your own once.",
+      "sources": [
+        {
+          "media": "Ameblo blog · Japanese source",
+          "date": "2024-11-19",
+          "title": "When you absorb too much influence from others",
+          "id": "20241119_02"
+        },
+        {
+          "media": "Ameblo blog · Japanese source",
+          "date": "2024-05-14",
+          "title": "How not to be pulled into someone’s negative remarks",
+          "id": "20240514_01"
+        },
+        {
+          "media": "Ameblo blog · Japanese source",
+          "date": "2025-06-22",
+          "title": "Loving your sensitivity makes life easier",
+          "id": "20250622_01"
+        }
+      ]
+    },
+    "q006": {
+      "hitokoto": "Strong expectations may reveal a part of you that is depleted",
+      "body": "Many of us have felt let down after hoping someone would act as we expected.\n\nWe may lean heavily on expectations when we have partly stopped taking care of our own happiness: please notice what I need; please make my wishes come true. When we are depleted in this way, disappointment hurts all the more.\n\nOther people cannot always act as we imagine. Today, turn kindness toward the part of you so worn down that it needs to expect so much. As your strength returns, someone else’s response may shake you less.",
+      "toi": "Perhaps this expectation is something you wanted to offer yourself. Who was the wish really meant for?",
+      "sources": [
+        {
+          "media": "Ameblo blog · Japanese source",
+          "date": "2025-10-30",
+          "title": "What to consider when expectations leave you feeling betrayed",
+          "id": "20251030_01"
+        },
+        {
+          "media": "Ameblo blog · Japanese source",
+          "date": "2026-03-27",
+          "title": "What to notice when you feel someone has hurt you",
+          "id": "20260327_01"
+        }
+      ]
+    },
+    "q007": {
+      "hitokoto": "The pain may come from inferiority, rather than comparison itself",
+      "body": "They have come so far, and I am still here: anyone can feel this. Comparison itself is not bad; we can learn from others. The pain may arise because we are looking through a sense of inferiority.\n\nThe people you compare yourself with also have struggles you cannot see. The life you imagine may be an illusion.\n\nWhile comparing, your attention is outside yourself. As you watch someone else’s garden, your own goes unwatered. Today, sit gently beside the part of you that feels discouraged.",
+      "toi": "Whose garden would you like to water now? What does this sadness really long for?",
+      "sources": [
+        {
+          "media": "Ameblo blog · Japanese source",
+          "date": "2024-09-29",
+          "title": "When comparing yourself with others hurts",
+          "id": "20240929_01"
+        },
+        {
+          "media": "Ameblo blog · Japanese source",
+          "date": "2025-10-24",
+          "title": "When comparing your life with someone else becomes painful",
+          "id": "20251024_01"
+        },
+        {
+          "media": "Ameblo blog · Japanese source",
+          "date": "2026-04-25",
+          "title": "What becomes visible when you stop comparing",
+          "id": "20260425_01"
+        }
+      ]
+    },
+    "q008": {
+      "hitokoto": "It hurts when your own acceptance is missing",
+      "body": "Human beings naturally want recognition. It is a kind of nourishment, and wanting it is not wrong. But being unable to feel okay without it may suggest some dependence.\n\nHarshness toward yourself can be a major reason you lose sight of who you are. People often treat themselves mercilessly in ways they would never treat others.\n\nWithout your own acceptance, approval is hard to receive however hard you work outside. Today, look at your words and actions as though they belonged to someone else. If empathy appears, that is recognition.",
+      "toi": "Whose recognition did you want most? Perhaps that person’s voice now lives within you.",
+      "sources": [
+        {
+          "media": "Ameblo blog · Japanese source",
+          "date": "2024-08-20",
+          "title": "When a lack of recognition becomes painful",
+          "id": "20240820_01"
+        },
+        {
+          "media": "Ameblo blog · Japanese source",
+          "date": "2024-07-01",
+          "title": "Recognizing yourself opens the way to recognition from others",
+          "id": "20240701_01"
+        },
+        {
+          "media": "Ameblo blog · Japanese source",
+          "date": "2025-06-02",
+          "title": "People keep trying because someone sees them",
+          "id": "20250602_01"
+        }
+      ]
+    },
+    "q009": {
+      "hitokoto": "Jealousy may tell you that you are pushing yourself too hard",
+      "body": "You may judge yourself as ugly for feeling this way. Yet jealousy often appears when you have been forcing yourself. In a sense, it is as natural as a stomach growling when hungry.\n\nIf you are struggling desperately beside someone loved simply as they are, your heart responds. Judging yourself only lowers your energy and makes you more reactive. Beneath it may be the belief that you are not good enough.\n\nAnd when you recognize something wonderful in someone else, it may be because a similar quality exists in you too.",
+      "toi": "What you envied may be a way you wanted to live yourself. Where have you been pushing too hard?",
+      "sources": [
+        {
+          "media": "Ameblo blog · Japanese source",
+          "date": "2025-08-29",
+          "title": "Jealousy can signal a depleted heart",
+          "id": "20250829_01"
+        },
+        {
+          "media": "Ameblo blog · Japanese source",
+          "date": "2024-11-22",
+          "title": "Jealousy tells you about a sense of lack; you need not hate it",
+          "id": "20241122_02"
+        },
+        {
+          "media": "Ameblo blog · Japanese source",
+          "date": "2026-05-31",
+          "title": "Find in yourself the wonderful qualities you see in others",
+          "id": "20260531_01"
+        }
+      ]
+    },
+    "q010": {
+      "hitokoto": "Do not disguise self-criticism as reflection",
+      "body": "I should have done that differently: the thought can circle endlessly before sleep. It may look diligent and sincere, but criticism disguised as reflection wounds your energy and enlarges regret and guilt.\n\nThen you freeze when it is time to act again, and criticize yourself once more. Reflection is meant to help next time. Once you have noticed what you will do differently, it can end.\n\nBefore bed today, offer yourself appreciation: you did well today too. If you are going to use energy, let it support tomorrow.",
+      "toi": "What would happen if you said these words to someone you love every night? These are the words you are saying to yourself.",
+      "sources": [
+        {
+          "media": "Ameblo blog · Japanese source",
+          "date": "2024-07-22",
+          "title": "Do not disguise criticism as reflection",
+          "id": "20240722_01"
+        },
+        {
+          "media": "Ameblo blog · Japanese source",
+          "date": "2026-02-01",
+          "title": "To live better, release the habit of self-reproach",
+          "id": "20260201_01"
+        },
+        {
+          "media": "Ameblo blog · Japanese source",
+          "date": "2026-06-18",
+          "title": "What happens when you stop reviewing your faults before bed",
+          "id": "20260618_01"
+        }
+      ]
+    },
+    "q011": {
+      "hitokoto": "True confidence is the quiet strength of staying with yourself",
+      "body": "If only I had confidence, I could do it: we sometimes feel this. Yet when confidence is truly present, we are no longer debating whether we have it.\n\nConfidence built on ability or praise can fall away when those conditions disappear. True confidence is a foundation within, the quiet power of being with yourself in a place beyond other people’s judgments.\n\nStop evaluating whether you have enough, and cherish who you are today. Confidence grows with the time you spend living alongside yourself.",
+      "toi": "What have you placed beyond the words once I am confident? Is it truly out of reach for today’s you?",
+      "sources": [
+        {
+          "media": "Ameblo blog · Japanese source",
+          "date": "2025-10-17",
+          "title": "How to grow true confidence",
+          "id": "20251017_01"
+        },
+        {
+          "media": "Ameblo blog · Japanese source",
+          "date": "2024-10-30",
+          "title": "Confidence you build up, and confidence that needs no embellishment",
+          "id": "20241030_01"
+        }
+      ]
+    },
+    "q012": {
+      "hitokoto": "Your own nature lives in ordinary things",
+      "body": "Being yourself may be much closer than a special talent or a clear vision.\n\nThe topic that makes you animated in conversation. Something you do without being asked. Something you keep doing for no particular reason. Little pieces of you are scattered through these ordinary moments.\n\nYou need not describe them perfectly. When you notice this somehow feels like me, gently pick up that small feeling instead of letting it pass.",
+      "toi": "What moved your heart today without a reason? You are already present within that little feeling.",
+      "sources": [
+        {
+          "media": "Ameblo blog · Japanese source",
+          "date": "2026-06-14",
+          "title": "What does being yourself mean? A simple way to find it",
+          "id": "20260614_01"
+        },
+        {
+          "media": "Ameblo blog · Japanese source",
+          "date": "2025-06-24",
+          "title": "Use your senses when you lose sight of yourself",
+          "id": "20250624_01"
+        },
+        {
+          "media": "Ameblo blog · Japanese source",
+          "date": "2024-09-25",
+          "title": "Shine by becoming yourself, rather than somebody",
+          "id": "20240925_01"
+        }
+      ]
+    },
+    "q013": {
+      "hitokoto": "Your ability to feel may simply be tired",
+      "body": "Not knowing what you want can make you anxious. But it does not necessarily mean there is nothing you want. Your ability to feel may be worn out.\n\nPeople who have worked hard for a long time often put should before like. What you want is often something you naturally find yourself doing, rather than something to hunt down. Searching harder can draw you deeper into feeling unable to find it.\n\nToday, choose one thing by whether it feels gently pleasant, rather than demanding to know whether you love it. With that ease in everyday life, your wishes may quietly appear.",
+      "toi": "Which option feels a little better now? Your body may know before your mind does.",
+      "sources": [
+        {
+          "media": "Ameblo blog · Japanese source",
+          "date": "2026-06-02",
+          "title": "When you do not know what you want to do",
+          "id": "20260602_01"
+        },
+        {
+          "media": "Ameblo blog · Japanese source",
+          "date": "2024-11-25",
+          "title": "Searching harder can hinder finding what you want",
+          "id": "20241125_01"
+        },
+        {
+          "media": "Ameblo blog · Japanese source",
+          "date": "2025-11-19",
+          "title": "What to do when you cannot find your desire",
+          "id": "20251119_01"
+        }
+      ]
+    },
+    "q014": {
+      "hitokoto": "Loving yourself means no longer cornering yourself",
+      "body": "Many people do not know what loving themselves means. It is neither indulgence nor giving selfishness free rein.\n\nIt is not a condition fulfilled by doing a particular thing, but a state of accepting yourself unconditionally. Perhaps the simplest description is: you are no longer driving yourself into a corner.\n\nInstead of searching for a method, listen to how you usually approach yourself. If you are judging, blaming, or feeling ashamed, soften that harshness a little. Unconditional acceptance even includes the part of you insisting that you must love yourself.",
+      "toi": "Could you say those same words to a small child every day? The difference shows how much harder you are being on yourself.",
+      "sources": [
+        {
+          "media": "Ameblo blog · Japanese source",
+          "date": "2024-08-26",
+          "title": "Understanding what self-love really means",
+          "id": "20240826_01"
+        },
+        {
+          "media": "Ameblo blog · Japanese source",
+          "date": "2024-06-17",
+          "title": "A concrete way to love yourself",
+          "id": "20240617_01"
+        },
+        {
+          "media": "Ameblo blog · Japanese source",
+          "date": "2025-11-25",
+          "title": "When self-love becomes an obligation",
+          "id": "20251125_01"
+        }
+      ]
+    },
+    "q015": {
+      "hitokoto": "Simply turn your radar toward yourself",
+      "body": "We begin life centered in ourselves. As we learn that living with others requires adapting, we gradually become centered on other people. Sensitive people can read others’ energy so readily that it becomes their normal way of being.\n\nPlease do not blame yourself for having lived this way. Blame only sends your center farther outside.\n\nThere is one thing to practice: turn the radar you have aimed at others toward yourself. Just once today, ask how you feel right now. One millimeter a day becomes a centimeter in ten days. Your inner center grows little by little.",
+      "toi": "You read other people’s faces so well. What about your own? What expression are you wearing now?",
+      "sources": [
+        {
+          "media": "Ameblo blog · Japanese source",
+          "date": "2025-09-09",
+          "title": "Accepting your outward-centered past helps you return to yourself",
+          "id": "20250909_02"
+        },
+        {
+          "media": "Ameblo blog · Japanese source",
+          "date": "2026-04-12",
+          "title": "For those who have read others’ moods since childhood",
+          "id": "20260412_01"
+        },
+        {
+          "media": "Ameblo blog · Japanese source",
+          "date": "2026-05-23",
+          "title": "An inner center grows through small daily accumulations of energy",
+          "id": "20260523_01"
+        }
+      ]
+    },
+    "q016": {
+      "hitokoto": "Sometimes the hardest part is being unable to say that it hurts",
+      "body": "There may be times in life when simply being alive feels difficult. The hardest part can be feeling unable to tell anyone. Being able to say I am struggling is a very good thing.\n\nDiligence and responsibility often lie beneath this difficulty. When you continually give yourself orders about what you must do, your unadorned self loses energy.\n\nAllowing even one thing you would not usually permit yourself can soften that tension. If your body is struggling, seeing a professional is also a way of caring for yourself.",
+      "toi": "If you told one person I am struggling right now, who would it be? Picture their face.",
+      "sources": [
+        {
+          "media": "Ameblo blog · Japanese source",
+          "date": "2024-08-31",
+          "title": "Something to try when life feels difficult",
+          "id": "20240831_01"
+        },
+        {
+          "media": "Ameblo blog · Japanese source",
+          "date": "2024-09-08",
+          "title": "Difficulty living can express the inner child’s pain",
+          "id": "20240908_01"
+        },
+        {
+          "media": "Ameblo blog · Japanese source",
+          "date": "2025-02-08",
+          "title": "Being highly sensitive is not itself why life feels difficult",
+          "id": "20250208_01"
+        }
+      ]
+    },
+    "q017": {
+      "hitokoto": "Difficulty switching on can be a sign",
+      "body": "After a break, you may blame yourself for being unable to get into work. But this does not mean you are lazy or inadequate.\n\nWork you enjoy is easy to switch on for. With work you do not enjoy, it can take longer each year. Perhaps you have had your fill of this particular work. If you can keep going on habit alone, that may reveal how much energy you are really putting into it.\n\nInstead of forcing enthusiasm, notice where you have been moving only through duty or obligation. Today, do a little something that is for you.",
+      "toi": "How much energy do you actually want to give this work? Gently look at the honest feeling beneath the habit.",
+      "sources": [
+        {
+          "media": "Ameblo blog · Japanese source",
+          "date": "2026-01-05",
+          "title": "When it is difficult to switch into work mode",
+          "id": "20260105_01"
+        },
+        {
+          "media": "Ameblo blog · Japanese source",
+          "date": "2025-10-16",
+          "title": "What to know when motivation will not come",
+          "id": "20251016_02"
+        },
+        {
+          "media": "Ameblo blog · Japanese source",
+          "date": "2026-04-06",
+          "title": "For those blaming themselves for a lack of motivation",
+          "id": "20260406_01"
+        }
+      ]
+    },
+    "q018": {
+      "hitokoto": "Love comes first; work follows",
+      "body": "Many people wish they could make a living doing what they love. Yet a hobby does not instantly become a job. Often it happens when making it a job was not the original intention: work was the result, not the purpose.\n\nSeen through energy, love for something carries a powerful vibration that moves people. Today, set the work part aside and simply spend time with what you love. That passion is what can keep you going for months and years.",
+      "toi": "What was so enjoyable that you forgot the time, meals, or sleep? Find your love for it first.",
+      "sources": [
+        {
+          "media": "Ameblo blog · Japanese source",
+          "date": "2025-12-13",
+          "title": "For those who want to make a living doing what they love",
+          "id": "20251213_01"
+        },
+        {
+          "media": "Ameblo blog · Japanese source",
+          "date": "2024-04-27",
+          "title": "Things made with love can sell",
+          "id": "20240427_01"
+        },
+        {
+          "media": "Ameblo blog · Japanese source",
+          "date": "2025-09-02",
+          "title": "Following your love until skill grows",
+          "id": "20250902_01"
+        }
+      ]
+    },
+    "q019": {
+      "hitokoto": "Your career does not need to be fixed in advance",
+      "body": "Many people feel anxious because they cannot picture their career ahead. With AI changing the world, even next year may look very different. Difficulty drawing a clear vision is not your fault.\n\nTry looking at the essence of a career rather than a job title: whatever work you do, how would you like to live? Work backward from that feeling.\n\nHints may already exist in what you do now. Instead of setting the future rigidly, look at it with enjoyment and flexibility.",
+      "toi": "Whatever my work, this is the kind of life I want. Write that one line in your own words.",
+      "sources": [
+        {
+          "media": "Ameblo blog · Japanese source",
+          "date": "2025-11-04",
+          "title": "Why you need not define your career clearly right now",
+          "id": "20251104_01"
+        },
+        {
+          "media": "Ameblo blog · Japanese source",
+          "date": "2026-01-28",
+          "title": "Hints for your ideal working life are in your current work",
+          "id": "20260128_01"
+        },
+        {
+          "media": "Ameblo blog · Japanese source",
+          "date": "2025-07-17",
+          "title": "A career setback can signal a new direction",
+          "id": "20250717_01"
+        }
+      ]
+    },
+    "q020": {
+      "hitokoto": "That exhaustion may signal attention turned outward",
+      "body": "People who work hardest often do not realize they are overdoing it. They may believe they still are not doing enough.\n\nPerhaps you have run straight toward praise and recognition, believing that was the right way to live. Yet however hard you work, recognition may not reach you because you have not accepted yourself.\n\nThat exhaustion is a familiar feeling when awareness is directed outward. Today, offer yourself one simple acknowledgment: you are doing well.",
+      "toi": "Whose words did you hope all that effort would bring, and what were they? Offer those words to yourself.",
+      "sources": [
+        {
+          "media": "Ameblo blog · Japanese source",
+          "date": "2025-06-14",
+          "title": "First understand why you push yourself too hard",
+          "id": "20250614_02"
+        },
+        {
+          "media": "Ameblo blog · Japanese source",
+          "date": "2025-07-28",
+          "title": "Recognizing the signs of overexertion",
+          "id": "20250728_02"
+        },
+        {
+          "media": "Ameblo blog · Japanese source",
+          "date": "2024-02-01",
+          "title": "What people who carry too much most need to prioritize",
+          "id": "20240201_01"
+        }
+      ]
+    },
+    "q021": {
+      "hitokoto": "Easing your effort is not irresponsible",
+      "body": "I must do it; if I ease up, I will trouble someone. Such thoughts can make it hard to let go even beyond your limits.\n\nResponsibility originally comes from love: giving energy to what you believe in. Mixed with fear and obligation, it can become a force that crushes you.\n\nDoes they need me come from love, or from trying to feel your existence matters by being useful? People with strong responsibility may see relaxing as irresponsible, but adjusting your energy is necessary to avoid breaking yourself. Protecting it lets you meet responsibility when it truly matters.",
+      "toi": "Does this responsibility arise from love, or from a wish to be needed?",
+      "sources": [
+        {
+          "media": "Ameblo blog · Japanese source",
+          "date": "2026-06-06",
+          "title": "Living without letting responsibility crush you",
+          "id": "20260606_01"
+        },
+        {
+          "media": "Ameblo blog · Japanese source",
+          "date": "2025-05-01",
+          "title": "Illness arising from a heavy sense of responsibility",
+          "id": "20250501_02"
+        },
+        {
+          "media": "Ameblo blog · Japanese source",
+          "date": "2024-02-01",
+          "title": "What people who carry too much most need to prioritize",
+          "id": "20240201_01"
+        }
+      ]
+    },
+    "q022": {
+      "hitokoto": "Trying too forcefully can push results farther away",
+      "body": "It is easy to become anxious when effort brings no visible result. Yet trying harder to produce one can create too much tension. Beneath it may be a large store of self-rejection: I am no good unless I achieve something. Starting from fear makes results harder to reach.\n\nThe physical world is a world of process. Planting a seed today does not bring growth instantly. Results can seem more distant the tighter you grip them.\n\nTo produce something, first let your own heart become warm. Find one small point of interest in what you are doing now.",
+      "toi": "If you set the result aside for a moment, what remains interesting about the work itself? Savor that.",
+      "sources": [
+        {
+          "media": "Ameblo blog · Japanese source",
+          "date": "2026-03-16",
+          "title": "If you want results, stop trying to force results",
+          "id": "20260316_01"
+        },
+        {
+          "media": "Ameblo blog · Japanese source",
+          "date": "2026-03-30",
+          "title": "A new beginning need not produce results immediately",
+          "id": "20260330_01"
+        },
+        {
+          "media": "Ameblo blog · Japanese source",
+          "date": "2026-06-01",
+          "title": "Results follow when you release attachment",
+          "id": "20260601_01"
+        }
+      ]
+    },
+    "q023": {
+      "hitokoto": "There is something to look at before deciding how to leave",
+      "body": "When you keep pushing yourself, you may be living with other people as your first priority. More than deliberately forcing yourself, you prioritize being loved or avoiding dislike, leaving yourself last.\n\nBefore searching for a way to quit, ask why you put others first. Often you will find the wish to be loved and the fear of being disliked.\n\nHave you asked others to take on the role of loving you instead of offering yourself love? Seeing this can help you decide not to keep forcing yourself beyond your limits.",
+      "toi": "Have you handed someone else the role of loving you for you? Look quietly, without rushing.",
+      "sources": [
+        {
+          "media": "Ameblo blog · Japanese source",
+          "date": "2024-11-13",
+          "title": "When you want to stop overdoing it but cannot",
+          "id": "20241113_01"
+        },
+        {
+          "media": "Ameblo blog · Japanese source",
+          "date": "2025-03-13",
+          "title": "There is meaning in people leaving",
+          "id": "20250313_01"
+        },
+        {
+          "media": "Ameblo blog · Japanese source",
+          "date": "2026-03-10",
+          "title": "For those unable to move on after a painful resignation",
+          "id": "20260310_02"
+        }
+      ]
+    },
+    "q024": {
+      "hitokoto": "Security can lie in circulation, not just an amount",
+      "body": "Many people worry about the future so much that spending money feels difficult. Yet having money does not automatically bring peace. The amount that feels safe differs from person to person, and spending reduces it.\n\nIn this perspective, reassurance comes not simply from having a large amount, but from circulation: money can come in after it goes out.\n\nDo not limit your image of receiving to a salary alone. Remaining open to abundance from many directions allows the energy of money to move more freely.",
+      "toi": "How much have I decided I need in order to feel safe? Look at what that number represents.",
+      "sources": [
+        {
+          "media": "Ameblo blog · Japanese source",
+          "date": "2024-11-29",
+          "title": "Awareness Room 56: attachment to money and financial stability",
+          "id": "20241129_01"
+        },
+        {
+          "media": "Ameblo blog · Japanese source",
+          "date": "2025-04-29",
+          "title": "True reassurance about money lies in circulation",
+          "id": "20250429_01"
+        },
+        {
+          "media": "Ameblo blog · Japanese source",
+          "date": "2024-04-19",
+          "title": "What happens when you welcome abundance",
+          "id": "20240419_02"
+        }
+      ]
+    },
+    "q025": {
+      "hitokoto": "A sense of lack may hide beneath I must save",
+      "body": "Perhaps you know the feeling: the harder you try to save, the more money seems to leave. Beneath I must save may be the energy of not enough and fear about the future.\n\nIn this view of energy, what you focus on draws more of the same. Attention fixed on lack brings a reality of lack.\n\nEconomizing need not mean enduring deprivation. It can mean no longer spending on things that do not move your heart. More than trying to accumulate, notice whether you can feel money circulating. Today, find one small gratitude for something you were able to pay for.",
+      "toi": "What is one thing you spend on that does not reflect your honest wishes or move your heart?",
+      "sources": [
+        {
+          "media": "Ameblo blog · Japanese source",
+          "date": "2026-06-17",
+          "title": "Why trying harder to save can leave you unable to save",
+          "id": "20260617_01"
+        },
+        {
+          "media": "Ameblo blog · Japanese source",
+          "date": "2025-06-17",
+          "title": "Economizing means no longer spending on what does not move your heart",
+          "id": "20250617_02"
+        },
+        {
+          "media": "Ameblo blog · Japanese source",
+          "date": "2024-12-06",
+          "title": "Saving and awareness: money as energy",
+          "id": "20241206_02"
+        }
+      ]
+    },
+    "q026": {
+      "hitokoto": "Overspending may be your heart calling out",
+      "body": "Spending freely and feeling guilty afterward can happen when your energy is low. Something feels missing within, and you try to fill it by acquiring things.\n\nBlaming or punishing yourself lowers your energy further, and you may spend again. Begin by not blaming yourself. Then gently ask what part of you feels a lack.\n\nSome feeling is calling out beneath the spending. Once you can see it, things may naturally settle.",
+      "toi": "Was the thing you bought what you truly wanted then, or was it something entirely different?",
+      "sources": [
+        {
+          "media": "Ameblo blog · Japanese source",
+          "date": "2024-11-12",
+          "title": "Understanding the real reason for overspending",
+          "id": "20241112_01"
+        },
+        {
+          "media": "Ameblo blog · Japanese source",
+          "date": "2024-02-10",
+          "title": "The heart’s message hidden in spending",
+          "id": "20240210_01"
+        },
+        {
+          "media": "Ameblo blog · Japanese source",
+          "date": "2025-02-23",
+          "title": "Money for genuine interests is an expense, not necessarily waste",
+          "id": "20250223_01"
+        }
+      ]
+    },
+    "q027": {
+      "hitokoto": "Spending on joy is not wrong",
+      "body": "Sometimes we shame or punish ourselves for becoming absorbed in what we love. Yet we can spend money precisely because we are alive. We want tools that let us experience our interests.\n\nA watercolor painting need not use only red and blue. Many colors allow many forms of expression. We too are here to experience the varied colors of joy.\n\nIf your heart is happy, you are nourishing yourself. Please do not turn what brings enjoyment into something bad.",
+      "toi": "Was your heart happy when you spent that money? Remember the feeling itself.",
+      "sources": [
+        {
+          "media": "Ameblo blog · Japanese source",
+          "date": "2026-04-08",
+          "title": "Guilt that appears when spending on joy",
+          "id": "20260408_01"
+        },
+        {
+          "media": "Ameblo blog · Japanese source",
+          "date": "2024-04-29",
+          "title": "Spend on what has value: joy",
+          "id": "20240429_01"
+        },
+        {
+          "media": "Ameblo blog · Japanese source",
+          "date": "2025-08-27",
+          "title": "A happy way to use money, beyond a clever one",
+          "id": "20250827_01"
+        }
+      ]
+    },
+    "q028": {
+      "hitokoto": "Sadness may be what lies beneath the block",
+      "body": "You may want money while feeling it is dirty or that you are not worth that much, then feel ashamed of those thoughts.\n\nBut a money block may not truly be about money. It can be the sadness left by having the belief you must not wish for happiness planted within you. That is why affirming that you may be abundant can feel like being pulled back by a rubber band.\n\nBefore trying to remove it, notice it. From there, you can begin offering yourself a new message.",
+      "toi": "Whose voice taught you that you must not wish for happiness? Look gently at where it came from.",
+      "sources": [
+        {
+          "media": "Ameblo blog · Japanese source",
+          "date": "2026-06-11",
+          "title": "Why trying to remove money blocks may not remove them",
+          "id": "20260611_01"
+        },
+        {
+          "media": "Ameblo blog · Japanese source",
+          "date": "2025-03-27",
+          "title": "Learn how money circulates, beyond studying money",
+          "id": "20250327_01"
+        }
+      ]
+    },
+    "q029": {
+      "hitokoto": "Fear about old age may carry a message from the present",
+      "body": "People of many ages fear what life will be like when they are older. Interestingly, they may skip over the next two or three years and focus directly on old age. Creative energy goes into imagining an unhappy situation that has not happened.\n\nThis is a trick of thought. Beneath it may be a feeling that life now is not enjoyable. Concern about reserves can also reflect feeling short of energy in the present.\n\nToday, bring attention back to now. A future can grow from the way you enjoy living today.",
+      "toi": "How would you truly like to spend this day currently devoted to worrying about a future that has not arrived? Just today’s portion.",
+      "sources": [
+        {
+          "media": "Ameblo blog · Japanese source",
+          "date": "2024-10-26",
+          "title": "For younger people who worry about their imagined old age",
+          "id": "20241026_01"
+        },
+        {
+          "media": "Ameblo blog · Japanese source",
+          "date": "2025-01-12",
+          "title": "Stability in later life begins with living fully now",
+          "id": "20250112_01"
+        }
+      ]
+    },
+    "q030": {
+      "hitokoto": "You have a part in creating your own happiness",
+      "body": "You cannot meet someone, move forward, or keep a relationship going. Each time, you may wonder whether something is wrong with you.\n\nPain in love can arise from expecting someone else to fulfill you. Handing your life to the person you love becomes painful. Focusing strongly on requirements can also hide fear of rejection, before you are ready to love another person.\n\nWhat matters may be less a checklist made by the mind than the atmosphere—the vibration—that feels right when you are together. Today, meet one of your own needs yourself.",
+      "toi": "If you offered care to the place you want someone else to fill, what could you do?",
+      "sources": [
+        {
+          "media": "Ameblo blog · Japanese source",
+          "date": "2024-12-15",
+          "title": "What to know when love feels painful",
+          "id": "20241215_01"
+        },
+        {
+          "media": "Ameblo blog · Japanese source",
+          "date": "2025-08-28",
+          "title": "Partner ideals: the mind and soul seek different things",
+          "id": "20250828_01"
+        },
+        {
+          "media": "Ameblo blog · Japanese source",
+          "date": "2024-11-22",
+          "title": "Awareness Room 55: difficulties in love and marriage",
+          "id": "20241122_01"
+        }
+      ]
+    },
+    "q031": {
+      "hitokoto": "Walking together begins on your own feet",
+      "body": "Every relationship can have periods when feelings fail to meet. Partnership is like walking a three-legged race. Leaning entirely on the other person prevents movement, but moving only for yourself will not create a shared rhythm either.\n\nBalancing your own happiness with attention to your partner supports the relationship. However different you are, respecting what each person cannot compromise on can help you live well together.\n\nCaring for yourself makes a good connection possible. A better relationship with your partner grows from your relationship with yourself.",
+      "toi": "Have I ever honestly told my partner what I truly cannot compromise on?",
+      "sources": [
+        {
+          "media": "Ameblo blog · Japanese source",
+          "date": "2025-11-22",
+          "title": "Building a better partnership",
+          "id": "20251122_01"
+        },
+        {
+          "media": "Ameblo blog · Japanese source",
+          "date": "2025-04-30",
+          "title": "Respecting each other’s non-negotiable needs",
+          "id": "20250430_01"
+        },
+        {
+          "media": "Ameblo blog · Japanese source",
+          "date": "2025-08-28",
+          "title": "Partner ideals: the mind and soul seek different things",
+          "id": "20250828_01"
+        }
+      ]
+    },
+    "q032": {
+      "hitokoto": "Anger can be an expression of sadness",
+      "body": "Many people feel persistent anger toward a spouse. Believing anger is bad, they swallow it. Yet even if consciously suppressed, it can continue swirling like magma under a sealed volcano.\n\nThe more you dismiss it as something from long ago, the more it may return unexpectedly. Anger can express sadness. Wanting to blame the other person may mean wanting them to understand your pain.\n\nWrite in a notebook, speak aloud alone, or sing it out. As the feeling finds expression, you can meet the honest wishes beneath it.",
+      "toi": "What words did you want someone to hear about the sadness beneath this anger? Write them down.",
+      "sources": [
+        {
+          "media": "Ameblo blog · Japanese source",
+          "date": "2024-05-10",
+          "title": "Awareness Room 34: I cannot stop being angry with my husband",
+          "id": "20240510_01"
+        },
+        {
+          "media": "Ameblo blog · Japanese source",
+          "date": "2026-01-27",
+          "title": "When old anger returns repeatedly",
+          "id": "20260127_01"
+        },
+        {
+          "media": "Ameblo blog · Japanese source",
+          "date": "2025-12-15",
+          "title": "Using the energy of anger constructively",
+          "id": "20251215_01"
+        }
+      ]
+    },
+    "q033": {
+      "hitokoto": "Look at the heart beneath the attachment",
+      "body": "You may wish you could stop thinking about someone. But attachment often comes from anxiety: I cannot manage without this. Until that anxiety eases, simply trying to stop clinging may not work.\n\nA tightly closed hand cannot receive something new. Letting go can mean opening your hand to receive, rather than giving up.\n\nInstead of trying to fix attachment itself, care for the weakened heart beneath it. Gently ask what fear is making you hold on. When light reaches that place, the attachment may naturally soften.",
+      "toi": "What are you afraid of losing if this person is not there? Ask your heart.",
+      "sources": [
+        {
+          "media": "Ameblo blog · Japanese source",
+          "date": "2026-01-03",
+          "title": "Looking at the anxiety beneath attachment helps it soften",
+          "id": "20260103_01"
+        },
+        {
+          "media": "Ameblo blog · Japanese source",
+          "date": "2024-04-15",
+          "title": "Why trying harder to release attachment can make it harder",
+          "id": "20240415_01"
+        },
+        {
+          "media": "Ameblo blog · Japanese source",
+          "date": "2026-04-30",
+          "title": "For those afraid to release painful attachment",
+          "id": "20260430_01"
+        }
+      ]
+    },
+    "q034": {
+      "hitokoto": "Sometimes being together can feel lonelier",
+      "body": "Fear of being alone often lives beneath the inability to decide. Some people remain in an unhappy relationship to avoid loneliness. Yet being with someone whose heart does not meet yours can be lonelier still.\n\nBeing alone can reset your energy. Feelings may linger for a while, but as things settle, your own strength can return.\n\nA parting is also a passage, not simply an ending. Beyond whether the relationship lasted, you have received something important from it. The experience can bring a new version of you into being.",
+      "toi": "Within this relationship, do our hearts truly reach each other? You need not rush the answer.",
+      "sources": [
+        {
+          "media": "Ameblo blog · Japanese source",
+          "date": "2024-03-16",
+          "title": "What happens when you choose parting without fearing solitude",
+          "id": "20240316_02"
+        },
+        {
+          "media": "Ameblo blog · Japanese source",
+          "date": "2024-11-28",
+          "title": "Both meetings and partings have meaning",
+          "id": "20241128_02"
+        },
+        {
+          "media": "Ameblo blog · Japanese source",
+          "date": "2024-08-08",
+          "title": "A one-way connection may signal a time to step away",
+          "id": "20240808_01"
+        }
+      ]
+    },
+    "q035": {
+      "hitokoto": "It is okay if parent and child cannot be close",
+      "body": "Many people carry this heaviness. Even with a family bond and shared blood, you are separate in energy. The more you insist because we are family or even though we are family, the more an ideal can weigh down the relationship.\n\nIt is okay if parent and child cannot get along. Instead of seeing it as wrong or shameful, try seeing each other as individual people.\n\nIf your mother’s words still echo, you might ask whether the person who spoke them was happy herself. Being able to say that it hurts means you have already begun to move.",
+      "toi": "How do you truly want things to be with your mother? An answer may already be resting quietly within you.",
+      "sources": [
+        {
+          "media": "Ameblo blog · Japanese source",
+          "date": "2026-02-13",
+          "title": "It is okay if parent and child cannot be close",
+          "id": "20260213_02"
+        },
+        {
+          "media": "Ameblo blog · Japanese source",
+          "date": "2026-02-15",
+          "title": "Learning from the painful spell of a parent’s words",
+          "id": "20260215_01"
+        },
+        {
+          "media": "Ameblo blog · Japanese source",
+          "date": "2025-02-28",
+          "title": "Awareness Room 63: my suffering is my mother",
+          "id": "20250228_01"
+        }
+      ]
+    },
+    "q036": {
+      "hitokoto": "Do not hurt yourself to keep your parents from sadness",
+      "body": "Perhaps you have played the ideal child for your parents since childhood. Even as an adult, you still feel you must manage their reactions.\n\nBeneath this is care for them: I must not make my parents sad. But while protecting them from sadness, you may be making yourself sad. Even a close family can leave you conflicted if your true self and outward self are far apart.\n\nToday, gently separate their feelings from yours. Being so concerned about someone else that you neglect yourself is not the whole of kindness.",
+      "toi": "How much of life have you spent as the person your parents wanted, and how much as your unguarded self? Quietly notice.",
+      "sources": [
+        {
+          "media": "Ameblo blog · Japanese source",
+          "date": "2026-03-09",
+          "title": "For adults still playing the child their parents need",
+          "id": "20260309_01"
+        },
+        {
+          "media": "Ameblo blog · Japanese source",
+          "date": "2025-02-03",
+          "title": "Even a close family can leave inner conflict",
+          "id": "20250203_01"
+        },
+        {
+          "media": "Ameblo blog · Japanese source",
+          "date": "2025-01-04",
+          "title": "Parents may not know their child’s feelings",
+          "id": "20250104_01"
+        }
+      ]
+    },
+    "q037": {
+      "hitokoto": "Some worry may come from fear rather than love",
+      "body": "Worrying about your child is a natural feeling for a parent. That part is welcome. But excessive worry can be driven by feelings from your own childhood.\n\nThe more you endured or felt lonely, the more urgently you may wish to spare your child the same. What looks like worry as love may include fear that they will suffer as you did. While you seem to be watching your child, your younger self may still be crying.\n\nSometimes the feeling comes from the little child within you, rather than a problem with your child. Love also means watching over them with trust. Today, do one thing that brings you joy.",
+      "toi": "Am I worrying about my child now, or about the child I once was? Look gently for a moment.",
+      "sources": [
+        {
+          "media": "Ameblo blog · Japanese source",
+          "date": "2025-04-22",
+          "title": "What excessive worry about your child may mean",
+          "id": "20250422_02"
+        },
+        {
+          "media": "Ameblo blog · Japanese source",
+          "date": "2025-05-30",
+          "title": "True love includes watching over with trust",
+          "id": "20250530_02"
+        },
+        {
+          "media": "Ameblo blog · Japanese source",
+          "date": "2024-01-12",
+          "title": "A happy way to support your child’s future",
+          "id": "20240112_02"
+        }
+      ]
+    },
+    "q038": {
+      "hitokoto": "Your child may be trying to respect their own feelings",
+      "body": "Not knowing what to do can feel bewildering. In an energetic reading, parents of children who stop attending school have often been very diligent since childhood, carefully playing their role without troubling their own parents.\n\nTheir children may not be trying to cause trouble, but to respect and prioritize their own feelings. The belief that being different is shameful may echo the concern for appearances you grew up with.\n\nToday, also notice the part of you asking for help within your own heart.",
+      "toi": "Is the pain around my child about other people’s judgments, or about what I had to endure long ago?",
+      "sources": [
+        {
+          "media": "Ameblo blog · Japanese source",
+          "date": "2024-11-15",
+          "title": "What parents of children not attending school may need to notice",
+          "id": "20241115_01"
+        },
+        {
+          "media": "Ameblo blog · Japanese source",
+          "date": "2026-03-01",
+          "title": "The meaning of a child who challenges a parent’s beliefs",
+          "id": "20260301_01"
+        },
+        {
+          "media": "Ameblo blog · Japanese source",
+          "date": "2024-03-22",
+          "title": "Awareness Room 28: school absence and withdrawal in the family",
+          "id": "20240322_01"
+        }
+      ]
+    },
+    "q039": {
+      "hitokoto": "You are also a family member who deserves your care",
+      "body": "Why do they not understand when we are family? The because and even though in those thoughts can be what hurts.\n\nEven close relatives have different energies. However near they are, they are not the same as you. First understand your irritation: I wanted them to understand, and they did not.\n\nYou need not endure or forgive simply because someone is family. The family member you most need to cherish is yourself. If it is too painful, you are allowed some distance.",
+      "toi": "How did you truly want your family to treat you? Begin by offering some of that care to yourself.",
+      "sources": [
+        {
+          "media": "Ameblo blog · Japanese source",
+          "date": "2025-12-26",
+          "title": "Why because we are family and even though we are family can hurt",
+          "id": "20251226_01"
+        },
+        {
+          "media": "Ameblo blog · Japanese source",
+          "date": "2024-08-17",
+          "title": "What to consider when going home feels uncomfortable",
+          "id": "20240817_01"
+        },
+        {
+          "media": "Ameblo blog · Japanese source",
+          "date": "2025-02-03",
+          "title": "Even a close family can leave inner conflict",
+          "id": "20250203_01"
+        }
+      ]
+    },
+    "q040": {
+      "hitokoto": "Letting go of they should notice can lighten the load",
+      "body": "It is always me, you think, while continuing to work today. The more you feel I should not have to say it; they should notice, the more endlessly you may carry. Then your heart or body reaches its limit, and you dislike yourself for it. You deserve kinder treatment.\n\nHousehold work needs doing, but if you live with family, it is not yours alone. Rather than continuing to endure, learn ways of helping yourself.\n\nToday, name and write down one small invisible task. Talking about it clearly can be part of finding relief.",
+      "toi": "Beneath I wish they would notice, what did you really want to say?",
+      "sources": [
+        {
+          "media": "Ameblo blog · Japanese source",
+          "date": "2025-03-26",
+          "title": "Do not keep enduring unequal household work",
+          "id": "20250326_01"
+        },
+        {
+          "media": "Ameblo blog · Japanese source",
+          "date": "2025-10-29",
+          "title": "Making invisible labor visible can reduce exhaustion",
+          "id": "20251029_02"
+        },
+        {
+          "media": "Ameblo blog · Japanese source",
+          "date": "2026-04-02",
+          "title": "Something to try when it is always me",
+          "id": "20260402_01"
+        }
+      ]
+    },
+    "q041": {
+      "hitokoto": "Sadness often waits beneath irritation",
+      "body": "Sometimes irritation will not settle, however hard you try. It can be anger being held back, and sadness often lies beneath that anger.\n\nRather than deciding that your irritated self is bad or unlovable, try understanding: I was feeling this sadness, and that is why I became irritated. That recognition can bring relief and let the irritation gradually soften.\n\nToday, write the feeling into a notebook. A swallowed emotion may vanish from your thoughts for a moment while continuing to live within your feelings.",
+      "toi": "What was truly sad beneath this irritation? What did you leave without words?",
+      "sources": [
+        {
+          "media": "Ameblo blog · Japanese source",
+          "date": "2024-03-21",
+          "title": "Notice the important feeling beneath irritation",
+          "id": "20240321_01"
+        },
+        {
+          "media": "Ameblo blog · Japanese source",
+          "date": "2025-12-15",
+          "title": "Using the energy of anger constructively",
+          "id": "20251215_01"
+        },
+        {
+          "media": "Ameblo blog · Japanese source",
+          "date": "2026-01-27",
+          "title": "When old anger returns repeatedly",
+          "id": "20260127_01"
+        }
+      ]
+    },
+    "q042": {
+      "hitokoto": "That unsettled feeling is a signal from your heart",
+      "body": "You may blame yourself for being unable to put it into words. But a concern exists even before language arrives.\n\nUnease can be the heart saying that the energy does not fit. The mind often rejects it: leaving now would be a loss; ending this connection would waste something. Ignoring it through calculations of gain and loss may make the discomfort grow rather than disappear.\n\nToday, make some time without analysis. Simply write your feelings on paper. Like fog clearing, something may gradually become visible.",
+      "toi": "What is this unease saying no to? Let the question rest without rushing an answer.",
+      "sources": [
+        {
+          "media": "Ameblo blog · Japanese source",
+          "date": "2025-12-07",
+          "title": "Do not ignore a feeling that something does not fit",
+          "id": "20251207_01"
+        },
+        {
+          "media": "Ameblo blog · Japanese source",
+          "date": "2026-05-20",
+          "title": "When you do not know what is troubling you",
+          "id": "20260520_01"
+        },
+        {
+          "media": "Ameblo blog · Japanese source",
+          "date": "2024-07-17",
+          "title": "Unease can signal accumulated feelings needing release",
+          "id": "20240717_01"
+        }
+      ]
+    },
+    "q043": {
+      "hitokoto": "Stay beside yourself: there are days like this too",
+      "body": "Of course you want to feel better soon. But human beings are not constant: we have good days and difficult ones. Forcing your mood upward can make it harder.\n\nIn this reflection, self-blame is one source of low energy. A blaming awareness can act like a knife against your own energy, leaving the heart depleted.\n\nWithout doing anything special, quietly stay beside yourself: yes, there are days when I feel low and tired. Kindness gives your mood room to rise. Not attacking yourself conserves the heart’s energy.",
+      "toi": "Just before your mood fell, what did you say to yourself? Quietly recall that one sentence.",
+      "sources": [
+        {
+          "media": "Ameblo blog · Japanese source",
+          "date": "2025-08-04",
+          "title": "What to do when you feel low or have little energy",
+          "id": "20250804_01"
+        },
+        {
+          "media": "Ameblo blog · Japanese source",
+          "date": "2024-11-20",
+          "title": "There is a reason when the heart sinks",
+          "id": "20241120_01"
+        },
+        {
+          "media": "Ameblo blog · Japanese source",
+          "date": "2024-03-17",
+          "title": "A short path toward feeling better when energy is low",
+          "id": "20240317_01"
+        }
+      ]
+    },
+    "q044": {
+      "hitokoto": "You do not have to force forgiveness",
+      "body": "They did not understand; they did not receive what I felt. Each reason may carry sadness. Hurt can become anger, and beyond anger, an inability to forgive.\n\nIf you cannot forgive, you need not force it. Do not punish that feeling. Understand instead how deeply sad the experience was.\n\nAllow yourself to be someone who cannot forgive yet. Even while anger remains, acceptance can gradually bring a feeling that it no longer matters so much. Today, focus on caring for yourself in the present.",
+      "toi": "What hurt most in the event you cannot forgive? Touch that place gently, and only that place.",
+      "sources": [
+        {
+          "media": "Ameblo blog · Japanese source",
+          "date": "2024-10-05",
+          "title": "Allowing yourself not to forgive opens the way to acceptance",
+          "id": "20241005_01"
+        },
+        {
+          "media": "Ameblo blog · Japanese source",
+          "date": "2024-09-05",
+          "title": "When you cannot forgive, you do not have to",
+          "id": "20240905_01"
+        },
+        {
+          "media": "Ameblo blog · Japanese source",
+          "date": "2024-01-09",
+          "title": "Changing your relationship with what feels unforgivable",
+          "id": "20240109_01"
+        }
+      ]
+    },
+    "q045": {
+      "hitokoto": "Rejecting negativity can become the deeper burden",
+      "body": "The harder you try to remove negative thinking because it is bad, the more you may dislike yourself when it stays. Then another layer of negativity appears.\n\nThe deeper negative force can be the awareness that hates negativity. If feelings were crayons, a picture could not be made from bright colors alone. Dark colors have their place too. Negativity can even hold a wealth of creativity.\n\nToday, do not try to drive that part of you away. Let it be: there are times like this. When it is accepted, the suffering can quietly ease.",
+      "toi": "Through all those years of disliking your negative self, what was that rejecting awareness trying to protect?",
+      "sources": [
+        {
+          "media": "Ameblo blog · Japanese source",
+          "date": "2026-02-23",
+          "title": "To release negative thinking, stop hating it",
+          "id": "20260223_01"
+        },
+        {
+          "media": "Ameblo blog · Japanese source",
+          "date": "2025-02-26",
+          "title": "Many reasons not to hate negativity",
+          "id": "20250226_01"
+        },
+        {
+          "media": "Ameblo blog · Japanese source",
+          "date": "2024-11-17",
+          "title": "The awareness that attracts negative experiences",
+          "id": "20241117_01"
+        }
+      ]
+    },
+    "q046": {
+      "hitokoto": "When you worry, allow a little softness",
+      "body": "Anxiety can leave you unable to move forward and your body tense. The more worried you are, the more you may try to think your way out. But thinking does not necessarily reduce worry, and constant thought can make your energy heavier.\n\nThat is why a little loosening matters when concerns arise. Prioritize something that brings relief, include something that makes you smile, and relax your body. Energy can begin to change through that softness.\n\nWhen outside information shakes you, returning to your own center also helps you trust your own senses.",
+      "toi": "How many things are actually troubling me in this exact moment? Count them one by one.",
+      "sources": [
+        {
+          "media": "Ameblo blog · Japanese source",
+          "date": "2024-06-20",
+          "title": "Loosen your grip when problems and worries arise",
+          "id": "20240620_01"
+        },
+        {
+          "media": "Ameblo blog · Japanese source",
+          "date": "2025-08-08",
+          "title": "For those made anxious by frightening information",
+          "id": "20250808_01"
+        },
+        {
+          "media": "Ameblo blog · Japanese source",
+          "date": "2024-11-01",
+          "title": "Awareness Room 59: anxiety and fear",
+          "id": "20241101_01"
+        }
+      ]
+    },
+    "q047": {
+      "hitokoto": "There is a reason your decision is not coming",
+      "body": "A deadline or the wish not to disappoint someone can make you force yourself. Yet inability to decide may mean that now is not the moment, or that the choice is not right for you. Either way, something keeps your heart from saying yes.\n\nAn answer forced out can lead to regret. When you are unsure, the answer may be hidden rather than absent.\n\nSet the dilemma aside for a moment, return to the here and now, and breathe fully. As the fog clears, you may find the answer was there from the beginning.",
+      "toi": "Where in this choice is your heart quietly saying no? Listen without rushing.",
+      "sources": [
+        {
+          "media": "Ameblo blog · Japanese source",
+          "date": "2024-11-07",
+          "title": "There is always a reason when you cannot decide",
+          "id": "20241107_02"
+        },
+        {
+          "media": "Ameblo blog · Japanese source",
+          "date": "2024-05-04",
+          "title": "What to do when you feel unsure",
+          "id": "20240504_01"
+        },
+        {
+          "media": "Ameblo blog · Japanese source",
+          "date": "2026-04-21",
+          "title": "How can you know whether the path you chose is right?",
+          "id": "20260421_01"
+        }
+      ]
+    },
+    "q048": {
+      "hitokoto": "Being yourself can be your right answer",
+      "body": "Not wanting to make a mistake is understandable. But the right answer you seek may belong to society or other people’s expectations, rather than to you.\n\nThe longer you adapt to others, the more you may crave an answer and be swayed by information claiming to provide it. Often there is no universal right answer there.\n\nInstead, ask what experience would be enjoyable to offer yourself today, and act for yourself. Being your unadorned self can be your answer.",
+      "toi": "Whose right answer was I seeking: society’s, or my own?",
+      "sources": [
+        {
+          "media": "Ameblo blog · Japanese source",
+          "date": "2026-04-20",
+          "title": "Seeking only correct answers can obscure your answer",
+          "id": "20260420_02"
+        },
+        {
+          "media": "Ameblo blog · Japanese source",
+          "date": "2025-10-10",
+          "title": "Seeking certainty too intensely can stop your life",
+          "id": "20251010_02"
+        },
+        {
+          "media": "Ameblo blog · Japanese source",
+          "date": "2024-11-18",
+          "title": "Your heart knows the way of learning that fits you",
+          "id": "20241118_01"
+        }
+      ]
+    },
+    "q049": {
+      "hitokoto": "Change can begin when you return to the present",
+      "body": "The more urgently you want to change, the harder it may feel. Sometimes that wish includes not wanting to see your current situation, almost abandoning the here and now.\n\nSet it aside and savor the ordinary life before you. Eat something you want, see someone you miss, or read the book you have been meaning to open. Such simple experiences bring your center back and set energy moving.\n\nWhat you truly seek may be returning to your original self, rather than becoming someone else. As you care for who you are now, things can naturally change.",
+      "toi": "When I say I want to change, what part of now do I least want to see? Gently turn toward it.",
+      "sources": [
+        {
+          "media": "Ameblo blog · Japanese source",
+          "date": "2025-04-14",
+          "title": "What to do when wanting to change makes change difficult",
+          "id": "20250414_01"
+        },
+        {
+          "media": "Ameblo blog · Japanese source",
+          "date": "2024-07-08",
+          "title": "Why you cannot change despite wanting to",
+          "id": "20240708_01"
+        },
+        {
+          "media": "Ameblo blog · Japanese source",
+          "date": "2025-06-15",
+          "title": "What to know when you want to change",
+          "id": "20250615_01"
+        }
+      ]
+    },
+    "q050": {
+      "hitokoto": "Perfectionism can be an extreme form of idealism",
+      "body": "Perfectionism can mean carrying many rules in your mind: it should be this way; anything else is wrong. Reality does not obey them, so you may remain angry at things, people, and especially yourself.\n\nBeneath this may be fear of failing or being ridiculed. Energy grows while it flows. Aiming only at perfection can stop it like stagnant river water.\n\nToday, begin one thing that the person you are now can do. Human beings make errors; we are not creatures who become perfect.",
+      "toi": "When, and from whom, did you receive one of these inner rules? Recall just one.",
+      "sources": [
+        {
+          "media": "Ameblo blog · Japanese source",
+          "date": "2024-02-28",
+          "title": "Perfectionism as extreme idealism",
+          "id": "20240228_01"
+        },
+        {
+          "media": "Ameblo blog · Japanese source",
+          "date": "2026-04-28",
+          "title": "It must be perfect stops energy flowing",
+          "id": "20260428_01"
+        },
+        {
+          "media": "Ameblo blog · Japanese source",
+          "date": "2024-11-06",
+          "title": "Accepting imperfection expands what you can do as a person",
+          "id": "20241106_01"
+        }
+      ]
+    },
+    "q051": {
+      "hitokoto": "Calling an experience a failure can be the real loss",
+      "body": "You may want to begin something new yet be unable to take the first step. In this reflection, it is not the experience alone that wounds you, but a preexisting habit of blaming yourself when things go wrong. What frightens you may be that self-blame more than failure itself.\n\nTurning a setback into a personal defect wastes a valuable chance to gain experience. If you let everything be experience without coloring it success or failure, all of it becomes a foundation.\n\nToday, take one small action to enjoy an experience, rather than to produce a result.",
+      "toi": "Was what I have called failure truly a failure, or was it an experience?",
+      "sources": [
+        {
+          "media": "Ameblo blog · Japanese source",
+          "date": "2024-09-26",
+          "title": "Making failure into failure is the real failure",
+          "id": "20240926_01"
+        },
+        {
+          "media": "Ameblo blog · Japanese source",
+          "date": "2025-01-03",
+          "title": "For those afraid they cannot recover from a setback",
+          "id": "20250103_01"
+        },
+        {
+          "media": "Ameblo blog · Japanese source",
+          "date": "2026-02-16",
+          "title": "Success becomes possible when failure is allowed to be experience",
+          "id": "20260216_01"
+        }
+      ]
+    },
+    "q052": {
+      "hitokoto": "You are a living being, not a machine",
+      "body": "There can be days when tiredness lingers despite rest. In this energetic perspective, humans are organic beings, and being surrounded by the inorganic can create a sense of electromagnetic confinement and fatigue. If your rest was spent entirely inside a screen, your energy may have kept working.\n\nToday, spend a little time with something living. Stop at a nearby park or water a balcony plant. Letting hands or feet touch soil can help you feel life’s energy move.\n\nThere is no need for guilt about cherishing and replenishing yourself.",
+      "toi": "Is this tiredness about how I rest, or about not allowing myself to rest?",
+      "sources": [
+        {
+          "media": "Ameblo blog · Japanese source",
+          "date": "2025-09-06",
+          "title": "Living without digital exhaustion: remember you are alive",
+          "id": "20250906_01"
+        },
+        {
+          "media": "Ameblo blog · Japanese source",
+          "date": "2024-07-09",
+          "title": "Cherish and replenish the self who works hard every day",
+          "id": "20240709_01"
+        },
+        {
+          "media": "Ameblo blog · Japanese source",
+          "date": "2026-06-15",
+          "title": "When your body will not move as you wish",
+          "id": "20260615_01"
+        }
+      ]
+    },
+    "q053": {
+      "hitokoto": "The heart’s daytime state can shape the night",
+      "body": "Being tired yet unable to sleep night after night is difficult. The state of your heart can matter alongside the bedroom and bedding. Worry, anger, and sadness can stimulate thought and keep awareness from resting.\n\nFeeling on edge is, in this perspective, energy continuing to turn without softening. Rather than forcing sleep, allowing your heart more ease during the day may help.\n\nTonight, go to bed remembering one enjoyable moment or something you appreciate from today. The time before sleep can also shape the energy you carry into tomorrow.",
+      "toi": "On a sleepless night, what words repeat in your mind, and to whom are they addressed? Quietly notice.",
+      "sources": [
+        {
+          "media": "Ameblo blog · Japanese source",
+          "date": "2026-02-21",
+          "title": "Good sleep begins with the heart’s state during the day",
+          "id": "20260221_01"
+        },
+        {
+          "media": "Ameblo blog · Japanese source",
+          "date": "2024-01-24",
+          "title": "The relationship between sleeplessness and energy",
+          "id": "20240124_01"
+        },
+        {
+          "media": "Ameblo blog · Japanese source",
+          "date": "2025-08-15",
+          "title": "The time before sleep shapes tomorrow’s vibration",
+          "id": "20250815_01"
+        }
+      ]
+    },
+    "q054": {
+      "hitokoto": "The body may also be expressing a need for care",
+      "body": "Continuing to feel unwell despite medical visits can be deeply difficult. First, receiving professional care is itself a way to value yourself.\n\nAlongside that, this reflection offers an energetic perspective: symptoms that persist may also carry a plea from the heart. Please understand me. Please care for me. I am trying so hard.\n\nIn this view, feelings can find expression through the body when they cannot come out through the heart. A harsh inner voice may prevent recognition or rest, leaving the body to appeal for care.\n\nToday, try thanking your body for all it does.",
+      "toi": "What feeling might this discomfort be asking you to notice? Listen gently for a moment.",
+      "sources": [
+        {
+          "media": "Ameblo blog · Japanese source",
+          "date": "2025-11-15",
+          "title": "The meaning of an illness that does not readily improve",
+          "id": "20251115_01"
+        },
+        {
+          "media": "Ameblo blog · Japanese source",
+          "date": "2024-11-21",
+          "title": "What persistent symptoms may be expressing",
+          "id": "20241121_01"
+        },
+        {
+          "media": "Ameblo blog · Japanese source",
+          "date": "2026-06-15",
+          "title": "When your body will not move as you wish",
+          "id": "20260615_01"
+        }
+      ]
+    },
+    "q055": {
+      "hitokoto": "Fear may be hiding beneath no time",
+      "body": "You finish tasks quickly, but more appear, and the day ends in duty and responsibility. At such times, you may be unconsciously braking the part of you that wants to do something for yourself.\n\nWhat if it does not work? What if I do not get the result I imagine? Desire and fear can arise together.\n\nToday, gently disrupt the pattern of duties first and do one thing you enjoy before them. You are allowed to enjoy life, beyond producing results.",
+      "toi": "When I say there is no time, what might I want to postpone? Look at the fear beneath it.",
+      "sources": [
+        {
+          "media": "Ameblo blog · Japanese source",
+          "date": "2025-08-13",
+          "title": "The real reason behind wanting to do something but having no time",
+          "id": "20250813_01"
+        },
+        {
+          "media": "Ameblo blog · Japanese source",
+          "date": "2025-08-05",
+          "title": "When you want to use busyness as a reason",
+          "id": "20250805_01"
+        },
+        {
+          "media": "Ameblo blog · Japanese source",
+          "date": "2025-12-02",
+          "title": "Making inner space even when busy can help things work",
+          "id": "20251202_01"
+        }
+      ]
+    },
+    "q056": {
+      "hitokoto": "Let enjoyment be your reason for continuing",
+      "body": "You may criticize yourself for giving up after a few days. But this need not mean you have a fickle character. If you are working from I must continue, your heart may not yet be involved.\n\nOften we want to become good quickly without enjoying the activity itself. If the excitement at the start was an image of a capable future self, motivation shrinks as soon as progress is hard to see.\n\nWhen you naturally continue, no special method is needed: you are doing what you love. Today, forget continuing and find one way to make it enjoyable.",
+      "toi": "Do I want to continue because I want to become somebody, or because I simply like it? Be honest with yourself.",
+      "sources": [
+        {
+          "media": "Ameblo blog · Japanese source",
+          "date": "2025-04-08",
+          "title": "How to move beyond giving up after three days",
+          "id": "20250408_01"
+        },
+        {
+          "media": "Ameblo blog · Japanese source",
+          "date": "2026-03-31",
+          "title": "For those who cannot sustain anything they begin",
+          "id": "20260331_01"
+        },
+        {
+          "media": "Ameblo blog · Japanese source",
+          "date": "2026-05-26",
+          "title": "What you need in order to keep going",
+          "id": "20260526_01"
+        }
+      ]
+    },
+    "q057": {
+      "hitokoto": "The light of living as yourself can be meaning enough",
+      "body": "Anyone may have a time when life’s meaning becomes unclear. In nature, some beings live for many years and others for a short time. A short life is not therefore meaningless.\n\nNature does not think it must perform well or produce a result. Each being simply lives as itself. The light of that life is its meaning.\n\nHuman beings can think so much that meaning disappears from view. Today, step into the outside air for a little while. You may gradually return to the part of you that feels.",
+      "toi": "Is it the mind searching for meaning, or the heart? Today, let the feeling part lead for a while.",
+      "sources": [
+        {
+          "media": "Ameblo blog · Japanese source",
+          "date": "2025-12-05",
+          "title": "When life’s meaning becomes unclear",
+          "id": "20251205_01"
+        },
+        {
+          "media": "Ameblo blog · Japanese source",
+          "date": "2025-11-01",
+          "title": "The meaning of ordinary days when nothing happens",
+          "id": "20251101_02"
+        },
+        {
+          "media": "Ameblo blog · Japanese source",
+          "date": "2026-05-20",
+          "title": "When you do not know what is troubling you",
+          "id": "20260520_01"
+        }
+      ]
+    },
+    "q058": {
+      "hitokoto": "Purpose is within you, rather than somewhere outside",
+      "body": "The wish to know your purpose can be deeply sincere. Many people imagine it as a job, but purpose and work are not the same. Purpose is a way of living that delights your soul. Searching outside can quietly take years.\n\nIts core is to be, rather than to do. It may live in what feels natural, in the steady sense of joy or happiness you recognize.\n\nToday, set aside everyone’s evaluation and remember one moment when you felt at ease. Living as yourself becomes a role only you can fulfill.",
+      "toi": "What do you keep doing even when no one is watching? Is the soul’s joy still there?",
+      "sources": [
+        {
+          "media": "Ameblo blog · Japanese source",
+          "date": "2025-09-21",
+          "title": "Purpose means living in a way that delights the soul",
+          "id": "20250921_02"
+        },
+        {
+          "media": "Ameblo blog · Japanese source",
+          "date": "2025-12-04",
+          "title": "Your purpose lives in how you live",
+          "id": "20251204_01"
+        },
+        {
+          "media": "Ameblo blog · Japanese source",
+          "date": "2025-06-10",
+          "title": "Living as yourself fulfills your purpose",
+          "id": "20250610_01"
+        }
+      ]
+    },
+    "q059": {
+      "hitokoto": "Perhaps it is the heart that feels stopped",
+      "body": "Feeling stuck can make you want to change places or people. Yet stagnation may arise from your own inner state. Put others first; do not show yourself: while those brakes remain, a new environment may bring the same pattern.\n\nThose brakes were often made from a wish to be loved. You need not blame yourself for them.\n\nInstead of urgently trying to change reality, savor one ordinary part of today. Sometimes reality starts moving when you stop trying to force it to change.",
+      "toi": "Beneath wanting to change this place, is there frustration with yourself for being unable to move? Quietly check.",
+      "sources": [
+        {
+          "media": "Ameblo blog · Japanese source",
+          "date": "2025-05-19",
+          "title": "What to do when life feels stagnant",
+          "id": "20250519_01"
+        },
+        {
+          "media": "Ameblo blog · Japanese source",
+          "date": "2025-09-11",
+          "title": "Reality can change when you stop trying to change it",
+          "id": "20250911_01"
+        },
+        {
+          "media": "Ameblo blog · Japanese source",
+          "date": "2025-11-01",
+          "title": "The meaning of ordinary days when nothing happens",
+          "id": "20251101_02"
+        }
+      ]
+    },
+    "q060": {
+      "hitokoto": "Freedom also means being able to choose",
+      "body": "When you feel unfree, reasons come readily: this responsibility, that thing you cannot leave. Yet freedom includes being able to choose, rather than only the absence of physical restrictions.\n\nIf something brings no joy, perhaps there is a choice to stop. Sometimes it is the belief I must not stop that binds you. You may be rejecting your own choices rather than having none.\n\nToday, choose one small thing for yourself. Allowing freedom can invite a freer environment closer.",
+      "toi": "What could I choose but have not? Whom does that not-choosing protect?",
+      "sources": [
+        {
+          "media": "Ameblo blog · Japanese source",
+          "date": "2026-01-22",
+          "title": "What to know when you feel unfree",
+          "id": "20260122_01"
+        },
+        {
+          "media": "Ameblo blog · Japanese source",
+          "date": "2026-02-10",
+          "title": "Allowing freedom invites a freer environment",
+          "id": "20260210_01"
+        },
+        {
+          "media": "Ameblo blog · Japanese source",
+          "date": "2024-11-09",
+          "title": "Becoming an adult can mean becoming free",
+          "id": "20241109_01"
+        }
+      ]
+    },
+    "q061": {
+      "hitokoto": "Luck can shift with where you place attention",
+      "body": "There can be runs of days when you feel unlucky. Continuing to see everything that way can deepen the spiral.\n\nAn event may be neutral in itself. Unfortunate from one angle, it can offer a new beginning from another. Missing a train might let you meet an old acquaintance on the next one.\n\nIn Japanese, the character for luck is also used in the verb to carry. What arrives can change with your attention. Today, find one good aspect of something that did not go to plan. From that point, luck may begin to move.",
+      "toi": "What did that disappointing event bring instead? Recall one thing.",
+      "sources": [
+        {
+          "media": "Ameblo blog · Japanese source",
+          "date": "2026-06-08",
+          "title": "What to know before lamenting bad luck",
+          "id": "20260608_01"
+        },
+        {
+          "media": "Ameblo blog · Japanese source",
+          "date": "2025-01-20",
+          "title": "The difference between people who feel lucky and unlucky",
+          "id": "20250120_02"
+        },
+        {
+          "media": "Ameblo blog · Japanese source",
+          "date": "2025-10-15",
+          "title": "Fate and destiny: luck shaped by awareness",
+          "id": "20251015_01"
+        }
+      ]
+    },
+    "q062": {
+      "hitokoto": "True spirituality does not require dependence",
+      "body": "You may wonder why nothing changes after years of practice. The difficulty may lie in how spirituality is used. Some teachers offer another set of do this instructions. People accustomed to obeying parents or schools may follow them diligently, yet still never live as themselves.\n\nRestricting yourself as though in constant training can lower your energy. True spirituality contains no dependence.\n\nIt can help you adjust how to bring yourself fully to life, rather than make you follow someone else. The answer is within you.",
+      "toi": "Which teachings you have followed received an honest yes from your heart? Let yourself choose again.",
+      "sources": [
+        {
+          "media": "Ameblo blog · Japanese source",
+          "date": "2026-01-23",
+          "title": "Why years of spiritual practice may not bring results",
+          "id": "20260123_01"
+        },
+        {
+          "media": "Ameblo blog · Japanese source",
+          "date": "2025-12-10",
+          "title": "How to use spirituality and notice the soul’s growth",
+          "id": "20251210_01"
+        },
+        {
+          "media": "Ameblo blog · Japanese source",
+          "date": "2025-07-10",
+          "title": "True spirituality contains no dependence",
+          "id": "20250710_01"
+        }
+      ]
+    },
+    "q063": {
+      "hitokoto": "Care for your present state before making a wish",
+      "body": "People often tell me they practice attraction but see no sign of a wish coming true. Its essence, in this perspective, is less wishing intensely than being the person who already lives that reality.\n\nIf awareness remains at I want it, meaning I do not have it yet, a reality of not having it is what continues. The state of your energy matters more than words or thoughts alone.\n\nBefore wishing, care for yourself as you are now. Find one thing in ordinary life that already feels enough to bring happiness. That may be the nearest doorway.",
+      "toi": "What feeling do I want this wish to bring when it comes true? Some part of that feeling may be available today.",
+      "sources": [
+        {
+          "media": "Ameblo blog · Japanese source",
+          "date": "2026-05-25",
+          "title": "The essence of the law of attraction",
+          "id": "20260525_01"
+        },
+        {
+          "media": "Ameblo blog · Japanese source",
+          "date": "2025-10-18",
+          "title": "Attraction through awareness of the here and now",
+          "id": "20251018_01"
+        },
+        {
+          "media": "Ameblo blog · Japanese source",
+          "date": "2025-09-11",
+          "title": "Reality can change when you stop trying to change it",
+          "id": "20250911_01"
+        }
+      ]
+    },
+    "q064": {
+      "hitokoto": "Vibration rises as the heart and feelings move",
+      "body": "Diligent people can feel they must raise their vibration. But this is not simply thinking positive thoughts or commanding energy to rise. In this view, it happens when the heart and emotions move.\n\nRejecting your true feelings lowers vibration. Anger is allowed too; feeling it carries more movement than feeling nothing. Desperately insisting on improvement may conceal the belief that your current self is not enough.\n\nToday, stop trying to raise anything and remember one thing that absorbed you as a child.",
+      "toi": "Do I want a higher vibration because I reject who I am now? Hold even that anxious urgency with kindness.",
+      "sources": [
+        {
+          "media": "Ameblo blog · Japanese source",
+          "date": "2024-02-26",
+          "title": "What is needed before raising your vibration",
+          "id": "20240226_01"
+        },
+        {
+          "media": "Ameblo blog · Japanese source",
+          "date": "2025-10-12",
+          "title": "How a high-vibration state is created",
+          "id": "20251012_01"
+        },
+        {
+          "media": "Ameblo blog · Japanese source",
+          "date": "2026-05-09",
+          "title": "When activities meant to improve luck leave you exhausted",
+          "id": "20260509_01"
+        }
+      ]
+    },
+    "q065": {
+      "hitokoto": "Fear often lies beneath dependence",
+      "body": "If you can recognize your dependence, that awareness is already an opening. Fear of losing something, of change, or of being alone can make holding on feel like the only choice.\n\nTelling yourself with the mind not to depend does not remove fear from the heart. Instead of punishing or shaming yourself, look at what you are afraid of.\n\nToday, pause the blame and stay beside that fear. Some of its shape may be an image created by thought.",
+      "toi": "If that person or thing were gone, what would trouble me most? Gently look at the fear itself.",
+      "sources": [
+        {
+          "media": "Ameblo blog · Japanese source",
+          "date": "2024-09-09",
+          "title": "Why dependence arises",
+          "id": "20240909_01"
+        },
+        {
+          "media": "Ameblo blog · Japanese source",
+          "date": "2026-01-16",
+          "title": "Approaching alcohol dependence from within the heart",
+          "id": "20260116_02"
+        },
+        {
+          "media": "Ameblo blog · Japanese source",
+          "date": "2025-07-10",
+          "title": "True spirituality contains no dependence",
+          "id": "20250710_01"
+        }
+      ]
+    },
+    "q066": {
+      "hitokoto": "Your human qualities matter",
+      "body": "Many people are anxious about AI and work. However efficiently AI handles administrative tasks, this reflection sees something different in the human heart that works with, nurtures, and cares for people.\n\nHuman qualities cannot simply be replaced. They may become more visible as technology grows. Expressing your energy through senses and feelings, and opening a path through your individuality, are part of being human.\n\nToday, bring one part of yourself into the place you are in and the work you do. You need not face the future through undirected fear alone.",
+      "toi": "What part of you is not interchangeable with AI? Look for it in today’s work.",
+      "sources": [
+        {
+          "media": "Ameblo blog · Japanese source",
+          "date": "2025-10-20",
+          "title": "The skill AI cannot replace: human qualities",
+          "id": "20251020_02"
+        },
+        {
+          "media": "Ameblo blog · Japanese source",
+          "date": "2025-11-17",
+          "title": "Human skills AI cannot imitate",
+          "id": "20251117_01"
+        },
+        {
+          "media": "Ameblo blog · Japanese source",
+          "date": "2025-08-26",
+          "title": "Spiritual sensitivity needed in the AI era",
+          "id": "20250826_01"
+        }
+      ]
+    },
+    "q067": {
+      "hitokoto": "Answers grow within you",
+      "body": "That feeling is natural. AI may respond with words that meet your emotions, and people who could not speak to anyone before may find relief in that response. That can be a good thing.\n\nYet there may be limits to what it can answer about a better way of living or a fundamental resolution. This reflection understands true empathy as resonance beyond words: the unspoken rhythm between breaths and heartbeats that belongs to living people.\n\nAfter talking to AI helps you feel lighter, offer those words to your own heart once more.",
+      "toi": "After feeling reassured by AI’s words, what is my own heart saying? Listen again.",
+      "sources": [
+        {
+          "media": "Ameblo blog · Japanese source",
+          "date": "2026-03-02",
+          "title": "What AI can and cannot do in conversations about worries",
+          "id": "20260302_01"
+        },
+        {
+          "media": "Ameblo blog · Japanese source",
+          "date": "2025-08-30",
+          "title": "Human resonance that AI cannot imitate",
+          "id": "20250830_01"
+        },
+        {
+          "media": "Ameblo blog · Japanese source",
+          "date": "2025-11-06",
+          "title": "Why spiritually sensitive people can use AI well",
+          "id": "20251106_01"
+        }
+      ]
+    }
+  }
+};
+
+</script>
+<script>
+(function(){
+  const $=s=>document.querySelector(s);
+  const cats=DATA.catalog.categories, items=DATA.catalog.items, answers=DATA.answers;
+  const book=$('#book'), pl=$('#pl'), pr=$('#pr');
+  let currentCat=null;
+
+  function el(tag,cls,text){const e=document.createElement(tag); if(cls) e.className=cls; if(text!=null) e.textContent=text; return e;}
+  function setPages(leftFn,rightFn,folioL,folioR){
+    pl.innerHTML=''; pr.innerHTML='';
+    leftFn(pl); rightFn(pr);
+    pl.dataset.folio=folioL||''; pr.dataset.folio=folioR||'';
+    [pl,pr].forEach(p=>{p.classList.remove('turn'); void p.offsetWidth; p.classList.add('turn'); p.addEventListener('animationend',()=>p.classList.remove('turn'),{once:true});});
+    const y=book.getBoundingClientRect().top+window.scrollY-76;
+    if(window.scrollY>y) window.scrollTo({top:y,behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'});
+  }
+  function tocList(list, arr, onPick, isItem){
+    arr.forEach(c=>{
+      const li=el('li'); const b=el('button'); b.type='button';
+      b.appendChild(el('span','name',c.label||c.name));
+      if(!isItem){ b.appendChild(el('span','hint', items.filter(i=>i.category===c.id).slice(0,2).map(i=>i.label.replace(/、/g,'')).join(' ／ ')+' and more')); }
+      b.addEventListener('click',()=>onPick(c.id));
+      li.appendChild(b); list.appendChild(li);
+    });
+  }
+  // ---- TOC spread ----
+  function showToc(){
+    setPages(p=>{
+      p.appendChild(el('p','kicker','Contents'));
+      p.appendChild(el('h2','ptitle','What is on your mind?'));
+      p.appendChild(el('p','plead','Choose what feels closest to your concern. Open a page of Michiyo’s words and a question to reflect on in your own time.'));
+      const ul=el('ul','toc'); tocList(ul,cats.slice(0,6),openCat); p.appendChild(ul);
+    }, p=>{
+      p.appendChild(el('p','kicker','Contents'));
+      const ul=el('ul','toc'); tocList(ul,cats.slice(6),openCat); p.appendChild(ul);
+      const lk=el('div','links'); const r=el('button','textlink','Cannot choose? Draw a reflection'); r.type='button'; r.addEventListener('click',random); lk.appendChild(r); p.appendChild(lk);
+    },'1','2');
+  }
+  // ---- items spread ----
+  function openCat(id){
+    currentCat=cats.find(c=>c.id===id);
+    const list=items.filter(i=>i.category===id);
+    const half=Math.ceil(list.length/2);
+    setPages(p=>{
+      const b=el('button','back','← Back to contents'); b.type='button'; b.addEventListener('click',showToc); p.appendChild(b);
+      p.appendChild(el('p','kicker','Choose a concern'));
+      p.appendChild(el('h2','ptitle',currentCat.name));
+      p.appendChild(el('p','plead','Open the one that feels closest.'));
+      const ul=el('ul','toc items'); tocList(ul,list.slice(0,half),openAns,true); p.appendChild(ul);
+    }, p=>{
+      p.appendChild(el('p','kicker',currentCat.name+' · Continued'));
+      const ul=el('ul','toc items'); tocList(ul,list.slice(half),openAns,true); p.appendChild(ul);
+      const lk=el('div','links'); const r=el('button','textlink','Cannot choose? Draw a reflection'); r.type='button'; r.addEventListener('click',random); lk.appendChild(r); p.appendChild(lk);
+    },'3','4');
+  }
+  // ---- answer spread ----
+  function openAns(id){
+    const it=items.find(i=>i.id===id), a=answers[id]; if(!it||!a) return;
+    currentCat=cats.find(c=>c.id===it.category);
+    setPages(p=>{
+      const b=el('button','back','← Back to the list'); b.type='button'; b.addEventListener('click',()=>openCat(currentCat.id)); p.appendChild(b);
+      const ch=el('div','chosen'); ch.appendChild(el('p','lab','The concern you opened')); ch.appendChild(el('p','q','「'+it.label+'」')); p.appendChild(ch);
+      p.appendChild(el('h2','hitokoto',a.hitokoto));
+      const body=el('div','body');
+      a.body.split('\n\n').filter(Boolean).forEach(text=>body.appendChild(el('p',null,text)));
+      p.appendChild(body);
+      p.appendChild(el('p','sign','── Michiyo'));
+    }, p=>{
+      p.appendChild(el('p','kicker','A question for reflection'));
+      const tw=el('div','toi-wrap');
+      tw.appendChild(el('p','toi-text',a.toi));
+      tw.appendChild(el('p','toi-after','There is no need to hurry an answer. Carry this question with you for a while. The answer is within you.'));
+      p.appendChild(tw);
+      const src=el('div','src'); src.appendChild(el('h3',null,'Sources · Titles translated from Japanese'));
+      const ul=el('ul'); (a.sources||[]).forEach(s=>{const li=el('li'); li.appendChild(el('span',null,s.media+' '+s.date)); li.appendChild(document.createTextNode(' 「'+s.title+'」')); ul.appendChild(li);}); src.appendChild(ul); p.appendChild(src);
+      const lk=el('div','links');
+      const b1=el('button','textlink','Explore another concern'); b1.type='button'; b1.addEventListener('click',showToc);
+      const b2=el('button','textlink','Draw another reflection'); b2.type='button'; b2.addEventListener('click',random);
+      lk.appendChild(b1); lk.appendChild(b2); p.appendChild(lk);
+    },'5','6');
+    history.replaceState(null,'','#'+id);
+  }
+  function random(){ openAns(items[Math.floor(Math.random()*items.length)].id); }
+
+  function open(){ if(book.classList.contains('opened')) return; book.classList.add('opened'); }
+  $('#cover').addEventListener('click',()=>{ open(); showToc(); });
+
+  const h=location.hash.replace('#','');
+  if(h&&answers[h]){ open(); openAns(h); }
+
+  // footer
+  $('#about').textContent=CONFIG.aboutText; $('#help').textContent=CONFIG.helpText; const support=el('a',null,'Yorisoi multilingual support in Japan');support.href='https://www.since2011.net/yorisoi/n2/';$('#help').appendChild(document.createTextNode(' '));$('#help').appendChild(support);
+  const links=$('#links'); let any=false;
+  [['substackUrl','substackLabel'],['portalUrl','portalLabel'],['privacyUrl','privacyLabel']].forEach(([u,l])=>{ if(CONFIG[u]){const a=el('a',null,CONFIG[l]); a.href=CONFIG[u]; a.rel='noopener'; links.appendChild(a); any=true;} });
+  $('#quiet').textContent=any?CONFIG.quietText:''; $('#quiet').hidden=!any;
+
+  // watercolor wash
+  const cv=$('#water'), ctx=cv.getContext('2d'); const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches; let W,H,t=0;
+  const dark=()=>document.documentElement.getAttribute('data-theme')==='dark'||(!document.documentElement.getAttribute('data-theme')&&matchMedia('(prefers-color-scheme: dark)').matches);
+  function size(){W=cv.width=Math.floor(innerWidth*devicePixelRatio/2);H=cv.height=Math.floor(innerHeight*devicePixelRatio/2);} size(); addEventListener('resize',size);
+  const seed=[[0.15,0.15,0.42,'a'],[0.88,0.28,0.36,'b'],[0.6,0.8,0.40,'a'],[0.08,0.85,0.30,'b']];
+  function blob(cx,cy,r,k,ph){ctx.beginPath();const n=14;for(let i=0;i<=n;i++){const a=i/n*Math.PI*2;const wob=1+0.14*Math.sin(a*3+ph+k)+0.09*Math.cos(a*5-ph*0.7+k*2);const x=cx+Math.cos(a)*r*wob,y=cy+Math.sin(a)*r*wob*0.86;i?ctx.lineTo(x,y):ctx.moveTo(x,y);}ctx.closePath();}
+  function draw(){ctx.clearRect(0,0,W,H);const d=dark();const cols=d?{a:'143,182,199',b:'170,150,130'}:{a:'127,166,184',b:'214,186,160'};const alpha=d?0.10:0.17;
+    seed.forEach((s,i)=>{const ph=t*0.0025+i;const r=Math.max(W,H)*s[2]*(1+0.03*Math.sin(ph));const cx=s[0]*W+Math.sin(ph*0.6)*W*0.012,cy=s[1]*H+Math.cos(ph*0.5)*H*0.012;const g=ctx.createRadialGradient(cx,cy,r*0.1,cx,cy,r);g.addColorStop(0,`rgba(${cols[s[3]]},${alpha})`);g.addColorStop(0.7,`rgba(${cols[s[3]]},${alpha*0.45})`);g.addColorStop(1,`rgba(${cols[s[3]]},0)`);ctx.fillStyle=g;blob(cx,cy,r,i*1.7,ph);ctx.fill();ctx.strokeStyle=`rgba(${cols[s[3]]},${alpha*0.35})`;ctx.lineWidth=1.2;ctx.stroke();});
+    t+=1; if(!reduce) requestAnimationFrame(draw);}
+  draw();
+})();
+</script>
+
+<script data-goatcounter="https://resonancelink.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+
+</body>
+</html>

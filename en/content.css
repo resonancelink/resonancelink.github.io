@@ -1,0 +1,23 @@
+body.english-page{font-family:Georgia,'Times New Roman',serif;padding-top:60px;overflow-wrap:break-word}
+.english-page p,.english-page a,.english-page button,.english-page h1,.english-page h2,.english-page h3,.english-page span,.english-page div{letter-spacing:.015em;text-indent:0;word-break:normal}
+.english-page h1{line-height:1.3;letter-spacing:.035em}
+.english-page p{line-height:1.85}
+.english-page button{font-family:inherit;line-height:1.6}
+.english-page a:focus-visible,.english-page button:focus-visible,.english-page summary:focus-visible{outline:2px solid #a8687f;outline-offset:4px}
+.en-nav{position:fixed;inset:0 0 auto;z-index:100;background:rgba(244,249,250,.94);backdrop-filter:blur(12px);border-bottom:1px solid #dce8e9;color:#345f69;font-size:14px}
+.en-nav-inner{max-width:1080px;height:60px;display:flex;align-items:center;gap:24px;margin:auto;padding:0 22px}
+.en-nav a{color:inherit;text-decoration:none}.en-nav .en-home{font-weight:600;margin-right:auto}.en-nav .en-japanese{text-decoration:underline;text-underline-offset:4px;font-size:12px}
+.en-menu{position:relative}.en-menu summary{cursor:pointer;padding:8px;list-style:none}.en-menu summary::after{content:' ▾'}.en-menu ul{position:absolute;right:0;top:45px;width:min(290px,80vw);padding:10px;margin:0;list-style:none;background:#fff;border:1px solid #dce8e9;border-radius:14px;box-shadow:0 12px 35px #345f6920}.en-menu li a{display:block;padding:10px 12px;font-size:14px;line-height:1.5;border-radius:8px}.en-menu li a:hover,.en-menu li a[aria-current]{background:#f4f9fa}
+.english-page .bd-head{padding-top:56px}.english-page .bd-head h1{font-size:clamp(27px,4vw,42px);line-height:1.35}.english-page .bd-head .sub{font-size:.45em;display:block;margin-top:12px}.english-page .lede{max-width:780px;margin-left:auto;margin-right:auto;line-height:1.8}
+.english-page .bd-card .pair,.english-page .pair{flex-wrap:wrap;line-height:1.45}.english-page .bd-card,.english-page .word-card{overflow-wrap:anywhere}.english-page .bd-card .pair span,.english-page .word{word-break:normal}
+.english-page .bubble{font-size:11px;line-height:1.35;letter-spacing:0}.english-page .star .lb{white-space:normal;max-width:140px;font-size:11px;line-height:1.4;letter-spacing:0}
+.english-page .bd-modal h2,.english-page .modal h2{font-size:clamp(21px,3vw,29px);line-height:1.4}.english-page .bd-modal p,.english-page .modal p{line-height:1.9;letter-spacing:.01em}.english-page .bd-modal .src{font-size:11px}
+.english-page #bdModal h3{font-size:22px;line-height:1.45;letter-spacing:.015em}
+.english-page #bdModal .card p{font-size:16px;line-height:1.8;letter-spacing:.01em}
+.english-page #bdModal .card .src{font-size:12px;line-height:1.6}
+.english-page #bdModal .nav{flex-wrap:wrap;font-size:12px;gap:10px}
+.english-page #bdModal .nav .more{order:3;flex-basis:100%}
+.english-page .more,.english-page .pillbtn{white-space:normal;max-width:100%;letter-spacing:.02em;line-height:1.6}
+.page-suki_shindan .type-mark{font-family:Georgia,serif}.page-suki_shindan .type-name{font-size:clamp(26px,5vw,36px)}.page-suki_shindan .type-catch{font-size:18px;line-height:1.6}.page-suki_shindan .seibun-name{width:145px;min-width:145px;font-size:13px}.page-suki_shindan .q-text{line-height:1.55}.page-suki_shindan .opt{line-height:1.65}
+@media(max-width:640px){.page-zukan .bd-sea{height:900px}.page-hikiyose .bd-sea{height:780px}.english-page #bdModal .card{padding:42px 24px 28px}.english-page .bubble{font-size:12px}.english-page .star .lb{font-size:12px;width:126px}}
+@media(max-width:640px){.en-nav-inner{padding:0 14px;gap:14px}.en-nav{font-size:13px}.english-page .bd-head{padding-left:20px;padding-right:20px}.english-page .bd-head h1{font-size:29px}.english-page .lede br{display:none}.english-page .bd-guide{line-height:1.7}.page-suki_shindan .cover h1{font-size:31px}.page-suki_shindan .seibun-row{flex-wrap:wrap;gap:6px}.page-suki_shindan .seibun-name{width:100%;min-width:0}.page-suki_shindan .seibun-row .dots{margin:0 0 12px}.english-page .btn{white-space:normal;max-width:100%;letter-spacing:.02em}.english-page .r-card h2{line-height:1.5;font-size:19px}}

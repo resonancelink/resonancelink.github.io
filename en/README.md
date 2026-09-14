@@ -1,31 +1,25 @@
-# English edition — initial implementation
+# English edition
 
-Source review and translation snapshot: September 13, 2026.
+Translation snapshot: September 14, 2026.
 
-This initial edition translates the home page (`/en/`) and the introduction guide (`/en/start/`). It preserves the Japanese site's water effects, artwork, main sections, and outbound destinations. Article collections and interactive apps are currently in Japanese; their English entry points state this.
+The English edition includes the home page and visitor guide, all 13 Atlas of Consciousness entries, all 12 Law of Attraction Lab entries, all 67 Guidance answers across 12 categories, all 77 oracle cards, the Soul Compass, and all 18 questions and six result types in Discover What You Love. Questions, answers, reflection prompts, result descriptions, and navigation are translated.
 
-## Files and maintenance
+## Sources and behavior
 
-- `index.html`: English home page, profile, news, app introductions, and the 28 translated `KOTOBA` reflections. `WEEKLY` contains a manually translated newsletter issue. Update its title, episode, and URL when selecting another issue.
-- `home-content.js`: six translated teaser labels. Each `number` is the original Japanese collection's one-based entry number, used in `#no-XX` deep links. Keep the original numbers when editing or replacing teasers. This file is not automatically synchronized with the Japanese data arrays.
-- `start/index.html`: English visitor guide, with its own navigation and styles.
-- `english.css`: layout adjustments for English text and mobile displays.
-- `language-switch.css`: language selector used by the English home and both Japanese entry pages.
-- `site.webmanifest`: English app name and `/en/` launch URL/scope; original icons are reused.
+The Japanese collections are maintained in this repository. The oracle, soul, and interests apps were translated from the user's separate source projects. Their English editions are served here under `/en/michiyo_oraclecards/`, `/en/tamashii_shindan/`, and `/en/suki_shindan/`. The original Japanese app repositories remain their own projects. Oracle artwork is reused from `/michiyo_oraclecards/images/`; its visible card titles are already English.
 
-The existing `scripts/update_weekly.py` updates the Japanese home page only. Do not run it against the English page: it fetches Japanese titles. Update the English newsletter text and the Japanese source together as an editorial task. The English navigation deliberately says “Newsletter”, without implying automated weekly translation.
+Question order, answer weights, result keys, numerology calculations, and tie handling retain the Japanese behavior. Soul quiz ties can be resolved randomly, as in the original app. These experiences offer spiritual reflection, not medical or psychological diagnosis.
 
-The Japanese home and start page have reciprocal `canonical`/`hreflang` metadata and visible language links. English pages likewise have `lang="en"`, translated metadata, and Japanese/English alternatives. Shared resources use root-relative paths. Preview using an HTTP server with the repository root as document root, rather than opening an HTML file directly.
+## Maintenance
 
-## Remaining translation work
+- Update Japanese and English content together. English data is a manually maintained translation, not automatic live translation.
+- `home-content.js` contains six translated teasers. Preserve each original one-based entry number used in `#no-XX` links.
+- The existing `scripts/update_weekly.py` updates only the Japanese home page. Translate the selected newsletter title and description separately for the English home page.
+- `portal-nav.js` in this directory provides English navigation; the root shared navigation provides English links from the Japanese apps.
+- Each English page has English metadata and Japanese/English alternate links. Per-app manifests launch the corresponding English route.
+- Preview with an HTTP server rooted at the repository. Opening HTML files directly does not reproduce root-relative paths.
+- Newsletter articles, videos, books, external services, installation instructions, and the dream experience announcement retain their Japanese destinations, identified where linked. This edition does not translate third-party websites.
 
-- Atlas of Consciousness: page UI and 13 entries.
-- Law of Attraction Lab: page UI and 12 entries.
-- Michiyo’s Guidance: page UI, 12 categories, 67 questions and answers, prompts, and source references.
-- Home-screen installation instructions and dream experience announcement.
-- Shared portal navigation for the remaining pages and apps.
-- Oracle, soul, and interests apps: sources are not present in this repository.
+Brand/course names are working translations; Japanese book titles are romanized where no official English edition was established. Guidance source dates and identifiers are preserved, with translated titles. Support information links to the provider's multilingual service page instead of implying that Japanese-only support details apply to English readers.
 
-English names such as “Spiritual Metascience Institute”, “House of the Soul”, and “Soul Independence” are working translations. Confirm preferred brand/course names during editorial review. Book references keep romanized Japanese titles, because official English editions were not established.
-
-No deployment, Git commit/push, domain change, or GitHub Pages setting change is part of this implementation.
+Validation covered complete content counts, script syntax, internal links, 821 calculation comparisons against the original logic, and browser flows through the actual question and result screens. Publication uses the existing GitHub Pages configuration; no domain or hosting setting change is required.

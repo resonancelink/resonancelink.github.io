@@ -41,6 +41,8 @@
   const css = `
   .pn-bar{position:fixed;top:0;left:0;right:0;z-index:60;background:rgba(255,255,255,.72);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);
     border-bottom:1px solid rgba(0,0,0,.06);font-family:inherit;color:var(--ink,#345f69)}
+  .pn-english{font-size:11px;letter-spacing:.02em;white-space:nowrap;text-decoration:underline!important}
+  @media(max-width:380px){.pn-home .pn-short{font-size:11px;letter-spacing:.02em}.pn-bar .pn-in{gap:8px}.pn-menu > button{padding-left:10px;padding-right:10px}}
   .pn-spacer{height:44px}
   .pn-bar .pn-in{max-width:1000px;margin:0 auto;display:flex;align-items:center;gap:12px;padding:0 14px;height:44px}
   .pn-bar a{color:inherit;text-decoration:none}
@@ -120,6 +122,16 @@
         <a class="pn-home" href="${HOME}">${SEED}<span class="pn-long">スピリチュアル・メタサイエンス研究所</span><span class="pn-short">研究所のホーム</span></a>
         <div class="pn-menu"><button type="button" aria-expanded="false" aria-haspopup="true">ほかの部屋 ▾</button><ul>${items.join("")}</ul></div>
       </div>`;
+      const currentRoom = ROOMS.find(r => r.id === app);
+      if (currentRoom) {
+        const english = document.createElement("a");
+        english.className = "pn-english"; english.lang = "en"; english.hreflang = "en";
+        english.textContent = "English";
+        const suffix = location.pathname.endsWith("/about.html") ? "about.html" : "";
+        const setLanguageLink = () => { english.href = currentRoom.url.replace("resonancelink.com/", "resonancelink.com/en/") + suffix + location.hash; };
+        setLanguageLink(); addEventListener("hashchange", setLanguageLink);
+        bar.querySelector(".pn-in").appendChild(english);
+      }
       /* 固定の帯(sticky はアプリ側の overflow 指定で効かないことがあるので fixed+同じ高さの余白) */
       document.body.insertBefore(el("div", "pn-spacer"), document.body.firstChild);
       document.body.insertBefore(bar, document.body.firstChild);
