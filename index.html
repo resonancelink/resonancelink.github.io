@@ -7,6 +7,7 @@
 <meta name="theme-color" content="#f4f9fa">
 <!-- 読み込み中の「最初の一瞬」も明るい地にする(スマホのダークモードだと、CSSが届く前は黒い画面が出るため。本体のCSSより先に置く) -->
 <style>html{background:#f4f9fa;color-scheme:light}</style>
+<link rel="preload" as="image" href="water.jpg">  <!-- 水面の写真を最優先で取りに行く(HEROが早く現れる) -->
 <title>スピリチュアル・メタサイエンス研究所 — 意識＝エネルギーのしくみを、知る場所</title>
 <meta name="description" content="意識＝エネルギーのしくみを、知る場所。スピリチュアルを、自分のために使う。スピリチュアルカウンセラー・みちよの「意識の図鑑」「引き寄せの法則ラボ」「みちよのガイダンス」と無料アプリ(今日の１枚・魂診断の家・好き診断)。">
 <!-- OGP: og:image は公開先の絶対URLに置き換える(同梱の og.jpg を同じ場所に置く) -->
@@ -570,7 +571,16 @@
 <link rel="alternate" hreflang="ja" href="https://resonancelink.com/">
 <link rel="alternate" hreflang="en-GB" href="https://resonancelink.com/en/">
 <link rel="alternate" hreflang="x-default" href="https://resonancelink.com/">
-<link rel="stylesheet" href="/en/language-switch.css">
+<!-- 言語切替ボタンのCSS。以前は /en/language-switch.css を読み込んでいたが、外部CSSは「届くまで画面を何も描かない」ため、
+     NFC等でスマホから最初に開いたとき一瞬まっ暗になる原因になっていた。同じ内容をここに直接置く(直すときは /en/language-switch.css と両方) -->
+<style>
+.language-switch{position:absolute;top:12px;right:18px;z-index:50;display:flex;gap:9px;align-items:center;font:13px/1.5 Georgia,"Yu Mincho",serif;letter-spacing:.02em;color:#345f69;background:rgba(255,255,255,.82);border:1px solid rgba(79,125,136,.2);border-radius:999px;padding:6px 14px}
+.language-switch a{color:inherit;text-decoration:underline;text-underline-offset:3px}
+.language-switch [aria-current]{font-weight:700}
+.language-switch a:focus-visible{outline:2px solid #a8687f;outline-offset:4px}
+.language-switch.language-switch-below-nav{top:58px}
+@media(max-width:640px){.language-switch{top:8px;right:12px;font-size:12px;padding:5px 11px}.hero-inner{padding-top:max(68px,6vh)!important}}
+</style>
 </head>
 <body>
 <nav class="language-switch" aria-label="言語 / Language"><span lang="ja" aria-current="page">日本語</span><span aria-hidden="true"> / </span><a href="/en/" lang="en" hreflang="en-GB">English</a></nav>
