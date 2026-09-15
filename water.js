@@ -26,7 +26,17 @@ function createWater(canvas, opts){
     const dw = img.width * s, dh = img.height * s;
     simCtx.drawImage(img, (SIM_W - dw) / 2, (SIM_H - dh) / 2, dw, dh);
     srcData = simCtx.getImageData(0, 0, SIM_W, SIM_H);
+    /* iPhoneのSafariは、通知(NFC等)から開いた直後など「写真は届いたのに、まだ絵に展開していない」ことがあり、
+       その状態で drawImage すると透明のまま=黒い水面になる。数点の画素を見て、絵が入っていなければ「まだ」と判断する */
+    if (!hasPixels(srcData)){ srcData = null; return false; }
     outData = simCtx.createImageData(SIM_W, SIM_H);
+    return true;
+  }
+  function hasPixels(d){
+    const a = d.data, W = SIM_W, H = SIM_H;
+    const pts = [[W>>1,H>>1],[W>>2,H>>2],[W-(W>>2),H>>2],[W>>2,H-(H>>2)],[W-(W>>2),H-(H>>2)]];
+    for (const [x,y] of pts){ if (a[(y*W+x)*4+3] === 0) return false; }
+    return true;
   }
 
   function drop(nx, ny, strength = 260, radius = 2){
@@ -50,6 +60,7 @@ function createWater(canvas, opts){
   }
 
   function render(){
+    if (!srcData || !outData) return;   /* 写真がまだ絵になっていない間は描かない(黒い水面を出さない) */
     const s = srcData.data, o = outData.data;
     for (let y = 1; y < SIM_H - 1; y++){
       for (let x = 1; x < SIM_W - 1; x++){
@@ -152,7 +163,17 @@ function createWater(canvas, opts){
     flakeTimer = 60 + Math.random() * 80;
     setTimeout(() => drop(0.5 + (Math.random() - .5) * 0.3, 0.68, 260, 2), 350);
   }
-  img.onload = () => { fit(); ready = true; warmStart(); loop(); };
+  /* 写真が「絵として使える」ことを確かめてから動かし始める。
+     ・img.decode() で展開を待つ(iPhoneのSafariは onload の時点ではまだ展開していないことがある)
+     ・fit() が画素を確認できなければ、少し待ってやり直す(最大およそ20秒・その間は canvas は透明のままで、CSSの背景写真が見えている) */
+  let tries = 0, warmed = false;
+  function start(){
+    if (ready) return;
+    if (fit()){ ready = true; if (!warmed){ warmed = true; warmStart(); } if (!running) loop(); return; }
+    if (tries++ < 40) setTimeout(start, 500);
+  }
+  img.onload = () => { (img.decode ? img.decode().catch(() => {}) : Promise.resolve()).then(start); };
   img.src = HERO_IMG;
-  addEventListener('resize', fit);
+  document.addEventListener('visibilitychange', () => { if (!document.hidden && !ready && img.complete) start(); });
+  addEventListener('resize', () => { if (ready && !fit()){ ready = false; tries = 0; setTimeout(start, 500); } });
 }
