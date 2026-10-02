@@ -285,5 +285,97 @@ const BREAKDOWN = [
       "Letting go may sound like abandoning or throwing something away, but it is a little different. You cannot receive something in a tightly clenched hand. Letting go means opening that hand, making yourself ready to receive something new. It is not giving up.",
       "‘If I let this go, something good might never come again.’ That fear is what lies beneath attachment to the old. Yet when you actually let go, you often realise, ‘Oh, this was right for me.’ Letting go is the first step towards welcoming new good things, opportunities, and guidance."
     ]
+  },
+  {
+    "q": "The difference between solitude and loneliness",
+    "card": {
+      "pair": [
+        "Solitude",
+        "Loneliness"
+      ],
+      "theme": "Understanding the difference"
+    },
+    "bubble": {
+      "label": [
+        "Solitude &",
+        "loneliness"
+      ],
+      "x": 33,
+      "y": 16,
+      "d": 94
+    },
+    "a": [
+      "Solitude may sound like being all alone, or lonely by yourself, but in truth it is a precious time and state that protects your own energy. Someone who is surrounded by people around the clock is spending energy on others without realising it, which is why time in solitude is needed. Choosing to be on your own, as your own ally, is a way of recharging your energy.",
+      "Loneliness, on the other hand, does not come from being without company. Even with someone beside you, if you do not understand each other, you feel lonelier still. That vague, aching loneliness arises when there is no ally in your heart: when you yourself are not on your own side. If you feel lonely, take it as a sign from your soul saying ‘Stay with me,’ and draw close to your heart. As long as you do not leave your own heart lonely, you will not feel lonely even when you are alone."
+    ]
+  },
+  {
+    "q": "The difference between reflecting and putting yourself down",
+    "card": {
+      "pair": [
+        "Reflecting",
+        "Putting yourself down"
+      ],
+      "theme": "Understanding the difference"
+    },
+    "bubble": {
+      "label": [
+        "Reflecting &",
+        "self-criticism"
+      ],
+      "x": 80,
+      "y": 45,
+      "d": 92
+    },
+    "a": [
+      "Looking back at what is over and thinking ‘I should have done it this way’ or ‘Why didn’t I do that?’: is that reflection, or are you putting yourself down in its name? In Japan, ‘reflection’ (hansei) all too often becomes self-denial, self-loathing and self-punishment, an act that drags you down to the depths. It wounds your energy, swells regret and guilt, and leaves you frozen the next time you try to do something.",
+      "True reflection exists to serve what comes next: the future. Disappointing results and mistakes can become the foundation that makes you stronger when you look back on them. So when you do, leave yourself a kind comment: ‘Well done,’ or ‘I did my best in my own way.’ Do not weaken yourself any further with the self-denial and self-punishment that pass for reflection."
+    ]
+  },
+  {
+    "q": "The difference between endurance and strength",
+    "card": {
+      "pair": [
+        "Endurance",
+        "Strength"
+      ],
+      "theme": "Understanding the difference"
+    },
+    "bubble": {
+      "label": [
+        "Endurance &",
+        "strength"
+      ],
+      "x": 35,
+      "y": 90,
+      "d": 90
+    },
+    "a": [
+      "People who can put up with anything are often thought of as strong, but the heart does not grow strong through endurance or gritting your teeth. Forced cheerfulness and bravado alone make it as brittle as glass. When you brush aside the heart’s discomfort with ‘it’s nothing’, ‘it doesn’t matter’, or ‘I mustn’t be so weak’, it piles up like dust until the heart is carrying a heavy burden.",
+      "The heart only becomes strong when it is nurtured by the kindness and love that let you live as yourself. When enduring becomes a virtue in itself, it often leads to greater loss: like refusing a taxi on a hot day because it feels wasteful, and then collapsing. If you are feeling some discomfort in your emotions right now, do not overlook the sign. Look at it properly."
+    ]
+  },
+  {
+    "q": "The difference between trauma and something that is simply over",
+    "card": {
+      "pair": [
+        "Trauma",
+        "Something that is over"
+      ],
+      "theme": "Understanding the difference"
+    },
+    "bubble": {
+      "label": [
+        "Trauma &",
+        "the past"
+      ],
+      "x": 90,
+      "y": 88,
+      "d": 96
+    },
+    "a": [
+      "You may tell yourself ‘that was long ago’ or ‘it’s over, so let’s forget it’, yet the wound remains deep in the heart. It is very common for something that happened decades ago to still be sitting there, unhealed. That is trauma. A wound left behind in the past, one the thinking mind has declared ‘never happened’, is not actually over. You avoid looking at it or touching it precisely because it hurts. But the longer it is left, like a crying child left alone, the louder the crying grows.",
+      "True healing is not forgetting; it is a change in energy. An old wound can be healed when you notice it yourself and acknowledge it. The wounds of the past are an important message from the soul: ‘Look here. And love yourself.’ Do not hate them or ignore them. Shine a light on them."
+    ]
   }
 ];

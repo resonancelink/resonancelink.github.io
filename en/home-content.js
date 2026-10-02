@@ -1,64 +1,75 @@
 // Translated homepage teasers. Source item numbers preserve Japanese deep links.
+// Keep the newest items at the end: the homepage shows the last three of each list.
 const BREAKDOWN = [
   {
-    "number": 11,
-    "q": "Admiration and worship: similar, but different",
+    "number": 14,
+    "q": "The difference between solitude and loneliness",
     "bubble": {
       "label": [
-        "Admiration &",
-        "worship"
+        "Solitude &",
+        "loneliness"
       ]
     }
   },
   {
-    "number": 12,
-    "q": "The difference between true love and self-sacrifice",
+    "number": 15,
+    "q": "The difference between reflecting and putting yourself down",
     "bubble": {
       "label": [
-        "Love &",
-        "self-sacrifice"
+        "Reflecting &",
+        "self-criticism"
       ]
     }
   },
   {
-    "number": 13,
-    "q": "The difference between letting go and giving up",
+    "number": 16,
+    "q": "The difference between endurance and strength",
     "bubble": {
       "label": [
-        "Letting go &",
-        "giving up"
+        "Endurance &",
+        "strength"
+      ]
+    }
+  },
+  {
+    "number": 17,
+    "q": "The difference between trauma and something that is simply over",
+    "bubble": {
+      "label": [
+        "Trauma &",
+        "the past"
       ]
     }
   }
 ];
 const HIKIYOSE = [
   {
-    "number": 10,
-    "q": "You only need to send your wish out once",
+    "number": 13,
+    "q": "Excitement is not something you talk yourself into",
     "bubble": {
       "label": [
-        "The basics",
-        "of wishing"
+        "What is",
+        "excitement?"
       ]
     }
   },
   {
-    "number": 11,
-    "q": "Did I attract something unpleasant because something is wrong with me?",
+    "number": 14,
+    "q": "Abundance is not a quantity of money",
     "bubble": {
       "label": [
-        "Unpleasant",
-        "experiences"
+        "What is",
+        "abundance?"
       ]
     }
   },
   {
-    "number": 12,
-    "q": "Synchronicity is no coincidence",
+    "number": 15,
+    "q": "An affirmation is not granted by repetition",
     "bubble": {
       "label": [
-        "Meaningful",
-        "coincidences"
+        "What an",
+        "affirmation is"
       ]
     }
   }

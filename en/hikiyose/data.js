@@ -262,5 +262,65 @@ const HIKIYOSE = [
       "Synchronicity is a message that a shift is happening: a sign that energy is flowing. If the same thing keeps appearing, try receiving it through the feeling that immediately resonates with you, rather than puzzling over why it happened. The meaning of the attraction taking place can begin to become clear."
     ],
     "src": "Manga de Wakaru Hikiyose no Hosoku; Hikiyose no Hosoku Tsukaikonashi Bukku (books in Japanese)"
+  },
+  {
+    "q": "Excitement is not something you talk yourself into",
+    "card": {
+      "word": "Excitement",
+      "theme": "Not a chant in the head, but picturing the reality you want to see"
+    },
+    "bubble": {
+      "label": [
+        "What is",
+        "excitement?"
+      ],
+      "d": 96
+    },
+    "g": "Having heard that excitement matters for attraction, people tell themselves ‘this is fun, this is fun’ in their heads. The less they feel like it, the more excitement turns into something they have to do.",
+    "a": [
+      "Rather than chanting ‘fun, fun’ in your head like a prayer, turn your consciousness towards the reality you want to see. ‘How happy I’ll be when I’m slimmer. I could wear clothes like this, and walk with my head held high like that.’ Imagine it, and feel the excitement as you do. The knack is to connect your consciousness to the joy of ‘I’ll be so happy when I’m slimmer’, not to ‘I’m ugly because I’m fat, so I want to lose weight’.",
+      "Excitement does not arise from wishes shaped by society’s ‘I ought to’ or by other people’s expectations. If thinking about a relationship or marriage brings a feeling that is not joy, it is not your true wish. When you enjoy what is in front of you with excitement, that becomes a pebble of joy whose ripples spread outwards, and people and things of the same vibration are drawn to you."
+    ],
+    "src": "Hikiyose no Hosoku Tsukaikonashi Bukku (book in Japanese)"
+  },
+  {
+    "q": "Abundance is not a quantity of money",
+    "card": {
+      "word": "Abundance",
+      "theme": "It arises within; money follows afterwards"
+    },
+    "bubble": {
+      "label": [
+        "What is",
+        "abundance?"
+      ],
+      "d": 94
+    },
+    "g": "‘If I had money, I would be abundant.’ So when people wish for abundance, the first thing they think about is increasing the figures, or their income.",
+    "a": [
+      "You can have money and still feel completely unfulfilled inside. Hold a ten-thousand-yen note and notice: do you feel ‘I have a whole ten thousand yen’, or ‘I only have ten thousand yen’? An abundant person feels grateful for the ten thousand yen they have now and feels good; a person who is not abundant feels dissatisfied and feels bad. This is not about the size of the sum. True abundance arises from within.",
+      "When you keep your eyes on what is lacking, that energy of lack attracts more of the same situation. You eat three meals a day; you buy what you need. Notice that at this very moment you are already abundant, and feel that abundance in your heart. Only once the heart is abundant does money, the material form of that energy, follow."
+    ],
+    "src": "Haato de Tenshi to Tsunagaru Houhou (book in Japanese)"
+  },
+  {
+    "q": "An affirmation is not granted by repetition",
+    "card": {
+      "word": "Affirmation",
+      "theme": "Less about the words, more about whether the heart feels it"
+    },
+    "bubble": {
+      "label": [
+        "What an",
+        "affirmation is"
+      ],
+      "d": 100
+    },
+    "g": "‘I deserve abundance.’ ‘My wish is coming true.’ Repeat the chosen words every day and the wish will be granted. An affirmation is sometimes treated like a spell that works by the number of repetitions.",
+    "a": [
+      "What brings things into reality in this three-dimensional world is not the words themselves but our vibration. What the heart truly feels becomes reality as it is. So the knack of an affirmation is to speak to the universe as if your wish has already come true and you are giving thanks for it, feeling the happiness and gratitude fully in your heart. You say it in the past tense, to put yourself in the state of having already received.",
+      "For example, before sleep, turn both palms upwards and say, ‘I have received wealth and abundance in these hands. Thank you,’ and keep going until you can feel the weight of that sparkling energy in your hands. But if a sadness still lies deep in your heart, the belief that you must not wish for happiness, then words alone will snap you back like an elastic band. First, notice that you had been given that mistaken message."
+    ],
+    "src": "Haato de Tenshi to Tsunagaru Houhou (book in Japanese); Michiyo’s blog Mainichi Spiritual"
   }
 ];
