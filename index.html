@@ -242,12 +242,18 @@
   .today-bar .m.on:hover{box-shadow:0 5px 16px rgba(184,150,74,.22);transform:translateY(-1px)}
   .today-bar .m.on{opacity:1;color:var(--ink);border-color:rgba(196,168,96,.6);background:rgba(255,255,255,.92);box-shadow:0 3px 12px rgba(184,150,74,.14)}
   .today-bar .m.on img{filter:none}
+  /* LINEでも届く(今日のみちよカードの足元・1行) */
+  .today-bar .line-row{display:flex;align-items:center;gap:8px;margin:14px 0 0 46px;padding-top:12px;border-top:1px dashed rgba(196,168,96,.4);font-size:12.5px;letter-spacing:.08em;color:var(--ink-soft);flex-wrap:wrap}
+  .today-bar .line-row a{display:inline-flex;align-items:center;gap:6px;color:var(--ink);text-decoration:none;font-weight:600;border:1px solid rgba(6,199,85,.45);background:rgba(255,255,255,.9);border-radius:999px;padding:5px 13px 5px 9px;transition:box-shadow .4s,transform .4s}
+  .today-bar .line-row a:hover{box-shadow:0 5px 16px rgba(6,199,85,.18);transform:translateY(-1px)}
+  .today-bar .line-row .dot{width:16px;height:16px;border-radius:50%;background:#06C755;display:inline-block;flex-shrink:0;position:relative}
+  .today-bar .line-row .dot::after{content:"";position:absolute;left:4px;top:5px;width:8px;height:5px;border-radius:3px;background:#fff}
   @media (max-width:640px){
     .bars{margin-top:30px;gap:10px}
     .start-bar a,.weekly .line{gap:10px;padding:12px 16px 12px 14px;flex-wrap:wrap}
     .today-bar .card{padding:18px 18px 16px;border-radius:24px}.today-bar .card::before{border-radius:26px}
     .today-bar .head .sg{width:30px;height:30px}.today-bar .head .t{font-size:17px;letter-spacing:.16em}
-    .today-bar .d{margin-left:0;font-size:14px;letter-spacing:.02em}.today-bar .media{margin-left:0;gap:6px 8px}.today-bar .m{font-size:12px;padding:5px 10px 5px 7px}
+    .today-bar .d{margin-left:0;font-size:14px;letter-spacing:.02em}.today-bar .media{margin-left:0;gap:6px 8px}.today-bar .line-row{margin-left:0}.today-bar .m{font-size:12px;padding:5px 10px 5px 7px}
     .start-bar .d{display:none}
     .weekly .line .d{white-space:normal;flex-basis:100%;order:3;font-size:14px;line-height:1.7;padding-left:40px}
     .start-bar .sg,.weekly .line .sg{width:26px;height:26px}
@@ -909,6 +915,9 @@ createWater(document.getElementById('water'), {flakes:true, hover:65, click:420,
       <a class="m" data-k="mail" href="https://michiyospiritualcounsellor.substack.com/" target="_blank" rel="noopener"><img src="https://angelswayhealing.com/icon/Substack.png" alt="Substack" loading="lazy">メルマガ</a>
       <a class="m" data-k="video" href="https://www.youtube.com/channel/UCM4Cxu05XHKE7H530RbWuYA" target="_blank" rel="noopener"><img src="https://angelswayhealing.com/icon/youtube.png" alt="YouTube" loading="lazy">YouTube</a>
     </span>
+    <span class="line-row">毎朝1通、LINEでも届きます
+      <a href="https://line.me/R/ti/p/@604ehwlj" target="_blank" rel="noopener"><span class="dot" aria-hidden="true"></span>LINEで受け取る</a>
+    </span>
   </div>
 </section>
 <script>
@@ -1111,8 +1120,9 @@ createWater(document.getElementById('water'), {flakes:true, hover:65, click:420,
     <a href="https://www.youtube.com/channel/UCM4Cxu05XHKE7H530RbWuYA" target="_blank" rel="noopener">YouTube</a>
     <a href="https://ameblo.jp/michiyo-hikiyose/" target="_blank" rel="noopener">Ameblo</a>
     <a href="https://michiyospiritualcounsellor.substack.com/" target="_blank" rel="noopener">Substack</a>
+    <a href="https://line.me/R/ti/p/@604ehwlj" target="_blank" rel="noopener">LINE</a>
   </p>
-  <p class="links" style="margin-top:0"><a href="install/">スマホのホーム画面に置く</a></p>
+  <p class="links" style="margin-top:0"><a href="install/">スマホのホーム画面に置く</a> ｜ <a href="today/#line">LINEで「今日のみちよ」を受け取る</a></p>
   <p class="unei">運営: <a href="https://spiritualmetascienceacademy.org/" target="_blank" rel="noopener">一般社団法人スピリチュアル・メタサイエンス・アカデミー</a></p>
   © みちよ
 </footer>
