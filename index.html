@@ -215,13 +215,24 @@
   .weekly .line .d #wkLead{color:var(--accent);font-size:.9em;letter-spacing:.1em}
   .start-bar .arrow,.weekly .line .arrow{font-size:14px;flex-shrink:0;color:var(--ink-soft)}
   .weekly .line{border-color:rgba(168,104,127,.28);background:linear-gradient(135deg,rgba(255,255,255,.78),rgba(250,236,240,.82))}
+  /* 今日のみちよ(1行バー・today/today.json から毎朝自動で入る) */
+  .today-bar .line{display:flex;align-items:center;gap:14px;text-decoration:none;color:var(--ink);
+    border-radius:999px;padding:14px 24px 14px 18px;border:1px solid rgba(196,168,96,.38);
+    background:linear-gradient(135deg,rgba(255,255,255,.8),rgba(252,246,230,.86));box-shadow:0 8px 26px rgba(61,107,117,.06);
+    transition:background .5s,box-shadow .5s,transform .5s cubic-bezier(.22,1,.36,1)}
+  .today-bar .line:hover{background:rgba(255,255,255,.96);box-shadow:0 12px 30px rgba(61,107,117,.1);transform:translateY(-1px)}
+  .today-bar .sg{width:30px;height:30px;flex-shrink:0;color:#b8964a;opacity:.9}
+  .today-bar .t{font-size:15px;font-weight:600;letter-spacing:.16em;white-space:nowrap;color:var(--ink)}
+  .today-bar .d{font-size:13.5px;letter-spacing:.04em;color:var(--ink);font-weight:500;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;flex:1}
+  .today-bar .d .dt{color:#b8964a;font-size:.9em;letter-spacing:.1em}
+  .today-bar .arrow{font-size:14px;flex-shrink:0;color:var(--ink-soft)}
   @media (max-width:640px){
     .bars{margin-top:30px;gap:10px}
-    .start-bar a,.weekly .line{gap:10px;padding:12px 16px 12px 14px;flex-wrap:wrap}
+    .start-bar a,.weekly .line,.today-bar .line{gap:10px;padding:12px 16px 12px 14px;flex-wrap:wrap}
     .start-bar .d{display:none}
-    .weekly .line .d{white-space:normal;flex-basis:100%;order:3;font-size:14px;line-height:1.7;padding-left:40px}
-    .start-bar .sg,.weekly .line .sg{width:26px;height:26px}
-    .start-bar .arrow,.weekly .line .arrow{margin-left:auto}
+    .weekly .line .d,.today-bar .d{white-space:normal;flex-basis:100%;order:3;font-size:14px;line-height:1.7;padding-left:40px}
+    .start-bar .sg,.weekly .line .sg,.today-bar .sg{width:26px;height:26px}
+    .start-bar .arrow,.weekly .line .arrow,.today-bar .arrow{margin-left:auto}
   }
 
   /* ---------- 夢診断の予告バー(2027年公開まで、準備中ページ yume/ へ) ---------- */
@@ -863,6 +874,34 @@ createWater(document.getElementById('water'), {flakes:true, hover:65, click:420,
 
 <!-- ============ HERO直下の3本のバー: はじめての方へ(start/) / 夢診断の予告(yume/・2027年公開したらアプリに差し替える) / 今週のメルマガ(WEEKLYから) ============ -->
 <div class="bars">
+<!-- 今日のみちよ(1行バー)。中身は today/today.json(GitHub Actionsが毎朝7:20に更新)。読めない間は見出しだけ -->
+<section class="today-bar" id="today">
+  <a class="line" href="today/">
+    <svg class="sg" aria-hidden="true"><use href="#sg-seed"/></svg>
+    <span class="t">今日のみちよ</span>
+    <span class="d"><span class="dt" id="tdDate"></span><span id="tdText">きょうの配信は、こちらから</span></span>
+    <span class="arrow">→</span>
+  </a>
+</section>
+<script>
+(() => {
+  fetch('today/today.json?t=' + Math.floor(Date.now()/600000), {cache:'no-store'}).then(r => r.ok ? r.json() : null).then(d => {
+    if (!d) return;
+    const parts = [];
+    const b = (d.blog && d.blog.items && d.blog.items[0]);
+    if (b) parts.push('ブログ「' + b.title + '」');
+    parts.push('Voicy 朝7時');
+    (d.substack && d.substack.items || []).slice(0,1).forEach(x => parts.push('メルマガ「' + x.title + '」'));
+    (d.youtube && d.youtube.videos || []).slice(0,1).forEach(v => parts.push('YouTube「' + v.title + '」'));
+    (d.youtube && d.youtube.live || []).forEach(v => {
+      if (v.start && d.date && v.start.slice(0,10) === d.date) { const h = new Date(v.start).getHours(); parts.push('今夜' + h + '時 ライブ'); }
+    });
+    if (d.date) { const m = d.date.slice(5,7).replace(/^0/,''), day = d.date.slice(8,10).replace(/^0/,'');
+      document.getElementById('tdDate').textContent = m + '/' + day + '　'; }
+    document.getElementById('tdText').textContent = parts.join('　・　');
+  }).catch(() => {});
+})();
+</script>
 <section class="start-bar" id="start">
   <a href="start/">
     <svg class="sg" aria-hidden="true"><use href="#sg-seed"/></svg>

@@ -1,0 +1,72 @@
+# 「今日のみちよ」の自動更新 + LINE配信
+#  - 毎朝 07:20 JST: 各媒体の新着 → today/today.json → (土曜は今週のメルマガ欄も) → コミット → LINEに朝の1通
+#  - 毎時 :07     : YouTubeの予定ライブを見張り、新しい予約があれば LINEに1通(1ライブ1回)
+# LINEの鍵は Settings → Secrets and variables → Actions → LINE_CHANNEL_TOKEN。無い間は文面を出すだけ(送らない)。
+name: today
+
+on:
+  schedule:
+    - cron: "20 22 * * *"   # 07:20 JST (UTCで前日22:20)
+    - cron: "7 * * * *"     # 毎時07分 ライブ見張り
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: "morning(朝の更新) / live(ライブ見張り)"
+        default: "morning"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: today
+  cancel-in-progress: false
+
+jobs:
+  today:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: どちらの便か決める
+        id: mode
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            echo "mode=${{ github.event.inputs.mode }}" >> "$GITHUB_OUTPUT"
+          elif [ "${{ github.event.schedule }}" = "20 22 * * *" ]; then
+            echo "mode=morning" >> "$GITHUB_OUTPUT"
+          else
+            echo "mode=live" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: 朝の更新(today.json)
+        if: steps.mode.outputs.mode == 'morning'
+        run: python3 scripts/update_today.py
+
+      - name: 土曜は「今週のメルマガ」欄も更新
+        if: steps.mode.outputs.mode == 'morning'
+        continue-on-error: true
+        run: |
+          if [ "$(TZ=Asia/Tokyo date +%u)" = "6" ]; then python3 scripts/update_weekly.py index.html; else echo "土曜ではないので飛ばす"; fi
+
+      - name: ライブ見張り
+        if: steps.mode.outputs.mode == 'live'
+        run: python3 scripts/update_today.py --live
+
+      - name: LINEに送る
+        env:
+          LINE_CHANNEL_TOKEN: ${{ secrets.LINE_CHANNEL_TOKEN }}
+        run: python3 scripts/line_push.py ${{ steps.mode.outputs.mode }}
+
+      - name: 変更があればコミット
+        run: |
+          rm -f today/fresh_live.json
+          git config user.name "today-bot"
+          git config user.email "today-bot@users.noreply.github.com"
+          git add today/today.json index.html
+          if git diff --cached --quiet; then
+            echo "変更なし"
+          else
+            git commit -m "today: $(TZ=Asia/Tokyo date '+%Y-%m-%d %H:%M') ${{ steps.mode.outputs.mode }} [skip ci]"
+            git pull --rebase origin main || true
+            git push
+          fi
