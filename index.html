@@ -216,7 +216,7 @@
   .start-bar .arrow,.weekly .line .arrow{font-size:14px;flex-shrink:0;color:var(--ink-soft)}
   .weekly .line{border-color:rgba(168,104,127,.28);background:linear-gradient(135deg,rgba(255,255,255,.78),rgba(250,236,240,.82))}
   /* 今日のみちよ(カード・today/today.json から毎朝自動で入る)。ほかの1行バーより一回り大きく、金色の縁で区別する */
-  .today-bar .card{display:block;color:var(--ink);position:relative;
+  .today-bar .card{display:block;color:var(--ink);position:relative;overflow:hidden;max-width:100%;
     border-radius:28px;padding:22px 26px 20px;border:1.5px solid rgba(196,168,96,.55);
     background:linear-gradient(145deg,rgba(255,255,255,.9),rgba(252,246,230,.92));
     box-shadow:0 14px 40px rgba(184,150,74,.14), inset 0 1px 0 rgba(255,255,255,.9);
@@ -229,10 +229,11 @@
   .today-bar .head:hover .t{text-decoration:underline;text-underline-offset:5px}
   .today-bar .head .sg{width:34px;height:34px;flex-shrink:0;color:#b8964a;opacity:.95;filter:drop-shadow(0 0 6px rgba(255,255,255,.9))}
   .today-bar .head .t{font-size:18px;font-weight:600;letter-spacing:.2em;color:var(--ink)}
-  .today-bar .head .dt{font-size:12.5px;letter-spacing:.14em;color:#b8964a;font-weight:600;margin-left:2px;white-space:nowrap}
+  .today-bar .head .dt{font-size:12.5px;letter-spacing:.14em;color:#b8964a;font-weight:600;margin-left:2px;white-space:nowrap;flex-shrink:0}
+  .today-bar .head .t{min-width:0}
   .today-bar .head .arrow{margin-left:auto;font-size:15px;color:var(--ink-soft)}
-  .today-bar .d{display:block;margin:10px 0 0 46px;font-size:14px;line-height:1.8;letter-spacing:.04em;color:var(--ink);font-weight:500}
-  .today-bar .d .ln{display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .today-bar .d{display:block;margin:10px 0 0 46px;font-size:14px;line-height:1.8;letter-spacing:.04em;color:var(--ink);font-weight:500;min-width:0;max-width:100%;overflow:hidden}
+  .today-bar .d .ln{display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:100%;word-break:keep-all}
   .today-bar .media{display:flex;flex-wrap:wrap;gap:8px 10px;margin:14px 0 0 46px}
   .today-bar .m{display:inline-flex;align-items:center;gap:6px;font-size:12px;letter-spacing:.1em;color:var(--ink-soft);text-decoration:none;
     border:1px solid rgba(110,151,160,.22);border-radius:999px;padding:5px 12px 5px 8px;background:rgba(255,255,255,.55);opacity:.5;transition:opacity .5s,background .5s,border-color .5s}
@@ -246,7 +247,7 @@
     .start-bar a,.weekly .line{gap:10px;padding:12px 16px 12px 14px;flex-wrap:wrap}
     .today-bar .card{padding:18px 18px 16px;border-radius:24px}.today-bar .card::before{border-radius:26px}
     .today-bar .head .sg{width:30px;height:30px}.today-bar .head .t{font-size:17px;letter-spacing:.16em}
-    .today-bar .d{margin-left:0;font-size:14.5px}.today-bar .media{margin-left:0;gap:6px 8px}.today-bar .m{font-size:12px;padding:5px 10px 5px 7px}
+    .today-bar .d{margin-left:0;font-size:14px;letter-spacing:.02em}.today-bar .media{margin-left:0;gap:6px 8px}.today-bar .m{font-size:12px;padding:5px 10px 5px 7px}
     .start-bar .d{display:none}
     .weekly .line .d{white-space:normal;flex-basis:100%;order:3;font-size:14px;line-height:1.7;padding-left:40px}
     .start-bar .sg,.weekly .line .sg{width:26px;height:26px}
