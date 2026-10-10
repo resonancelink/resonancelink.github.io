@@ -232,7 +232,7 @@
   .today-bar .head .dt{font-size:12.5px;letter-spacing:.14em;color:#b8964a;font-weight:600;margin-left:2px;white-space:nowrap}
   .today-bar .head .arrow{margin-left:auto;font-size:15px;color:var(--ink-soft)}
   .today-bar .d{display:block;margin:10px 0 0 46px;font-size:14px;line-height:1.8;letter-spacing:.04em;color:var(--ink);font-weight:500}
-  .today-bar .d .em{font-weight:600}
+  .today-bar .d .ln{display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
   .today-bar .media{display:flex;flex-wrap:wrap;gap:8px 10px;margin:14px 0 0 46px}
   .today-bar .m{display:inline-flex;align-items:center;gap:6px;font-size:12px;letter-spacing:.1em;color:var(--ink-soft);text-decoration:none;
     border:1px solid rgba(110,151,160,.22);border-radius:999px;padding:5px 12px 5px 8px;background:rgba(255,255,255,.55);opacity:.5;transition:opacity .5s,background .5s,border-color .5s}
@@ -929,7 +929,7 @@ createWater(document.getElementById('water'), {flakes:true, hover:65, click:420,
     });
     if (d.date) { const m = d.date.slice(5,7).replace(/^0/,''), day = d.date.slice(8,10).replace(/^0/,''), W = '日月火水木金土';
       const dt = new Date(d.date + 'T00:00:00+09:00'); document.getElementById('tdDate').textContent = m + '/' + day + '（' + W[dt.getDay()] + '）'; }
-    document.getElementById('tdText').textContent = parts.join('　・　');
+    document.getElementById('tdText').innerHTML = parts.map(t => '<span class="ln">' + t.replace(/[&<>]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;'}[c])) + '</span>').join('');
   }).catch(() => {});
 })();
 </script>
