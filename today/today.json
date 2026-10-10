@@ -1,12 +1,12 @@
 {
- "date": "2026-10-10",
- "updated": "2026-10-11T06:35+09:00",
+ "date": "2026-10-11",
+ "updated": "2026-10-11T07:32+09:00",
  "blog": {
   "items": [
    {
-    "title": "１０月１０日　「早く決めて」と急かされた時に気づくべきこと",
-    "url": "https://ameblo.jp/michiyo-hikiyose/entry-12980800321.html",
-    "date": "2026-10-10T07:00:00+09:00"
+    "title": "１０月１１日　シンクロに動かされた推し活【大阪～山形】",
+    "url": "https://ameblo.jp/michiyo-hikiyose/entry-12980800362.html",
+    "date": "2026-10-11T07:00:00+09:00"
    }
   ],
   "is_today": true,
@@ -17,19 +17,25 @@
   "note": "毎朝7時更新"
  },
  "substack": {
-  "items": [
-   {
-    "title": "連載 第13回『AIに悩みを話せる時代に、それでも自分と対話する理由』",
-    "url": "https://michiyospiritualcounsellor.substack.com/",
-    "date": "2026-10-10T08:00+09:00",
-    "by_rule": true
-   }
-  ],
-  "week": null,
-  "stale": true
+  "items": [],
+  "week": {
+   "title": "連載 第13回",
+   "url": "https://michiyospiritualcounsellor.substack.com/",
+   "date": "2026-10-10"
+  }
  },
  "youtube": {
-  "videos": [],
+  "videos": [
+   {
+    "id": "QAUJanSQoD0",
+    "title": "恩を仇で返された。その優しさ、自己犠牲です #ショート #スピリチュアル #人間関係",
+    "url": "https://www.youtube.com/watch?v=QAUJanSQoD0",
+    "published": "2026-10-10T20:00:17+09:00",
+    "kind": "video",
+    "start": null,
+    "length": null
+   }
+  ],
   "live": [
    {
     "id": "vkufFGzbBj4",
