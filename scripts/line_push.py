@@ -44,7 +44,7 @@ def morning_text(data):
     lines.append("▷Voicy 朝7時の放送")
     for x in data.get("substack", {}).get("items", [])[:2]:
         if x.get("by_rule") and x["title"].startswith("連載"):
-            lines.append(f"▷メルマガ {x['title']}（今朝8時）")
+            lines.append(f"▷メルマガ {x['title']}（8時に配信）")
         elif x.get("by_rule"):
             lines.append(f"▷メルマガ {x['title']}")
         else:
