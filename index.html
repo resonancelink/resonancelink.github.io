@@ -215,24 +215,41 @@
   .weekly .line .d #wkLead{color:var(--accent);font-size:.9em;letter-spacing:.1em}
   .start-bar .arrow,.weekly .line .arrow{font-size:14px;flex-shrink:0;color:var(--ink-soft)}
   .weekly .line{border-color:rgba(168,104,127,.28);background:linear-gradient(135deg,rgba(255,255,255,.78),rgba(250,236,240,.82))}
-  /* 今日のみちよ(1行バー・today/today.json から毎朝自動で入る) */
-  .today-bar .line{display:flex;align-items:center;gap:14px;text-decoration:none;color:var(--ink);
-    border-radius:999px;padding:14px 24px 14px 18px;border:1px solid rgba(196,168,96,.38);
-    background:linear-gradient(135deg,rgba(255,255,255,.8),rgba(252,246,230,.86));box-shadow:0 8px 26px rgba(61,107,117,.06);
-    transition:background .5s,box-shadow .5s,transform .5s cubic-bezier(.22,1,.36,1)}
-  .today-bar .line:hover{background:rgba(255,255,255,.96);box-shadow:0 12px 30px rgba(61,107,117,.1);transform:translateY(-1px)}
-  .today-bar .sg{width:30px;height:30px;flex-shrink:0;color:#b8964a;opacity:.9}
-  .today-bar .t{font-size:15px;font-weight:600;letter-spacing:.16em;white-space:nowrap;color:var(--ink)}
-  .today-bar .d{font-size:13.5px;letter-spacing:.04em;color:var(--ink);font-weight:500;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;flex:1}
-  .today-bar .d .dt{color:#b8964a;font-size:.9em;letter-spacing:.1em}
-  .today-bar .arrow{font-size:14px;flex-shrink:0;color:var(--ink-soft)}
+  /* 今日のみちよ(カード・today/today.json から毎朝自動で入る)。ほかの1行バーより一回り大きく、金色の縁で区別する */
+  .today-bar .card{display:block;text-decoration:none;color:var(--ink);position:relative;
+    border-radius:28px;padding:22px 26px 20px;border:1.5px solid rgba(196,168,96,.55);
+    background:linear-gradient(145deg,rgba(255,255,255,.9),rgba(252,246,230,.92));
+    box-shadow:0 14px 40px rgba(184,150,74,.14), inset 0 1px 0 rgba(255,255,255,.9);
+    transition:box-shadow .5s,transform .5s cubic-bezier(.22,1,.36,1)}
+  .today-bar .card::before{content:"";position:absolute;inset:-1.5px;border-radius:30px;pointer-events:none;
+    background:linear-gradient(135deg,rgba(216,167,177,.55),rgba(196,168,96,.6) 50%,rgba(197,180,227,.55));
+    -webkit-mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);-webkit-mask-composite:xor;mask-composite:exclude;padding:1.5px;opacity:.9}
+  .today-bar .card:hover{box-shadow:0 18px 48px rgba(184,150,74,.2), inset 0 1px 0 rgba(255,255,255,.9);transform:translateY(-2px)}
+  .today-bar .head{display:flex;align-items:center;gap:12px}
+  .today-bar .head .sg{width:34px;height:34px;flex-shrink:0;color:#b8964a;opacity:.95;filter:drop-shadow(0 0 6px rgba(255,255,255,.9))}
+  .today-bar .head .t{font-size:18px;font-weight:600;letter-spacing:.2em;color:var(--ink)}
+  .today-bar .head .dt{font-size:12.5px;letter-spacing:.14em;color:#b8964a;font-weight:600;margin-left:2px;white-space:nowrap}
+  .today-bar .head .arrow{margin-left:auto;font-size:15px;color:var(--ink-soft)}
+  .today-bar .d{display:block;margin:10px 0 0 46px;font-size:14px;line-height:1.8;letter-spacing:.04em;color:var(--ink);font-weight:500}
+  .today-bar .d .em{font-weight:600}
+  .today-bar .media{display:flex;flex-wrap:wrap;gap:8px 10px;margin:14px 0 0 46px}
+  .today-bar .m{display:inline-flex;align-items:center;gap:6px;font-size:12px;letter-spacing:.1em;color:var(--ink-soft);
+    border:1px solid rgba(110,151,160,.22);border-radius:999px;padding:5px 12px 5px 8px;background:rgba(255,255,255,.55);opacity:.5;transition:opacity .5s,background .5s,border-color .5s}
+  .today-bar .m svg{width:16px;height:16px;flex-shrink:0;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+  .today-bar .m.on{opacity:1;color:var(--ink);border-color:rgba(196,168,96,.6);background:rgba(255,255,255,.92);box-shadow:0 3px 12px rgba(184,150,74,.14)}
+  .today-bar .m.on svg{color:#b8964a}
+  .today-bar .m.live.on{border-color:rgba(168,104,127,.6)}
+  .today-bar .m.live.on svg{color:var(--accent)}
   @media (max-width:640px){
     .bars{margin-top:30px;gap:10px}
-    .start-bar a,.weekly .line,.today-bar .line{gap:10px;padding:12px 16px 12px 14px;flex-wrap:wrap}
+    .start-bar a,.weekly .line{gap:10px;padding:12px 16px 12px 14px;flex-wrap:wrap}
+    .today-bar .card{padding:18px 18px 16px;border-radius:24px}.today-bar .card::before{border-radius:26px}
+    .today-bar .head .sg{width:30px;height:30px}.today-bar .head .t{font-size:17px;letter-spacing:.16em}
+    .today-bar .d{margin-left:0;font-size:14.5px}.today-bar .media{margin-left:0;gap:6px 8px}.today-bar .m{font-size:12px;padding:5px 10px 5px 7px}
     .start-bar .d{display:none}
-    .weekly .line .d,.today-bar .d{white-space:normal;flex-basis:100%;order:3;font-size:14px;line-height:1.7;padding-left:40px}
-    .start-bar .sg,.weekly .line .sg,.today-bar .sg{width:26px;height:26px}
-    .start-bar .arrow,.weekly .line .arrow,.today-bar .arrow{margin-left:auto}
+    .weekly .line .d{white-space:normal;flex-basis:100%;order:3;font-size:14px;line-height:1.7;padding-left:40px}
+    .start-bar .sg,.weekly .line .sg{width:26px;height:26px}
+    .start-bar .arrow,.weekly .line .arrow{margin-left:auto}
   }
 
   /* ---------- 夢診断の予告バー(2027年公開まで、準備中ページ yume/ へ) ---------- */
@@ -876,28 +893,44 @@ createWater(document.getElementById('water'), {flakes:true, hover:65, click:420,
 <div class="bars">
 <!-- 今日のみちよ(1行バー)。中身は today/today.json(GitHub Actionsが毎朝7:20に更新)。読めない間は見出しだけ -->
 <section class="today-bar" id="today">
-  <a class="line" href="today/">
-    <svg class="sg" aria-hidden="true"><use href="#sg-seed"/></svg>
-    <span class="t">今日のみちよ</span>
-    <span class="d"><span class="dt" id="tdDate"></span><span id="tdText">きょうの配信は、こちらから</span></span>
-    <span class="arrow">→</span>
+  <a class="card" href="today/">
+    <span class="head">
+      <svg class="sg" aria-hidden="true"><use href="#sg-seed"/></svg>
+      <span class="t">今日のみちよ</span>
+      <span class="dt" id="tdDate"></span>
+      <span class="arrow">→</span>
+    </span>
+    <span class="d" id="tdText">きょうの配信を、ここ一か所で。</span>
+    <span class="media" id="tdMedia">
+      <span class="m" data-k="blog"><svg viewBox="0 0 24 24"><path d="M4 20h4l10-10-4-4L4 16v4z"/><path d="M13 7l4 4"/></svg>ブログ</span>
+      <span class="m" data-k="voicy"><svg viewBox="0 0 24 24"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0"/><path d="M12 18v3"/></svg>Voicy</span>
+      <span class="m" data-k="mail"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>メルマガ</span>
+      <span class="m" data-k="video"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="M10 9l5 3-5 3z"/></svg>YouTube</span>
+      <span class="m" data-k="short"><svg viewBox="0 0 24 24"><rect x="7" y="3" width="10" height="18" rx="2.5"/><path d="M10.5 9.5l4 2.5-4 2.5z"/></svg>ショート</span>
+      <span class="m live" data-k="live"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="2.5"/><path d="M7.5 7.5a6.5 6.5 0 0 0 0 9"/><path d="M16.5 7.5a6.5 6.5 0 0 1 0 9"/><path d="M4.5 4.5a10.5 10.5 0 0 0 0 15"/><path d="M19.5 4.5a10.5 10.5 0 0 1 0 15"/></svg>ライブ</span>
+    </span>
   </a>
 </section>
 <script>
 (() => {
+  const on = k => { const el = document.querySelector('#tdMedia .m[data-k="' + k + '"]'); if (el) el.classList.add('on'); };
   fetch('today/today.json?t=' + Math.floor(Date.now()/600000), {cache:'no-store'}).then(r => r.ok ? r.json() : null).then(d => {
     if (!d) return;
     const parts = [];
     const b = (d.blog && d.blog.items && d.blog.items[0]);
-    if (b) parts.push('ブログ「' + b.title + '」');
-    parts.push('Voicy 朝7時');
-    (d.substack && d.substack.items || []).slice(0,1).forEach(x => parts.push('メルマガ「' + x.title + '」'));
-    (d.youtube && d.youtube.videos || []).slice(0,1).forEach(v => parts.push('YouTube「' + v.title + '」'));
+    if (b) { parts.push('ブログ「' + b.title + '」'); on('blog'); }
+    parts.push('Voicy 朝7時'); on('voicy');
+    const subs = (d.substack && d.substack.items) || [];
+    subs.slice(0,1).forEach(x => { parts.push('メルマガ「' + x.title + '」'); on('mail'); });
+    const vids = (d.youtube && d.youtube.videos) || [];
+    vids.slice(0,1).forEach(v => { parts.push('YouTube「' + v.title + '」'); on('video'); });
+    if ((d.youtube && d.youtube.shorts || []).length) on('short');
     (d.youtube && d.youtube.live || []).forEach(v => {
+      on('live');
       if (v.start && d.date && v.start.slice(0,10) === d.date) { const h = new Date(v.start).getHours(); parts.push('今夜' + h + '時 ライブ'); }
     });
-    if (d.date) { const m = d.date.slice(5,7).replace(/^0/,''), day = d.date.slice(8,10).replace(/^0/,'');
-      document.getElementById('tdDate').textContent = m + '/' + day + '　'; }
+    if (d.date) { const m = d.date.slice(5,7).replace(/^0/,''), day = d.date.slice(8,10).replace(/^0/,''), W = '日月火水木金土';
+      const dt = new Date(d.date + 'T00:00:00+09:00'); document.getElementById('tdDate').textContent = m + '/' + day + '（' + W[dt.getDay()] + '）'; }
     document.getElementById('tdText').textContent = parts.join('　・　');
   }).catch(() => {});
 })();
