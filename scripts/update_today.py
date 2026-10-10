@@ -212,7 +212,13 @@ def build_morning(now):
         "youtube": {"videos": [], "live": [], "channel": YT_CHANNEL_URL},
         "notified_live": prev.get("notified_live", []),
     }
+    # GitHubの定時実行は遅れるので朝の便は6:50に起動し、今日のブログ(7:00公開)が出るまで最大 WAIT_UNTIL まで粘る
     am = get_ameblo(now)
+    deadline = now.replace(hour=7, minute=30, second=0, microsecond=0)
+    while (not am or not am.get("is_today")) and datetime.now(JST) < deadline and os.environ.get("TODAY_NO_WAIT") != "1":
+        log("今日のブログがまだ無いので2分待つ")
+        time.sleep(120)
+        am = get_ameblo(datetime.now(JST))
     if am:
         data["blog"].update(am)
     else:

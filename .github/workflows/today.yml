@@ -1,12 +1,12 @@
 # 「今日のみちよ」の自動更新 + LINE配信
-#  - 毎朝 07:20 JST: 各媒体の新着 → today/today.json → コミット → LINEに朝の1通
+#  - 毎朝 06:50 JST起動(遅延込みで7時台に届く): 今日のブログが出るまで待ってから today/today.json → コミット → LINEに朝の1通
 #  - 毎時 :07     : YouTubeの予定ライブを見張り、新しい予約があれば LINEに1通(1ライブ1回)
 # LINEの鍵は Settings → Secrets and variables → Actions → LINE_CHANNEL_TOKEN。無い間は文面を出すだけ(送らない)。
 name: today
 
 on:
   schedule:
-    - cron: "20 22 * * *"   # 07:20 JST (UTCで前日22:20)
+    - cron: "50 21 * * *"   # 06:50 JST に起動(GitHubの定時実行は遅れるため早めに。今日のブログが出るまで最大7:30まで待つ)
     - cron: "7 * * * *"     # 毎時07分 ライブ見張り
   workflow_dispatch:
     inputs:
@@ -24,6 +24,7 @@ concurrency:
 jobs:
   today:
     runs-on: ubuntu-latest
+    timeout-minutes: 55
     steps:
       - uses: actions/checkout@v4
 
@@ -32,7 +33,7 @@ jobs:
         run: |
           if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
             echo "mode=${{ github.event.inputs.mode }}" >> "$GITHUB_OUTPUT"
-          elif [ "${{ github.event.schedule }}" = "20 22 * * *" ]; then
+          elif [ "${{ github.event.schedule }}" = "50 21 * * *" ]; then
             echo "mode=morning" >> "$GITHUB_OUTPUT"
           else
             echo "mode=live" >> "$GITHUB_OUTPUT"
