@@ -1,5 +1,5 @@
 # 「今日のみちよ」の自動更新 + LINE配信
-#  - 毎朝 07:20 JST: 各媒体の新着 → today/today.json → (土曜は今週のメルマガ欄も) → コミット → LINEに朝の1通
+#  - 毎朝 07:20 JST: 各媒体の新着 → today/today.json → コミット → LINEに朝の1通
 #  - 毎時 :07     : YouTubeの予定ライブを見張り、新しい予約があれば LINEに1通(1ライブ1回)
 # LINEの鍵は Settings → Secrets and variables → Actions → LINE_CHANNEL_TOKEN。無い間は文面を出すだけ(送らない)。
 name: today
@@ -42,12 +42,6 @@ jobs:
         if: steps.mode.outputs.mode == 'morning'
         run: python3 scripts/update_today.py
 
-      - name: 土曜は「今週のメルマガ」欄も更新
-        if: steps.mode.outputs.mode == 'morning'
-        continue-on-error: true
-        run: |
-          if [ "$(TZ=Asia/Tokyo date +%u)" = "6" ]; then python3 scripts/update_weekly.py index.html; else echo "土曜ではないので飛ばす"; fi
-
       - name: ライブ見張り
         if: steps.mode.outputs.mode == 'live'
         run: python3 scripts/update_today.py --live
@@ -62,7 +56,7 @@ jobs:
           rm -f today/fresh_live.json
           git config user.name "today-bot"
           git config user.email "today-bot@users.noreply.github.com"
-          git add today/today.json index.html
+          git add today/today.json
           if git diff --cached --quiet; then
             echo "変更なし"
           else

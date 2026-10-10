@@ -17,7 +17,7 @@ resonancelink.com として GitHub Pages で公開するためのファイル一
 - `water.js` / `water.jpg` … 図鑑ページが使う水面のスクリプトと写真(トップページは同じものを index.html の中に内蔵)
 - `CNAME` … 独自ドメイン(resonancelink.com)の設定ファイル。消さない
 - `.nojekyll` … GitHub Pagesにそのまま配信させる印
-- `scripts/update_weekly.py` … 「今週のメルマガ」欄を最新記事に書き換えるスクリプト(毎週土曜の朝、下の自動更新が実行する)
+- `scripts/update_weekly.py` … (旧)「今週のメルマガ」欄用のスクリプト。欄は2026-10-10に「今日のみちよ」へ統合したので未使用
 - `today/index.html` … 今日のみちよ(今日の配信を一か所で)。resonancelink.com/today/。トップの1行バー「今日のみちよ」から飛ぶ。LINEの朝1通のリンク先
 - `today/today.json` … 今日の配信の正本(自動更新。手で直さない)
 - `scripts/update_today.py` … 各媒体の新着(Ameblo・Substack・YouTube)を読んで today.json を書く
@@ -25,7 +25,7 @@ resonancelink.com として GitHub Pages で公開するためのファイル一
 - `.github/workflows/today.yml` … 上の2つを毎朝7:20 JSTと毎時07分に自動実行し、変更をコミットする(GitHub Actions)
 
 ## 自動更新について(2026-10-10〜)
-- 毎朝7:20 JST: today.json を更新 → (土曜はメルマガ欄も) → コミット → LINEに朝の1通
+- 毎朝7:20 JST: today.json を更新 → コミット → LINEに朝の1通(メルマガは出た日に「今日のみちよ」に入り、/today/ には「今週のメルマガ」として8日間残る)
 - 毎時07分: YouTubeの予定ライブを見張り、新しい予約が公開されていればLINEに1通(1ライブ1回)
 - LINEの鍵: GitHub の Settings → Secrets and variables → Actions → New repository secret → Name `LINE_CHANNEL_TOKEN`。鍵が無い間は送信しない
 - **注意: この仕組みがリポジトリに毎日コミットするので、PCのクローンから push する前に必ず `git pull` する**(Claude Codeに頼むときは「pull してから commit と push」と書く)

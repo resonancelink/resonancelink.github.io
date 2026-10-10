@@ -193,7 +193,9 @@
     const b = d.blog && d.blog.items && d.blog.items[0];
     if (b) out.push(card('ブログ', b.title, d.blog.is_today ? 'Ameblo・今日の記事' : 'Ameblo・最新の記事', b.url));
     out.push(card('Voicy', 'みちよのハートラジオ', '毎朝7時更新', (d.voicy && d.voicy.url) || 'https://voicy.jp/channel/1756'));
-    (d.substack && d.substack.items || []).forEach(x => out.push(card('メルマガ', x.title, 'Substack', x.url, 'gold')));
+    const subs = (d.substack && d.substack.items || []);
+    subs.forEach(x => out.push(card('メルマガ', x.title, 'Substack・今日の記事', x.url, 'gold')));
+    if (!subs.length && d.substack && d.substack.week) out.push(card('今週のメルマガ', d.substack.week.title, 'Substack', d.substack.week.url, 'gold'));
     (d.youtube && d.youtube.videos || []).forEach(v => out.push(card('YouTube', v.title, '新しい動画', v.url)));
     (d.youtube && d.youtube.shorts || []).forEach(v => out.push(card('ショート', v.title, 'YouTubeショート', v.url)));
     list.innerHTML = out.join('');

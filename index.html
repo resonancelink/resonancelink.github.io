@@ -644,7 +644,7 @@
   <div class="in">
     <a class="home" href="#hero"><svg class="sg" aria-hidden="true"><use href="#sg-seed"/></svg><span>スピリチュアル・メタサイエンス研究所</span></a>
     <ul>
-      <li><a href="#weekly"><span class="l">今週のメルマガ</span><span class="s">メルマガ</span></a></li>
+      <li><a href="#today"><span class="l">今日のみちよ</span><span class="s">今日</span></a></li>
       <li><a href="#notice">お知らせ</a></li>
       <li><a href="#intro"><span class="l">研究所について</span><span class="s">研究所</span></a></li>
       <li><a href="#rooms">体験室</a></li>
@@ -872,7 +872,7 @@ createWater(document.getElementById('water'), {flakes:true, hover:65, click:420,
 
 </script>
 
-<!-- ============ HERO直下の3本のバー: はじめての方へ(start/) / 夢診断の予告(yume/・2027年公開したらアプリに差し替える) / 今週のメルマガ(WEEKLYから) ============ -->
+<!-- ============ HERO直下の3本のバー: 今日のみちよ(today/today.jsonから) / はじめての方へ(start/) / 夢診断の予告(yume/・2027年公開したらアプリに差し替える) ============ -->
 <div class="bars">
 <!-- 今日のみちよ(1行バー)。中身は today/today.json(GitHub Actionsが毎朝7:20に更新)。読めない間は見出しだけ -->
 <section class="today-bar" id="today">
@@ -919,35 +919,8 @@ createWater(document.getElementById('water'), {flakes:true, hover:65, click:420,
     <span class="arrow">→</span>
   </a>
 </section>
-<!-- 今週のメルマガ(1行バー)は下の WEEKLY のデータから入る -->
-<section class="weekly" id="weekly">
-  <a class="line" id="wkMore" href="#" target="_blank" rel="noopener">
-    <svg class="sg" aria-hidden="true"><use href="#sg-seed"/></svg>
-    <span class="t">今週のメルマガ</span>
-    <span class="d"><span id="wkLead"></span><span id="wkTitle"></span></span>
-    <span class="arrow">→</span>
-  </a>
-</section>
 </div>
 
-<!-- ============ 今週のSubstack ============
-  下の WEEKLY の4行(ep=第N回/title/url/excerpt)が中身。公開後は GitHub Actions(.github/workflows/weekly-substack.yml)が
-  毎週土曜にSubstackの配信を読んで自動で書き換える。手で直してもよい(形式を崩さなければ次の自動更新で上書きされるだけ)。
-  excerpt は本文の冒頭をそのまま(3行分ほど)。連載が終わって「第N回」が無い記事は ep を "" にする。 -->
-<script>
-const WEEKLY = {
-  ep: "第8回",
-  title: "答えをもらう人、自分で分かる人",
-  url: "https://michiyospiritualcounsellor.substack.com/p/8",
-  excerpt: "今回は、わたしの人生を変えた、ちょっと不思議な実話から始めます。信じるか信じないかは、あなた次第ですｗまだこの仕事を始める前のことです。離婚をして、会社勤めをしながら、この先どう生きていくのかが不透明だった時期がありました。自分は会社員で終わる人間ではない、ということはわかっている。でも、何をしていいかわからない。。。。そんなとき、わたしは知り合いのサイキック（＝エネルギーで視る人）のセッションを受けました。"
-};
-(() => {
-  /* 1行バー: 「第8回」の印 + タイトル。excerpt はバーには出さない(データは毎週の更新手順を変えないため残す) */
-  document.getElementById('wkLead').textContent = WEEKLY.ep ? WEEKLY.ep + '　' : '';
-  document.getElementById('wkTitle').textContent = '「' + WEEKLY.title + '」';
-  document.getElementById('wkMore').href = WEEKLY.url;
-})();
-</script>
 
 <!-- ============ お知らせ ============ -->
 <section class="notice" id="notice">

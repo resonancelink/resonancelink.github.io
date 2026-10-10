@@ -112,14 +112,18 @@ def get_substack(now, hours=26):
         root = ET.fromstring(raw)
     except ET.ParseError:
         return None
-    out = []
+    out, week = [], None
     for it in root.findall("./channel/item"):
         title = html.unescape((it.findtext("title") or "").strip())
         link = (it.findtext("link") or "").strip().split("?")[0]
         d = parse_rfc822(it.findtext("pubDate") or "")
-        if d and (now - d) <= timedelta(hours=hours) and title and link:
+        if not (d and title and link):
+            continue
+        if (now - d) <= timedelta(hours=hours):
             out.append({"title": title, "url": link, "date": d.isoformat()})
-    return {"items": out}
+        if week is None and (now - d) <= timedelta(days=8):
+            week = {"title": title, "url": link, "date": d.isoformat()}  # 「今週のメルマガ」(最新・8日以内)
+    return {"items": out, "week": week}
 
 
 # ---------------- YouTube ----------------
@@ -222,7 +226,7 @@ def build_morning(now):
             d = parse_iso(x.get("date") or "")
             if d and (now - d) <= timedelta(hours=26):
                 keep.append(x)
-        data["substack"] = {"items": keep, "stale": True}
+        data["substack"] = {"items": keep, "week": prev.get("substack", {}).get("week"), "stale": True}
 
     yt = get_youtube(now)
     if yt is not None:
