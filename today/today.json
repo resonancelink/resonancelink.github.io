@@ -4,6 +4,6 @@
  "blog": {"items": [{"title": "（初回の自動更新で、今日の記事に入れ替わります）", "url": "https://ameblo.jp/michiyo-hikiyose/", "date": null}], "is_today": false, "top": "https://ameblo.jp/michiyo-hikiyose/"},
  "voicy": {"url": "https://voicy.jp/channel/1756", "note": "毎朝7時更新"},
  "substack": {"items": []},
- "youtube": {"videos": [], "shorts": [], "live": [], "channel": "https://www.youtube.com/channel/UCM4Cxu05XHKE7H530RbWuYA"},
+ "youtube": {"videos": [], "live": [], "channel": "https://www.youtube.com/channel/UCM4Cxu05XHKE7H530RbWuYA"},
  "notified_live": []
 }

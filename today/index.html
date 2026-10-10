@@ -137,7 +137,7 @@
   <p class="kicker"><svg class="sg" aria-hidden="true"><use href="#sg-seed"/></svg>今日のみちよ</p>
   <p class="date" id="tdDate"></p>
   <h1>今日の配信を、ここ一か所で</h1>
-  <p class="lede">ブログ・Voicy・メルマガ・YouTube。<br>毎朝7時半ごろに、きょうの分に入れ替わります。</p>
+  <p class="lede">ブログ・Voicy・メルマガ・YouTube（動画とライブ）。<br>毎朝7時半ごろに、きょうの分に入れ替わります。</p>
 </header>
 
 <!-- ============ 今日の配信(today.json から) ============ -->
@@ -197,7 +197,6 @@
     subs.forEach(x => out.push(card('メルマガ', x.title, 'Substack・今日の記事', x.url, 'gold')));
     if (!subs.length && d.substack && d.substack.week) out.push(card('今週のメルマガ', d.substack.week.title, 'Substack', d.substack.week.url, 'gold'));
     (d.youtube && d.youtube.videos || []).forEach(v => out.push(card('YouTube', v.title, '新しい動画', v.url)));
-    (d.youtube && d.youtube.shorts || []).forEach(v => out.push(card('ショート', v.title, 'YouTubeショート', v.url)));
     list.innerHTML = out.join('');
     if (d.updated) { const u = new Date(d.updated); document.getElementById('upd').textContent = `更新 ${u.getMonth()+1}/${u.getDate()} ${u.getHours()}:${String(u.getMinutes()).padStart(2,'0')}`; }
   }).catch(() => {

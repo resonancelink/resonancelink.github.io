@@ -205,7 +205,7 @@ def build_morning(now):
         "blog": {"items": [], "is_today": False, "top": AMEBLO_TOP},
         "voicy": {"url": VOICY_URL, "note": "毎朝7時更新"},
         "substack": {"items": []},
-        "youtube": {"videos": [], "shorts": [], "live": [], "channel": YT_CHANNEL_URL},
+        "youtube": {"videos": [], "live": [], "channel": YT_CHANNEL_URL},
         "notified_live": prev.get("notified_live", []),
     }
     am = get_ameblo(now)
@@ -235,9 +235,7 @@ def build_morning(now):
             pub = parse_iso(v["published"] or "")
             if v["kind"] in ("live_upcoming", "live_now"):
                 data["youtube"]["live"].append(v)
-            elif v["kind"] == "short":
-                if pub and (now - pub) <= day:
-                    data["youtube"]["shorts"].append(v)
+            # short は欄に出さない(本人の指示 2026-10-10)
             elif v["kind"] == "video":
                 if pub and (now - pub) <= day:
                     data["youtube"]["videos"].append(v)
@@ -287,7 +285,7 @@ def main():
         save(data)
         b = data["blog"]["items"]
         log("朝の更新:", (b[0]["title"] if b else "ブログなし"),
-            f"/ Substack {len(data['substack']['items'])}件 / 動画{len(data['youtube']['videos'])} ショート{len(data['youtube']['shorts'])} ライブ{len(data['youtube']['live'])}")
+            f"/ Substack {len(data['substack']['items'])}件 / 動画{len(data['youtube']['videos'])} ライブ{len(data['youtube']['live'])}")
 
 
 if __name__ == "__main__":
