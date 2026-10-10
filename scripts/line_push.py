@@ -43,7 +43,7 @@ def morning_text(data):
         lines.append(f"▷ブログ「{t}」" + ("" if blog.get("is_today") else "（最新）"))
     lines.append("▷Voicy 朝7時の放送")
     for x in data.get("substack", {}).get("items", [])[:2]:
-        lines.append(f"▷メルマガ「{x['title']}」")
+        lines.append(f"▷メルマガ {x['title']}（今朝8時）" if x.get("by_rule") else f"▷メルマガ「{x['title']}」")
     for v in data.get("youtube", {}).get("videos", [])[:2]:
         lines.append(f"▷YouTube 新しい動画「{v['title']}」")
     today = data.get("date")

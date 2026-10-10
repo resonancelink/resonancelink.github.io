@@ -25,6 +25,10 @@ AMEBLO_RSS = "https://rssblog.ameba.jp/michiyo-hikiyose/rss20.xml"
 AMEBLO_TOP = "https://ameblo.jp/michiyo-hikiyose/"
 VOICY_URL = "https://voicy.jp/channel/1756"
 SUBSTACK_FEED = "https://michiyospiritualcounsellor.substack.com/feed"
+SUBSTACK_TOP = "https://michiyospiritualcounsellor.substack.com/"
+from datetime import date as _date
+SERIAL_START = _date(2026, 7, 18)   # 連載 第1回(土)
+SERIAL_END = _date(2026, 12, 26)    # 第24回
 YT_CHANNEL_ID = "UCM4Cxu05XHKE7H530RbWuYA"
 YT_FEED = f"https://www.youtube.com/feeds/videos.xml?channel_id={YT_CHANNEL_ID}"
 YT_CHANNEL_URL = f"https://www.youtube.com/channel/{YT_CHANNEL_ID}"
@@ -217,7 +221,18 @@ def build_morning(now):
         data["blog"]["stale"] = True
 
     sb = get_substack(now)
-    if sb is not None:
+    if sb is not None and sb["items"]:
+        data["substack"] = sb
+    elif now.weekday() == 5 and SERIAL_START <= now.date() <= SERIAL_END:
+        # 土曜8時の連載は曜日ルールで必ず載せる(取得が弾かれても落とさない・本人決定 2026-10-10)
+        n = (now.date() - SERIAL_START).days // 7 + 1
+        data["substack"] = {
+            "items": [{"title": f"連載 第{n}回『AIに悩みを話せる時代に、それでも自分と対話する理由』", "url": SUBSTACK_TOP,
+                        "date": now.replace(hour=8, minute=0).isoformat(timespec="minutes"), "by_rule": True}],
+            "week": (sb or {}).get("week") if sb else prev.get("substack", {}).get("week"),
+            "stale": sb is None,
+        }
+    elif sb is not None:
         data["substack"] = sb
     else:
         # 弾かれた日: 前回のitemsのうち26時間以内のものだけ残す
