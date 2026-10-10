@@ -17,9 +17,15 @@
   "note": "毎朝7時更新"
  },
  "substack": {
-  "items": [],
-  "week": null,
-  "stale": true
+  "items": [
+   {
+    "title": "連載 第13回『AIに悩みを話せる時代に、それでも自分と対話する理由』",
+    "url": "https://michiyospiritualcounsellor.substack.com/",
+    "date": "2026-10-10T08:00+09:00",
+    "by_rule": true
+   }
+  ],
+  "week": null
  },
  "youtube": {
   "videos": [],
