@@ -1,9 +1,31 @@
 {
  "date": "2026-10-10",
- "updated": "2026-10-10T15:00+09:00",
- "blog": {"items": [{"title": "（初回の自動更新で、今日の記事に入れ替わります）", "url": "https://ameblo.jp/michiyo-hikiyose/", "date": null}], "is_today": false, "top": "https://ameblo.jp/michiyo-hikiyose/"},
- "voicy": {"url": "https://voicy.jp/channel/1756", "note": "毎朝7時更新"},
- "substack": {"items": []},
- "youtube": {"videos": [], "live": [], "channel": "https://www.youtube.com/channel/UCM4Cxu05XHKE7H530RbWuYA"},
+ "updated": "2026-10-10T15:52+09:00",
+ "blog": {
+  "items": [
+   {
+    "title": "１０月１０日　「早く決めて」と急かされた時に気づくべきこと",
+    "url": "https://ameblo.jp/michiyo-hikiyose/entry-12980800321.html",
+    "date": "2026-10-10T07:00:00+09:00"
+   }
+  ],
+  "is_today": true,
+  "top": "https://ameblo.jp/michiyo-hikiyose/"
+ },
+ "voicy": {
+  "url": "https://voicy.jp/channel/1756",
+  "note": "毎朝7時更新"
+ },
+ "substack": {
+  "items": [],
+  "week": null,
+  "stale": true
+ },
+ "youtube": {
+  "videos": [],
+  "live": [],
+  "channel": "https://www.youtube.com/channel/UCM4Cxu05XHKE7H530RbWuYA",
+  "stale": true
+ },
  "notified_live": []
 }
