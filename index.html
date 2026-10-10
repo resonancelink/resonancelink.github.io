@@ -235,11 +235,10 @@
   .today-bar .media{display:flex;flex-wrap:wrap;gap:8px 10px;margin:14px 0 0 46px}
   .today-bar .m{display:inline-flex;align-items:center;gap:6px;font-size:12px;letter-spacing:.1em;color:var(--ink-soft);
     border:1px solid rgba(110,151,160,.22);border-radius:999px;padding:5px 12px 5px 8px;background:rgba(255,255,255,.55);opacity:.5;transition:opacity .5s,background .5s,border-color .5s}
-  .today-bar .m svg{width:16px;height:16px;flex-shrink:0;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+  .today-bar .m img{width:18px;height:18px;flex-shrink:0;border-radius:5px;object-fit:cover;filter:grayscale(1);transition:filter .5s}
   .today-bar .m.on{opacity:1;color:var(--ink);border-color:rgba(196,168,96,.6);background:rgba(255,255,255,.92);box-shadow:0 3px 12px rgba(184,150,74,.14)}
-  .today-bar .m.on svg{color:#b8964a}
+  .today-bar .m.on img{filter:none}
   .today-bar .m.live.on{border-color:rgba(168,104,127,.6)}
-  .today-bar .m.live.on svg{color:var(--accent)}
   @media (max-width:640px){
     .bars{margin-top:30px;gap:10px}
     .start-bar a,.weekly .line{gap:10px;padding:12px 16px 12px 14px;flex-wrap:wrap}
@@ -902,12 +901,12 @@ createWater(document.getElementById('water'), {flakes:true, hover:65, click:420,
     </span>
     <span class="d" id="tdText">きょうの配信を、ここ一か所で。</span>
     <span class="media" id="tdMedia">
-      <span class="m" data-k="blog"><svg viewBox="0 0 24 24"><path d="M4 20h4l10-10-4-4L4 16v4z"/><path d="M13 7l4 4"/></svg>ブログ</span>
-      <span class="m" data-k="voicy"><svg viewBox="0 0 24 24"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0"/><path d="M12 18v3"/></svg>Voicy</span>
-      <span class="m" data-k="mail"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>メルマガ</span>
-      <span class="m" data-k="video"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="M10 9l5 3-5 3z"/></svg>YouTube</span>
-      <span class="m" data-k="short"><svg viewBox="0 0 24 24"><rect x="7" y="3" width="10" height="18" rx="2.5"/><path d="M10.5 9.5l4 2.5-4 2.5z"/></svg>ショート</span>
-      <span class="m live" data-k="live"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="2.5"/><path d="M7.5 7.5a6.5 6.5 0 0 0 0 9"/><path d="M16.5 7.5a6.5 6.5 0 0 1 0 9"/><path d="M4.5 4.5a10.5 10.5 0 0 0 0 15"/><path d="M19.5 4.5a10.5 10.5 0 0 1 0 15"/></svg>ライブ</span>
+      <span class="m" data-k="blog"><img src="https://angelswayhealing.com/icon/ameba.png" alt="Ameblo" loading="lazy">ブログ</span>
+      <span class="m" data-k="voicy"><img src="https://angelswayhealing.com/icon/voicy.png" alt="Voicy" loading="lazy">Voicy</span>
+      <span class="m" data-k="mail"><img src="https://angelswayhealing.com/icon/Substack.png" alt="Substack" loading="lazy">メルマガ</span>
+      <span class="m" data-k="video"><img src="https://angelswayhealing.com/icon/youtube.png" alt="YouTube" loading="lazy">YouTube</span>
+      <span class="m" data-k="short"><img src="https://angelswayhealing.com/icon/youtube.png" alt="YouTube" loading="lazy">ショート</span>
+      <span class="m live" data-k="live"><img src="https://angelswayhealing.com/icon/youtube.png" alt="YouTube" loading="lazy">ライブ</span>
     </span>
   </a>
 </section>
