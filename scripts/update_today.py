@@ -220,28 +220,25 @@ def build_morning(now):
         data["blog"]["is_today"] = False
         data["blog"]["stale"] = True
 
-    sb = get_substack(now)
-    if sb is not None and sb["items"]:
-        data["substack"] = sb
-    elif now.weekday() == 5 and SERIAL_START <= now.date() <= SERIAL_END:
-        # 土曜8時の連載は曜日ルールで必ず載せる(取得が弾かれても落とさない・本人決定 2026-10-10)
+    # Substack は毎朝8時配信(7:20時点では未公開)なので取りに行かず、曜日ルールで載せる(本人決定 2026-10-10)
+    #   土曜 = 連載 第N回(7/18起点・12/26の第24回まで) / 火曜 = 今週のお便り / それ以外 = 行なし
+    wd = now.weekday()
+    sub_items = []
+    if wd == 5 and SERIAL_START <= now.date() <= SERIAL_END:
         n = (now.date() - SERIAL_START).days // 7 + 1
-        data["substack"] = {
-            "items": [{"title": f"連載 第{n}回『AIに悩みを話せる時代に、それでも自分と対話する理由』", "url": SUBSTACK_TOP,
-                        "date": now.replace(hour=8, minute=0).isoformat(timespec="minutes"), "by_rule": True}],
-            "week": (sb or {}).get("week") if sb else prev.get("substack", {}).get("week"),
-            "stale": sb is None,
-        }
-    elif sb is not None:
-        data["substack"] = sb
-    else:
-        # 弾かれた日: 前回のitemsのうち26時間以内のものだけ残す
-        keep = []
-        for x in prev.get("substack", {}).get("items", []):
-            d = parse_iso(x.get("date") or "")
-            if d and (now - d) <= timedelta(hours=26):
-                keep.append(x)
-        data["substack"] = {"items": keep, "week": prev.get("substack", {}).get("week"), "stale": True}
+        sub_items = [{"title": f"連載 第{n}回『AIに悩みを話せる時代に、それでも自分と対話する理由』", "url": SUBSTACK_TOP,
+                      "date": now.replace(hour=8, minute=0).isoformat(timespec="minutes"), "by_rule": True}]
+    elif wd == 1:
+        sub_items = [{"title": "今週のお便り", "url": SUBSTACK_TOP,
+                      "date": now.replace(hour=8, minute=0).isoformat(timespec="minutes"), "by_rule": True}]
+    # 「今週のメルマガ」(/today/ の見出し用)は直近の土曜の連載を8日間残す
+    week = None
+    days_since_sat = (wd - 5) % 7
+    last_sat = now.date() - timedelta(days=days_since_sat)
+    if SERIAL_START <= last_sat <= SERIAL_END:
+        n = (last_sat - SERIAL_START).days // 7 + 1
+        week = {"title": f"連載 第{n}回", "url": SUBSTACK_TOP, "date": last_sat.isoformat()}
+    data["substack"] = {"items": sub_items, "week": week}
 
     yt = get_youtube(now)
     if yt is not None:

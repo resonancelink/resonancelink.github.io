@@ -25,7 +25,7 @@ resonancelink.com として GitHub Pages で公開するためのファイル一
 - `.github/workflows/today.yml` … 上の2つを毎朝7:20 JSTと毎時07分に自動実行し、変更をコミットする(GitHub Actions)
 
 ## 自動更新について(2026-10-10〜)
-- 毎朝7:20 JST: today.json を更新 → コミット → LINEに朝の1通(メルマガは出た日に「今日のみちよ」に入り、/today/ には「今週のメルマガ」として8日間残る)
+- 毎朝7:20 JST: today.json を更新 → コミット → LINEに朝の1通(メルマガは毎朝8時配信で7:20には未公開のため取りに行かず、曜日ルールで載せる: 土曜=連載 第N回・火曜=今週のお便り。/today/ には直近の連載が「今週のメルマガ」として残る)
 - 毎時07分: YouTubeの予定ライブを見張り、新しい予約が公開されていればLINEに1通(1ライブ1回)
 - LINEの鍵: GitHub の Settings → Secrets and variables → Actions → New repository secret → Name `LINE_CHANNEL_TOKEN`。鍵が無い間は送信しない
 - **注意: この仕組みがリポジトリに毎日コミットするので、PCのクローンから push する前に必ず `git pull` する**(Claude Codeに頼むときは「pull してから commit と push」と書く)
