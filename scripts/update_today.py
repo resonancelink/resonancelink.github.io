@@ -54,7 +54,7 @@ def fetch(url, tries=3, timeout=30):
                 return r.read()
         except urllib.error.HTTPError as e:
             last = f"HTTP {e.code}"
-            if e.code not in (403, 429, 500, 502, 503, 504):
+            if e.code not in (403, 404, 429, 500, 502, 503, 504):
                 break
         except Exception as e:  # URLError, timeout
             last = str(e)
@@ -188,7 +188,7 @@ def is_short_by_url(video_id, page_html=""):
 
 
 def get_youtube(now, max_check=8):
-    raw = fetch(YT_FEED, tries=3, timeout=30)
+    raw = fetch(YT_FEED, tries=5, timeout=30)
     if not raw:
         return None
     ns = {"a": "http://www.w3.org/2005/Atom", "yt": "http://www.youtube.com/xml/schemas/2015"}
@@ -204,6 +204,9 @@ def get_youtube(now, max_check=8):
         if not vid:
             continue
         info = yt_video_info(vid) or {"kind": "video", "start": None, "length": None}
+        tl = title.lower()
+        if info["kind"] == "video" and ("#ショート" in tl or "#short" in tl):
+            info["kind"] = "short"   # 動画ページが読めなかった日も、題名の #ショート で判定する
         time.sleep(1.5)
         entries.append({
             "id": vid, "title": title, "url": f"https://www.youtube.com/watch?v={vid}",
@@ -279,8 +282,16 @@ def build_morning(now):
                     data["youtube"]["videos"].append(v)
             # live_ended は欄に出さない
     else:
-        data["youtube"] = prev.get("youtube", data["youtube"])
-        data["youtube"]["stale"] = True
+        # YouTubeが読めなかった日は前回の内容を使うが、「新しい動画」は26時間以内のものだけ残す(古い動画を毎日載せない)
+        pv = prev.get("youtube", {})
+        day = timedelta(hours=26)
+        keep = []
+        for v in pv.get("videos", []):
+            pub = parse_iso(v.get("published") or "")
+            tl = (v.get("title") or "").lower()
+            if pub and (now - pub) <= day and "#ショート" not in tl and "#short" not in tl:
+                keep.append(v)
+        data["youtube"] = {"videos": keep, "live": pv.get("live", []), "channel": YT_CHANNEL_URL, "stale": True}
     return data
 
 
