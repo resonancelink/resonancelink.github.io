@@ -8,7 +8,7 @@
 鍵は環境変数 LINE_CHANNEL_TOKEN(GitHub Secrets に置く)。無ければ「送ったつもり」の文面だけ表示して終わる(ドライラン)。
 文面の型は固定: 絵文字なし・「!」なし・講座やイベントの案内は混ぜない。
 """
-import json, os, sys, urllib.request, urllib.error
+import json, os, sys, time, uuid, urllib.request, urllib.error
 from datetime import datetime, timedelta, timezone
 
 JST = timezone(timedelta(hours=9))
@@ -57,7 +57,9 @@ def morning_text(data):
         if st and st[:10] == today:
             try:
                 d = datetime.fromisoformat(st).astimezone(JST)
-                lines.append(f"▷今夜{d.hour}時から YouTubeライブ")
+                when = "今夜" if d.hour >= 18 else "今日"
+                mm = f"{d.minute:02d}分" if d.minute else ""
+                lines.append(f"▷{when}{d.hour}時{mm}から YouTubeライブ")
             except Exception:
                 lines.append("▷今日 YouTubeライブ")
     lines.append(f"→ {TODAY_URL}")
@@ -70,13 +72,41 @@ def live_text(v):
     return "\n".join([head, "よかったら、ゆっくりどうぞ。", v["url"]])
 
 
-def broadcast(text, token):
+def retry_key(seed):
+    """同じ内容を二度送らないための鍵(LINEの X-Line-Retry-Key)。
+    朝の1通は「その日付」、ライブ通知は「その動画ID」から毎回同じUUIDを作るので、
+    通信エラーや再実行で同じ便をもう一度送っても、LINE側で1通にまとめられる。"""
+    return str(uuid.uuid5(uuid.NAMESPACE_URL, "https://resonancelink.com/today/line/" + seed))
+
+
+def broadcast(text, token, key, tries=4):
+    """送信。失敗しても諦めずに少し待って再送する(最大 tries 回)。
+    戻り: HTTPステータス。409(同じ鍵で送信済み)は「もう届いている」ので成功扱い。"""
     body = json.dumps({"messages": [{"type": "text", "text": text}]}).encode("utf-8")
-    req = urllib.request.Request(
-        "https://api.line.me/v2/bot/message/broadcast", data=body, method="POST",
-        headers={"Content-Type": "application/json", "Authorization": f"Bearer {token}"})
-    with urllib.request.urlopen(req, timeout=30) as r:
-        return r.status
+    last = None
+    for i in range(tries):
+        if i:
+            time.sleep(15 * i)
+        req = urllib.request.Request(
+            "https://api.line.me/v2/bot/message/broadcast", data=body, method="POST",
+            headers={"Content-Type": "application/json", "Authorization": f"Bearer {token}",
+                     "X-Line-Retry-Key": key})
+        try:
+            with urllib.request.urlopen(req, timeout=30) as r:
+                return r.status
+        except urllib.error.HTTPError as e:
+            detail = e.read().decode("utf-8", "ignore")[:300]
+            if e.code == 409:
+                print(f"[line] 同じ鍵で送信済み(HTTP 409) → 届いているので成功扱い: {detail}")
+                return 409
+            print(f"[line] 送信失敗 HTTP {e.code} ({i+1}/{tries}): {detail}")
+            last = e
+            if e.code in (400, 401, 403, 404):   # 鍵が無効・文面が不正など、待っても直らないもの
+                raise
+        except Exception as e:
+            print(f"[line] 送信失敗 ({i+1}/{tries}): {e}")
+            last = e
+    raise last
 
 
 def main():
@@ -89,10 +119,12 @@ def main():
     if mode == "morning":
         texts = [morning_text(data)]
         ids = []
+        keys = [retry_key("morning/" + str(data.get("date", "")))]
     else:
         fresh = load(FRESH_JSON, [])
         texts = [live_text(v) for v in fresh]
         ids = [v["id"] for v in fresh]
+        keys = [retry_key("live/" + v["id"]) for v in fresh]
         if not texts:
             print("[line] 新しい予定ライブはありません"); return 0
 
@@ -103,15 +135,12 @@ def main():
             print("[line] LINE_CHANNEL_TOKEN が無いので送信しません(ドライラン)")
             continue
         try:
-            st = broadcast(text, token)
+            st = broadcast(text, token, keys[i])
             print(f"[line] 送信しました (HTTP {st})")
             if ids:
                 sent_ids.append(ids[i])
-        except urllib.error.HTTPError as e:
-            print(f"[line] 送信失敗 HTTP {e.code}: {e.read().decode('utf-8','ignore')[:300]}")
-            return 1
         except Exception as e:
-            print(f"[line] 送信失敗: {e}")
+            print(f"[line] 送信を諦めました: {e}")
             return 1
 
     if mode == "live" and sent_ids:

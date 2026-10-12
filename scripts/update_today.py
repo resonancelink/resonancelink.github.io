@@ -162,9 +162,29 @@ def yt_video_info(video_id):
         info["kind"] = "live_upcoming"
     elif is_live_content:
         info["kind"] = "live_ended"
-    elif info["length"] is not None and info["length"] <= 60 and info["length"] > 0:
+    elif info["length"] is not None and 0 < info["length"] <= 60:
+        info["kind"] = "short"
+    elif is_short_by_url(video_id, s):
+        # 60秒を超えるショート(YouTubeは最長3分まで)も「ショート」扱いにする(欄にもLINEにも出さない・本人指示 2026-10-10)
         info["kind"] = "short"
     return info
+
+
+def is_short_by_url(video_id, page_html=""):
+    """ショートかどうかの追加判定。
+    1) 題名に #ショート / #shorts があればショート
+    2) https://www.youtube.com/shorts/<id> を開いて、/watch に転送されなければショート(転送されれば普通の動画)
+    判定できなければ False(普通の動画扱い)。"""
+    m = re.search(r'"title":"([^"]*)"', page_html)
+    title = (m.group(1) if m else "").lower()
+    if "#ショート" in title or "#short" in title:
+        return True
+    try:
+        req = urllib.request.Request(f"https://www.youtube.com/shorts/{video_id}", headers=HEADERS)
+        with urllib.request.urlopen(req, timeout=30) as r:
+            return "/shorts/" in r.geturl()
+    except Exception:
+        return False
 
 
 def get_youtube(now, max_check=8):
