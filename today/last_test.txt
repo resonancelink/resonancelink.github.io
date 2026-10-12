@@ -1,0 +1,70 @@
+テスト実行: 2026-10-12 09:49 JST(送信していません)
+===== 今日の today.json =====
+[today] 取得失敗 https://www.youtube.com/feeds/videos.xml?channel_id=UCM4Cxu05XHKE7H530RbWuYA (HTTP 404)
+[today] 朝の更新: １０月１２日　お守りに込める本当のパワー / Substack 0件 / 動画1 ライブ1
+{
+ "date": "2026-10-12",
+ "updated": "2026-10-12T09:49+09:00",
+ "blog": {
+  "items": [
+   {
+    "title": "１０月１２日　お守りに込める本当のパワー",
+    "url": "https://ameblo.jp/michiyo-hikiyose/entry-12980041477.html",
+    "date": "2026-10-12T07:00:00+09:00"
+   }
+  ],
+  "is_today": true,
+  "top": "https://ameblo.jp/michiyo-hikiyose/"
+ },
+ "voicy": {
+  "url": "https://voicy.jp/channel/1756",
+  "note": "毎朝7時更新"
+ },
+ "substack": {
+  "items": [],
+  "week": {
+   "title": "連載 第13回",
+   "url": "https://michiyospiritualcounsellor.substack.com/",
+   "date": "2026-10-10"
+  }
+ },
+ "youtube": {
+  "videos": [
+   {
+    "id": "QAUJanSQoD0",
+    "title": "恩を仇で返された。その優しさ、自己犠牲です #ショート #スピリチュアル #人間関係",
+    "url": "https://www.youtube.com/watch?v=QAUJanSQoD0",
+    "published": "2026-10-10T20:00:17+09:00",
+    "kind": "video",
+    "start": null,
+    "length": null
+   }
+  ],
+  "live": [
+   {
+    "id": "vkufFGzbBj4",
+    "title": "２０２６年１０月１２日YouTubeライブ！スピリチュアルカウンセラーみちよ",
+    "url": "https://www.youtube.com/watch?v=vkufFGzbBj4",
+    "published": "2026-10-09T14:02:36+09:00",
+    "kind": "live_upcoming",
+    "start": "2026-10-12T15:00:00+09:00",
+    "length": 0
+   }
+  ],
+  "channel": "https://www.youtube.com/channel/UCM4Cxu05XHKE7H530RbWuYA",
+  "stale": true
+ },
+ "notified_live": [
+  "vkufFGzbBj4"
+ ]
+}
+===== 朝の1通(ドライラン・送信しない) =====
+----- 文面 -----
+おはようございます。今日のみちよです。
+▷ブログ「１０月１２日　お守りに込める本当のパワー」
+▷Voicy 朝7時の放送
+▷YouTube 新しい動画「恩を仇で返された。その優しさ、自己犠牲です #ショート #スピリチュアル #人間関係」
+▷今日15時から YouTubeライブ
+→ https://resonancelink.com/today/
+----------------
+[line] LINE_CHANNEL_TOKEN が無いので送信しません(ドライラン)
