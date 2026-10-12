@@ -1,12 +1,12 @@
 {
- "date": "2026-10-11",
- "updated": "2026-10-12T07:49+09:00",
+ "date": "2026-10-12",
+ "updated": "2026-10-12T09:38+09:00",
  "blog": {
   "items": [
    {
-    "title": "１０月１１日　シンクロに動かされた推し活【大阪～山形】",
-    "url": "https://ameblo.jp/michiyo-hikiyose/entry-12980800362.html",
-    "date": "2026-10-11T07:00:00+09:00"
+    "title": "１０月１２日　お守りに込める本当のパワー",
+    "url": "https://ameblo.jp/michiyo-hikiyose/entry-12980041477.html",
+    "date": "2026-10-12T07:00:00+09:00"
    }
   ],
   "is_today": true,
@@ -47,7 +47,8 @@
     "length": 0
    }
   ],
-  "channel": "https://www.youtube.com/channel/UCM4Cxu05XHKE7H530RbWuYA"
+  "channel": "https://www.youtube.com/channel/UCM4Cxu05XHKE7H530RbWuYA",
+  "stale": true
  },
  "notified_live": [
   "vkufFGzbBj4"
