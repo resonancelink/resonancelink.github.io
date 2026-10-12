@@ -1,13 +1,17 @@
 # 「今日のみちよ」の自動更新 + LINE配信
 #  - 毎朝 06:50 JST起動(遅延込みで7時台に届く): 今日のブログが出るまで待ってから today/today.json → コミット → LINEに朝の1通
 #  - 毎時 :07     : YouTubeの予定ライブを見張り、新しい予約があれば LINEに1通(1ライブ1回)
+#  - 保険(2026-10-12追加): GitHubの定時実行は遅れるだけでなく丸ごと飛ぶことがある(10/12の朝がそうだった)。
+#    そこで「どの予約で起動しても、今日の朝の1通がまだ出ていなければ(today.json の date が今日より前で、6:45 JST以降なら)朝の便として動く」。
+#    朝の便が済めば today.json の date が今日になるので、同じ日に二度は送らない。
 # LINEの鍵は Settings → Secrets and variables → Actions → LINE_CHANNEL_TOKEN。無い間は文面を出すだけ(送らない)。
 name: today
 
 on:
   schedule:
     - cron: "50 21 * * *"   # 06:50 JST に起動(GitHubの定時実行は遅れるため早めに。今日のブログが出るまで最大7:30まで待つ)
-    - cron: "7 * * * *"     # 毎時07分 ライブ見張り
+    - cron: "25 22 * * *"   # 07:25 JST 保険(6:50の便が飛んだとき用。朝の便が済んでいればライブ見張りになる)
+    - cron: "7 * * * *"     # 毎時07分 ライブ見張り(朝の便がまだなら朝の便として動く)
   workflow_dispatch:
     inputs:
       mode:
@@ -33,10 +37,22 @@ jobs:
         run: |
           if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
             echo "mode=${{ github.event.inputs.mode }}" >> "$GITHUB_OUTPUT"
-          elif [ "${{ github.event.schedule }}" = "50 21 * * *" ]; then
-            echo "mode=morning" >> "$GITHUB_OUTPUT"
           else
-            echo "mode=live" >> "$GITHUB_OUTPUT"
+            # 予約起動: today.json の date が今日(JST)より前で、6:45 JST を過ぎていれば朝の便。それ以外はライブ見張り
+            mode=$(python3 - <<'PY'
+          import json, datetime
+          jst = datetime.timezone(datetime.timedelta(hours=9))
+          now = datetime.datetime.now(jst)
+          try:
+              last = json.load(open("today/today.json", encoding="utf-8")).get("date", "")
+          except Exception:
+              last = ""
+          today = now.strftime("%Y-%m-%d")
+          print("morning" if (last < today and (now.hour, now.minute) >= (6, 45)) else "live")
+          PY
+          )
+            echo "today.json の date と現在時刻から判定: $mode"
+            echo "mode=$mode" >> "$GITHUB_OUTPUT"
           fi
 
       - name: 朝の更新(today.json)
