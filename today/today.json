@@ -1,6 +1,6 @@
 {
  "date": "2026-10-12",
- "updated": "2026-10-12T09:39+09:00",
+ "updated": "2026-10-12T19:39+09:00",
  "blog": {
   "items": [
    {
@@ -36,17 +36,7 @@
     "length": null
    }
   ],
-  "live": [
-   {
-    "id": "vkufFGzbBj4",
-    "title": "２０２６年１０月１２日YouTubeライブ！スピリチュアルカウンセラーみちよ",
-    "url": "https://www.youtube.com/watch?v=vkufFGzbBj4",
-    "published": "2026-10-09T14:02:36+09:00",
-    "kind": "live_upcoming",
-    "start": "2026-10-12T15:00:00+09:00",
-    "length": 0
-   }
-  ],
+  "live": [],
   "channel": "https://www.youtube.com/channel/UCM4Cxu05XHKE7H530RbWuYA",
   "stale": true
  },
