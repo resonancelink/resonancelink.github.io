@@ -1,10 +1,10 @@
-テスト実行: 2026-10-12 09:49 JST(送信していません)
+テスト実行: 2026-10-12 09:51 JST(送信していません)
 ===== 今日の today.json =====
 [today] 取得失敗 https://www.youtube.com/feeds/videos.xml?channel_id=UCM4Cxu05XHKE7H530RbWuYA (HTTP 404)
-[today] 朝の更新: １０月１２日　お守りに込める本当のパワー / Substack 0件 / 動画1 ライブ1
+[today] 朝の更新: １０月１２日　お守りに込める本当のパワー / Substack 0件 / 動画0 ライブ1
 {
  "date": "2026-10-12",
- "updated": "2026-10-12T09:49+09:00",
+ "updated": "2026-10-12T09:51+09:00",
  "blog": {
   "items": [
    {
@@ -29,17 +29,7 @@
   }
  },
  "youtube": {
-  "videos": [
-   {
-    "id": "QAUJanSQoD0",
-    "title": "恩を仇で返された。その優しさ、自己犠牲です #ショート #スピリチュアル #人間関係",
-    "url": "https://www.youtube.com/watch?v=QAUJanSQoD0",
-    "published": "2026-10-10T20:00:17+09:00",
-    "kind": "video",
-    "start": null,
-    "length": null
-   }
-  ],
+  "videos": [],
   "live": [
    {
     "id": "vkufFGzbBj4",
@@ -63,7 +53,6 @@
 おはようございます。今日のみちよです。
 ▷ブログ「１０月１２日　お守りに込める本当のパワー」
 ▷Voicy 朝7時の放送
-▷YouTube 新しい動画「恩を仇で返された。その優しさ、自己犠牲です #ショート #スピリチュアル #人間関係」
 ▷今日15時から YouTubeライブ
 → https://resonancelink.com/today/
 ----------------
