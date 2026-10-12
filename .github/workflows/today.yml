@@ -101,17 +101,25 @@ jobs:
             done
           fi
 
-      # ---- test: 送らずに、今日の文面と判定結果だけ確認する(today.json は書き換えない) ----
+      # ---- test: 送らずに、今日の文面と判定結果だけ確認する(today.json は書き換えず、結果は today/last_test.txt に残す) ----
       - name: テスト(送らずに文面を確認)
         if: steps.mode.outputs.mode == 'test'
         env:
           TODAY_NO_WAIT: "1"
         run: |
-          cp today/today.json /tmp/today.bak.json
-          python3 scripts/update_today.py
-          echo "===== 今日の today.json ====="
-          cat today/today.json
-          echo "===== 朝の1通(ドライラン・送信しない) ====="
-          python3 scripts/line_push.py morning
+          {
+            echo "テスト実行: $(TZ=Asia/Tokyo date '+%Y-%m-%d %H:%M') JST(送信していません)"
+            echo "===== 今日の today.json ====="
+            python3 scripts/update_today.py 2>&1
+            cat today/today.json
+            echo "===== 朝の1通(ドライラン・送信しない) ====="
+            python3 scripts/line_push.py morning 2>&1
+          } | tee today/last_test.txt
+          cat today/last_test.txt >> "$GITHUB_STEP_SUMMARY"
           git checkout -- today/today.json
           rm -f today/fresh_live.json
+          git config user.name "today-bot"
+          git config user.email "today-bot@users.noreply.github.com"
+          git add today/last_test.txt
+          git commit -m "today: テスト結果 [skip ci]" || true
+          git pull --rebase origin main && git push || true
