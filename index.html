@@ -366,13 +366,15 @@
   .intro figcaption .nm{font-size:16px;font-weight:600;letter-spacing:.3em;color:var(--ink)}
   .intro figcaption .ttl{margin-left:.6em;font-size:12.5px;letter-spacing:.16em;color:var(--accent)}
   .intro figcaption .sm{display:block;font-size:11.5px;letter-spacing:.06em;color:var(--ink-soft)}
-  .intro figcaption .official{display:inline-flex;align-items:center;gap:10px;margin-top:14px;padding:10px 22px;border-radius:999px;
-    text-decoration:none;color:#5a4420;font-size:13.5px;font-weight:600;letter-spacing:.12em;
-    background:linear-gradient(135deg,#f6ead0,#e9d49e);border:1px solid rgba(201,168,106,.55);
-    box-shadow:0 4px 14px rgba(201,168,106,.22);transition:transform .25s,box-shadow .25s}
-  .intro figcaption .official:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(201,168,106,.32)}
-  .intro figcaption .official .arr{font-size:13px;opacity:.8}
-  @media (max-width:640px){.intro figcaption .official{margin-top:12px;padding:12px 24px;font-size:14.5px}}
+  .intro figcaption .official{display:inline-flex;align-items:baseline;gap:9px;margin-top:12px;padding:7px 18px 6px;border-radius:999px;
+    text-decoration:none;color:var(--accent);border:1px solid rgba(168,104,127,.45);background:rgba(255,255,255,.55);
+    transition:background .25s,box-shadow .25s,transform .25s}
+  .intro figcaption .official:hover{background:rgba(255,244,246,.95);box-shadow:0 6px 16px rgba(168,104,127,.18);transform:translateY(-1px)}
+  .intro figcaption .official .en{font-family:"Didot","Bodoni 72","Cormorant Garamond","Garamond","Times New Roman",serif;font-style:italic;
+    font-size:14.5px;letter-spacing:.14em;font-weight:400}
+  .intro figcaption .official .jp{font-size:11.5px;letter-spacing:.16em;font-weight:500;opacity:.9}
+  .intro figcaption .official .arr{font-size:11px;opacity:.7}
+  @media (max-width:640px){.intro figcaption .official{margin-top:12px;padding:8px 20px 7px}.intro figcaption .official .en{font-size:15.5px}.intro figcaption .official .jp{font-size:12.5px}}
   .intro .txt{text-align:left;max-width:480px}
   .intro .txt .kicker{text-align:left;text-indent:0;margin-bottom:18px}
   .intro .ilead{color:var(--ink)}
@@ -1034,7 +1036,7 @@ createWater(document.getElementById('water'), {flakes:true, hover:65, click:420,
       <figcaption><span class="nm">みちよ</span><span class="ttl">スピリチュアルカウンセラー</span>
         <span class="sm">カウンセラー歴約20年・累計7000人以上をリーディング・著書10冊超</span>
         <!-- 写真の下にオフィシャルサイトへの入口(本人指定・2026-10-13) -->
-        <a class="official" href="https://angelswayhealing.com/" target="_blank" rel="noopener"><span class="lbl">MICHIYO オフィシャルサイト</span><span class="arr">→</span></a></figcaption>
+        <a class="official" href="https://angelswayhealing.com/" target="_blank" rel="noopener"><span class="en">Official Site</span><span class="jp">オフィシャルサイトへ</span><span class="arr">→</span></a></figcaption>
     </figure>
     <div class="txt">
       <p class="kicker"><svg class="sg" aria-hidden="true"><use href="#sg-seed"/></svg>この研究所について</p>
