@@ -1,12 +1,12 @@
 {
- "date": "2026-10-13",
- "updated": "2026-10-14T03:11+09:00",
+ "date": "2026-10-14",
+ "updated": "2026-10-14T07:16+09:00",
  "blog": {
   "items": [
    {
-    "title": "１０月１３日　ひとりで寂しいと感じる時に知ってほしいこと",
-    "url": "https://ameblo.jp/michiyo-hikiyose/entry-12980041443.html",
-    "date": "2026-10-13T07:00:00+09:00"
+    "title": "１０月１４日　パートナーが「わかってくれない」理由",
+    "url": "https://ameblo.jp/michiyo-hikiyose/entry-12980800445.html",
+    "date": "2026-10-14T07:00:00+09:00"
    }
   ],
   "is_today": true,
@@ -17,14 +17,7 @@
   "note": "毎朝7時更新"
  },
  "substack": {
-  "items": [
-   {
-    "title": "今週のお便り",
-    "url": "https://michiyospiritualcounsellor.substack.com/",
-    "date": "2026-10-13T08:00+09:00",
-    "by_rule": true
-   }
-  ],
+  "items": [],
   "week": {
    "title": "連載 第13回",
    "url": "https://michiyospiritualcounsellor.substack.com/",
@@ -32,19 +25,10 @@
   }
  },
  "youtube": {
-  "videos": [
-   {
-    "id": "vkufFGzbBj4",
-    "title": "２０２６年１０月１２日YouTubeライブ！スピリチュアルカウンセラーみちよ",
-    "url": "https://www.youtube.com/watch?v=vkufFGzbBj4",
-    "published": "2026-10-12T16:33:15+09:00",
-    "kind": "video",
-    "start": null,
-    "length": null
-   }
-  ],
+  "videos": [],
   "live": [],
-  "channel": "https://www.youtube.com/channel/UCM4Cxu05XHKE7H530RbWuYA"
+  "channel": "https://www.youtube.com/channel/UCM4Cxu05XHKE7H530RbWuYA",
+  "stale": true
  },
  "notified_live": [
   "vkufFGzbBj4"
