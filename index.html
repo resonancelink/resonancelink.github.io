@@ -260,6 +260,12 @@
     .start-bar .arrow,.weekly .line .arrow{margin-left:auto}
   }
 
+  /* オンラインサロンのバー: はじめての方へと同じ形で、ローズ寄りの薄い塗り。文言(b)は濃く */
+  .salon-bar a{background:linear-gradient(90deg,rgba(255,244,246,.92),rgba(255,255,255,.88));border-color:rgba(168,104,127,.28)}
+  .salon-bar .d{color:var(--ink)}
+  .salon-bar .d b{font-weight:700;color:var(--accent);letter-spacing:.04em}
+  .salon-bar .d .sub{font-size:12.5px}
+  @media (max-width:640px){.salon-bar .arrow{order:2}.salon-bar .d{order:3;display:block;flex-basis:100%;font-size:15.5px;margin-top:2px;padding-left:36px}.salon-bar .d .sub{display:none}}
   /* ---------- 夢診断の予告バー(2027年公開まで、準備中ページ yume/ へ) ---------- */
   .yume-bar{max-width:700px;margin:44px auto 0;padding:0 24px}
   .yume-bar a{display:flex;align-items:center;gap:16px;text-decoration:none;color:#fff;
@@ -314,13 +320,25 @@
     border-radius:999px;padding:13px 38px;
     box-shadow:0 5px 18px rgba(216,167,177,.4);transition:transform .25s, box-shadow .25s}
   .pillbtn:hover{transform:translateY(-2px);box-shadow:0 9px 24px rgba(197,180,227,.5)}
-  /* お知らせの中の「対」(教養科 ⇄ 大阪1DAY): 細い罫で区切り、金のボタンで釣り合いを取る */
+  /* 説明会の日付箱: 金の縁+ごく薄い金の塗りで、日付だけ大きく */
+  .notice .event{max-width:420px;margin:6px auto 28px;padding:20px 24px 18px;border-radius:20px;
+    border:1.5px solid rgba(201,168,106,.55);background:linear-gradient(180deg,rgba(255,250,240,.9),rgba(246,234,208,.55));
+    box-shadow:0 6px 22px rgba(201,168,106,.14)}
+  .notice .ev-k{font-size:13px;letter-spacing:.3em;text-indent:.3em;color:#8a6a2a;font-weight:600;margin:0 0 6px}
+  .notice .ev-date{margin:0;line-height:1.2;color:var(--ink);font-weight:700;letter-spacing:.02em;word-break:keep-all}
+  .notice .ev-date .m,.notice .ev-date .d{font-size:clamp(40px,6vw,52px)}
+  .notice .ev-date .u{font-size:clamp(18px,2.4vw,22px);margin:0 .12em 0 .06em}
+  .notice .ev-date .w{font-size:clamp(18px,2.4vw,22px)}
+  .notice .ev-time{margin:8px 0 0;font-size:14px;letter-spacing:.08em;color:var(--ink-soft);font-weight:500}
+  @media (max-width:640px){.notice .event{padding:18px 16px 16px}.notice .ev-time{font-size:14.5px}}
+  /* お知らせの中の「対」(教養科 ⇄ 手帳の予告): 細い罫で区切る */
   .notice .pair{margin:34px auto 0;padding-top:30px;border-top:1px solid rgba(168,104,127,.22);position:relative}
   .notice .pair::before{content:"";position:absolute;top:-1px;left:50%;width:44px;height:2px;transform:translateX(-50%);border-radius:2px;
     background:linear-gradient(90deg,#D8A7B1,#C5B4E3)}
   .notice .pair-k{font-size:11.5px;letter-spacing:.36em;text-indent:.36em;color:var(--accent);font-weight:600;margin-bottom:12px}
   .notice .pair-name{font-size:clamp(15px,1.8vw,19px);font-weight:600;letter-spacing:.1em;line-height:1.9;margin-bottom:10px;word-break:keep-all}
   .notice .pair-detail{font-size:14.5px;line-height:2.2;letter-spacing:.06em;color:var(--ink-soft);margin-bottom:22px}
+  .notice .pair-sub{display:block;font-size:.8em;font-weight:400;letter-spacing:.08em;color:var(--accent);margin-top:2px}
   .notice .pair-fine{margin-top:14px;font-size:12px;letter-spacing:.1em;color:var(--ink-soft)}
   @media (max-width:640px){.notice .pair-detail br{display:none}.notice .pair-detail{font-size:15px}.notice .pair-fine{font-size:13px}}
   .notice .mail-line{margin-top:26px;font-size:13px;letter-spacing:.12em;color:var(--ink-soft)}
@@ -943,6 +961,15 @@ createWater(document.getElementById('water'), {flakes:true, hover:65, click:420,
   }).catch(() => {});
 })();
 </script>
+<!-- オンラインサロンのバー(2026-10-13追加・本人指定の文言)。DMM「シンクロニシティ∞サロン」へ -->
+<section class="start-bar salon-bar" id="salon">
+  <a href="https://lounge.dmm.com/detail/1986/" target="_blank" rel="noopener">
+    <svg class="sg" aria-hidden="true"><use href="#sg-seed"/></svg>
+    <span class="t">オンラインサロン</span>
+    <span class="d"><b>「すべてはエネルギー」を学ぼう</b><span class="sub"> ── 毎週ライブ</span></span>
+    <span class="arrow">→</span>
+  </a>
+</section>
 <section class="start-bar" id="start">
   <a href="start/">
     <svg class="sg" aria-hidden="true"><use href="#sg-seed"/></svg>
@@ -967,19 +994,25 @@ createWater(document.getElementById('water'), {flakes:true, hover:65, click:420,
 <section class="notice" id="notice">
   <div class="box">
     <p class="kicker"><svg class="sg" aria-hidden="true"><use href="#sg-seed"/></svg>お知らせ</p>
-    <p class="name">スピリチュアル・<wbr>メタサイエンス・<wbr>アカデミー<br>教養科「魂の自立コース」、はじまります</p>
-    <p class="detail">1年かけて、自分に還る学び。みちよ直伝のオンラインコースです。<br>
-    2027年1月開講・募集は10月から始まります。</p>
-    <!-- 教養科の専用LPができたら、下のhrefをLPのURLに差し替えてもよい -->
-    <a class="pillbtn" href="https://spiritualmetascienceacademy.org/" target="_blank" rel="noopener">アカデミー公式サイトへ</a>
-    <!-- 大阪1DAY(2026-10-03): 教養科と対になる「会って話す1日」。満席でもリンクは残す(空席状況は申込ページ側で) -->
+    <p class="name">スピリチュアル・<wbr>メタサイエンス・<wbr>アカデミー<br>教養科「魂の自立コース」、2027年1月開講</p>
+    <p class="detail">知っていることを、生きるところまで。<br>
+    1年かけて、自分に還る学び。みちよ直伝のオンラインコースです。</p>
+    <!-- 説明会の日付を目立たせる箱(本人の希望・2026-10-13)。終わったら消すか、録画案内に差し替える -->
+    <div class="event">
+      <p class="ev-k">無料オンライン説明会</p>
+      <p class="ev-date"><span class="m">10</span><span class="u">月</span><span class="d">17</span><span class="u">日</span><span class="w">（土）</span></p>
+      <p class="ev-time">朝10:00〜11:00 ／ Zoom ／ 参加無料・録画あり</p>
+    </div>
+    <!-- 教養科の募集ページ(LP・Cloudflare Pages)。説明会の申込もここから -->
+    <a class="pillbtn" href="https://tamashii-no-jiritsu.pages.dev/" target="_blank" rel="noopener">コースの案内・説明会のお申込み</a>
+    <!-- 手帳2027(予告)。予約受付が始まったら、下の pair-fine を販売ページへの金ボタン(pillbtn gold)に差し替える -->
     <div class="pair">
-      <p class="pair-k">その前に、会って話す一日</p>
-      <p class="pair-name">10月3日（土）大阪 1DAYセミナー</p>
-      <p class="pair-detail">教養科でひらく「意識＝エネルギーのしくみ」を、先に体で感じる一日。<br>
-      ここで出会った問いが、1年の学びの入口になります。</p>
-      <a class="pillbtn gold" href="https://osaka-1day.osaka-1day.workers.dev/" target="_blank" rel="noopener">大阪1DAYの詳細・お申込み</a>
-      <p class="pair-fine">空席の状況は、申込ページでご確認ください</p>
+      <p class="pair-k">手帳の予告</p>
+      <p class="pair-name">『自分で答えを見つける手帳』2027<br><span class="pair-sub">わたしと対話する my journaling note</span></p>
+      <p class="pair-detail">今年の手帳は、ジャーナリング手帳として生まれ変わります。<br>
+      年初の問いと年末の答え、月ごとのコラム、週末の「わたしとの対話」。<br>
+      数量限定の予約販売・しおり付き・11月下旬お届けの予定です。</p>
+      <p class="pair-fine">予約受付の開始は、このページとメルマガでお知らせします</p>
     </div>
     <p class="mail-line">先行のご案内は、<a href="https://michiyospiritualcounsellor.substack.com/" target="_blank" rel="noopener">メルマガ（無料）</a>でお届けします</p>
   </div>
