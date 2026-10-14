@@ -101,6 +101,9 @@ def broadcast(text, token, key, tries=4):
                 return 409
             print(f"[line] 送信失敗 HTTP {e.code} ({i+1}/{tries}): {detail}")
             last = e
+            if e.code == 429 and "monthly limit" in detail:
+                print("[line] LINE公式アカウントの月間メッセージ上限に到達。再実行しても送れません → プランの確認(LINE Official Account Manager → 設定 → 利用と請求)")
+                raise
             if e.code in (400, 401, 403, 404):   # 鍵が無効・文面が不正など、待っても直らないもの
                 raise
         except Exception as e:

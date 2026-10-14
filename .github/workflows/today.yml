@@ -10,6 +10,8 @@
 #   3. LINE送信は X-Line-Retry-Key(その日付から作る固定の鍵)付きで最大4回まで再送。万一やり直しで同じ便を
 #      送っても、LINE側が同じ鍵として1通にまとめる(二重配信にならない)。
 #   4. checkout は常に main の最新(ref: main)。順番待ちの便が古い today.json を見て二重送信するのを防ぐ。
+#   5. 毎回の便で LINE の「今月の残り通数」を確認し today.json の line_quota に記録(scripts/line_quota.py)。
+#      2026-10-15 に無料プランの月200通を使い切って送れなくなった(HTTP 429)ため。足りない見込みなら Claude の保険①が通知する。
 #
 #  LINEの鍵は Settings → Secrets and variables → Actions → LINE_CHANNEL_TOKEN。無い間は文面を出すだけ(送らない)。
 #  手動実行: Actions タブ → today → Run workflow → mode = morning(朝の便) / live(見張り便) / test(送らずに文面確認)
@@ -77,6 +79,12 @@ jobs:
       - name: ライブ見張り
         if: steps.mode.outputs.mode == 'live'
         run: python3 scripts/update_today.py --live
+
+      - name: LINEの残り通数を確認(today.json に記録。足りない見込みなら保険①が通知する)
+        if: steps.mode.outputs.mode == 'morning' || steps.mode.outputs.mode == 'live'
+        env:
+          LINE_CHANNEL_TOKEN: ${{ secrets.LINE_CHANNEL_TOKEN }}
+        run: python3 scripts/line_quota.py
 
       - name: LINEに送る
         if: steps.mode.outputs.mode == 'morning' || steps.mode.outputs.mode == 'live'

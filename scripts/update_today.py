@@ -234,6 +234,7 @@ def build_morning(now):
         "substack": {"items": []},
         "youtube": {"videos": [], "live": [], "channel": YT_CHANNEL_URL},
         "notified_live": prev.get("notified_live", []),
+        "line_quota": prev.get("line_quota", {}),   # LINEの残り通数の記録(scripts/line_quota.py が更新)
     }
     # GitHubの定時実行は遅れるので朝の便は6:50に起動し、今日のブログ(7:00公開)が出るまで最大 WAIT_UNTIL まで粘る
     am = get_ameblo(now)
