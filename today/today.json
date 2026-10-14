@@ -32,5 +32,19 @@
  },
  "notified_live": [
   "vkufFGzbBj4"
- ]
+ ],
+ "line_quota": {
+  "checked": "2026-10-15T08:21+09:00",
+  "limit": 5000,
+  "used": 312,
+  "history": {
+   "2026-10-15": 312
+  },
+  "remaining": 4688,
+  "daily_est": 22.3,
+  "days_left": 17,
+  "need_est": 357,
+  "status": "ok",
+  "message": "LINE残り 4,688通 / 5,000通(使用 312)。1日約22通×あと16回≒357通必要 → 足りる見込み"
+ }
 }
