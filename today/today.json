@@ -1,12 +1,12 @@
 {
- "date": "2026-10-15",
- "updated": "2026-10-16T04:05+09:00",
+ "date": "2026-10-16",
+ "updated": "2026-10-16T07:13+09:00",
  "blog": {
   "items": [
    {
-    "title": "１０月１５日　衣替えは「今のわたし」を選び直す時間",
-    "url": "https://ameblo.jp/michiyo-hikiyose/entry-12980800491.html",
-    "date": "2026-10-15T07:00:00+09:00"
+    "title": "１０月１６日　お金の循環はこうやって起こす",
+    "url": "https://ameblo.jp/michiyo-hikiyose/entry-12981418370.html",
+    "date": "2026-10-16T07:00:00+09:00"
    }
   ],
   "is_today": true,
@@ -27,14 +27,13 @@
  "youtube": {
   "videos": [],
   "live": [],
-  "channel": "https://www.youtube.com/channel/UCM4Cxu05XHKE7H530RbWuYA",
-  "stale": true
+  "channel": "https://www.youtube.com/channel/UCM4Cxu05XHKE7H530RbWuYA"
  },
  "notified_live": [
   "vkufFGzbBj4"
  ],
  "line_quota": {
-  "checked": "2026-10-16T04:05+09:00",
+  "checked": "2026-10-16T07:13+09:00",
   "limit": 5000,
   "used": 312,
   "history": {
@@ -46,6 +45,6 @@
   "days_left": 16,
   "need_est": 0,
   "status": "ok",
-  "message": "LINE残り 4,688通 / 5,000通(使用 312)。1日約0通×あと16回≒0通必要 → 足りる見込み"
+  "message": "LINE残り 4,688通 / 5,000通(使用 312)。1日約0通×あと15回≒0通必要 → 足りる見込み"
  }
 }
