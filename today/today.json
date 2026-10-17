@@ -1,12 +1,12 @@
 {
- "date": "2026-10-17",
- "updated": "2026-10-18T04:21+09:00",
+ "date": "2026-10-18",
+ "updated": "2026-10-18T07:14+09:00",
  "blog": {
   "items": [
    {
-    "title": "１０月１７日　長年不仲の夫婦関係で考えるべきこと",
-    "url": "https://ameblo.jp/michiyo-hikiyose/entry-12981418421.html",
-    "date": "2026-10-17T07:00:00+09:00"
+    "title": "１０月１８日　秋の夜の内省タイムを健やかにするコツ",
+    "url": "https://ameblo.jp/michiyo-hikiyose/entry-12981418436.html",
+    "date": "2026-10-18T07:00:00+09:00"
    }
   ],
   "is_today": true,
@@ -17,14 +17,7 @@
   "note": "毎朝7時更新"
  },
  "substack": {
-  "items": [
-   {
-    "title": "連載 第14回『AIに悩みを話せる時代に、それでも自分と対話する理由』",
-    "url": "https://michiyospiritualcounsellor.substack.com/",
-    "date": "2026-10-17T08:00+09:00",
-    "by_rule": true
-   }
-  ],
+  "items": [],
   "week": {
    "title": "連載 第14回",
    "url": "https://michiyospiritualcounsellor.substack.com/",
@@ -40,7 +33,7 @@
   "vkufFGzbBj4"
  ],
  "line_quota": {
-  "checked": "2026-10-18T04:21+09:00",
+  "checked": "2026-10-18T07:14+09:00",
   "limit": 5000,
   "used": 557,
   "history": {
@@ -52,8 +45,8 @@
   "remaining": 4443,
   "daily_est": 81.7,
   "days_left": 14,
-  "need_est": 1144,
+  "need_est": 1062,
   "status": "ok",
-  "message": "LINE残り 4,443通 / 5,000通(使用 557)。1日約82通×あと14回≒1,144通必要 → 足りる見込み"
+  "message": "LINE残り 4,443通 / 5,000通(使用 557)。1日約82通×あと13回≒1,062通必要 → 足りる見込み"
  }
 }
