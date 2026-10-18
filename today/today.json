@@ -1,12 +1,12 @@
 {
- "date": "2026-10-18",
- "updated": "2026-10-19T05:35+09:00",
+ "date": "2026-10-19",
+ "updated": "2026-10-19T07:16+09:00",
  "blog": {
   "items": [
    {
-    "title": "１０月１８日　秋の夜の内省タイムを健やかにするコツ",
-    "url": "https://ameblo.jp/michiyo-hikiyose/entry-12981418436.html",
-    "date": "2026-10-18T07:00:00+09:00"
+    "title": "１０月１９日　有言実行しなくても実行はできる",
+    "url": "https://ameblo.jp/michiyo-hikiyose/entry-12981418455.html",
+    "date": "2026-10-19T07:00:00+09:00"
    }
   ],
   "is_today": true,
@@ -33,7 +33,7 @@
   "vkufFGzbBj4"
  ],
  "line_quota": {
-  "checked": "2026-10-19T05:35+09:00",
+  "checked": "2026-10-19T07:16+09:00",
   "limit": 5000,
   "used": 684,
   "history": {
@@ -46,8 +46,8 @@
   "remaining": 4316,
   "daily_est": 93.0,
   "days_left": 13,
-  "need_est": 1209,
+  "need_est": 1116,
   "status": "ok",
-  "message": "LINE残り 4,316通 / 5,000通(使用 684)。1日約93通×あと13回≒1,209通必要 → 足りる見込み"
+  "message": "LINE残り 4,316通 / 5,000通(使用 684)。1日約93通×あと12回≒1,116通必要 → 足りる見込み"
  }
 }
