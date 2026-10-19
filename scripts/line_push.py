@@ -15,7 +15,18 @@ JST = timezone(timedelta(hours=9))
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 TODAY_JSON = os.path.join(ROOT, "today", "today.json")
 FRESH_JSON = os.path.join(ROOT, "today", "fresh_live.json")
-TODAY_URL = "https://resonancelink.com/today/"
+# openExternalBrowser=1 を付けると、LINEはリンクをLINE内ブラウザではなく
+# Safari/Chromeで開く。こうすると、ページ内のVoicyやYouTubeのリンクが
+# そのままアプリに飛ぶ(LINE内ブラウザだとアプリに飛ばない)。
+EXT = "openExternalBrowser=1"
+TODAY_URL = "https://resonancelink.com/today/?" + EXT
+
+
+def ext_url(url):
+    """LINEから外部ブラウザで開かせるためのパラメータを付ける。"""
+    if not url or EXT in url:
+        return url
+    return url + ("&" if "?" in url else "?") + EXT
 WEEKDAYS = "月火水木金土日"
 
 
@@ -69,7 +80,7 @@ def morning_text(data):
 def live_text(v):
     when = fmt_dt(v.get("start") or "")
     head = f"{when}から、YouTubeライブをします。" if when else "YouTubeライブの予定が入りました。"
-    return "\n".join([head, "よかったら、ゆっくりどうぞ。", v["url"]])
+    return "\n".join([head, "よかったら、ゆっくりどうぞ。", ext_url(v["url"])])
 
 
 def retry_key(seed):
