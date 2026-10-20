@@ -331,8 +331,12 @@
   .notice .ev-date .m,.notice .ev-date .d{font-size:clamp(40px,6vw,52px)}
   .notice .ev-date .u{font-size:clamp(18px,2.4vw,22px);margin:0 .12em 0 .06em}
   .notice .ev-date .w{font-size:clamp(18px,2.4vw,22px)}
+  .notice .ev-title{margin:0;line-height:1.4;color:var(--ink);font-weight:700;letter-spacing:.04em;font-size:clamp(22px,3.4vw,28px);word-break:keep-all}
   .notice .ev-time{margin:8px 0 0;font-size:14px;letter-spacing:.08em;color:var(--ink-soft);font-weight:500}
-  @media (max-width:640px){.notice .event{padding:18px 16px 16px}.notice .ev-time{font-size:14.5px}}
+  .notice .ev-note{margin:12px 0 16px;font-size:14px;line-height:2;letter-spacing:.06em;color:var(--ink-soft)}
+  .notice .ev-note strong{color:#8a6a2a;font-weight:700}
+  .notice .event .pillbtn{font-size:14.5px;padding:12px 34px;white-space:nowrap}
+  @media (max-width:640px){.notice .event{padding:18px 16px 16px}.notice .ev-time{font-size:14px}.notice .ev-note{font-size:13.5px;word-break:keep-all}.notice .ev-note br{display:none}}
   /* お知らせの中の「対」(教養科 ⇄ 手帳の予告): 細い罫で区切る */
   .notice .pair{margin:34px auto 0;padding-top:30px;border-top:1px solid rgba(168,104,127,.22);position:relative}
   .notice .pair::before{content:"";position:absolute;top:-1px;left:50%;width:44px;height:2px;transform:translateX(-50%);border-radius:2px;
@@ -1008,14 +1012,18 @@ createWater(document.getElementById('water'), {flakes:true, hover:65, click:420,
     <p class="name">スピリチュアル・<wbr>メタサイエンス・<wbr>アカデミー<br>教養科「魂の自立コース」、2027年1月開講</p>
     <p class="detail">知っていることを、生きるところまで。<br>
     1年かけて、自分に還る学び。みちよ直伝のオンラインコースです。</p>
-    <!-- 説明会の日付を目立たせる箱(本人の希望・2026-10-13)。終わったら消すか、録画案内に差し替える -->
+    <!-- 説明会は10/17に終了→録画申込の案内に差し替え(2026-10-20)。録画は早割締切11/30まで視聴可。フォームはLP側と同じ formman -->
     <div class="event">
       <p class="ev-k">無料オンライン説明会</p>
-      <p class="ev-date"><span class="m">10</span><span class="u">月</span><span class="d">17</span><span class="u">日</span><span class="w">（土）</span></p>
-      <p class="ev-time">朝10:00〜11:00 ／ Zoom ／ 参加無料・録画あり</p>
+      <p class="ev-title">録画で、ご覧いただけます</p>
+      <p class="ev-time">10月17日（土）に開催 ／ 約60分 ／ 視聴無料</p>
+      <p class="ev-note">第1月のレッスンの体験と、1年の歩き方のご案内。<br>
+      お申込みいただくと、<wbr>録画のご案内がメールで届きます。<br>
+      早割締切の<strong>11月30日（月）</strong>までご覧いただけます。</p>
+      <a class="pillbtn gold" href="https://ssl.formman.com/t/T6Pj/" target="_blank" rel="noopener">録画を申し込む</a>
     </div>
-    <!-- 教養科の募集ページ(LP・Cloudflare Pages)。説明会の申込もここから -->
-    <a class="pillbtn" href="https://tamashii-no-jiritsu.pages.dev/" target="_blank" rel="noopener">コースの案内・説明会のお申込み</a>
+    <!-- 教養科の募集ページ(LP・Cloudflare Pages) -->
+    <a class="pillbtn" href="https://tamashii-no-jiritsu.pages.dev/" target="_blank" rel="noopener">コースの案内・お申込み</a>
     <!-- 手帳2027(予告)。予約受付が始まったら、下の pair-fine を販売ページへの金ボタン(pillbtn gold)に差し替える -->
     <div class="pair">
       <p class="pair-k">手帳の予告</p>
