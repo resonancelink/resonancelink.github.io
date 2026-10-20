@@ -1,12 +1,12 @@
 {
- "date": "2026-10-20",
- "updated": "2026-10-21T05:32+09:00",
+ "date": "2026-10-21",
+ "updated": "2026-10-21T07:16+09:00",
  "blog": {
   "items": [
    {
-    "title": "１０月２０日　今さら「もう遅い」と思ってしまう時",
-    "url": "https://ameblo.jp/michiyo-hikiyose/entry-12981418475.html",
-    "date": "2026-10-20T07:00:00+09:00"
+    "title": "１０月２１日　自分の時間が確保できない時",
+    "url": "https://ameblo.jp/michiyo-hikiyose/entry-12981418492.html",
+    "date": "2026-10-21T07:00:00+09:00"
    }
   ],
   "is_today": true,
@@ -17,14 +17,7 @@
   "note": "毎朝7時更新"
  },
  "substack": {
-  "items": [
-   {
-    "title": "今週のお便り",
-    "url": "https://michiyospiritualcounsellor.substack.com/",
-    "date": "2026-10-20T08:00+09:00",
-    "by_rule": true
-   }
-  ],
+  "items": [],
   "week": {
    "title": "連載 第14回",
    "url": "https://michiyospiritualcounsellor.substack.com/",
@@ -40,7 +33,7 @@
   "vkufFGzbBj4"
  ],
  "line_quota": {
-  "checked": "2026-10-21T05:32+09:00",
+  "checked": "2026-10-21T07:16+09:00",
   "limit": 5000,
   "used": 954,
   "history": {
@@ -55,8 +48,8 @@
   "remaining": 4046,
   "daily_est": 107.0,
   "days_left": 11,
-  "need_est": 1177,
+  "need_est": 1070,
   "status": "ok",
-  "message": "LINE残り 4,046通 / 5,000通(使用 954)。1日約107通×あと11回≒1,177通必要 → 足りる見込み"
+  "message": "LINE残り 4,046通 / 5,000通(使用 954)。1日約107通×あと10回≒1,070通必要 → 足りる見込み"
  }
 }
