@@ -1,12 +1,12 @@
 {
- "date": "2026-10-21",
- "updated": "2026-10-22T05:05+09:00",
+ "date": "2026-10-22",
+ "updated": "2026-10-22T07:15+09:00",
  "blog": {
   "items": [
    {
-    "title": "１０月２１日　自分の時間が確保できない時",
-    "url": "https://ameblo.jp/michiyo-hikiyose/entry-12981418492.html",
-    "date": "2026-10-21T07:00:00+09:00"
+    "title": "１０月２２日　悪口ばかりいう人の心理",
+    "url": "https://ameblo.jp/michiyo-hikiyose/entry-12981418539.html",
+    "date": "2026-10-22T07:00:00+09:00"
    }
   ],
   "is_today": true,
@@ -44,7 +44,7 @@
   "vkufFGzbBj4"
  ],
  "line_quota": {
-  "checked": "2026-10-22T05:05+09:00",
+  "checked": "2026-10-22T07:16+09:00",
   "limit": 5000,
   "used": 1403,
   "history": {
@@ -60,8 +60,8 @@
   "remaining": 3597,
   "daily_est": 155.9,
   "days_left": 10,
-  "need_est": 1559,
+  "need_est": 1403,
   "status": "ok",
-  "message": "LINE残り 3,597通 / 5,000通(使用 1,403)。1日約156通×あと10回≒1,559通必要 → 足りる見込み"
+  "message": "LINE残り 3,597通 / 5,000通(使用 1,403)。1日約156通×あと9回≒1,403通必要 → 足りる見込み"
  }
 }
