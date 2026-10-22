@@ -1,12 +1,12 @@
 {
- "date": "2026-10-22",
- "updated": "2026-10-23T05:01+09:00",
+ "date": "2026-10-23",
+ "updated": "2026-10-23T07:15+09:00",
  "blog": {
   "items": [
    {
-    "title": "１０月２２日　悪口ばかりいう人の心理",
-    "url": "https://ameblo.jp/michiyo-hikiyose/entry-12981418539.html",
-    "date": "2026-10-22T07:00:00+09:00"
+    "title": "１０月２３日　副業はあなたの「思い」を入れるとうまくいく",
+    "url": "https://ameblo.jp/michiyo-hikiyose/entry-12981954420.html",
+    "date": "2026-10-23T07:00:00+09:00"
    }
   ],
   "is_today": true,
@@ -44,7 +44,7 @@
   "vkufFGzbBj4"
  ],
  "line_quota": {
-  "checked": "2026-10-23T05:01+09:00",
+  "checked": "2026-10-23T07:16+09:00",
   "limit": 5000,
   "used": 1553,
   "history": {
@@ -61,8 +61,8 @@
   "remaining": 3447,
   "daily_est": 160.0,
   "days_left": 9,
-  "need_est": 1440,
+  "need_est": 1280,
   "status": "ok",
-  "message": "LINE残り 3,447通 / 5,000通(使用 1,553)。1日約160通×あと9回≒1,440通必要 → 足りる見込み"
+  "message": "LINE残り 3,447通 / 5,000通(使用 1,553)。1日約160通×あと8回≒1,280通必要 → 足りる見込み"
  }
 }
