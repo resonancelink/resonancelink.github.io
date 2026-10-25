@@ -1,12 +1,12 @@
 {
- "date": "2026-10-25",
- "updated": "2026-10-26T06:42+09:00",
+ "date": "2026-10-26",
+ "updated": "2026-10-26T07:15+09:00",
  "blog": {
   "items": [
    {
-    "title": "１０月２５日　2026年の残りの時間をどう過ごすか",
-    "url": "https://ameblo.jp/michiyo-hikiyose/entry-12981954576.html",
-    "date": "2026-10-25T07:00:00+09:00"
+    "title": "１０月２６日　人に会うと疲れてしまう人へ",
+    "url": "https://ameblo.jp/michiyo-hikiyose/entry-12981954699.html",
+    "date": "2026-10-26T07:00:00+09:00"
    }
   ],
   "is_today": true,
@@ -25,7 +25,17 @@
   }
  },
  "youtube": {
-  "videos": [],
+  "videos": [
+   {
+    "id": "RWHCvUCjy9o",
+    "title": "２０２６年１０月２５日YouTubeライブ！スピリチュアルカウンセラーみちよ",
+    "url": "https://www.youtube.com/watch?v=RWHCvUCjy9o",
+    "published": "2026-10-25T16:15:14+09:00",
+    "kind": "video",
+    "start": null,
+    "length": null
+   }
+  ],
   "live": [],
   "channel": "https://www.youtube.com/channel/UCM4Cxu05XHKE7H530RbWuYA"
  },
@@ -34,7 +44,7 @@
   "vkufFGzbBj4"
  ],
  "line_quota": {
-  "checked": "2026-10-26T06:42+09:00",
+  "checked": "2026-10-26T07:16+09:00",
   "limit": 5000,
   "used": 2009,
   "history": {
@@ -54,8 +64,8 @@
   "remaining": 2991,
   "daily_est": 170.6,
   "days_left": 6,
-  "need_est": 1024,
+  "need_est": 853,
   "status": "ok",
-  "message": "LINE残り 2,991通 / 5,000通(使用 2,009)。1日約171通×あと6回≒1,024通必要 → 足りる見込み"
+  "message": "LINE残り 2,991通 / 5,000通(使用 2,009)。1日約171通×あと5回≒853通必要 → 足りる見込み"
  }
 }
