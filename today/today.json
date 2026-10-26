@@ -1,12 +1,12 @@
 {
- "date": "2026-10-26",
- "updated": "2026-10-27T04:13+09:00",
+ "date": "2026-10-27",
+ "updated": "2026-10-27T07:16+09:00",
  "blog": {
   "items": [
    {
-    "title": "１０月２６日　人に会うと疲れてしまう人へ",
-    "url": "https://ameblo.jp/michiyo-hikiyose/entry-12981954699.html",
-    "date": "2026-10-26T07:00:00+09:00"
+    "title": "１０月２７日　忘れ物やなくし物が増える時のスピリチュアルな意味",
+    "url": "https://ameblo.jp/michiyo-hikiyose/entry-12981954759.html",
+    "date": "2026-10-27T07:00:00+09:00"
    }
   ],
   "is_today": true,
@@ -17,7 +17,14 @@
   "note": "毎朝7時更新"
  },
  "substack": {
-  "items": [],
+  "items": [
+   {
+    "title": "今週のお便り",
+    "url": "https://michiyospiritualcounsellor.substack.com/",
+    "date": "2026-10-27T08:00+09:00",
+    "by_rule": true
+   }
+  ],
   "week": {
    "title": "連載 第15回",
    "url": "https://michiyospiritualcounsellor.substack.com/",
@@ -25,17 +32,7 @@
   }
  },
  "youtube": {
-  "videos": [
-   {
-    "id": "RWHCvUCjy9o",
-    "title": "２０２６年１０月２５日YouTubeライブ！スピリチュアルカウンセラーみちよ",
-    "url": "https://www.youtube.com/watch?v=RWHCvUCjy9o",
-    "published": "2026-10-25T16:15:14+09:00",
-    "kind": "video",
-    "start": null,
-    "length": null
-   }
-  ],
+  "videos": [],
   "live": [],
   "channel": "https://www.youtube.com/channel/UCM4Cxu05XHKE7H530RbWuYA"
  },
@@ -44,7 +41,7 @@
   "vkufFGzbBj4"
  ],
  "line_quota": {
-  "checked": "2026-10-27T04:13+09:00",
+  "checked": "2026-10-27T07:16+09:00",
   "limit": 5000,
   "used": 2325,
   "history": {
@@ -65,8 +62,8 @@
   "remaining": 2675,
   "daily_est": 195.9,
   "days_left": 5,
-  "need_est": 980,
+  "need_est": 784,
   "status": "ok",
-  "message": "LINE残り 2,675通 / 5,000通(使用 2,325)。1日約196通×あと5回≒980通必要 → 足りる見込み"
+  "message": "LINE残り 2,675通 / 5,000通(使用 2,325)。1日約196通×あと4回≒784通必要 → 足りる見込み"
  }
 }
