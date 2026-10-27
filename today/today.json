@@ -1,12 +1,12 @@
 {
- "date": "2026-10-27",
- "updated": "2026-10-28T06:15+09:00",
+ "date": "2026-10-28",
+ "updated": "2026-10-28T07:16+09:00",
  "blog": {
   "items": [
    {
-    "title": "１０月２７日　忘れ物やなくし物が増える時のスピリチュアルな意味",
-    "url": "https://ameblo.jp/michiyo-hikiyose/entry-12981954759.html",
-    "date": "2026-10-27T07:00:00+09:00"
+    "title": "１０月２８日　自分で決められずについ人に聞いてしまう人へ",
+    "url": "https://ameblo.jp/michiyo-hikiyose/entry-12981954839.html",
+    "date": "2026-10-28T07:00:00+09:00"
    }
   ],
   "is_today": true,
@@ -17,14 +17,7 @@
   "note": "毎朝7時更新"
  },
  "substack": {
-  "items": [
-   {
-    "title": "今週のお便り",
-    "url": "https://michiyospiritualcounsellor.substack.com/",
-    "date": "2026-10-27T08:00+09:00",
-    "by_rule": true
-   }
-  ],
+  "items": [],
   "week": {
    "title": "連載 第15回",
    "url": "https://michiyospiritualcounsellor.substack.com/",
@@ -41,7 +34,7 @@
   "vkufFGzbBj4"
  ],
  "line_quota": {
-  "checked": "2026-10-28T06:15+09:00",
+  "checked": "2026-10-28T07:16+09:00",
   "limit": 5000,
   "used": 2488,
   "history": {
@@ -63,8 +56,8 @@
   "remaining": 2512,
   "daily_est": 176.4,
   "days_left": 4,
-  "need_est": 706,
+  "need_est": 529,
   "status": "ok",
-  "message": "LINE残り 2,512通 / 5,000通(使用 2,488)。1日約176通×あと4回≒706通必要 → 足りる見込み"
+  "message": "LINE残り 2,512通 / 5,000通(使用 2,488)。1日約176通×あと3回≒529通必要 → 足りる見込み"
  }
 }
