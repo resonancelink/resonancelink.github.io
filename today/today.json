@@ -1,12 +1,12 @@
 {
- "date": "2026-10-29",
- "updated": "2026-10-30T05:14+09:00",
+ "date": "2026-10-30",
+ "updated": "2026-10-30T07:16+09:00",
  "blog": {
   "items": [
    {
-    "title": "１０月２９日　達成感は小さければ小さいほどいい理由",
-    "url": "https://ameblo.jp/michiyo-hikiyose/entry-12981954919.html",
-    "date": "2026-10-29T07:00:00+09:00"
+    "title": "１０月３０日　理由もなく「何もしたくない日」はサボりではない",
+    "url": "https://ameblo.jp/michiyo-hikiyose/entry-12982670976.html",
+    "date": "2026-10-30T07:00:00+09:00"
    }
   ],
   "is_today": true,
@@ -34,7 +34,7 @@
   "vkufFGzbBj4"
  ],
  "line_quota": {
-  "checked": "2026-10-30T05:14+09:00",
+  "checked": "2026-10-30T07:16+09:00",
   "limit": 5000,
   "used": 2821,
   "history": {
@@ -56,8 +56,8 @@
   "remaining": 2179,
   "daily_est": 159.7,
   "days_left": 2,
-  "need_est": 319,
+  "need_est": 160,
   "status": "ok",
-  "message": "LINE残り 2,179通 / 5,000通(使用 2,821)。1日約160通×あと2回≒319通必要 → 足りる見込み"
+  "message": "LINE残り 2,179通 / 5,000通(使用 2,821)。1日約160通×あと1回≒160通必要 → 足りる見込み"
  }
 }
