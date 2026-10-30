@@ -1,12 +1,12 @@
 {
- "date": "2026-10-30",
- "updated": "2026-10-31T04:18+09:00",
+ "date": "2026-10-31",
+ "updated": "2026-10-31T07:16+09:00",
  "blog": {
   "items": [
    {
-    "title": "１０月３０日　理由もなく「何もしたくない日」はサボりではない",
-    "url": "https://ameblo.jp/michiyo-hikiyose/entry-12982670976.html",
-    "date": "2026-10-30T07:00:00+09:00"
+    "title": "１０月３１日　観る人に「問い」を投げかける「ディスクロージャー・デイ」",
+    "url": "https://ameblo.jp/michiyo-hikiyose/entry-12982671020.html",
+    "date": "2026-10-31T07:00:00+09:00"
    }
   ],
   "is_today": true,
@@ -17,11 +17,18 @@
   "note": "毎朝7時更新"
  },
  "substack": {
-  "items": [],
+  "items": [
+   {
+    "title": "連載 第16回『AIに悩みを話せる時代に、それでも自分と対話する理由』",
+    "url": "https://michiyospiritualcounsellor.substack.com/",
+    "date": "2026-10-31T08:00+09:00",
+    "by_rule": true
+   }
+  ],
   "week": {
-   "title": "連載 第15回",
+   "title": "連載 第16回",
    "url": "https://michiyospiritualcounsellor.substack.com/",
-   "date": "2026-10-24"
+   "date": "2026-10-31"
   }
  },
  "youtube": {
@@ -34,7 +41,7 @@
   "vkufFGzbBj4"
  ],
  "line_quota": {
-  "checked": "2026-10-31T04:18+09:00",
+  "checked": "2026-10-31T07:16+09:00",
   "limit": 5000,
   "used": 2991,
   "history": {
@@ -56,8 +63,8 @@
   "remaining": 2009,
   "daily_est": 162.4,
   "days_left": 1,
-  "need_est": 162,
+  "need_est": 0,
   "status": "ok",
-  "message": "LINE残り 2,009通 / 5,000通(使用 2,991)。1日約162通×あと1回≒162通必要 → 足りる見込み"
+  "message": "LINE残り 2,009通 / 5,000通(使用 2,991)。1日約162通×あと0回≒0通必要 → 足りる見込み"
  }
 }
