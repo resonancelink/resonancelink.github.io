@@ -1,12 +1,12 @@
 {
- "date": "2026-10-31",
- "updated": "2026-11-01T06:27+09:00",
+ "date": "2026-11-01",
+ "updated": "2026-11-01T07:15+09:00",
  "blog": {
   "items": [
    {
-    "title": "１０月３１日　観る人に「問い」を投げかける「ディスクロージャー・デイ」",
-    "url": "https://ameblo.jp/michiyo-hikiyose/entry-12982671020.html",
-    "date": "2026-10-31T07:00:00+09:00"
+    "title": "１１月１日　ひとりの時間は「感じること」に集中する",
+    "url": "https://ameblo.jp/michiyo-hikiyose/entry-12982671107.html",
+    "date": "2026-11-01T07:00:00+09:00"
    }
   ],
   "is_today": true,
@@ -17,14 +17,7 @@
   "note": "毎朝7時更新"
  },
  "substack": {
-  "items": [
-   {
-    "title": "連載 第16回『AIに悩みを話せる時代に、それでも自分と対話する理由』",
-    "url": "https://michiyospiritualcounsellor.substack.com/",
-    "date": "2026-10-31T08:00+09:00",
-    "by_rule": true
-   }
-  ],
+  "items": [],
   "week": {
    "title": "連載 第16回",
    "url": "https://michiyospiritualcounsellor.substack.com/",
@@ -41,7 +34,7 @@
   "vkufFGzbBj4"
  ],
  "line_quota": {
-  "checked": "2026-11-01T06:27+09:00",
+  "checked": "2026-11-01T07:15+09:00",
   "limit": 5000,
   "used": 0,
   "history": {
