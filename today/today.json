@@ -1,12 +1,12 @@
 {
- "date": "2026-11-01",
- "updated": "2026-11-02T04:35+09:00",
+ "date": "2026-11-02",
+ "updated": "2026-11-02T07:15+09:00",
  "blog": {
   "items": [
    {
-    "title": "１１月１日　ひとりの時間は「感じること」に集中する",
-    "url": "https://ameblo.jp/michiyo-hikiyose/entry-12982671107.html",
-    "date": "2026-11-01T07:00:00+09:00"
+    "title": "１１月２日　仕事は情熱を優先すると結果として評価される",
+    "url": "https://ameblo.jp/michiyo-hikiyose/entry-12982671375.html",
+    "date": "2026-11-02T07:00:00+09:00"
    }
   ],
   "is_today": true,
@@ -34,7 +34,7 @@
   "vkufFGzbBj4"
  ],
  "line_quota": {
-  "checked": "2026-11-02T04:35+09:00",
+  "checked": "2026-11-02T07:16+09:00",
   "limit": 5000,
   "used": 171,
   "history": {
@@ -46,6 +46,6 @@
   "days_left": 29,
   "need_est": 0,
   "status": "ok",
-  "message": "LINE残り 4,829通 / 5,000通(使用 171)。1日約0通×あと29回≒0通必要 → 足りる見込み"
+  "message": "LINE残り 4,829通 / 5,000通(使用 171)。1日約0通×あと28回≒0通必要 → 足りる見込み"
  }
 }
