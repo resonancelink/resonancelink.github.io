@@ -1,12 +1,12 @@
 {
- "date": "2026-11-05",
- "updated": "2026-11-06T00:25+09:00",
+ "date": "2026-11-06",
+ "updated": "2026-11-06T06:57+09:00",
  "blog": {
   "items": [
    {
-    "title": "１１月５日　長くいる場所で周波数が変わる瞬間",
-    "url": "https://ameblo.jp/michiyo-hikiyose/entry-12982671999.html",
-    "date": "2026-11-05T07:00:00+09:00"
+    "title": "１１月６日　甘いものが無性に欲しくなる時の意味",
+    "url": "https://ameblo.jp/michiyo-hikiyose/entry-12983271060.html",
+    "date": "2026-11-06T07:00:00+09:00"
    }
   ],
   "is_today": true,
@@ -45,7 +45,7 @@
   "wmEcwHhgx4g"
  ],
  "line_quota": {
-  "checked": "2026-11-06T00:25+09:00",
+  "checked": "2026-11-06T07:01+09:00",
   "limit": 5000,
   "used": 1075,
   "history": {
@@ -59,8 +59,8 @@
   "remaining": 3925,
   "daily_est": 180.8,
   "days_left": 25,
-  "need_est": 4520,
+  "need_est": 4339,
   "status": "warn",
-  "message": "LINE残り 3,925通 / 5,000通(使用 1,075)。1日約181通×あと25回≒4,520通必要 → 約595通足りない見込み。プランの見直しが必要"
+  "message": "LINE残り 3,925通 / 5,000通(使用 1,075)。1日約181通×あと24回≒4,339通必要 → 約414通足りない見込み。プランの見直しが必要"
  }
 }
