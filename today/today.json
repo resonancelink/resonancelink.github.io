@@ -1,12 +1,12 @@
 {
- "date": "2026-11-06",
- "updated": "2026-11-07T02:54+09:00",
+ "date": "2026-11-07",
+ "updated": "2026-11-07T07:16+09:00",
  "blog": {
   "items": [
    {
-    "title": "１１月６日　甘いものが無性に欲しくなる時の意味",
-    "url": "https://ameblo.jp/michiyo-hikiyose/entry-12983271060.html",
-    "date": "2026-11-06T07:00:00+09:00"
+    "title": "１１月７日　映画を見れば見るほどハートが開かれる理由",
+    "url": "https://ameblo.jp/michiyo-hikiyose/entry-12983271115.html",
+    "date": "2026-11-07T07:00:00+09:00"
    }
   ],
   "is_today": true,
@@ -17,11 +17,18 @@
   "note": "毎朝7時更新"
  },
  "substack": {
-  "items": [],
+  "items": [
+   {
+    "title": "連載 第17回『AIに悩みを話せる時代に、それでも自分と対話する理由』",
+    "url": "https://michiyospiritualcounsellor.substack.com/",
+    "date": "2026-11-07T08:00+09:00",
+    "by_rule": true
+   }
+  ],
   "week": {
-   "title": "連載 第16回",
+   "title": "連載 第17回",
    "url": "https://michiyospiritualcounsellor.substack.com/",
-   "date": "2026-10-31"
+   "date": "2026-11-07"
   }
  },
  "youtube": {
@@ -45,7 +52,7 @@
   "wmEcwHhgx4g"
  ],
  "line_quota": {
-  "checked": "2026-11-07T02:55+09:00",
+  "checked": "2026-11-07T07:16+09:00",
   "limit": 5000,
   "used": 1260,
   "history": {
@@ -60,8 +67,8 @@
   "remaining": 3740,
   "daily_est": 181.5,
   "days_left": 24,
-  "need_est": 4356,
+  "need_est": 4174,
   "status": "warn",
-  "message": "LINE残り 3,740通 / 5,000通(使用 1,260)。1日約182通×あと24回≒4,356通必要 → 約616通足りない見込み。プランの見直しが必要"
+  "message": "LINE残り 3,740通 / 5,000通(使用 1,260)。1日約182通×あと23回≒4,174通必要 → 約434通足りない見込み。プランの見直しが必要"
  }
 }
