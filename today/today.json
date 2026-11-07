@@ -1,12 +1,12 @@
 {
- "date": "2026-11-07",
- "updated": "2026-11-08T05:50+09:00",
+ "date": "2026-11-08",
+ "updated": "2026-11-08T07:15+09:00",
  "blog": {
   "items": [
    {
-    "title": "１１月７日　映画を見れば見るほどハートが開かれる理由",
-    "url": "https://ameblo.jp/michiyo-hikiyose/entry-12983271115.html",
-    "date": "2026-11-07T07:00:00+09:00"
+    "title": "１１月８日　何歳になっても心が動くコツ",
+    "url": "https://ameblo.jp/michiyo-hikiyose/entry-12983271190.html",
+    "date": "2026-11-08T07:00:00+09:00"
    }
   ],
   "is_today": true,
@@ -17,14 +17,7 @@
   "note": "毎朝7時更新"
  },
  "substack": {
-  "items": [
-   {
-    "title": "連載 第17回『AIに悩みを話せる時代に、それでも自分と対話する理由』",
-    "url": "https://michiyospiritualcounsellor.substack.com/",
-    "date": "2026-11-07T08:00+09:00",
-    "by_rule": true
-   }
-  ],
+  "items": [],
   "week": {
    "title": "連載 第17回",
    "url": "https://michiyospiritualcounsellor.substack.com/",
@@ -44,7 +37,8 @@
     "length": 0
    }
   ],
-  "channel": "https://www.youtube.com/channel/UCM4Cxu05XHKE7H530RbWuYA"
+  "channel": "https://www.youtube.com/channel/UCM4Cxu05XHKE7H530RbWuYA",
+  "stale": true
  },
  "notified_live": [
   "RWHCvUCjy9o",
@@ -52,7 +46,7 @@
   "wmEcwHhgx4g"
  ],
  "line_quota": {
-  "checked": "2026-11-08T05:50+09:00",
+  "checked": "2026-11-08T07:17+09:00",
   "limit": 5000,
   "used": 1447,
   "history": {
@@ -68,8 +62,8 @@
   "remaining": 3553,
   "daily_est": 182.3,
   "days_left": 23,
-  "need_est": 4193,
+  "need_est": 4011,
   "status": "warn",
-  "message": "LINE残り 3,553通 / 5,000通(使用 1,447)。1日約182通×あと23回≒4,193通必要 → 約640通足りない見込み。プランの見直しが必要"
+  "message": "LINE残り 3,553通 / 5,000通(使用 1,447)。1日約182通×あと22回≒4,011通必要 → 約458通足りない見込み。プランの見直しが必要"
  }
 }
