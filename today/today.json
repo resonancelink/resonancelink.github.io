@@ -1,12 +1,12 @@
 {
- "date": "2026-11-09",
- "updated": "2026-11-10T02:24+09:00",
+ "date": "2026-11-10",
+ "updated": "2026-11-10T07:15+09:00",
  "blog": {
   "items": [
    {
-    "title": "１１月９日　「Voicy相談室」②暴言や嫌味で傷つけられた時に知ってほしいこと",
-    "url": "https://ameblo.jp/michiyo-hikiyose/entry-12983271263.html",
-    "date": "2026-11-09T07:00:00+09:00"
+    "title": "１１月１０日　 「あんなこと言わなきゃよかった。。。」  と後悔してしまう時",
+    "url": "https://ameblo.jp/michiyo-hikiyose/entry-12983271335.html",
+    "date": "2026-11-10T07:00:00+09:00"
    }
   ],
   "is_today": true,
@@ -17,7 +17,14 @@
   "note": "毎朝7時更新"
  },
  "substack": {
-  "items": [],
+  "items": [
+   {
+    "title": "今週のお便り",
+    "url": "https://michiyospiritualcounsellor.substack.com/",
+    "date": "2026-11-10T08:00+09:00",
+    "by_rule": true
+   }
+  ],
   "week": {
    "title": "連載 第17回",
    "url": "https://michiyospiritualcounsellor.substack.com/",
@@ -25,17 +32,7 @@
   }
  },
  "youtube": {
-  "videos": [
-   {
-    "id": "wmEcwHhgx4g",
-    "title": "２０２６年１１月８日YouTubeライブ！スピリチュアルカウンセラーみちよ",
-    "url": "https://www.youtube.com/watch?v=wmEcwHhgx4g",
-    "published": "2026-11-08T16:15:01+09:00",
-    "kind": "video",
-    "start": null,
-    "length": null
-   }
-  ],
+  "videos": [],
   "live": [],
   "channel": "https://www.youtube.com/channel/UCM4Cxu05XHKE7H530RbWuYA"
  },
@@ -45,7 +42,7 @@
   "wmEcwHhgx4g"
  ],
  "line_quota": {
-  "checked": "2026-11-10T02:25+09:00",
+  "checked": "2026-11-10T07:16+09:00",
   "limit": 5000,
   "used": 1828,
   "history": {
@@ -63,8 +60,8 @@
   "remaining": 3172,
   "daily_est": 186.6,
   "days_left": 21,
-  "need_est": 3919,
+  "need_est": 3732,
   "status": "warn",
-  "message": "LINE残り 3,172通 / 5,000通(使用 1,828)。1日約187通×あと21回≒3,919通必要 → 約747通足りない見込み。プランの見直しが必要"
+  "message": "LINE残り 3,172通 / 5,000通(使用 1,828)。1日約187通×あと20回≒3,732通必要 → 約560通足りない見込み。プランの見直しが必要"
  }
 }
