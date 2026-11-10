@@ -1,6 +1,6 @@
 {
  "date": "2026-11-10",
- "updated": "2026-11-10T13:34+09:00",
+ "updated": "2026-11-10T18:40+09:00",
  "blog": {
   "items": [
    {
@@ -33,16 +33,27 @@
  },
  "youtube": {
   "videos": [],
-  "live": [],
+  "live": [
+   {
+    "id": "POOG40payE8",
+    "title": "みちよYouTubeライブ「なぜ今自分に向き合うことが必要なのか」スピリチュアルカウンセラー",
+    "url": "https://www.youtube.com/watch?v=POOG40payE8",
+    "published": "2026-11-10T15:46:50+09:00",
+    "kind": "live_upcoming",
+    "start": "2026-11-14T21:00:00+09:00",
+    "length": 0
+   }
+  ],
   "channel": "https://www.youtube.com/channel/UCM4Cxu05XHKE7H530RbWuYA"
  },
  "notified_live": [
+  "POOG40payE8",
   "RWHCvUCjy9o",
   "vkufFGzbBj4",
   "wmEcwHhgx4g"
  ],
  "line_quota": {
-  "checked": "2026-11-10T13:34+09:00",
+  "checked": "2026-11-10T18:41+09:00",
   "limit": 5000,
   "used": 2024,
   "history": {
