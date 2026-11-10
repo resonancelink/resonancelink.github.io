@@ -1,12 +1,12 @@
 {
- "date": "2026-11-10",
- "updated": "2026-11-11T02:43+09:00",
+ "date": "2026-11-11",
+ "updated": "2026-11-11T07:15+09:00",
  "blog": {
   "items": [
    {
-    "title": "１１月１０日　 「あんなこと言わなきゃよかった。。。」  と後悔してしまう時",
-    "url": "https://ameblo.jp/michiyo-hikiyose/entry-12983271335.html",
-    "date": "2026-11-10T07:00:00+09:00"
+    "title": "１１月１１日　久しぶりの人からの連絡からわかる「今のエネルギー」",
+    "url": "https://ameblo.jp/michiyo-hikiyose/entry-12983271392.html",
+    "date": "2026-11-11T07:00:00+09:00"
    }
   ],
   "is_today": true,
@@ -17,14 +17,7 @@
   "note": "毎朝7時更新"
  },
  "substack": {
-  "items": [
-   {
-    "title": "今週のお便り",
-    "url": "https://michiyospiritualcounsellor.substack.com/",
-    "date": "2026-11-10T08:00+09:00",
-    "by_rule": true
-   }
-  ],
+  "items": [],
   "week": {
    "title": "連載 第17回",
    "url": "https://michiyospiritualcounsellor.substack.com/",
@@ -53,7 +46,7 @@
   "wmEcwHhgx4g"
  ],
  "line_quota": {
-  "checked": "2026-11-11T02:43+09:00",
+  "checked": "2026-11-11T07:16+09:00",
   "limit": 5000,
   "used": 2222,
   "history": {
@@ -72,8 +65,8 @@
   "remaining": 2778,
   "daily_est": 216.7,
   "days_left": 20,
-  "need_est": 4334,
+  "need_est": 4117,
   "status": "warn",
-  "message": "LINE残り 2,778通 / 5,000通(使用 2,222)。1日約217通×あと20回≒4,334通必要 → 約1,556通足りない見込み。プランの見直しが必要"
+  "message": "LINE残り 2,778通 / 5,000通(使用 2,222)。1日約217通×あと19回≒4,117通必要 → 約1,339通足りない見込み。プランの見直しが必要"
  }
 }
