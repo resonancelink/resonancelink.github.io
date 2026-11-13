@@ -1,12 +1,12 @@
 {
- "date": "2026-11-13",
- "updated": "2026-11-14T01:13+09:00",
+ "date": "2026-11-14",
+ "updated": "2026-11-14T07:15+09:00",
  "blog": {
   "items": [
    {
-    "title": "１１月１３日　髪を切りたくなる時の本当の気持ち",
-    "url": "https://ameblo.jp/michiyo-hikiyose/entry-12983970809.html",
-    "date": "2026-11-13T07:00:00+09:00"
+    "title": "１１月１４日　年賀状を送る相手は義務かハートかで決める",
+    "url": "https://ameblo.jp/michiyo-hikiyose/entry-12983970919.html",
+    "date": "2026-11-14T07:00:00+09:00"
    }
   ],
   "is_today": true,
@@ -17,11 +17,18 @@
   "note": "毎朝7時更新"
  },
  "substack": {
-  "items": [],
+  "items": [
+   {
+    "title": "連載 第18回『AIに悩みを話せる時代に、それでも自分と対話する理由』",
+    "url": "https://michiyospiritualcounsellor.substack.com/",
+    "date": "2026-11-14T08:00+09:00",
+    "by_rule": true
+   }
+  ],
   "week": {
-   "title": "連載 第17回",
+   "title": "連載 第18回",
    "url": "https://michiyospiritualcounsellor.substack.com/",
-   "date": "2026-11-07"
+   "date": "2026-11-14"
   }
  },
  "youtube": {
@@ -46,7 +53,7 @@
   "wmEcwHhgx4g"
  ],
  "line_quota": {
-  "checked": "2026-11-14T01:13+09:00",
+  "checked": "2026-11-14T07:15+09:00",
   "limit": 5000,
   "used": 2821,
   "history": {
@@ -68,8 +75,8 @@
   "remaining": 2179,
   "daily_est": 196.3,
   "days_left": 17,
-  "need_est": 3337,
+  "need_est": 3141,
   "status": "warn",
-  "message": "LINE残り 2,179通 / 5,000通(使用 2,821)。1日約196通×あと17回≒3,337通必要 → 約1,158通足りない見込み。プランの見直しが必要"
+  "message": "LINE残り 2,179通 / 5,000通(使用 2,821)。1日約196通×あと16回≒3,141通必要 → 約962通足りない見込み。プランの見直しが必要"
  }
 }
