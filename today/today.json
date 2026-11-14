@@ -1,12 +1,12 @@
 {
- "date": "2026-11-14",
- "updated": "2026-11-15T02:56+09:00",
+ "date": "2026-11-15",
+ "updated": "2026-11-15T07:15+09:00",
  "blog": {
   "items": [
    {
-    "title": "１１月１４日　年賀状を送る相手は義務かハートかで決める",
-    "url": "https://ameblo.jp/michiyo-hikiyose/entry-12983970919.html",
-    "date": "2026-11-14T07:00:00+09:00"
+    "title": "１１月１５日　日常の何気ない瞬間の感謝がさらなる感謝できる瞬間を引き寄せる",
+    "url": "https://ameblo.jp/michiyo-hikiyose/entry-12983970982.html",
+    "date": "2026-11-15T07:00:00+09:00"
    }
   ],
   "is_today": true,
@@ -17,14 +17,7 @@
   "note": "毎朝7時更新"
  },
  "substack": {
-  "items": [
-   {
-    "title": "連載 第18回『AIに悩みを話せる時代に、それでも自分と対話する理由』",
-    "url": "https://michiyospiritualcounsellor.substack.com/",
-    "date": "2026-11-14T08:00+09:00",
-    "by_rule": true
-   }
-  ],
+  "items": [],
   "week": {
    "title": "連載 第18回",
    "url": "https://michiyospiritualcounsellor.substack.com/",
@@ -34,7 +27,8 @@
  "youtube": {
   "videos": [],
   "live": [],
-  "channel": "https://www.youtube.com/channel/UCM4Cxu05XHKE7H530RbWuYA"
+  "channel": "https://www.youtube.com/channel/UCM4Cxu05XHKE7H530RbWuYA",
+  "stale": true
  },
  "notified_live": [
   "POOG40payE8",
@@ -43,7 +37,7 @@
   "wmEcwHhgx4g"
  ],
  "line_quota": {
-  "checked": "2026-11-15T02:56+09:00",
+  "checked": "2026-11-15T07:17+09:00",
   "limit": 5000,
   "used": 3021,
   "history": {
@@ -65,8 +59,8 @@
   "remaining": 1979,
   "daily_est": 197.9,
   "days_left": 16,
-  "need_est": 3166,
+  "need_est": 2968,
   "status": "warn",
-  "message": "LINE残り 1,979通 / 5,000通(使用 3,021)。1日約198通×あと16回≒3,166通必要 → 約1,187通足りない見込み。プランの見直しが必要"
+  "message": "LINE残り 1,979通 / 5,000通(使用 3,021)。1日約198通×あと15回≒2,968通必要 → 約989通足りない見込み。プランの見直しが必要"
  }
 }
