@@ -1,12 +1,12 @@
 {
- "date": "2026-11-15",
- "updated": "2026-11-16T02:40+09:00",
+ "date": "2026-11-16",
+ "updated": "2026-11-16T07:15+09:00",
  "blog": {
   "items": [
    {
-    "title": "１１月１５日　日常の何気ない瞬間の感謝がさらなる感謝できる瞬間を引き寄せる",
-    "url": "https://ameblo.jp/michiyo-hikiyose/entry-12983970982.html",
-    "date": "2026-11-15T07:00:00+09:00"
+    "title": "１１月１６日　「Voicy相談室」③どんな時でも余裕をもって対処できる方法",
+    "url": "https://ameblo.jp/michiyo-hikiyose/entry-12984465584.html",
+    "date": "2026-11-16T07:00:00+09:00"
    }
   ],
   "is_today": true,
@@ -27,8 +27,7 @@
  "youtube": {
   "videos": [],
   "live": [],
-  "channel": "https://www.youtube.com/channel/UCM4Cxu05XHKE7H530RbWuYA",
-  "stale": true
+  "channel": "https://www.youtube.com/channel/UCM4Cxu05XHKE7H530RbWuYA"
  },
  "notified_live": [
   "POOG40payE8",
@@ -37,7 +36,7 @@
   "wmEcwHhgx4g"
  ],
  "line_quota": {
-  "checked": "2026-11-16T02:40+09:00",
+  "checked": "2026-11-16T07:15+09:00",
   "limit": 5000,
   "used": 3224,
   "history": {
@@ -59,8 +58,8 @@
   "remaining": 1776,
   "daily_est": 199.4,
   "days_left": 15,
-  "need_est": 2991,
+  "need_est": 2792,
   "status": "warn",
-  "message": "LINE残り 1,776通 / 5,000通(使用 3,224)。1日約199通×あと15回≒2,991通必要 → 約1,215通足りない見込み。プランの見直しが必要"
+  "message": "LINE残り 1,776通 / 5,000通(使用 3,224)。1日約199通×あと14回≒2,792通必要 → 約1,016通足りない見込み。プランの見直しが必要"
  }
 }
