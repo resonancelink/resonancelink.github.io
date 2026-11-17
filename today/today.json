@@ -1,6 +1,6 @@
 {
  "date": "2026-11-17",
- "updated": "2026-11-17T14:01+09:00",
+ "updated": "2026-11-17T22:12+09:00",
  "blog": {
   "items": [
    {
@@ -33,17 +33,28 @@
  },
  "youtube": {
   "videos": [],
-  "live": [],
+  "live": [
+   {
+    "id": "a2PEMhK6j-g",
+    "title": "２０２６年１１月２２日YouTubeライブ！スピリチュアルカウンセラーみちよ",
+    "url": "https://www.youtube.com/watch?v=a2PEMhK6j-g",
+    "published": "2026-11-17T14:57:10+09:00",
+    "kind": "live_upcoming",
+    "start": "2026-11-22T15:00:00+09:00",
+    "length": 0
+   }
+  ],
   "channel": "https://www.youtube.com/channel/UCM4Cxu05XHKE7H530RbWuYA"
  },
  "notified_live": [
   "POOG40payE8",
   "RWHCvUCjy9o",
+  "a2PEMhK6j-g",
   "vkufFGzbBj4",
   "wmEcwHhgx4g"
  ],
  "line_quota": {
-  "checked": "2026-11-17T14:01+09:00",
+  "checked": "2026-11-17T22:12+09:00",
   "limit": 5000,
   "used": 3638,
   "history": {
