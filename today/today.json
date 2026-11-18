@@ -1,12 +1,12 @@
 {
- "date": "2026-11-18",
- "updated": "2026-11-18T22:52+09:00",
+ "date": "2026-11-19",
+ "updated": "2026-11-19T06:52+09:00",
  "blog": {
   "items": [
    {
-    "title": "１１月１８日　家に帰ると家族に当たってしまう時に知ってほしいこと",
-    "url": "https://ameblo.jp/michiyo-hikiyose/entry-12983971175.html",
-    "date": "2026-11-18T07:00:00+09:00"
+    "title": "１１月１９日　お酒に依存する時に心の中で起きていること",
+    "url": "https://ameblo.jp/michiyo-hikiyose/entry-12983971254.html",
+    "date": "2026-11-19T07:00:00+09:00"
    }
   ],
   "is_today": true,
@@ -26,7 +26,17 @@
  },
  "youtube": {
   "videos": [],
-  "live": [],
+  "live": [
+   {
+    "id": "a2PEMhK6j-g",
+    "title": "２０２６年１１月２２日YouTubeライブ！スピリチュアルカウンセラーみちよ",
+    "url": "https://www.youtube.com/watch?v=a2PEMhK6j-g",
+    "published": "2026-11-17T14:57:10+09:00",
+    "kind": "live_upcoming",
+    "start": "2026-11-22T15:00:00+09:00",
+    "length": 0
+   }
+  ],
   "channel": "https://www.youtube.com/channel/UCM4Cxu05XHKE7H530RbWuYA"
  },
  "notified_live": [
@@ -37,11 +47,10 @@
   "wmEcwHhgx4g"
  ],
  "line_quota": {
-  "checked": "2026-11-18T22:53+09:00",
+  "checked": "2026-11-19T07:00+09:00",
   "limit": 5000,
   "used": 4056,
   "history": {
-   "2026-11-05": 1075,
    "2026-11-06": 1260,
    "2026-11-07": 1447,
    "2026-11-08": 1636,
@@ -54,13 +63,14 @@
    "2026-11-15": 3224,
    "2026-11-16": 3429,
    "2026-11-17": 3638,
-   "2026-11-18": 4056
+   "2026-11-18": 4056,
+   "2026-11-19": 4056
   },
   "remaining": 944,
-  "daily_est": 233.6,
-  "days_left": 13,
-  "need_est": 2803,
+  "daily_est": 205.0,
+  "days_left": 12,
+  "need_est": 2255,
   "status": "warn",
-  "message": "LINE残り 944通 / 5,000通(使用 4,056)。1日約234通×あと12回≒2,803通必要 → 約1,859通足りない見込み。プランの見直しが必要"
+  "message": "LINE残り 944通 / 5,000通(使用 4,056)。1日約205通×あと11回≒2,255通必要 → 約1,311通足りない見込み。プランの見直しが必要"
  }
 }
