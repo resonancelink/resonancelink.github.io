@@ -1,12 +1,12 @@
 {
- "date": "2026-11-20",
- "updated": "2026-11-21T05:03+09:00",
+ "date": "2026-11-21",
+ "updated": "2026-11-21T07:16+09:00",
  "blog": {
   "items": [
    {
-    "title": "１１月２０日　2022年、東京を離れて『田舎移住』した頃のこと",
-    "url": "https://ameblo.jp/michiyo-hikiyose/entry-12984655738.html",
-    "date": "2026-11-20T07:00:00+09:00"
+    "title": "１１月２１日　死後の世界をバカにする人も死んだ後に理解する",
+    "url": "https://ameblo.jp/michiyo-hikiyose/entry-12984655860.html",
+    "date": "2026-11-21T07:00:00+09:00"
    }
   ],
   "is_today": true,
@@ -17,16 +17,33 @@
   "note": "毎朝7時更新"
  },
  "substack": {
-  "items": [],
+  "items": [
+   {
+    "title": "連載 第19回『AIに悩みを話せる時代に、それでも自分と対話する理由』",
+    "url": "https://michiyospiritualcounsellor.substack.com/",
+    "date": "2026-11-21T08:00+09:00",
+    "by_rule": true
+   }
+  ],
   "week": {
-   "title": "連載 第18回",
+   "title": "連載 第19回",
    "url": "https://michiyospiritualcounsellor.substack.com/",
-   "date": "2026-11-14"
+   "date": "2026-11-21"
   }
  },
  "youtube": {
   "videos": [],
-  "live": [],
+  "live": [
+   {
+    "id": "a2PEMhK6j-g",
+    "title": "２０２６年１１月２２日YouTubeライブ！スピリチュアルカウンセラーみちよ",
+    "url": "https://www.youtube.com/watch?v=a2PEMhK6j-g",
+    "published": "2026-11-17T14:57:10+09:00",
+    "kind": "live_upcoming",
+    "start": "2026-11-22T15:00:00+09:00",
+    "length": 0
+   }
+  ],
   "channel": "https://www.youtube.com/channel/UCM4Cxu05XHKE7H530RbWuYA"
  },
  "notified_live": [
@@ -37,7 +54,7 @@
   "wmEcwHhgx4g"
  ],
  "line_quota": {
-  "checked": "2026-11-21T05:04+09:00",
+  "checked": "2026-11-21T07:16+09:00",
   "limit": 5000,
   "used": 4478,
   "history": {
@@ -59,8 +76,8 @@
   "remaining": 522,
   "daily_est": 208.1,
   "days_left": 10,
-  "need_est": 2081,
+  "need_est": 1873,
   "status": "warn",
-  "message": "LINE残り 522通 / 5,000通(使用 4,478)。1日約208通×あと10回≒2,081通必要 → 約1,559通足りない見込み。プランの見直しが必要"
+  "message": "LINE残り 522通 / 5,000通(使用 4,478)。1日約208通×あと9回≒1,873通必要 → 約1,351通足りない見込み。プランの見直しが必要"
  }
 }
