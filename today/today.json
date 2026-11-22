@@ -1,12 +1,12 @@
 {
- "date": "2026-11-22",
- "updated": "2026-11-23T06:43+09:00",
+ "date": "2026-11-23",
+ "updated": "2026-11-23T07:15+09:00",
  "blog": {
   "items": [
    {
-    "title": "１１月２２日　大切な人とは「見守る愛」で距離を置く",
-    "url": "https://ameblo.jp/michiyo-hikiyose/entry-12984655896.html",
-    "date": "2026-11-22T07:00:00+09:00"
+    "title": "１１月２３日　「Voicy相談室」④「心の主張」は弱さではなく自分への「愛情表現」",
+    "url": "https://ameblo.jp/michiyo-hikiyose/entry-12985127897.html",
+    "date": "2026-11-23T07:00:00+09:00"
    }
   ],
   "is_today": true,
@@ -37,7 +37,7 @@
   "wmEcwHhgx4g"
  ],
  "line_quota": {
-  "checked": "2026-11-23T06:43+09:00",
+  "checked": "2026-11-23T07:16+09:00",
   "limit": 30000,
   "used": 4904,
   "history": {
@@ -59,8 +59,8 @@
   "remaining": 25096,
   "daily_est": 210.7,
   "days_left": 8,
-  "need_est": 1686,
+  "need_est": 1475,
   "status": "ok",
-  "message": "LINE残り 25,096通 / 30,000通(使用 4,904)。1日約211通×あと8回≒1,686通必要 → 足りる見込み"
+  "message": "LINE残り 25,096通 / 30,000通(使用 4,904)。1日約211通×あと7回≒1,475通必要 → 足りる見込み"
  }
 }
