@@ -1,12 +1,12 @@
 {
- "date": "2026-11-23",
- "updated": "2026-11-23T21:18+09:00",
+ "date": "2026-11-24",
+ "updated": "2026-11-24T07:16+09:00",
  "blog": {
   "items": [
    {
-    "title": "１１月２３日　「Voicy相談室」④「心の主張」は弱さではなく自分への「愛情表現」",
-    "url": "https://ameblo.jp/michiyo-hikiyose/entry-12985127897.html",
-    "date": "2026-11-23T07:00:00+09:00"
+    "title": "１１月２４日　AIに「スピリチュアル」を足すとAI活用がうまくいく",
+    "url": "https://ameblo.jp/michiyo-hikiyose/entry-12984656539.html",
+    "date": "2026-11-24T07:00:00+09:00"
    }
   ],
   "is_today": true,
@@ -17,7 +17,14 @@
   "note": "毎朝7時更新"
  },
  "substack": {
-  "items": [],
+  "items": [
+   {
+    "title": "今週のお便り",
+    "url": "https://michiyospiritualcounsellor.substack.com/",
+    "date": "2026-11-24T08:00+09:00",
+    "by_rule": true
+   }
+  ],
   "week": {
    "title": "連載 第19回",
    "url": "https://michiyospiritualcounsellor.substack.com/",
@@ -37,11 +44,10 @@
   "wmEcwHhgx4g"
  ],
  "line_quota": {
-  "checked": "2026-11-23T21:19+09:00",
+  "checked": "2026-11-24T07:16+09:00",
   "limit": 30000,
   "used": 5119,
   "history": {
-   "2026-11-10": 2024,
    "2026-11-11": 2421,
    "2026-11-12": 2621,
    "2026-11-13": 2821,
@@ -54,13 +60,14 @@
    "2026-11-20": 4478,
    "2026-11-21": 4690,
    "2026-11-22": 4904,
-   "2026-11-23": 5119
+   "2026-11-23": 5119,
+   "2026-11-24": 5119
   },
   "remaining": 24881,
-  "daily_est": 241.4,
-  "days_left": 8,
-  "need_est": 1690,
+  "daily_est": 211.6,
+  "days_left": 7,
+  "need_est": 1270,
   "status": "ok",
-  "message": "LINE残り 24,881通 / 30,000通(使用 5,119)。1日約241通×あと7回≒1,690通必要 → 足りる見込み"
+  "message": "LINE残り 24,881通 / 30,000通(使用 5,119)。1日約212通×あと6回≒1,270通必要 → 足りる見込み"
  }
 }
