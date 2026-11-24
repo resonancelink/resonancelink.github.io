@@ -1,12 +1,12 @@
 {
- "date": "2026-11-24",
- "updated": "2026-11-25T06:07+09:00",
+ "date": "2026-11-25",
+ "updated": "2026-11-25T07:16+09:00",
  "blog": {
   "items": [
    {
-    "title": "１１月２４日　AIに「スピリチュアル」を足すとAI活用がうまくいく",
-    "url": "https://ameblo.jp/michiyo-hikiyose/entry-12984656539.html",
-    "date": "2026-11-24T07:00:00+09:00"
+    "title": "１１月２５日　バラに癒される庭仕事が好きすぎる",
+    "url": "https://ameblo.jp/michiyo-hikiyose/entry-12984655570.html",
+    "date": "2026-11-25T07:00:00+09:00"
    }
   ],
   "is_today": true,
@@ -17,14 +17,7 @@
   "note": "毎朝7時更新"
  },
  "substack": {
-  "items": [
-   {
-    "title": "今週のお便り",
-    "url": "https://michiyospiritualcounsellor.substack.com/",
-    "date": "2026-11-24T08:00+09:00",
-    "by_rule": true
-   }
-  ],
+  "items": [],
   "week": {
    "title": "連載 第19回",
    "url": "https://michiyospiritualcounsellor.substack.com/",
@@ -44,7 +37,7 @@
   "wmEcwHhgx4g"
  ],
  "line_quota": {
-  "checked": "2026-11-25T06:07+09:00",
+  "checked": "2026-11-25T07:16+09:00",
   "limit": 30000,
   "used": 5334,
   "history": {
@@ -66,8 +59,8 @@
   "remaining": 24666,
   "daily_est": 182.6,
   "days_left": 6,
-  "need_est": 1096,
+  "need_est": 913,
   "status": "ok",
-  "message": "LINE残り 24,666通 / 30,000通(使用 5,334)。1日約183通×あと6回≒1,096通必要 → 足りる見込み"
+  "message": "LINE残り 24,666通 / 30,000通(使用 5,334)。1日約183通×あと5回≒913通必要 → 足りる見込み"
  }
 }
