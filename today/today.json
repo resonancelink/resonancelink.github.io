@@ -1,12 +1,12 @@
 {
- "date": "2026-11-26",
- "updated": "2026-11-27T04:33+09:00",
+ "date": "2026-11-27",
+ "updated": "2026-11-27T07:16+09:00",
  "blog": {
   "items": [
    {
-    "title": "１１月２６日　苦手な人が見せてくれる心の制限",
-    "url": "https://ameblo.jp/michiyo-hikiyose/entry-12984656827.html",
-    "date": "2026-11-26T07:00:00+09:00"
+    "title": "１１月２７日　「来年のわたし」に今どれだけ幸せなのかを伝えてみる",
+    "url": "https://ameblo.jp/michiyo-hikiyose/entry-12985352467.html",
+    "date": "2026-11-27T07:00:00+09:00"
    }
   ],
   "is_today": true,
@@ -37,7 +37,7 @@
   "wmEcwHhgx4g"
  ],
  "line_quota": {
-  "checked": "2026-11-27T04:33+09:00",
+  "checked": "2026-11-27T07:16+09:00",
   "limit": 30000,
   "used": 5768,
   "history": {
@@ -59,8 +59,8 @@
   "remaining": 24232,
   "daily_est": 184.3,
   "days_left": 4,
-  "need_est": 737,
+  "need_est": 553,
   "status": "ok",
-  "message": "LINE残り 24,232通 / 30,000通(使用 5,768)。1日約184通×あと4回≒737通必要 → 足りる見込み"
+  "message": "LINE残り 24,232通 / 30,000通(使用 5,768)。1日約184通×あと3回≒553通必要 → 足りる見込み"
  }
 }
