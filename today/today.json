@@ -1,12 +1,12 @@
 {
- "date": "2026-11-27",
- "updated": "2026-11-28T06:09+09:00",
+ "date": "2026-11-28",
+ "updated": "2026-11-28T07:15+09:00",
  "blog": {
   "items": [
    {
-    "title": "１１月２７日　「来年のわたし」に今どれだけ幸せなのかを伝えてみる",
-    "url": "https://ameblo.jp/michiyo-hikiyose/entry-12985352467.html",
-    "date": "2026-11-27T07:00:00+09:00"
+    "title": "１１月２８日　映画は「パラレルワールド」の見える化",
+    "url": "https://ameblo.jp/michiyo-hikiyose/entry-12985352492.html",
+    "date": "2026-11-28T07:00:00+09:00"
    }
   ],
   "is_today": true,
@@ -17,11 +17,18 @@
   "note": "毎朝7時更新"
  },
  "substack": {
-  "items": [],
+  "items": [
+   {
+    "title": "連載 第20回『AIに悩みを話せる時代に、それでも自分と対話する理由』",
+    "url": "https://michiyospiritualcounsellor.substack.com/",
+    "date": "2026-11-28T08:00+09:00",
+    "by_rule": true
+   }
+  ],
   "week": {
-   "title": "連載 第19回",
+   "title": "連載 第20回",
    "url": "https://michiyospiritualcounsellor.substack.com/",
-   "date": "2026-11-21"
+   "date": "2026-11-28"
   }
  },
  "youtube": {
@@ -37,7 +44,7 @@
   "wmEcwHhgx4g"
  ],
  "line_quota": {
-  "checked": "2026-11-28T06:09+09:00",
+  "checked": "2026-11-28T07:16+09:00",
   "limit": 30000,
   "used": 5988,
   "history": {
@@ -59,8 +66,8 @@
   "remaining": 24012,
   "daily_est": 185.4,
   "days_left": 3,
-  "need_est": 556,
+  "need_est": 371,
   "status": "ok",
-  "message": "LINE残り 24,012通 / 30,000通(使用 5,988)。1日約185通×あと3回≒556通必要 → 足りる見込み"
+  "message": "LINE残り 24,012通 / 30,000通(使用 5,988)。1日約185通×あと2回≒371通必要 → 足りる見込み"
  }
 }
